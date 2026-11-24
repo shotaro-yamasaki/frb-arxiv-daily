@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Citation Radar · FRB arXiv Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06070b; --bg2:#0b0d14; --panel:#10131c; --panel2:#151927; --line:#1f2435; --line2:#2a3047;
+  --ink:#e8ebf4; --muted:#8a91a8; --dim:#5a6178;
+  --hot:#ff6a3d; --hot2:#ffb547; --cool:#5ad1ff; --green:#7ee081; --pink:#ff5d8f; --violet:#c792ff;
+  --display:"Space Grotesk","Noto Sans JP",system-ui,sans-serif;
+  --body:"Inter","Noto Sans JP",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+html[lang=ja] body{font-family:"Noto Sans JP","Inter",system-ui,sans-serif}
+a{color:inherit}
+button{font:inherit;color:inherit}
+
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+#radar{position:absolute;right:-120px;top:50%;transform:translateY(-50%);width:560px;height:560px;opacity:.9}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--bg) 0%,rgba(6,7,11,.9) 45%,rgba(6,7,11,.2) 100%)}
+.hero-in{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:22px 28px 30px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:46px}
+.back{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;gap:8px;align-items:center}
+.back:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line2);border-radius:999px;padding:3px;background:rgba(16,19,28,.7)}
+.lang button{white-space:nowrap;border:0;background:none;padding:4px 12px;border-radius:999px;font:500 12px var(--mono);color:var(--muted);cursor:pointer}
+.lang button.on{background:var(--ink);color:var(--bg)}
+.eyebrow{font:500 11.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--violet);display:flex;align-items:center;gap:10px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--violet);box-shadow:0 0 12px var(--violet)}
+h1{font:700 clamp(34px,5.4vw,56px)/1.02 var(--display);letter-spacing:-.03em;margin:10px 0 0}
+h1 .f{background:linear-gradient(95deg,var(--violet),var(--cool));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--muted);margin:12px 0 0;max-width:560px}
+.stats{display:flex;gap:34px;margin-top:24px;flex-wrap:wrap}
+.stat b{display:block;font:600 26px/1.1 var(--display);letter-spacing:-.02em}
+.stat span{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.stat.a b{color:var(--cool)} .stat.b b{color:var(--green)} .stat.c b{color:var(--hot2)}
+
+.bar{position:sticky;top:0;z-index:20;background:rgba(6,7,11,.82);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tabs{display:flex;gap:4px}
+.tab{white-space:nowrap;border:0;background:none;padding:8px 14px;border-radius:9px;cursor:pointer;color:var(--muted);font:500 14px var(--display);display:flex;gap:8px;align-items:center}
+.tab:hover{color:var(--ink)}
+.tab.on{background:var(--panel2);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line2)}
+.tab .n{font:500 11px var(--mono);background:var(--line);border-radius:999px;padding:1px 7px;color:var(--muted)}
+.tab.on .n{background:var(--violet);color:#14101c}
+.sp{flex:1}
+.seg{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:3px}
+.seg button{border:0;background:none;padding:6px 12px;border-radius:7px;font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.seg button.on{background:var(--panel2);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line2)}
+.tog{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:7px 12px;font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tog.on{color:var(--violet);border-color:rgba(199,146,255,.4);background:rgba(199,146,255,.08)}
+
+main{max-width:1240px;margin:0 auto;padding:26px 28px 60px}
+.note{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:18px;background:var(--bg2)}
+.grp{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin:30px 0 4px;display:flex;align-items:center;gap:12px}
+.grp::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(199,146,255,.4),transparent)}
+.grp:first-of-type{margin-top:4px}
+
+.card{position:relative;background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:14px;padding:18px 20px 16px 22px;margin:12px 0;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c,var(--line2))}
+.card:hover{border-color:var(--line2)}
+.card.dim{opacity:.55}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.bd{font:600 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;border-radius:6px;padding:2px 8px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 10%,transparent)}
+.title{font:600 17px/1.4 var(--display);margin:0}
+.title a{text-decoration:none}
+.title a:hover{color:var(--cool)}
+.authors{color:var(--muted);font-size:13.5px;margin-top:4px}
+.meta{font:12px var(--mono);color:var(--dim);margin-top:8px;display:flex;gap:6px 14px;flex-wrap:wrap}
+.meta .pub{color:var(--muted)}
+.cites{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.cite{display:flex;gap:10px;align-items:baseline;font-size:13.5px;padding:7px 12px;border-radius:9px;background:var(--bg);border:1px solid var(--line)}
+.cite .arr{font:600 11px var(--mono);color:var(--violet);white-space:nowrap}
+.cite .yr{font:12px var(--mono);color:var(--dim);margin-left:auto;white-space:nowrap}
+.links{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;align-items:center}
+.links a,.links button{font:500 12px var(--mono);text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:7px;padding:4px 10px;background:none;cursor:pointer}
+.links a:hover,.links button:hover{color:var(--ink);border-color:var(--line2);background:var(--panel2)}
+.metric{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+.metric div{font:12px var(--mono);color:var(--dim)}
+.metric b{display:block;font:600 18px var(--display);color:var(--ink)}
+.bar-m{height:4px;width:120px;background:var(--line);border-radius:3px;margin-top:4px;overflow:hidden}
+.bar-m i{display:block;height:100%;background:var(--hot2)}
+.reason{margin:12px 0 0;padding-left:12px;border-left:2px solid var(--hot2);font-size:14px;color:#d6dae6}
+
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line2)}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+td.num{font:600 16px var(--display);text-align:right;white-space:nowrap}
+td.num.up{color:var(--green)}
+th.num{text-align:right}
+td.yr{font:13px var(--mono);color:var(--muted)}
+td a{text-decoration:none}
+td a:hover{color:var(--cool)}
+td .pub{display:block;font-size:12.5px;color:var(--dim);margin-top:2px}
+.empty{text-align:center;color:var(--muted);padding:70px 20px;border:1px dashed var(--line2);border-radius:14px}
+.empty b{display:block;font:600 18px var(--display);color:var(--ink);margin-bottom:6px}
+.empty code{font:12.5px var(--mono);background:var(--panel2);padding:2px 6px;border-radius:5px;color:var(--ink)}
+@media (max-width:760px){
+  .hero-in,.bar-in,main{padding-left:18px;padding-right:18px}
+  #radar{opacity:.4;right:-260px}
+  .top{margin-bottom:30px}
+  .stats{gap:10px 24px}.stat b{font-size:22px}
+  .tabs{width:100%;overflow-x:auto}
+  .cite{flex-wrap:wrap}.cite .yr{margin-left:0}
+  table,tbody,tr,td{display:block}thead{display:none}
+  tr{border-bottom:1px solid var(--line);padding:8px 0}td{border:0;padding:4px 0}td.num{text-align:left;display:inline-block;margin-right:16px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg id="radar" viewBox="-100 -100 200 200" aria-hidden="true">
+    <defs>
+      <radialGradient id="rg"><stop offset="0" stop-color="#c792ff" stop-opacity=".18"/><stop offset="1" stop-color="#c792ff" stop-opacity="0"/></radialGradient>
+      <linearGradient id="sw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5ad1ff" stop-opacity="0"/><stop offset="1" stop-color="#5ad1ff" stop-opacity=".35"/></linearGradient>
+    </defs>
+    <circle r="96" fill="url(#rg)"/>
+    <g fill="none" stroke="#2a3047" stroke-width=".5"><circle r="24"/><circle r="48"/><circle r="72"/><circle r="96"/>
+      <path d="M-96 0H96M0-96V96"/></g>
+    <g id="sweep"><path d="M0 0L96 0A96 96 0 0 0 67.9 -67.9Z" fill="url(#sw)"/><line x1="0" y1="0" x2="96" y2="0" stroke="#5ad1ff" stroke-width=".8"/></g>
+    <g id="blips"></g>
+  </svg>
+  <div class="hero-in">
+    <div class="top">
+      <a class="back" href="./">← FRB arXiv Daily</a>
+      <div class="lang"><button data-lang="en">EN</button><button data-lang="ja">日本語</button></div>
+    </div>
+    <div class="eyebrow"><i></i><span data-i="eyebrow"></span></div>
+    <h1><span class="f">Citation</span> Radar</h1>
+    <p class="tagline" data-i="tagline"></p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<div class="bar"><div class="bar-in">
+  <div class="tabs" id="tabs">
+    <button class="tab" data-t="new"><span data-i="tNew"></span><span class="n" id="nNew">0</span></button>
+    <button class="tab" data-t="missing"><span data-i="tMissing"></span><span class="n" id="nMissing">0</span></button>
+    <button class="tab" data-t="papers"><span data-i="tPapers"></span><span class="n" id="nPapers">0</span></button>
+  </div>
+  <span class="sp"></span>
+  <div class="seg" id="range"><button data-v="7" data-i="d7"></button><button data-v="30" data-i="d30"></button><button data-v="all" data-i="all"></button></div>
+  <button class="tog" id="noself" data-i="noSelf"></button>
+  <button class="tog" id="showDismissed" data-i="showDismissed"></button>
+</div></div>
+<main id="main"></main>
+
+<script>
+const I18N = {
+  en: {
+    eyebrow: "Personal · citations to my papers", tagline: "Who cited my papers on arXiv or in journals, updated every morning from NASA ADS, plus recent FRB papers that may have missed a citation.",
+    tNew: "New citations", tMissing: "Citation gaps?", tPapers: "My papers",
+    d7: "7 days", d30: "30 days", all: "All", noSelf: "Hide self-citations", showDismissed: "Show dismissed",
+    sNew: "New · 7 days", sPub: "Now in journals · 7 days", sTotal: "Citing papers", sMiss: "Possible gaps",
+    bNew: "New citation", bPub: "Published in journal", bSelf: "Self", bRef: "Refereed", bPre: "Preprint", bOld: "Before tracking",
+    citesMine: "cites", by: "", more: n => `+${n} more`, dismiss: "Dismiss", undismiss: "Restore",
+    textSim: "Text similarity", shared: "Shared references", verdictStrong: "Likely should cite", verdictMaybe: "Possibly relevant",
+    doesNotCite: "does not cite", citesOther: "cites some of my other papers",
+    missNote: "Recent FRB papers (3 to 30 days old) whose reference lists, as parsed by ADS, do not include one of my papers even though the topic or the reference lists overlap strongly. These are automated hints, not judgements.",
+    newNote: "Citations are grouped by the day they first appeared in ADS. Records that existed when tracking started are marked 'Before tracking'.",
+    thYear: "Year", thTitle: "Paper", thCit: "Citations", th30: "New · 30d",
+    emptyT: "Nothing here yet", emptyNew: "No new citations in this period.", emptyMiss: "No possible citation gaps right now.",
+    noData: "Citation data is not set up yet", noDataD: "Add the repository secret <code>ADS_TOKEN</code> and run the workflow once. See README.",
+    updated: "Updated", baseline: "Tracking since",
+  },
+  ja: {
+    eyebrow: "自分用 · 自分の論文への被引用", tagline: "arXiv とジャーナルで自分の論文を引用した論文を、NASA ADS から毎朝取得します。引用漏れの可能性がある最近の FRB 論文も表示します。",
+    tNew: "新しい被引用", tMissing: "引用漏れ候補", tPapers: "自分の論文",
+    d7: "7日間", d30: "30日間", all: "すべて", noSelf: "自己引用を隠す", showDismissed: "非表示にしたものも表示",
+    sNew: "新規 · 7日", sPub: "ジャーナル掲載 · 7日", sTotal: "引用論文数", sMiss: "引用漏れ候補",
+    bNew: "新規引用", bPub: "ジャーナルに掲載", bSelf: "自己引用", bRef: "査読あり", bPre: "プレプリント", bOld: "追跡開始前",
+    citesMine: "引用", by: "", more: n => `ほか${n}名`, dismiss: "非表示", undismiss: "戻す",
+    textSim: "本文の類似度", shared: "共通の参考文献", verdictStrong: "引用すべき可能性が高い", verdictMaybe: "関連がありそう",
+    doesNotCite: "を引用していない", citesOther: "自分の別の論文は引用している",
+    missNote: "公開から3〜30日の FRB 論文のうち、テーマや参考文献リストが自分の論文と強く重なるのに、ADS が解析した参考文献にその論文が入っていないものです。自動判定によるヒントで、断定ではありません。",
+    newNote: "ADS に初めて現れた日ごとにまとめています。追跡を始めた時点ですでにあった引用には「追跡開始前」と付けています。",
+    thYear: "年", thTitle: "論文", thCit: "被引用数", th30: "直近30日",
+    emptyT: "まだありません", emptyNew: "この期間に新しい被引用はありません。", emptyMiss: "いまのところ引用漏れ候補はありません。",
+    noData: "被引用データがまだ設定されていません", noDataD: "リポジトリの Secret に <code>ADS_TOKEN</code> を追加し、ワークフローを1回実行してください。README を参照。",
+    updated: "最終更新", baseline: "追跡開始",
+  },
+};
+const LS = "frb-arxiv-daily:v1";
+let store = {}; try { store = JSON.parse(localStorage.getItem(LS) || "{}"); } catch (e) {}
+store.lang ||= (navigator.language || "").startsWith("ja") ? "ja" : "en";
+store.dismissed ||= {};
+const save = () => { try { localStorage.setItem(LS, JSON.stringify(store)); } catch (e) {} };
+const st = { tab: location.hash.slice(1) || "new", range: "30", noself: true, showDismissed: false };
+let D = null;
+const $ = id => document.getElementById(id);
+const t = k => I18N[store.lang][k];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const loc = () => store.lang === "ja" ? "ja-JP" : "en-US";
+const fmt = (d, o = { year: "numeric", month: "short", day: "numeric", weekday: "short" }) => new Date(d + "T12:00:00").toLocaleDateString(loc(), o);
+const today = () => (D && D.updated ? D.updated.slice(0, 10) : new Date().toISOString().slice(0, 10));
+function within(d, days) { if (days === "all") return true; const c = new Date(today()); c.setDate(c.getDate() - (+days) + 1); return new Date(d) >= c; }
+const ads = b => `https://ui.adsabs.harvard.edu/abs/${encodeURIComponent(b)}/abstract`;
+const auth = (a, n) => esc(a.slice(0, 6).join("; ")) + (n > 6 ? " " + esc(t("more")(n - 6)) : "");
+
+function events() {
+  const ev = [];
+  for (const c of D.citations) {
+    if (!c.baseline || st.range === "all") ev.push({ type: c.baseline ? "old" : "new", date: c.first_seen, c });
+    if (c.journal_seen) ev.push({ type: "pub", date: c.journal_seen, c });
+  }
+  return ev.filter(e => (st.range === "all" || within(e.date, st.range)) && !(st.noself && e.c.self))
+           .sort((a, b) => b.date.localeCompare(a.date) || (a.type === "pub") - (b.type === "pub"));
+}
+
+function citeCard(e, titles) {
+  const c = e.c;
+  const badge = { new: ["bNew", "var(--cool)"], pub: ["bPub", "var(--green)"], old: ["bOld", "var(--dim)"] }[e.type];
+  const mine = c.cited.map(b => `<div class="cite"><span class="arr">→ ${esc(t("citesMine"))}</span><span>${esc(titles[b]?.title || b)}</span><span class="yr">${esc(titles[b]?.year || "")}</span></div>`).join("");
+  return `<article class="card" style="--c:${badge[1]}">
+    <div class="badges"><span class="bd" style="--c:${badge[1]}">${esc(t(badge[0]))}</span>
+      ${c.journal ? (c.refereed ? `<span class="bd" style="--c:var(--violet)">${esc(t("bRef"))}</span>` : "") : `<span class="bd" style="--c:var(--muted)">${esc(t("bPre"))}</span>`}
+      ${c.self ? `<span class="bd" style="--c:var(--pink)">${esc(t("bSelf"))}</span>` : ""}</div>
+    <h3 class="title"><a href="${ads(c.bibcode)}" target="_blank" rel="noopener">${esc(c.title)}</a></h3>
+    <div class="authors">${auth(c.authors, c.n_authors)}</div>
+    <div class="meta"><span class="pub">${esc(c.pub)}</span><span>${esc(c.year || "")}</span><span>${esc(c.bibcode)}</span></div>
+    <div class="cites">${mine}</div>
+    <div class="links"><a href="${ads(c.bibcode)}" target="_blank" rel="noopener">ADS</a>
+      ${c.arxiv ? `<a href="https://arxiv.org/abs/${esc(c.arxiv)}" target="_blank" rel="noopener">arXiv</a>` : ""}
+      ${c.doi ? `<a href="https://doi.org/${esc(c.doi)}" target="_blank" rel="noopener">DOI</a>` : ""}</div>
+  </article>`;
+}
+
+function missCard(m) {
+  const id = m.arxiv + "|" + m.my_bibcode, dis = !!store.dismissed[id];
+  const strong = m.verdict === "strong";
+  const reason = store.lang === "ja" ? (m.reason_ja || m.reason_en) : (m.reason_en || m.reason_ja);
+  const pct = Math.min(100, Math.round(m.text_sim * 160));
+  return `<article class="card ${dis ? "dim" : ""}" style="--c:${strong ? "var(--hot)" : "var(--hot2)"}">
+    <div class="badges">${m.verdict ? `<span class="bd" style="--c:${strong ? "var(--hot)" : "var(--hot2)"}">${esc(t(strong ? "verdictStrong" : "verdictMaybe"))}</span>` : ""}
+      ${m.cites_me_elsewhere ? `<span class="bd" style="--c:var(--muted)">${esc(t("citesOther"))}</span>` : ""}</div>
+    <h3 class="title"><a href="https://arxiv.org/abs/${esc(m.arxiv)}" target="_blank" rel="noopener">${esc(m.title)}</a></h3>
+    <div class="authors">${auth(m.authors, m.n_authors)}</div>
+    <div class="meta"><span>arXiv:${esc(m.arxiv)}</span><span>${esc(fmt(m.date, { month: "short", day: "numeric" }))}</span></div>
+    <div class="cites"><div class="cite"><span class="arr" style="color:var(--hot2)">✕ ${esc(t("doesNotCite"))}</span><span>${esc(m.my_title)}</span><span class="yr">${esc(m.my_year || "")}</span></div></div>
+    <div class="metric">
+      <div>${esc(t("textSim"))}<b>${m.text_sim.toFixed(2)}</b><div class="bar-m"><i style="width:${pct}%"></i></div></div>
+      <div>${esc(t("shared"))}<b>${m.shared_refs}</b></div>
+    </div>
+    ${reason ? `<p class="reason">${esc(reason)}</p>` : ""}
+    <div class="links"><a href="https://arxiv.org/abs/${esc(m.arxiv)}" target="_blank" rel="noopener">arXiv</a>
+      <a href="https://arxiv.org/pdf/${esc(m.arxiv)}" target="_blank" rel="noopener">PDF</a>
+      <a href="${ads(m.my_bibcode)}" target="_blank" rel="noopener">${esc(store.lang === "ja" ? "自分の論文 (ADS)" : "My paper (ADS)")}</a>
+      <button class="dis" data-id="${esc(id)}">${esc(t(dis ? "undismiss" : "dismiss"))}</button></div>
+  </article>`;
+}
+
+function renderStats() {
+  if (!D) { $("stats").innerHTML = ""; return; }
+  const n7 = D.citations.filter(c => !c.baseline && within(c.first_seen, 7) && !c.self).length;
+  const p7 = D.citations.filter(c => c.journal_seen && within(c.journal_seen, 7) && !c.self).length;
+  const miss = (D.missing || []).filter(m => !store.dismissed[m.arxiv + "|" + m.my_bibcode]).length;
+  const upd = D.updated ? new Date(D.updated).toLocaleString(loc(), { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" }) : "—";
+  $("stats").innerHTML = `<div class="stat a"><b>${n7}</b><span>${esc(t("sNew"))}</span></div>
+    <div class="stat b"><b>${p7}</b><span>${esc(t("sPub"))}</span></div>
+    <div class="stat"><b>${D.citations.length}</b><span>${esc(t("sTotal"))}</span></div>
+    <div class="stat c"><b>${miss}</b><span>${esc(t("sMiss"))}</span></div>
+    <div class="stat"><b style="font-size:16px;line-height:1.75">${esc(upd)}</b><span>${esc(t("updated"))}${D.baseline_date ? " · " + esc(t("baseline")) + " " + esc(fmt(D.baseline_date, { month: "short", day: "numeric" })) : ""}</span></div>`;
+  $("nNew").textContent = D.citations.filter(c => !c.baseline && within(c.first_seen, 30) && !c.self).length;
+  $("nMissing").textContent = miss;
+  $("nPapers").textContent = (D.my_papers || []).length;
+}
+
+function render() {
+  document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", b.dataset.t === st.tab));
+  document.querySelectorAll("#range button").forEach(b => b.classList.toggle("on", b.dataset.v === st.range));
+  $("range").style.display = st.tab === "new" ? "" : "none";
+  $("noself").style.display = st.tab === "new" ? "" : "none";
+  $("showDismissed").style.display = st.tab === "missing" ? "" : "none";
+  $("noself").classList.toggle("on", st.noself);
+  $("showDismissed").classList.toggle("on", st.showDismissed);
+  if (!D) { $("main").innerHTML = `<div class="empty"><b>${esc(t("noData"))}</b>${t("noDataD")}</div>`; return; }
+  const titles = Object.fromEntries((D.my_papers || []).map(p => [p.bibcode, p]));
+  let h = "";
+  if (st.tab === "new") {
+    const ev = events();
+    h = `<div class="note">${esc(t("newNote"))}</div>`;
+    if (!ev.length) h += `<div class="empty"><b>${esc(t("emptyT"))}</b>${esc(t("emptyNew"))}</div>`;
+    let cur = null;
+    for (const e of ev) {
+      if (e.date !== cur) { cur = e.date; h += `<div class="grp">${esc(fmt(cur))}</div>`; }
+      h += citeCard(e, titles);
+    }
+  } else if (st.tab === "missing") {
+    const ms = (D.missing || []).filter(m => st.showDismissed || !store.dismissed[m.arxiv + "|" + m.my_bibcode]);
+    h = `<div class="note">${esc(t("missNote"))}</div>` + (ms.length ? ms.map(missCard).join("") : `<div class="empty"><b>${esc(t("emptyT"))}</b>${esc(t("emptyMiss"))}</div>`);
+  } else {
+    h = `<table><thead><tr><th>${esc(t("thYear"))}</th><th>${esc(t("thTitle"))}</th><th class="num">${esc(t("thCit"))}</th><th class="num">${esc(t("th30"))}</th></tr></thead><tbody>` +
+      (D.my_papers || []).map(p => `<tr><td class="yr">${esc(p.year || "")}</td>
+        <td><a href="${ads(p.bibcode)}" target="_blank" rel="noopener">${esc(p.title)}</a><span class="pub">${esc(p.pub || "")}</span></td>
+        <td class="num">${p.citation_count}</td><td class="num ${p.new_30d ? "up" : ""}">${p.new_30d ? "+" + p.new_30d : "—"}</td></tr>`).join("") + `</tbody></table>`;
+  }
+  $("main").innerHTML = h;
+}
+
+function applyLang() {
+  document.documentElement.lang = store.lang;
+  document.querySelectorAll("[data-i]").forEach(el => el.textContent = t(el.dataset.i));
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === store.lang));
+}
+
+$("tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if (b) { st.tab = b.dataset.t; history.replaceState(null, "", "#" + st.tab); render(); } });
+$("range").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { st.range = b.dataset.v; render(); } });
+$("noself").addEventListener("click", () => { st.noself = !st.noself; render(); });
+$("showDismissed").addEventListener("click", () => { st.showDismissed = !st.showDismissed; render(); });
+$("main").addEventListener("click", e => {
+  const b = e.target.closest(".dis"); if (!b) return;
+  const id = b.dataset.id; store.dismissed[id] ? delete store.dismissed[id] : store.dismissed[id] = 1; save(); renderStats(); render();
+});
+document.querySelector(".lang").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return; store.lang = b.dataset.lang; save(); applyLang(); renderStats(); render();
+});
+
+/* radar sweep with blips for recent citations */
+(function () {
+  const sw = $("sweep"), still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let a = 0;
+  function blips() {
+    const g = $("blips"); if (!D) return;
+    const recent = D.citations.filter(c => !c.baseline).slice(0, 14);
+    const pts = (recent.length ? recent : D.citations.slice(0, 8)).map((c, i) => {
+      let h = 0; for (const ch of c.key) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+      const ang = (h % 360) * Math.PI / 180, r = 20 + (h >> 9) % 72;
+      return `<circle cx="${(r * Math.cos(ang)).toFixed(1)}" cy="${(r * Math.sin(ang)).toFixed(1)}" r="${c.baseline ? 1.4 : 2.2}" fill="${c.journal_seen ? "#7ee081" : "#5ad1ff"}" opacity="${c.baseline ? .45 : .95}"><animate attributeName="opacity" values="1;.3;1" dur="${2 + i % 3}s" repeatCount="indefinite"/></circle>`;
+    });
+    g.innerHTML = pts.join("");
+  }
+  window.__blips = blips;
+  function tick() { a = (a + 0.6) % 360; sw.setAttribute("transform", `rotate(${-a})`); requestAnimationFrame(tick); }
+  if (!still) tick();
+})();
+
+applyLang();
+fetch("data/citations.json?" + Date.now()).then(r => { if (!r.ok) throw 0; return r.json(); })
+  .then(d => { D = d; renderStats(); render(); window.__blips(); })
+  .catch(() => { renderStats(); render(); });
+</script>
+</body>
+</html>

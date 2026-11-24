@@ -352,5 +352,20 @@
         "array": 1
       }
     }
-  ]
+  ],
+  "me": {
+    "papers_query": "orcid:\"0000-0002-1688-8708\" OR (author:\"Yamasaki, Shotaro\" collection:astronomy)",
+    "self_author_patterns": [
+      "Yamasaki, S"
+    ],
+    "include_bibcodes": [],
+    "exclude_bibcodes": [],
+    "missing": {
+      "min_age_days": 3,
+      "max_age_days": 30,
+      "text_threshold": 0.3,
+      "shared_refs_threshold": 6,
+      "max_per_paper": 2
+    }
+  }
 }

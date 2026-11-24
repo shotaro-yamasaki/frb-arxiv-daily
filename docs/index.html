@@ -385,6 +385,16 @@ document.querySelector(".lang").addEventListener("click", e => {
   store.lang = b.dataset.lang; save(); applyLang(); renderStats(); render();
 });
 
+/* hidden: type "cite" anywhere (outside the search box) to open the citation page */
+(function () {
+  let buf = "";
+  addEventListener("keydown", e => {
+    if (e.target.closest("input, textarea") || e.metaKey || e.ctrlKey || e.altKey) return;
+    buf = (buf + e.key.toLowerCase()).slice(-4);
+    if (buf === "cite") location.href = "me.html";
+  });
+})();
+
 /* ================= hero: dispersed bursts on a waterfall ================= */
 (function sky() {
   const cv = $("sky"), ctx = cv.getContext("2d");
