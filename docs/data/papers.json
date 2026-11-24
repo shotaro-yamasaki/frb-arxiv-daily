@@ -1,6 +1,206 @@
 {
- "updated": "2026-11-24T09:28:31+00:00",
- "papers": [],
+ "updated": "2026-11-24T09:36:20+00:00",
+ "papers": [
+  {
+   "id": "2611.31069",
+   "title": "A hybrid effective field theory description of diffuse baryons",
+   "abstract": "Galaxy feedback mechanisms that displace baryonic gas on large scales are a dominant uncertainty in many cosmological analyses. Measurements that directly probe the baryonic component, such as Fast Radio Burst Dispersion Measure (FRB DM) and the kinetic Sunyaev-Zeldovich effect, can therefore be used to place constraints on feedback and inform other analyses, such as weak lensing. Thus far, analytic methods to model the effects of feedback are either limited to large scales, missing the regime of high signal-to-noise, or have many parameters, weakening constraining power. We propose a Hybrid Effective Field Theory (HEFT) approach, relying on the full gravitational displacement field computed in an $N$-body simulation. We account for feedback via a Lorentzian suppression with a single effective parameter, $c_f^2$. To describe the diffuse baryon field, we extend the arguments by Andrew et al. (arXiv:2604.25828), leveraging most baryons being in a diffuse state to reduce a full bias expansion to just the linear bias, $b_{1,d}^L$. With just these two parameters, we fit the diffuse gas power spectrum in most variants of the FLAMINGO suite of cosmological simulations at percent-level accuracy out to $k=1\\,h/\\mathrm{Mpc}$ at redshift $z=0.5$ and $k=1.5\\,h/\\mathrm{Mpc}$ at $z=1$. Further, by fitting the diffuse gas power spectrum including terms argued to be negligible, we show that their contribution is minimal. Applying this prescription for diffuse electron gas enables constraints on both cosmology and astrophysics without the need to marginalize over many unknown parameters.",
+   "authors": [
+    "Ryan Raikman",
+    "Kiyoshi Masui",
+    "James M. Sullivan",
+    "Josh Borrow"
+   ],
+   "categories": [
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-11-24",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.28334",
+   "title": "The FRB Population Revisited: Rate, Energy, Evolution, and Host-DM Constraints from the Second CHIME/FRB Catalog",
+   "abstract": "We present a study that simultaneously fits for key fast radio burst (FRB) population properties using the Second CHIME/FRB Catalog while calibrating for instrumental selection effects. Our inferred volumetric rate at $z=0$ is $1.1^{+0.4}_{-0.3}\\times 10^{5}\\,{\\rm Gpc}^{-3}\\,{\\rm yr}^{-1}$ above an isotropic-equivalent energy of $10^{39}$ erg and below a scattering timescale of 30 ms at 600 MHz. The evolution of the FRB rate relative to the cosmic star formation rate remains statistically unconstrained. Assuming a Schechter function for the energy distribution, isotropic emission, and 1-GHz emission bandwidth, we find a characteristic maximum energy of $2.0^{+2.6}_{-1.0} \\times 10^{41}$ erg and a differential power-law index of $-1.41\\,^{+0.27}_{-0.21}({\\rm stat.})\\,\\pm\\,0.35({\\rm sys.})$. The host galaxy contribution to the observed dispersion measure (DM) is modeled as a log-normal distribution; assuming a total Galactic contribution of 80 $\\text{pc cm}^{-3}$, we find a median host-galaxy DM contribution of $199^{+34}_{-36}\\;\\text{pc cm}^{-3}$ in the rest-frame. Finally, we find that the average FRB spectrum, described by a spectral index of $\\alpha=-1.0^{+0.5}_{-0.6}$, is inconsistent with being flat at the $\\sim2\\sigma$ level. We note an excess of high-S/N bursts at low DMs in the observed sample that is not predicted by the best-fit model. Testing alternative models does not alleviate this tension; future population studies may mitigate this limitation by incorporating robust fluence and redshift measurements.",
+   "authors": [
+    "Naman Jain",
+    "Kaitlyn Shin",
+    "Mawson Sammons",
+    "Kyle McGregor",
+    "Victoria Kaspi",
+    "Kiyoshi W. Masui",
+    "Alice P. Curtin",
+    "Matt Dobbs",
+    "B. M. Gaensler",
+    "Jason W. T. Hessels",
+    "Afrokk Khan",
+    "Adam E. Lanman",
+    "Calvin Leung",
+    "Lluis Mas-Ribas",
+    "Daniele Michilli",
+    "Juan Mena-Parra",
+    "Kenzie Nimmo",
+    "Ayush Pandhi",
+    "Aaron B. Pearlman",
+    "Ziggy Pleunis",
+    "Aniket Prasad",
+    "J. Xavier Prochaska",
+    "Paul Scholz",
+    "Vishwangi Shah",
+    "Seth R. Siegel",
+    "Kendrick Smith",
+    "Ingrid Stairs",
+    "Habtamu Menberu Tedila",
+    "Michele Woodland"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.GA"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-24",
+   "primary": "population",
+   "tags": [
+    "population",
+    "survey",
+    "host"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME"
+   ]
+  },
+  {
+   "id": "2611.28251",
+   "title": "Spectropolarimetric properties of fast radio bursts co-detected by CHIME/FRB and DSA-110",
+   "abstract": "We present spectropolarimetric analysis of twelve fast radio bursts (FRBs) co-detected by CHIME/FRB and DSA-110, eleven of which are apparently non-repeating. We obtain broadband spectral coverage (400-1530 MHz) for these FRBs and constrain propagation effects in their polarized spectra. We observe two notable spectral features: (i) in three FRBs, we find decreasing linear polarization fraction with increasing frequency and, (ii) in seven FRBs, we find that the linear polarization fraction decreases with decreasing frequency. The former spectral signature is commonly observed in radio pulsars and is suggestive of magnetospheric emission, where either the mixing of orthogonally polarized modes or incoherent summing of unresolved burst components may cause depolarization at high frequencies. The latter is consistent with depolarization due to multipath propagation. We report the first statistically significant correlation (3.5-3.9$\\sigma$) between the extent of depolarization and amplitude of Faraday rotation arising from FRB host galaxies, implying that the two effects likely arise in the same turbulent, magnetoionic environments around FRB sources. The prevalence of depolarization in our sample suggests that turbulent environments that have, thus far, been predominantly associated with some repeating FRBs, may also be commonly present around a subset of apparently non-repeating FRBs. We highlight a systematic bias for detecting a disproportionately high fraction of constant polarization angle (PA) profiles in low-frequency FRB surveys due to amplified scatter broadening, which we also observe in two of our co-detected FRBs.",
+   "authors": [
+    "Ayush Pandhi",
+    "Myles Sherman",
+    "Jakob Faber",
+    "Ziggy Pleunis",
+    "Kenzie Nimmo",
+    "Stella Ocker",
+    "Dylan Jow",
+    "Liam Connor",
+    "Alice P. Curtin",
+    "B. M. Gaensler",
+    "Jason W. T. Hessels",
+    "Victoria Kaspi",
+    "Afrokk Khan",
+    "Casey J. Law",
+    "Robert Main",
+    "Ryan Mckinven",
+    "Mason Ng",
+    "Aaron B. Pearlman",
+    "Vikram Ravi",
+    "Mawson Sammons",
+    "Paul Scholz",
+    "Kritti Sharma",
+    "Kaitlyn Shin",
+    "Kendrick Smith",
+    "Ingrid Stairs"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-24",
+   "primary": "polarization",
+   "tags": [
+    "polarization",
+    "survey"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME"
+   ]
+  },
+  {
+   "id": "2611.28250",
+   "title": "Fast Radio Bursts Co-detected by CHIME/FRB and DSA-110 from 400 to 1530 MHz",
+   "abstract": "We present a sample of $15$ fast radio bursts (FRBs) that were co-detected by the Deep Synoptic Array (DSA-110) and the Canadian Hydrogen Intensity Mapping Experiment (CHIME) between 2022 and 2024, of which $12$ have channelized voltage data from both instruments and 9 have secure redshifts. All but one are as-yet-non-repeating. Most bursts span the entire bandwidth of each instrument (400-800 MHz for CHIME, 1280-1530 MHz for DSA-110), significantly expanding the number of FRBs known to emit across $>1$ GHz of spectral bandwidth and constraining the spectral evolution of energy and propagation effects. On average, the FRBs exhibit higher spectral energies (up to a factor of $\\sim10$) in the CHIME band but are lower in peak flux density due to substantial pulse broadening. The sample mean (median) spectral index $-0.4\\pm0.4$ ($-0.3\\pm0.4$) is shallower than previously reported spectral indices, likely a selection effect. A third of the sample shows evidence for a spectral turnover, comparable to that seen in GHz-peaked pulsar and magnetar spectra. Joint scintillation and pulse broadening constraints indicate that nearly all bursts encounter multiple scattering screens, with pulse broadening originating within their host galaxies. The co-detected bursts are among the most scattered in the CHIME/FRB sample, while being the narrowest in the DSA-110 sample, indicating that CHIME/FRB and DSA-110 select different subsets of the FRB population; the interplay between intrinsic burst width, scattering, and the FRB search time resolution creates a narrow window of sensitivity to co-detected FRBs, providing a blueprint for future ultra-wideband FRB surveys.",
+   "authors": [
+    "S. K. Ocker",
+    "K. Nimmo",
+    "J. Faber",
+    "K. Shin",
+    "V. Ravi",
+    "F. Verdi",
+    "N. Jain",
+    "Z. Pleunis",
+    "A. Pandhi",
+    "M. Sherman",
+    "D. Jow",
+    "S. Pradeep E. T.",
+    "D. Amouyal",
+    "L. Connor",
+    "A. Curtin",
+    "M. Fine",
+    "B. M. Gaensler",
+    "J. W. T. Hessels",
+    "V. Kaspi",
+    "A. Khan",
+    "C. Law",
+    "R. Main",
+    "K. McGregor",
+    "A. B. Pearlman",
+    "M. Sammons",
+    "P. Scholz",
+    "K. Sharma",
+    "K. Smith",
+    "I. Stairs"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-24",
+   "primary": "survey",
+   "tags": [
+    "survey",
+    "propagation",
+    "population",
+    "progenitor"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME"
+   ]
+  },
+  {
+   "id": "2611.28068",
+   "title": "Probabilistic foreground diagnostics from dispersion measure excess in individual fast radio bursts",
+   "abstract": "Fast radio bursts (FRBs) provide a unique probe of diffuse baryons through their dispersion measure (DM), but interpreting a large DM for an individual burst is limited by the uncertain contribution from its host galaxy, which is hard to directly observed. We address this gap with a source-level diagnostic framework that treats $\\mathrm{DM_{host}}$ as a latent variable drawn from a shared lognormal population, thereby marginalizing over the uncertain host contribution. Applying an expectation--maximization (EM) inference scheme to 92 localized FRBs, we jointly estimate the host-DM population and obtain a model-conditioned host-DM distribution for each burst. We propagate these distributions into an excess cosmological DM for each sightline, quantifying both its uncertainty and the probability that a positive excess remains after accounting for the host contribution. FRBs previously reported to show evidence for foreground or intervening contributions preferentially exhibit high probabilities of retaining such an excess, indicating that this source-level probability can provide a useful statistic for prioritizing foreground follow-up observations. Using this diagnostic, we identify 18 additional localized FRBs as high-priority candidates for follow-up searches for possible intervening galaxies, groups, clusters, or large-scale structure.",
+   "authors": [
+    "Qi Zhou",
+    "Ran Gao",
+    "Zhengxiang Li",
+    "Zong-Hong Zhu"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-24",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  }
+ ],
  "subfields": [
   {
    "id": "survey",
