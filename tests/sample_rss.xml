@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>astro-ph updates on arXiv.org</title>
+    <link>http://rss.arxiv.org/rss/astro-ph</link>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 -0500</pubDate>
+    <item>
+      <title>A burst storm from the hyperactive repeater FRB 20240114A: waiting times and energy distribution</title>
+      <link>https://arxiv.org/abs/2611.00001</link>
+      <description>arXiv:2611.00001v1 Announce Type: new
+Abstract: We report 3000 bursts from the repeating fast radio burst FRB 20240114A detected with FAST. The waiting time distribution is bimodal and the energy distribution follows a power law.</description>
+      <category>astro-ph.HE</category>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:creator>A. Author, B. Author, C. Author</dc:creator>
+    </item>
+    <item>
+      <title>Constraining the Hubble constant and missing baryons with localized FRBs</title>
+      <link>https://arxiv.org/abs/2611.00002</link>
+      <description>arXiv:2611.00002v1 Announce Type: new
+Abstract: Using 120 localized fast radio bursts we fit the Macquart relation and constrain the baryon fraction in the intergalactic medium and H0.</description>
+      <category>astro-ph.CO</category>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:creator>D. Author</dc:creator>
+    </item>
+    <item>
+      <title>Polarization position angle swings in a repeating FRB</title>
+      <link>https://arxiv.org/abs/2611.00003</link>
+      <description>arXiv:2611.00003v2 Announce Type: replace
+Abstract: Revised version. We study rotation measure and PA swing in an FRB.</description>
+      <category>astro-ph.HE</category>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>replace</arxiv:announce_type>
+      <dc:creator>E. Author</dc:creator>
+    </item>
+    <item>
+      <title>Timing of millisecond pulsars with FAST</title>
+      <link>https://arxiv.org/abs/2611.00004</link>
+      <description>arXiv:2611.00004v1 Announce Type: new
+Abstract: We present fast timing solutions for 50 millisecond pulsars observed with the FAST telescope.</description>
+      <category>astro-ph.HE</category>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:creator>F. Author</dc:creator>
+    </item>
+    <item>
+      <title>Coherent curvature radiation from magnetar magnetospheres as the origin of fast radio bursts</title>
+      <link>https://arxiv.org/abs/2611.00005</link>
+      <description>arXiv:2611.00005v1 Announce Type: cross
+Abstract: We propose a model in which charged bunches in the magnetosphere of a magnetar produce coherent curvature radiation, explaining the downward drift.</description>
+      <category>physics.plasm-ph</category>
+      <category>astro-ph.HE</category>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>cross</arxiv:announce_type>
+      <dc:creator>G. Author and H. Author</dc:creator>
+    </item>
+    <item>
+      <title>A dwarf host galaxy and persistent radio source for a new FRB localized by the CHIME Outriggers</title>
+      <link>https://arxiv.org/abs/2611.00006</link>
+      <description>arXiv:2611.00006v1 Announce Type: new
+Abstract: We identify the host galaxy of FRB 20250316A, a low-metallicity dwarf galaxy, with spectroscopic redshift 0.05.</description>
+      <category>astro-ph.GA</category>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:creator>I. Author</dc:creator>
+    </item>
+    <item>
+      <title>A deep learning classifier for real-time single-pulse search and RFI mitigation</title>
+      <link>https://arxiv.org/abs/2611.00007</link>
+      <description>arXiv:2611.00007v1 Announce Type: new
+Abstract: We train a neural network to separate FRB candidates from radio frequency interference in a GPU search pipeline.</description>
+      <category>astro-ph.IM</category>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0500</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:creator>J. Author</dc:creator>
+    </item>
+  </channel>
+</rss>

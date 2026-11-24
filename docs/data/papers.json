@@ -1,0 +1,66 @@
+{
+ "updated": "2026-11-24T08:53:36+00:00",
+ "papers": [],
+ "subfields": [
+  {
+   "id": "survey",
+   "name": "Surveys & Discoveries",
+   "name_ja": "観測・発見・サーベイ"
+  },
+  {
+   "id": "repeater",
+   "name": "Repeaters & Activity",
+   "name_ja": "リピーター・活動統計"
+  },
+  {
+   "id": "host",
+   "name": "Hosts & Environments",
+   "name_ja": "母銀河・局所環境"
+  },
+  {
+   "id": "polarization",
+   "name": "Polarization & Magnetic Fields",
+   "name_ja": "偏波・RM・磁場"
+  },
+  {
+   "id": "propagation",
+   "name": "Propagation: Scattering & Lensing",
+   "name_ja": "伝播効果:散乱・レンズ"
+  },
+  {
+   "id": "cosmology",
+   "name": "Cosmology & Baryons",
+   "name_ja": "宇宙論・DM・バリオン"
+  },
+  {
+   "id": "emission",
+   "name": "Emission Mechanisms",
+   "name_ja": "放射機構・理論"
+  },
+  {
+   "id": "progenitor",
+   "name": "Progenitors: Magnetars & Compact Objects",
+   "name_ja": "起源天体:マグネター・コンパクト天体"
+  },
+  {
+   "id": "multiwavelength",
+   "name": "Multi-wavelength & Multi-messenger",
+   "name_ja": "多波長・マルチメッセンジャー"
+  },
+  {
+   "id": "population",
+   "name": "Populations & Rates",
+   "name_ja": "母集団・発生率"
+  },
+  {
+   "id": "methods",
+   "name": "Instruments & Methods",
+   "name_ja": "装置・手法・機械学習"
+  },
+  {
+   "id": "other",
+   "name": "Other",
+   "name_ja": "その他"
+  }
+ ]
+}

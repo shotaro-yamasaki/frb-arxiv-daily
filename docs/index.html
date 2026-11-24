@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FRB arXiv Daily</title>
+<meta name="description" content="New fast radio burst papers on arXiv, every day, sorted by subfield.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06070b; --bg2:#0b0d14; --panel:#10131c; --panel2:#151927; --line:#1f2435; --line2:#2a3047;
+  --ink:#e8ebf4; --muted:#8a91a8; --dim:#5a6178;
+  --hot:#ff6a3d; --hot2:#ffb547; --cool:#5ad1ff;
+  --display:"Space Grotesk","Noto Sans JP",system-ui,sans-serif;
+  --body:"Inter","Noto Sans JP",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+html[lang=ja] body{font-family:"Noto Sans JP","Inter",system-ui,sans-serif}
+a{color:inherit}
+button{font:inherit;color:inherit}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:300px;overflow:hidden;border-bottom:1px solid var(--line)}
+#sky{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,var(--bg) 0%,rgba(6,7,11,.85) 38%,rgba(6,7,11,.15) 75%,rgba(6,7,11,.4) 100%),
+             linear-gradient(0deg,var(--bg) 0%,transparent 40%)}
+.hero-in{position:relative;z-index:2;max-width:1240px;height:100%;margin:0 auto;padding:28px 28px 30px;
+  display:flex;flex-direction:column;justify-content:flex-end}
+.top{position:absolute;top:22px;left:28px;right:28px;display:flex;justify-content:space-between;align-items:center}
+.eyebrow{font:500 11.5px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
+.live{width:8px;height:8px;border-radius:50%;background:var(--hot);box-shadow:0 0 12px var(--hot);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.lang{display:flex;border:1px solid var(--line2);border-radius:999px;padding:3px;background:rgba(16,19,28,.7);backdrop-filter:blur(6px)}
+.lang button{white-space:nowrap;border:0;background:none;padding:4px 12px;border-radius:999px;font:500 12px var(--mono);color:var(--muted);cursor:pointer}
+.lang button.on{background:var(--ink);color:var(--bg)}
+h1{font:700 clamp(38px,6vw,64px)/1 var(--display);letter-spacing:-.03em;margin:0}
+h1 .f{background:linear-gradient(95deg,var(--hot) 0%,var(--hot2) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--muted);margin:12px 0 0;font-size:15.5px;max-width:560px}
+.stats{display:flex;gap:34px;margin-top:22px;flex-wrap:wrap}
+.stat b{display:block;font:600 26px/1.1 var(--display);letter-spacing:-.02em}
+.stat span{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.stat.hot b{color:var(--hot2)}
+
+/* ---------- toolbar ---------- */
+.bar{position:sticky;top:0;z-index:20;background:rgba(6,7,11,.82);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.seg{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:3px}
+.seg button{border:0;background:none;padding:6px 12px;border-radius:7px;font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.seg button:hover{color:var(--ink)}
+.seg button.on{background:var(--panel2);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line2)}
+.search{flex:1;min-width:200px;position:relative}
+.search input{width:100%;font:inherit;font-size:14px;padding:8px 12px 8px 34px;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;color:var(--ink);outline:none}
+.search input:focus{border-color:var(--line2);box-shadow:0 0 0 3px rgba(255,106,61,.15)}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--dim)}
+.tog{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:7px 12px;font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tog.on{color:var(--hot2);border-color:rgba(255,181,71,.4);background:rgba(255,181,71,.08)}
+
+/* ---------- layout ---------- */
+.wrap{max-width:1240px;margin:0 auto;padding:28px;display:grid;grid-template-columns:270px 1fr;gap:36px}
+main,aside{min-width:0}
+aside{position:sticky;top:78px;align-self:start;max-height:calc(100vh - 100px);overflow:auto}
+.side-h{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin:0 0 10px 10px}
+.fl{list-style:none;margin:0;padding:0}
+.fl button{width:100%;display:grid;grid-template-columns:10px 1fr auto;gap:10px;align-items:center;text-align:left;
+  border:0;background:none;padding:8px 10px;border-radius:9px;cursor:pointer;font-size:13.5px;color:var(--ink);position:relative}
+.fl button:hover{background:var(--panel)}
+.fl button.on{background:var(--panel2);box-shadow:inset 0 0 0 1px var(--line2)}
+.fl button:disabled{opacity:.32;cursor:default}
+.fl button:disabled:hover{background:none}
+.dot{width:10px;height:10px;border-radius:3px;background:var(--c);box-shadow:0 0 10px color-mix(in srgb,var(--c) 60%,transparent)}
+.fl .n{font:500 12px var(--mono);color:var(--muted)}
+.fl .meter{position:absolute;left:30px;right:10px;bottom:3px;height:2px;border-radius:2px;background:var(--line)}
+.fl .meter i{display:block;height:100%;border-radius:2px;background:var(--c);opacity:.7}
+
+/* ---------- feed ---------- */
+.day{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--hot2);margin:38px 0 -8px;display:flex;align-items:center;gap:12px}
+.day::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255,181,71,.4),transparent)}
+.day:first-child{margin-top:0}
+section{margin-bottom:34px}
+section h2{font:600 19px/1.3 var(--display);letter-spacing:-.01em;margin:26px 0 14px;display:flex;align-items:center;gap:12px}
+section h2 .dot{width:12px;height:12px}
+section h2 .n{font:500 12px var(--mono);color:var(--muted);margin-left:auto;border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.feed>section:first-child h2,.day+section h2{margin-top:6px}
+
+.card{position:relative;background:linear-gradient(180deg,var(--panel) 0%,var(--bg2) 100%);border:1px solid var(--line);
+  border-radius:14px;padding:18px 20px 16px 22px;margin:12px 0;transition:border-color .2s,transform .2s;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c)}
+.card:hover{border-color:var(--line2)}
+.card.read{opacity:.5}
+.card.read:hover{opacity:.85}
+.card.watch{border-color:rgba(255,181,71,.35);box-shadow:0 0 0 1px rgba(255,181,71,.08),0 10px 30px -18px rgba(255,140,60,.5)}
+.head{display:flex;gap:14px;align-items:flex-start}
+.title{flex:1;font:600 17px/1.4 var(--display);letter-spacing:-.005em;margin:0}
+.title a{text-decoration:none}
+.title a:hover{color:var(--hot2)}
+.acts{display:flex;gap:2px;flex-shrink:0;margin-top:-2px}
+.ic{border:0;background:none;width:32px;height:32px;border-radius:8px;cursor:pointer;color:var(--dim);display:grid;place-items:center}
+.ic:hover{background:var(--panel2);color:var(--ink)}
+.ic.on{color:var(--hot2)}
+.authors{color:var(--muted);font-size:13.5px;margin-top:5px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:10px;font:12px var(--mono);color:var(--dim)}
+.meta .id{color:var(--muted)}
+.chip{font:500 11.5px var(--body);padding:2px 9px;border-radius:999px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);
+  background:color-mix(in srgb,var(--c) 9%,transparent)}
+html[lang=ja] .chip{font-family:"Noto Sans JP",sans-serif}
+.chip.x{--c:#8a91a8}
+.chip.w{--c:var(--hot2)}
+.sum{margin:12px 0 0;font-size:14.5px;color:#cfd4e3;padding-left:12px;border-left:2px solid var(--line2)}
+details{margin-top:12px}
+summary{cursor:pointer;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);list-style:none;display:inline-flex;align-items:center;gap:6px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";display:inline-grid;place-items:center;width:16px;height:16px;border:1px solid var(--line2);border-radius:4px;font-size:11px}
+details[open] summary::before{content:"−"}
+summary:hover{color:var(--ink)}
+.abs{font-size:14px;color:#c3c8d6;margin:10px 0 0;line-height:1.7}
+.links{display:flex;gap:8px;margin-top:14px}
+.links a{font:500 12px var(--mono);text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:7px;padding:4px 10px}
+.links a:hover{color:var(--ink);border-color:var(--line2);background:var(--panel2)}
+.links a.pdf{color:var(--hot2);border-color:rgba(255,181,71,.3)}
+mark{background:rgba(255,181,71,.18);color:var(--hot2);border-radius:3px;padding:0 2px}
+.empty{text-align:center;color:var(--muted);padding:80px 20px;border:1px dashed var(--line2);border-radius:14px}
+.empty b{display:block;font:600 18px var(--display);color:var(--ink);margin-bottom:6px}
+footer{max-width:1240px;margin:0 auto;padding:20px 28px 50px;color:var(--dim);font:12px var(--mono);border-top:1px solid var(--line)}
+footer a{color:var(--muted)}
+
+@media (max-width:900px){
+  .wrap{grid-template-columns:1fr;gap:18px;padding:18px}
+  aside{position:static;max-height:none;overflow:visible}
+  .side-h{display:none}
+  .fl{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}
+  .fl button{grid-template-columns:8px auto auto;white-space:nowrap;border:1px solid var(--line);padding:6px 10px}
+  .fl .meter{display:none}
+  .hero{height:auto}
+  .hero-in{padding-top:76px;padding-bottom:24px}
+  .eyebrow{letter-spacing:.1em;font-size:10.5px}
+  .tagline{font-size:14px}
+  .stats{gap:10px 24px}
+  .stat b{font-size:22px}
+  .stat.upd{flex-basis:100%}
+  .stat.upd b{font-size:15px!important}
+  .search{flex-basis:100%;order:-1}
+  .card{padding:16px 16px 14px 18px}
+  .title{font-size:16px}
+  .acts .ic{width:28px;height:28px}
+  .bar-in,.hero-in{padding-left:18px;padding-right:18px}
+  .top{left:18px;right:18px}
+  .stats{gap:22px}
+}
+@media (prefers-reduced-motion:reduce){.live{animation:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <div class="top">
+      <div class="eyebrow"><span class="live"></span><span data-i="eyebrow"></span></div>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="en">EN</button><button data-lang="ja">日本語</button>
+      </div>
+    </div>
+    <h1><span class="f">FRB</span> arXiv Daily</h1>
+    <p class="tagline" data-i="tagline"></p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<div class="bar"><div class="bar-in">
+  <div class="seg" id="range">
+    <button data-v="latest" data-i="latest"></button><button data-v="7" data-i="d7"></button>
+    <button data-v="30" data-i="d30"></button><button data-v="all" data-i="all"></button>
+  </div>
+  <div class="seg" id="group">
+    <button data-v="field" data-i="byField"></button><button data-v="day" data-i="byDay"></button>
+  </div>
+  <label class="search">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input type="search" id="q">
+  </label>
+  <button class="tog" id="unread" data-i="unread"></button>
+  <button class="tog" id="starred" data-i="starred"></button>
+</div></div>
+
+<div class="wrap">
+  <aside>
+    <p class="side-h" data-i="subfields"></p>
+    <ul class="fl" id="fields"></ul>
+  </aside>
+  <main class="feed" id="feed"></main>
+</div>
+<footer id="foot"></footer>
+
+<script>
+/* ================= i18n ================= */
+const I18N = {
+  en: {
+    eyebrow: "Daily arXiv monitor · astro-ph", tagline: "Every new fast radio burst paper on arXiv, sorted by subfield each morning.",
+    latest: "Latest", d7: "7 days", d30: "30 days", all: "All", byField: "By field", byDay: "By day",
+    search: "Search titles, authors, abstracts…", unread: "Unread", starred: "★ Starred",
+    subfields: "Subfields", allFields: "All subfields", today: "Latest day", week: "Past 7 days", total: "Total",
+    updated: "Updated", papers: n => n === 1 ? "1 paper" : `${n} papers`, abstract: "Abstract",
+    more: n => `+${n} more`, cross: "cross-list", star: "Star", read: "Mark as read",
+    emptyT: "No papers here", emptyD: "Try a longer time range or clear the filters.",
+    foot: "Data from arXiv. Classification is automatic and may be imperfect.", loadErr: "Could not load data/papers.json",
+  },
+  ja: {
+    eyebrow: "arXiv デイリーモニター · astro-ph", tagline: "arXiv に出た FRB の新着論文を、毎朝サブ分野ごとにまとめて表示します。",
+    latest: "最新日", d7: "7日間", d30: "30日間", all: "すべて", byField: "分野ごと", byDay: "日付ごと",
+    search: "タイトル・著者・アブストを検索…", unread: "未読のみ", starred: "★ のみ",
+    subfields: "サブ分野", allFields: "すべての分野", today: "最新日", week: "過去7日", total: "累計",
+    updated: "最終更新", papers: n => `${n}本`, abstract: "アブストラクト",
+    more: n => `ほか${n}名`, cross: "クロスリスト", star: "★を付ける", read: "既読にする",
+    emptyT: "該当する論文はありません", emptyD: "期間を広げるか、絞り込みを解除してください。",
+    foot: "データは arXiv より。分類は自動で行っているため、誤りを含むことがあります。", loadErr: "data/papers.json を読み込めませんでした",
+  },
+};
+const COLORS = {
+  survey:"#5ad1ff", repeater:"#ff6a3d", host:"#7ee081", polarization:"#c792ff", propagation:"#4fe3c1",
+  cosmology:"#6d8bff", emission:"#ffb547", progenitor:"#ff5d8f", multiwavelength:"#f2e36b",
+  population:"#ff9f6b", methods:"#9fb3c8", other:"#6b7287",
+};
+
+/* ================= state ================= */
+const LS = "frb-arxiv-daily:v1";
+let store = {}; try { store = JSON.parse(localStorage.getItem(LS) || "{}"); } catch (e) {}
+store.read ||= {}; store.star ||= {};
+store.lang ||= (navigator.language || "").startsWith("ja") ? "ja" : "en";
+const st = { range: "latest", group: "field", unread: false, starred: false, field: null, q: "" };
+const save = () => { try { localStorage.setItem(LS, JSON.stringify(store)); } catch (e) {} };
+let DB = null;
+const $ = id => document.getElementById(id);
+const t = k => I18N[store.lang][k];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fname = s => store.lang === "ja" ? (s.name_ja || s.name) : s.name;
+
+const ICON = {
+  star: on => `<svg width="17" height="17" viewBox="0 0 24 24" fill="${on ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8 6.6 19.7l1.1-6.1L3.2 9.4l6.1-.8z"/></svg>`,
+  read: on => on
+    ? `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>`
+    : `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/></svg>`,
+};
+
+function highlight(text, words) {
+  let h = esc(text);
+  for (const w of words) {
+    const re = new RegExp("(" + esc(w).replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "g");
+    h = h.replace(re, "<mark>$1</mark>");
+  }
+  return h;
+}
+const allDates = () => [...new Set(DB.papers.map(p => p.date))].sort().reverse();
+function inRange(p, dates, r) {
+  if (r === "all") return true;
+  if (r === "latest") return p.date === dates[0];
+  const cut = new Date(dates[0]); cut.setDate(cut.getDate() - (+r) + 1);
+  return new Date(p.date) >= cut;
+}
+function fmtDate(d, opts = { year: "numeric", month: "short", day: "numeric", weekday: "short" }) {
+  return new Date(d + "T12:00:00").toLocaleDateString(store.lang === "ja" ? "ja-JP" : "en-US", opts);
+}
+
+/* ================= render ================= */
+function applyLang() {
+  document.documentElement.lang = store.lang;
+  document.querySelectorAll("[data-i]").forEach(el => el.textContent = t(el.dataset.i));
+  $("q").placeholder = t("search");
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === store.lang));
+  $("foot").innerHTML = `${esc(t("foot"))} · <a href="https://arxiv.org" target="_blank" rel="noopener">arxiv.org</a>`;
+}
+
+function renderStats() {
+  if (!DB) return;
+  const d = allDates();
+  const latest = DB.papers.filter(p => p.date === d[0]).length;
+  const week = DB.papers.filter(p => d.length && inRange(p, d, "7")).length;
+  const upd = DB.updated ? new Date(DB.updated).toLocaleString(store.lang === "ja" ? "ja-JP" : "en-US",
+    { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" }) : "—";
+  $("stats").innerHTML = `
+    <div class="stat hot"><b>${latest}</b><span>${esc(t("today"))}${d[0] ? " · " + esc(fmtDate(d[0], {month:"short",day:"numeric"})) : ""}</span></div>
+    <div class="stat"><b>${week}</b><span>${esc(t("week"))}</span></div>
+    <div class="stat"><b>${DB.papers.length.toLocaleString()}</b><span>${esc(t("total"))}</span></div>
+    <div class="stat upd"><b style="font-size:18px;line-height:1.55">${esc(upd)}</b><span>${esc(t("updated"))}</span></div>`;
+}
+
+function card(p, names) {
+  const max = 8, au = p.authors.length > max
+    ? esc(p.authors.slice(0, max).join(", ")) + " " + esc(t("more")(p.authors.length - max)) : esc(p.authors.join(", "));
+  const watch = p.watch || [];
+  const others = (p.tags || []).filter(x => x !== p.primary);
+  const sum = store.lang === "ja" ? (p.summary_ja || p.summary_en) : (p.summary_en || p.summary_ja);
+  const id = esc(p.id);
+  return `<article class="card ${store.read[p.id] ? "read" : ""} ${watch.length ? "watch" : ""}" style="--c:${COLORS[p.primary] || COLORS.other}" data-id="${id}">
+    <div class="head">
+      <h3 class="title"><a href="https://arxiv.org/abs/${id}" target="_blank" rel="noopener">${highlight(p.title, watch)}</a></h3>
+      <div class="acts">
+        <button class="ic star ${store.star[p.id] ? "on" : ""}" title="${esc(t("star"))}">${ICON.star(store.star[p.id])}</button>
+        <button class="ic readb ${store.read[p.id] ? "on" : ""}" title="${esc(t("read"))}">${ICON.read(store.read[p.id])}</button>
+      </div>
+    </div>
+    <div class="authors">${au}</div>
+    <div class="meta">
+      <span class="id">arXiv:${id}</span><span>${esc(p.primary_category)}</span><span>${esc(fmtDate(p.date, {month:"short",day:"numeric"}))}</span>
+      ${p.announce_type === "cross" ? `<span class="chip x">${esc(t("cross"))}</span>` : ""}
+      ${others.map(x => `<span class="chip" style="--c:${COLORS[x] || COLORS.other}">${esc(names[x] || x)}</span>`).join("")}
+      ${watch.map(w => `<span class="chip w">${esc(w)}</span>`).join("")}
+    </div>
+    ${sum ? `<p class="sum">${esc(sum)}</p>` : ""}
+    <details><summary>${esc(t("abstract"))}</summary><p class="abs">${highlight(p.abstract, watch)}</p></details>
+    <div class="links">
+      <a class="pdf" href="https://arxiv.org/pdf/${id}" target="_blank" rel="noopener">PDF</a>
+      <a href="https://arxiv.org/html/${id}" target="_blank" rel="noopener">HTML</a>
+      <a href="https://ui.adsabs.harvard.edu/abs/arXiv:${id}" target="_blank" rel="noopener">ADS</a>
+    </div>
+  </article>`;
+}
+
+function sections(list, order, names) {
+  return order.map(f => {
+    const ps = list.filter(p => p.primary === f);
+    if (!ps.length) return "";
+    return `<section><h2><span class="dot" style="--c:${COLORS[f]}"></span>${esc(names[f])}<span class="n">${esc(t("papers")(ps.length))}</span></h2>
+      ${ps.map(p => card(p, names)).join("")}</section>`;
+  }).join("");
+}
+
+function render() {
+  if (!DB) return;
+  const names = Object.fromEntries(DB.subfields.map(s => [s.id, fname(s)]));
+  const order = DB.subfields.map(s => s.id);
+  const dates = allDates(), q = st.q.trim().toLowerCase();
+  const base = DB.papers.filter(p =>
+    inRange(p, dates, st.range) && (!st.unread || !store.read[p.id]) && (!st.starred || store.star[p.id]) &&
+    (!q || (p.title + " " + p.authors.join(" ") + " " + p.abstract + " " + p.id).toLowerCase().includes(q)));
+  const counts = {}; base.forEach(p => counts[p.primary] = (counts[p.primary] || 0) + 1);
+  if (st.field && !counts[st.field]) st.field = null;
+  const mx = Math.max(1, ...Object.values(counts));
+
+  $("fields").innerHTML =
+    `<li><button class="${st.field ? "" : "on"}" data-f="" style="--c:var(--ink)"><span class="dot" style="--c:#e8ebf4;box-shadow:none"></span><span>${esc(t("allFields"))}</span><span class="n">${base.length}</span></button></li>` +
+    order.map(f => `<li><button class="${st.field === f ? "on" : ""}" data-f="${f}" style="--c:${COLORS[f]}" ${counts[f] ? "" : "disabled"}>
+      <span class="dot"></span><span>${esc(names[f])}</span><span class="n">${counts[f] || 0}</span>
+      <span class="meter"><i style="width:${100 * (counts[f] || 0) / mx}%"></i></span></button></li>`).join("");
+
+  const list = st.field ? base.filter(p => p.primary === st.field) : base;
+  let html;
+  if (!list.length) html = `<div class="empty"><b>${esc(t("emptyT"))}</b>${esc(t("emptyD"))}</div>`;
+  else if (st.group === "day") {
+    html = [...new Set(list.map(p => p.date))].sort().reverse()
+      .map(d => `<div class="day">${esc(fmtDate(d))}</div>` + sections(list.filter(p => p.date === d), order, names)).join("");
+  } else html = sections(list, order, names);
+  $("feed").innerHTML = html;
+
+  document.querySelectorAll("#range button").forEach(b => b.classList.toggle("on", b.dataset.v === st.range));
+  document.querySelectorAll("#group button").forEach(b => b.classList.toggle("on", b.dataset.v === st.group));
+  $("unread").classList.toggle("on", st.unread);
+  $("starred").classList.toggle("on", st.starred);
+}
+
+/* ================= events ================= */
+$("range").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { st.range = b.dataset.v; render(); } });
+$("group").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { st.group = b.dataset.v; render(); } });
+$("unread").addEventListener("click", () => { st.unread = !st.unread; render(); });
+$("starred").addEventListener("click", () => { st.starred = !st.starred; render(); });
+$("q").addEventListener("input", e => { st.q = e.target.value; render(); });
+$("fields").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b || b.disabled) return;
+  st.field = b.dataset.f || null; render(); window.scrollTo({ top: $("feed").offsetTop - 140, behavior: "smooth" });
+});
+$("feed").addEventListener("click", e => {
+  const c = e.target.closest(".card"); if (!c) return;
+  const id = c.dataset.id;
+  if (e.target.closest(".star")) { store.star[id] ? delete store.star[id] : store.star[id] = 1; save(); render(); }
+  else if (e.target.closest(".readb")) { store.read[id] ? delete store.read[id] : store.read[id] = 1; save(); render(); }
+  else if (e.target.closest(".title a, .links a")) { store.read[id] = 1; save(); setTimeout(render, 400); }
+});
+document.querySelector(".lang").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  store.lang = b.dataset.lang; save(); applyLang(); renderStats(); render();
+});
+
+/* ================= hero: dispersed bursts on a waterfall ================= */
+(function sky() {
+  const cv = $("sky"), ctx = cv.getContext("2d");
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let W, H, dpr, bursts = [], noise;
+  const fHi = 1.0, fLo = 0.4; // relative frequency band (top = high)
+  function resize() {
+    dpr = Math.min(2, devicePixelRatio || 1);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    noise = document.createElement("canvas"); noise.width = W; noise.height = H;
+    const n = noise.getContext("2d"), img = n.createImageData(W, H);
+    for (let i = 0; i < img.data.length; i += 4) {
+      const v = Math.random() * 22; img.data[i] = v * .6; img.data[i + 1] = v * .75; img.data[i + 2] = v * 1.3; img.data[i + 3] = 255;
+    }
+    n.putImageData(img, 0, 0);
+    for (let y = 0; y < H; y += 7) { n.fillStyle = "rgba(255,255,255,0.012)"; n.fillRect(0, y, W, 1); }
+  }
+  function spawn(x) {
+    const dm = 0.15 + Math.random() * 0.55;
+    return { x: x ?? W + Math.random() * W * .4, dm, w: 1.5 + Math.random() * 3.5, a: .45 + Math.random() * .55,
+             hue: Math.random() < .75 ? [255, 120 + Math.random() * 80, 60] : [90, 210, 255], band: Math.random() < .3 };
+  }
+  function delay(f, dm) { return dm * W * 0.9 * (1 / (f * f) - 1 / (fHi * fHi)) / (1 / (fLo * fLo) - 1); }
+  function draw() {
+    ctx.globalCompositeOperation = "source-over";
+    ctx.drawImage(noise, 0, 0, W, H);
+    ctx.globalCompositeOperation = "lighter";
+    for (const b of bursts) {
+      const steps = 90;
+      const top = b.band ? H * .2 : 0, bot = b.band ? H * .65 : H;
+      for (let i = 0; i < steps; i++) {
+        const fr = i / steps, y = top + fr * (bot - top), f = fHi - (y / H) * (fHi - fLo);
+        const x = b.x + delay(f, b.dm);
+        if (x < -40 || x > W + 40) continue;
+        const scint = .55 + .45 * Math.sin(i * .9 + b.dm * 40) * Math.sin(i * .23 + b.x * .01);
+        const edge = b.band ? Math.sin(fr * Math.PI) : 1;
+        const al = b.a * Math.max(.15, scint) * edge;
+        const [r, g, bl] = b.hue;
+        const grd = ctx.createRadialGradient(x, y, 0, x, y, b.w * 6);
+        grd.addColorStop(0, `rgba(${r},${g},${bl},${al})`); grd.addColorStop(1, `rgba(${r},${g},${bl},0)`);
+        ctx.fillStyle = grd; ctx.fillRect(x - b.w * 6, y - (bot - top) / steps * 1.2, b.w * 12, (bot - top) / steps * 2.4);
+      }
+    }
+  }
+  function tick() {
+    for (const b of bursts) b.x -= 0.6;
+    bursts = bursts.filter(b => b.x + b.dm * W > -60);
+    while (bursts.length < 5) bursts.push(spawn());
+    draw(); requestAnimationFrame(tick);
+  }
+  resize(); addEventListener("resize", () => { resize(); if (still) draw(); });
+  for (let i = 0; i < 5; i++) bursts.push(spawn(W * (.15 + i * .22)));
+  still ? draw() : tick();
+})();
+
+/* ================= boot ================= */
+applyLang();
+fetch("data/papers.json?" + Date.now()).then(r => r.json()).then(db => { DB = db; renderStats(); render(); })
+  .catch(() => { $("feed").innerHTML = `<div class="empty"><b>${esc(t("loadErr"))}</b></div>`; });
+</script>
+</body>
+</html>
