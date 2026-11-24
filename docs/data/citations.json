@@ -1,38 +1,6 @@
 {
  "citations": [
   {
-   "key": "arXiv:2610.31365",
-   "bibcode": "2026arXiv261031365M",
-   "arxiv": "2610.31365",
-   "doi": "10.48550/arXiv.2610.31365",
-   "title": "FRB 20210601A: Extreme Temporal Clustering in a Repeating Fast Radio Burst Source as Evidence for a Hidden Class of Episodic Repeaters",
-   "authors": [
-    "Mckinven, Ryan",
-    "Cook, Amanda M.",
-    "Curtin, Alice P.",
-    "Gaensler, B. M.",
-    "Hessels, Jason W. T.",
-    "Jain, Naman",
-    "Kahinga, Lordrick",
-    "Kaspi, Victoria M.",
-    "Brar, Charanjot",
-    "Cassanelli, Tomas"
-   ],
-   "n_authors": 32,
-   "pub": "arXiv e-prints",
-   "year": "2026",
-   "journal": false,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2024MNRAS.52711158Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-10-23"
-  },
-  {
    "key": "arXiv:2610.31664",
    "bibcode": "2026arXiv261031664B",
    "arxiv": "2610.31664",
@@ -58,6 +26,38 @@
    "self": false,
    "cited": [
     "2024MNRAS.528.3854Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-10-23"
+  },
+  {
+   "key": "arXiv:2610.31365",
+   "bibcode": "2026arXiv261031365M",
+   "arxiv": "2610.31365",
+   "doi": "10.48550/arXiv.2610.31365",
+   "title": "FRB 20210601A: Extreme Temporal Clustering in a Repeating Fast Radio Burst Source as Evidence for a Hidden Class of Episodic Repeaters",
+   "authors": [
+    "Mckinven, Ryan",
+    "Cook, Amanda M.",
+    "Curtin, Alice P.",
+    "Gaensler, B. M.",
+    "Hessels, Jason W. T.",
+    "Jain, Naman",
+    "Kahinga, Lordrick",
+    "Kaspi, Victoria M.",
+    "Brar, Charanjot",
+    "Cassanelli, Tomas"
+   ],
+   "n_authors": 32,
+   "pub": "arXiv e-prints",
+   "year": "2026",
+   "journal": false,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2024MNRAS.52711158Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -388,32 +388,6 @@
    "entry_date": "2026-10-11"
   },
   {
-   "key": "arXiv:2601.21336",
-   "bibcode": "2026PASJ...78.1615S",
-   "arxiv": "2601.21336",
-   "doi": "10.1093/pasj/psag085",
-   "title": "Cross-correlating galaxies and cosmic dispersion measures: Constraints on the gas-to-halo mass relation from 2MASS galaxies and 133 localized fast radio bursts",
-   "authors": [
-    "Shirasaki, Masato",
-    "Takahashi, Ryuichi",
-    "Osato, Ken",
-    "Ioka, Kunihito"
-   ],
-   "n_authors": 4,
-   "pub": "Publications of the Astronomical Society of Japan",
-   "year": "2026",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2020ApJ...888..105Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-10-11"
-  },
-  {
    "key": "arXiv:2604.22105",
    "bibcode": "2026ApJ..1010...47S",
    "arxiv": "2604.22105",
@@ -439,6 +413,32 @@
    "self": false,
    "cited": [
     "2022PASP..134i4106L"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-10-11"
+  },
+  {
+   "key": "arXiv:2601.21336",
+   "bibcode": "2026PASJ...78.1615S",
+   "arxiv": "2601.21336",
+   "doi": "10.1093/pasj/psag085",
+   "title": "Cross-correlating galaxies and cosmic dispersion measures: Constraints on the gas-to-halo mass relation from 2MASS galaxies and 133 localized fast radio bursts",
+   "authors": [
+    "Shirasaki, Masato",
+    "Takahashi, Ryuichi",
+    "Osato, Ken",
+    "Ioka, Kunihito"
+   ],
+   "n_authors": 4,
+   "pub": "Publications of the Astronomical Society of Japan",
+   "year": "2026",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2020ApJ...888..105Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -574,29 +574,6 @@
    "entry_date": "2026-10-09"
   },
   {
-   "key": "arXiv:2508.04040",
-   "bibcode": "2025PhRvD.112k2013A",
-   "arxiv": "2508.04040",
-   "doi": "10.1103/2v9j-ncf4",
-   "title": "Benchmarks and applications of the nuclear deexcitation event generator NucDeEx",
-   "authors": [
-    "Abe, Seisho"
-   ],
-   "n_authors": 1,
-   "pub": "Physical Review D",
-   "year": "2025",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2024NIMPA106569480A"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-10-08"
-  },
-  {
    "key": "arXiv:2508.18110",
    "bibcode": "2025PhRvC.112f4614M",
    "arxiv": "2508.18110",
@@ -616,6 +593,29 @@
    ],
    "n_authors": 267,
    "pub": "Physical Review C",
+   "year": "2025",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2024NIMPA106569480A"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-10-08"
+  },
+  {
+   "key": "arXiv:2508.04040",
+   "bibcode": "2025PhRvD.112k2013A",
+   "arxiv": "2508.04040",
+   "doi": "10.1103/2v9j-ncf4",
+   "title": "Benchmarks and applications of the nuclear deexcitation event generator NucDeEx",
+   "authors": [
+    "Abe, Seisho"
+   ],
+   "n_authors": 1,
+   "pub": "Physical Review D",
    "year": "2025",
    "journal": true,
    "refereed": true,
@@ -907,6 +907,30 @@
    "entry_date": "2026-09-30"
   },
   {
+   "key": "arXiv:2609.36988",
+   "bibcode": "2026arXiv260936988O",
+   "arxiv": "2609.36988",
+   "doi": "10.48550/arXiv.2609.36988",
+   "title": "Detecting Extragalactic Exoplanets With Fast Radio Burst Nanolensing",
+   "authors": [
+    "Olibrice, Kenneth F.",
+    "Jow, Dylan L."
+   ],
+   "n_authors": 2,
+   "pub": "arXiv e-prints",
+   "year": "2026",
+   "journal": false,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2022PASP..134i4106L"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-09-30"
+  },
+  {
    "key": "arXiv:2609.38100",
    "bibcode": "2026arXiv260938100A",
    "arxiv": "2609.38100",
@@ -926,30 +950,6 @@
    "self": false,
    "cited": [
     "2022MNRAS.512.2142Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-09-30"
-  },
-  {
-   "key": "arXiv:2609.36988",
-   "bibcode": "2026arXiv260936988O",
-   "arxiv": "2609.36988",
-   "doi": "10.48550/arXiv.2609.36988",
-   "title": "Detecting Extragalactic Exoplanets With Fast Radio Burst Nanolensing",
-   "authors": [
-    "Olibrice, Kenneth F.",
-    "Jow, Dylan L."
-   ],
-   "n_authors": 2,
-   "pub": "arXiv e-prints",
-   "year": "2026",
-   "journal": false,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2022PASP..134i4106L"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -2412,32 +2412,6 @@
    "entry_date": "2026-06-16"
   },
   {
-   "key": "2026ApJ..1004...69R",
-   "bibcode": "2026ApJ..1004...69R",
-   "arxiv": null,
-   "doi": "10.3847/1538-4357/ae6240",
-   "title": "The First FRB-associated X-Ray Bursting Episode of SGR 1935+2154: Swift-BAT Observations and Multi-instrument Comparisons with Fermi GBM, INTEGRAL/ISGRI, and Insight-HXMT",
-   "authors": [
-    "Rehan, Noor S.",
-    "Ibrahim, Alaa I.",
-    "Al-Ajmi, Mudhahir M."
-   ],
-   "n_authors": 3,
-   "pub": "The Astrophysical Journal",
-   "year": "2026",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2020MNRAS.498..484Y",
-    "2022MNRAS.511.3138Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-06-15"
-  },
-  {
    "key": "arXiv:2603.20663",
    "bibcode": "2026ApJS..284...77W",
    "arxiv": "2603.20663",
@@ -2463,6 +2437,32 @@
    "self": false,
    "cited": [
     "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-06-15"
+  },
+  {
+   "key": "2026ApJ..1004...69R",
+   "bibcode": "2026ApJ..1004...69R",
+   "arxiv": null,
+   "doi": "10.3847/1538-4357/ae6240",
+   "title": "The First FRB-associated X-Ray Bursting Episode of SGR 1935+2154: Swift-BAT Observations and Multi-instrument Comparisons with Fermi GBM, INTEGRAL/ISGRI, and Insight-HXMT",
+   "authors": [
+    "Rehan, Noor S.",
+    "Ibrahim, Alaa I.",
+    "Al-Ajmi, Mudhahir M."
+   ],
+   "n_authors": 3,
+   "pub": "The Astrophysical Journal",
+   "year": "2026",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2020MNRAS.498..484Y",
+    "2022MNRAS.511.3138Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -2649,6 +2649,33 @@
    "entry_date": "2026-05-31"
   },
   {
+   "key": "arXiv:2512.18012",
+   "bibcode": "2026ApJ..1003...24C",
+   "arxiv": "2512.18012",
+   "doi": "10.3847/1538-4357/ae5ba9",
+   "title": "A Shocked Wind Interpretation of an Odd Radio Circle",
+   "authors": [
+    "Coil, Alison L.",
+    "Rupke, David S. N.",
+    "Perrotta, Serena",
+    "Agrawal, Saloni",
+    "Lochhaas, Cassandra"
+   ],
+   "n_authors": 5,
+   "pub": "The Astrophysical Journal",
+   "year": "2026",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2024MNRAS.528.3854Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-05-24"
+  },
+  {
    "key": "2026ApJ..1003L...8X",
    "bibcode": "2026ApJ..1003L...8X",
    "arxiv": null,
@@ -2674,33 +2701,6 @@
    "self": false,
    "cited": [
     "2025ApJ...983L..16Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-05-24"
-  },
-  {
-   "key": "arXiv:2512.18012",
-   "bibcode": "2026ApJ..1003...24C",
-   "arxiv": "2512.18012",
-   "doi": "10.3847/1538-4357/ae5ba9",
-   "title": "A Shocked Wind Interpretation of an Odd Radio Circle",
-   "authors": [
-    "Coil, Alison L.",
-    "Rupke, David S. N.",
-    "Perrotta, Serena",
-    "Agrawal, Saloni",
-    "Lochhaas, Cassandra"
-   ],
-   "n_authors": 5,
-   "pub": "The Astrophysical Journal",
-   "year": "2026",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2024MNRAS.528.3854Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -2916,6 +2916,30 @@
    "entry_date": "2026-05-03"
   },
   {
+   "key": "arXiv:2602.11838",
+   "bibcode": "2026ApJ..1002....3O",
+   "arxiv": "2602.11838",
+   "doi": "10.3847/1538-4357/ae5825",
+   "title": "NE2025: An Updated Electron Density Model for the Galactic Interstellar Medium",
+   "authors": [
+    "Ocker, Stella Koch",
+    "Cordes, James M."
+   ],
+   "n_authors": 2,
+   "pub": "The Astrophysical Journal",
+   "year": "2026",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-04-26"
+  },
+  {
    "key": "arXiv:2601.20143",
    "bibcode": "2026MNRAS.548ag665K",
    "arxiv": "2601.20143",
@@ -2935,30 +2959,6 @@
    ],
    "n_authors": 26,
    "pub": "Monthly Notices of the Royal Astronomical Society",
-   "year": "2026",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2020ApJ...888..105Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-04-26"
-  },
-  {
-   "key": "arXiv:2602.11838",
-   "bibcode": "2026ApJ..1002....3O",
-   "arxiv": "2602.11838",
-   "doi": "10.3847/1538-4357/ae5825",
-   "title": "NE2025: An Updated Electron Density Model for the Galactic Interstellar Medium",
-   "authors": [
-    "Ocker, Stella Koch",
-    "Cordes, James M."
-   ],
-   "n_authors": 2,
-   "pub": "The Astrophysical Journal",
    "year": "2026",
    "journal": true,
    "refereed": true,
@@ -3322,34 +3322,6 @@
    "entry_date": "2026-03-08"
   },
   {
-   "key": "arXiv:2511.16850",
-   "bibcode": "2026ApJ...999..202S",
-   "arxiv": "2511.16850",
-   "doi": "10.3847/1538-4357/ae4696",
-   "title": "Quantifying the Impact of Selection Effects on FRB DM─z Relation Cosmological Inference",
-   "authors": [
-    "Sharma, Kritti",
-    "Ravi, Vikram",
-    "Connor, Liam",
-    "Krause, Elisabeth",
-    "R. S., Pranjal",
-    "Anbajagane, Dhayaa"
-   ],
-   "n_authors": 6,
-   "pub": "The Astrophysical Journal",
-   "year": "2026",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2020ApJ...888..105Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-03-08"
-  },
-  {
    "key": "arXiv:2510.24075",
    "bibcode": "2026ApJ...999..159X",
    "arxiv": "2510.24075",
@@ -3375,6 +3347,34 @@
    "self": false,
    "cited": [
     "2022MNRAS.511.3138Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-03-08"
+  },
+  {
+   "key": "arXiv:2511.16850",
+   "bibcode": "2026ApJ...999..202S",
+   "arxiv": "2511.16850",
+   "doi": "10.3847/1538-4357/ae4696",
+   "title": "Quantifying the Impact of Selection Effects on FRB DM─z Relation Cosmological Inference",
+   "authors": [
+    "Sharma, Kritti",
+    "Ravi, Vikram",
+    "Connor, Liam",
+    "Krause, Elisabeth",
+    "R. S., Pranjal",
+    "Anbajagane, Dhayaa"
+   ],
+   "n_authors": 6,
+   "pub": "The Astrophysical Journal",
+   "year": "2026",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2020ApJ...888..105Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -3637,33 +3637,6 @@
    "entry_date": "2026-02-08"
   },
   {
-   "key": "arXiv:2601.11122",
-   "bibcode": "2026ApJ...998..127L",
-   "arxiv": "2601.11122",
-   "doi": "10.3847/1538-4357/ae3a7e",
-   "title": "The Role of Plasma Lensing in Fast Radio Bursts",
-   "authors": [
-    "Li, Rui-Nan",
-    "Wang, Yu-Bin",
-    "Yi, Shuang-Xi",
-    "Zhou, Xia",
-    "Wang, Fa-Yin"
-   ],
-   "n_authors": 5,
-   "pub": "The Astrophysical Journal",
-   "year": "2026",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2025ApJ...983L..16Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-02-08"
-  },
-  {
    "key": "arXiv:2601.14065",
    "bibcode": "2026PASP..138b4101H",
    "arxiv": "2601.14065",
@@ -3684,6 +3657,33 @@
    "self": false,
    "cited": [
     "2024MNRAS.52711158Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-02-08"
+  },
+  {
+   "key": "arXiv:2601.11122",
+   "bibcode": "2026ApJ...998..127L",
+   "arxiv": "2601.11122",
+   "doi": "10.3847/1538-4357/ae3a7e",
+   "title": "The Role of Plasma Lensing in Fast Radio Bursts",
+   "authors": [
+    "Li, Rui-Nan",
+    "Wang, Yu-Bin",
+    "Yi, Shuang-Xi",
+    "Zhou, Xia",
+    "Wang, Fa-Yin"
+   ],
+   "n_authors": 5,
+   "pub": "The Astrophysical Journal",
+   "year": "2026",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2025ApJ...983L..16Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -3952,26 +3952,31 @@
    "entry_date": "2026-01-21"
   },
   {
-   "key": "arXiv:2508.07688",
-   "bibcode": "2026ApJ...997L...6Y",
-   "arxiv": "2508.07688",
-   "doi": "10.3847/2041-8213/ae2d19",
-   "title": "No Metallicity Preference in Fast Radio Burst Host Galaxies",
+   "key": "arXiv:2509.05174",
+   "bibcode": "2026ApJ...996L..16M",
+   "arxiv": "2509.05174",
+   "doi": "10.3847/2041-8213/ae28c7",
+   "title": "A Milliarcsecond Localization Associates FRB 20190417A with a Compact Persistent Radio Source and an Extreme Magnetoionic Environment",
    "authors": [
-    "Yamasaki, Shotaro",
-    "Hashimoto, Tetsuya",
-    "Kusakabe, Haruka",
-    "Goto, Tomotsugu"
+    "Moroianu, Alexandra M.",
+    "Bhandari, Shivani",
+    "Drout, Maria R.",
+    "Hessels, Jason W. T.",
+    "Hewitt, Danté M.",
+    "Kirsten, Franz",
+    "Marcote, Benito",
+    "Pleunis, Ziggy",
+    "Snelders, Mark P.",
+    "Sridhar, Navin"
    ],
-   "n_authors": 4,
+   "n_authors": 41,
    "pub": "The Astrophysical Journal Letters",
    "year": "2026",
    "journal": true,
    "refereed": true,
-   "self": true,
+   "self": false,
    "cited": [
-    "2018PASJ...70...39Y",
-    "2024MNRAS.52711158Y"
+    "2026ApJ...997L...6Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -4011,31 +4016,26 @@
    "entry_date": "2026-01-18"
   },
   {
-   "key": "arXiv:2509.05174",
-   "bibcode": "2026ApJ...996L..16M",
-   "arxiv": "2509.05174",
-   "doi": "10.3847/2041-8213/ae28c7",
-   "title": "A Milliarcsecond Localization Associates FRB 20190417A with a Compact Persistent Radio Source and an Extreme Magnetoionic Environment",
+   "key": "arXiv:2508.07688",
+   "bibcode": "2026ApJ...997L...6Y",
+   "arxiv": "2508.07688",
+   "doi": "10.3847/2041-8213/ae2d19",
+   "title": "No Metallicity Preference in Fast Radio Burst Host Galaxies",
    "authors": [
-    "Moroianu, Alexandra M.",
-    "Bhandari, Shivani",
-    "Drout, Maria R.",
-    "Hessels, Jason W. T.",
-    "Hewitt, Danté M.",
-    "Kirsten, Franz",
-    "Marcote, Benito",
-    "Pleunis, Ziggy",
-    "Snelders, Mark P.",
-    "Sridhar, Navin"
+    "Yamasaki, Shotaro",
+    "Hashimoto, Tetsuya",
+    "Kusakabe, Haruka",
+    "Goto, Tomotsugu"
    ],
-   "n_authors": 41,
+   "n_authors": 4,
    "pub": "The Astrophysical Journal Letters",
    "year": "2026",
    "journal": true,
    "refereed": true,
-   "self": false,
+   "self": true,
    "cited": [
-    "2026ApJ...997L...6Y"
+    "2018PASJ...70...39Y",
+    "2024MNRAS.52711158Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -4102,31 +4102,6 @@
    "entry_date": "2026-01-18"
   },
   {
-   "key": "arXiv:2511.10785",
-   "bibcode": "2026PASA...43....6M",
-   "arxiv": "2511.10785",
-   "doi": "10.1017/pasa.2025.10128",
-   "title": "The Dawes review 13: A new look at the dynamic radio sky",
-   "authors": [
-    "Murphy, Tara",
-    "Kaplan, David L."
-   ],
-   "n_authors": 2,
-   "pub": "Publications of the Astronomical Society of Australia",
-   "year": "2026",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2018PASJ...70...39Y",
-    "2022PASP..134i4106L"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-01-18"
-  },
-  {
    "key": "2026ApJ...996...40Z",
    "bibcode": "2026ApJ...996...40Z",
    "arxiv": null,
@@ -4148,30 +4123,6 @@
    "self": false,
    "cited": [
     "2018PASJ...70...39Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-01-18"
-  },
-  {
-   "key": "arXiv:2504.08038",
-   "bibcode": "2026ApJ...996...78H",
-   "arxiv": "2504.08038",
-   "doi": "10.3847/1538-4357/ae1f11",
-   "title": "The Host Galaxies of Fast Radio Bursts Track a Combination of Stellar Mass and Star Formation, Similar to Type Ia Supernovae",
-   "authors": [
-    "Horowicz, Asaf",
-    "Margalit, Ben"
-   ],
-   "n_authors": 2,
-   "pub": "The Astrophysical Journal",
-   "year": "2026",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.511.1961H"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -4203,28 +4154,48 @@
    "entry_date": "2026-01-18"
   },
   {
-   "key": "arXiv:2505.23892",
-   "bibcode": "2025JCAP...12..035B",
-   "arxiv": "2505.23892",
-   "doi": "10.1088/1475-7516/2025/12/035",
-   "title": "Physics beyond the Standard Model with the DSA-2000",
+   "key": "arXiv:2511.10785",
+   "bibcode": "2026PASA...43....6M",
+   "arxiv": "2511.10785",
+   "doi": "10.1017/pasa.2025.10128",
+   "title": "The Dawes review 13: A new look at the dynamic radio sky",
    "authors": [
-    "Berghaus, Kim V.",
-    "Du, Yufeng",
-    "Lee, Vincent S. H.",
-    "Prabhu, Anirudh",
-    "Reischke, Robert",
-    "Connor, Liam",
-    "Zurek, Kathryn M."
+    "Murphy, Tara",
+    "Kaplan, David L."
    ],
-   "n_authors": 7,
-   "pub": "Journal of Cosmology and Astroparticle Physics",
-   "year": "2025",
+   "n_authors": 2,
+   "pub": "Publications of the Astronomical Society of Australia",
+   "year": "2026",
    "journal": true,
    "refereed": true,
    "self": false,
    "cited": [
-    "2020ApJ...888..105Y"
+    "2018PASJ...70...39Y",
+    "2022PASP..134i4106L"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-01-18"
+  },
+  {
+   "key": "arXiv:2504.08038",
+   "bibcode": "2026ApJ...996...78H",
+   "arxiv": "2504.08038",
+   "doi": "10.3847/1538-4357/ae1f11",
+   "title": "The Host Galaxies of Fast Radio Bursts Track a Combination of Stellar Mass and Star Formation, Similar to Type Ia Supernovae",
+   "authors": [
+    "Horowicz, Asaf",
+    "Margalit, Ben"
+   ],
+   "n_authors": 2,
+   "pub": "The Astrophysical Journal",
+   "year": "2026",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.511.1961H"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -4246,6 +4217,35 @@
    ],
    "n_authors": 5,
    "pub": "The Astrophysical Journal",
+   "year": "2025",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2026-01-18"
+  },
+  {
+   "key": "arXiv:2505.23892",
+   "bibcode": "2025JCAP...12..035B",
+   "arxiv": "2505.23892",
+   "doi": "10.1088/1475-7516/2025/12/035",
+   "title": "Physics beyond the Standard Model with the DSA-2000",
+   "authors": [
+    "Berghaus, Kim V.",
+    "Du, Yufeng",
+    "Lee, Vincent S. H.",
+    "Prabhu, Anirudh",
+    "Reischke, Robert",
+    "Connor, Liam",
+    "Zurek, Kathryn M."
+   ],
+   "n_authors": 7,
+   "pub": "Journal of Cosmology and Astroparticle Physics",
    "year": "2025",
    "journal": true,
    "refereed": true,
@@ -4804,32 +4804,6 @@
    "entry_date": "2025-11-02"
   },
   {
-   "key": "arXiv:2505.18041",
-   "bibcode": "2025MNRAS.543.4218B",
-   "arxiv": "2505.18041",
-   "doi": "10.1093/mnras/staf1684",
-   "title": "Modelling multiwavelength afterglows of the VHE-GRB population",
-   "authors": [
-    "Barnard, Monica",
-    "Ghosh, Ankur",
-    "Joshi, Jagdish C.",
-    "Razzaque, Soebur"
-   ],
-   "n_authors": 4,
-   "pub": "Monthly Notices of the Royal Astronomical Society",
-   "year": "2025",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.512.2142Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2025-11-02"
-  },
-  {
    "key": "arXiv:2506.09138",
    "bibcode": "2025ApJ...993...37B",
    "arxiv": "2506.09138",
@@ -4879,6 +4853,32 @@
    "self": false,
    "cited": [
     "2022MNRAS.511.1961H"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2025-11-02"
+  },
+  {
+   "key": "arXiv:2505.18041",
+   "bibcode": "2025MNRAS.543.4218B",
+   "arxiv": "2505.18041",
+   "doi": "10.1093/mnras/staf1684",
+   "title": "Modelling multiwavelength afterglows of the VHE-GRB population",
+   "authors": [
+    "Barnard, Monica",
+    "Ghosh, Ankur",
+    "Joshi, Jagdish C.",
+    "Razzaque, Soebur"
+   ],
+   "n_authors": 4,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2025",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.512.2142Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -5467,30 +5467,6 @@
    "entry_date": "2025-09-03"
   },
   {
-   "key": "arXiv:2504.18176",
-   "bibcode": "2025MNRAS.542L..43R",
-   "arxiv": "2504.18176",
-   "doi": "10.1093/mnrasl/slaf065",
-   "title": "Are FRBs emitted from rotating magnetospheres? Searching for periodicity in polarized bursts",
-   "authors": [
-    "Rajwade, K. M.",
-    "Karastergiou, A."
-   ],
-   "n_authors": 2,
-   "pub": "Monthly Notices of the Royal Astronomical Society",
-   "year": "2025",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.512.3189Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2025-08-17"
-  },
-  {
    "key": "arXiv:2502.11217",
    "bibcode": "2025ApJS..280....6C",
    "arxiv": "2502.11217",
@@ -5517,6 +5493,30 @@
    "cited": [
     "2020ApJ...888..105Y",
     "2022PASP..134i4106L"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2025-08-17"
+  },
+  {
+   "key": "arXiv:2504.18176",
+   "bibcode": "2025MNRAS.542L..43R",
+   "arxiv": "2504.18176",
+   "doi": "10.1093/mnrasl/slaf065",
+   "title": "Are FRBs emitted from rotating magnetospheres? Searching for periodicity in polarized bursts",
+   "authors": [
+    "Rajwade, K. M.",
+    "Karastergiou, A."
+   ],
+   "n_authors": 2,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2025",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.512.3189Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -5951,36 +5951,6 @@
    "entry_date": "2025-07-13"
   },
   {
-   "key": "arXiv:2503.01641",
-   "bibcode": "2025EPJC...85..659L",
-   "arxiv": "2503.01641",
-   "doi": "10.1140/epjc/s10052-025-14348-x",
-   "title": "Improved sensitivity in the search for rare decays of Gd isotopes",
-   "authors": [
-    "Lehnert, B.",
-    "Nagorny, S. S.",
-    "Thiesse, M.",
-    "Ferella, F.",
-    "Laubenstein, M.",
-    "Meehan, E.",
-    "Nisi, S.",
-    "Scovell, P. R."
-   ],
-   "n_authors": 8,
-   "pub": "European Physical Journal C",
-   "year": "2025",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2024NIMPA106569480A"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2025-07-02"
-  },
-  {
    "key": "arXiv:2412.05264",
    "bibcode": "2025EPJC...85..695A",
    "arxiv": "2412.05264",
@@ -5999,6 +5969,36 @@
     "Baudis, L."
    ],
    "n_authors": 170,
+   "pub": "European Physical Journal C",
+   "year": "2025",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2024NIMPA106569480A"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2025-07-02"
+  },
+  {
+   "key": "arXiv:2503.01641",
+   "bibcode": "2025EPJC...85..659L",
+   "arxiv": "2503.01641",
+   "doi": "10.1140/epjc/s10052-025-14348-x",
+   "title": "Improved sensitivity in the search for rare decays of Gd isotopes",
+   "authors": [
+    "Lehnert, B.",
+    "Nagorny, S. S.",
+    "Thiesse, M.",
+    "Ferella, F.",
+    "Laubenstein, M.",
+    "Meehan, E.",
+    "Nisi, S.",
+    "Scovell, P. R."
+   ],
+   "n_authors": 8,
    "pub": "European Physical Journal C",
    "year": "2025",
    "journal": true,
@@ -6297,38 +6297,6 @@
    "entry_date": "2025-06-01"
   },
   {
-   "key": "arXiv:2406.00476",
-   "bibcode": "2025A&A...698A..18Z",
-   "arxiv": "2406.00476",
-   "doi": "10.1051/0004-6361/202450727",
-   "title": "Revisiting the energy distribution and formation rate of CHIME fast radio bursts",
-   "authors": [
-    "Zhang, K. J.",
-    "Zhang, Z. B.",
-    "Rodin, A. E.",
-    "Fedorova, V. A.",
-    "Huang, Y. F.",
-    "Li, D.",
-    "Dong, X. F.",
-    "Wang, P.",
-    "Li, Q. M.",
-    "Du, C."
-   ],
-   "n_authors": 12,
-   "pub": "Astronomy and Astrophysics",
-   "year": "2025",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.511.1961H"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2025-06-01"
-  },
-  {
    "key": "arXiv:2301.01000",
    "bibcode": "2025AJ....169..330R",
    "arxiv": "2301.01000",
@@ -6355,6 +6323,38 @@
    "cited": [
     "2020ApJ...888..105Y",
     "2022PASP..134i4106L"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2025-06-01"
+  },
+  {
+   "key": "arXiv:2406.00476",
+   "bibcode": "2025A&A...698A..18Z",
+   "arxiv": "2406.00476",
+   "doi": "10.1051/0004-6361/202450727",
+   "title": "Revisiting the energy distribution and formation rate of CHIME fast radio bursts",
+   "authors": [
+    "Zhang, K. J.",
+    "Zhang, Z. B.",
+    "Rodin, A. E.",
+    "Fedorova, V. A.",
+    "Huang, Y. F.",
+    "Li, D.",
+    "Dong, X. F.",
+    "Wang, P.",
+    "Li, Q. M.",
+    "Du, C."
+   ],
+   "n_authors": 12,
+   "pub": "Astronomy and Astrophysics",
+   "year": "2025",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.511.1961H"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -6735,6 +6735,33 @@
    "entry_date": "2025-03-30"
   },
   {
+   "key": "arXiv:2409.16852",
+   "bibcode": "2025MNRAS.538.2089N",
+   "arxiv": "2409.16852",
+   "doi": "10.1093/mnras/staf302",
+   "title": "Multiphysics framework for fast modelling of gamma-ray burst afterglows",
+   "authors": [
+    "Nedora, Vsevolod",
+    "Crosato Menegazzi, Ludovica",
+    "Peretti, Enrico",
+    "Dietrich, Tim",
+    "Shibata, Masaru"
+   ],
+   "n_authors": 5,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2025",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.512.2142Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2025-03-30"
+  },
+  {
    "key": "arXiv:2502.12263",
    "bibcode": "2025ApJ...982..146P",
    "arxiv": "2502.12263",
@@ -6824,31 +6851,33 @@
    "entry_date": "2025-03-30"
   },
   {
-   "key": "arXiv:2409.16852",
-   "bibcode": "2025MNRAS.538.2089N",
-   "arxiv": "2409.16852",
-   "doi": "10.1093/mnras/staf302",
-   "title": "Multiphysics framework for fast modelling of gamma-ray burst afterglows",
+   "key": "2025A&A...695A..68A",
+   "bibcode": "2025A&A...695A..68A",
+   "arxiv": null,
+   "doi": "10.1051/0004-6361/202452508",
+   "title": "Composite periodogram analysis for low-event-count fast radio burst repeaters",
    "authors": [
-    "Nedora, Vsevolod",
-    "Crosato Menegazzi, Ludovica",
-    "Peretti, Enrico",
-    "Dietrich, Tim",
-    "Shibata, Masaru"
+    "Aznam, Murthadza",
+    "Zainal Abidin, Zamri",
+    "Hashim, Norsiah",
+    "Goto, Tomotsugu",
+    "Hashimoto, Tetsuya",
+    "Zakie, Muhammad Hassan",
+    "Jayaganthan, Matdhesh Kummar"
    ],
-   "n_authors": 5,
-   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "n_authors": 7,
+   "pub": "Astronomy and Astrophysics",
    "year": "2025",
    "journal": true,
    "refereed": true,
    "self": false,
    "cited": [
-    "2022MNRAS.512.2142Y"
+    "2024MNRAS.52711158Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
    "journal_seen": null,
-   "entry_date": "2025-03-30"
+   "entry_date": "2025-03-23"
   },
   {
    "key": "arXiv:2410.17474",
@@ -6870,35 +6899,6 @@
    ],
    "n_authors": 11,
    "pub": "The Astrophysical Journal",
-   "year": "2025",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2024MNRAS.52711158Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2025-03-23"
-  },
-  {
-   "key": "2025A&A...695A..68A",
-   "bibcode": "2025A&A...695A..68A",
-   "arxiv": null,
-   "doi": "10.1051/0004-6361/202452508",
-   "title": "Composite periodogram analysis for low-event-count fast radio burst repeaters",
-   "authors": [
-    "Aznam, Murthadza",
-    "Zainal Abidin, Zamri",
-    "Hashim, Norsiah",
-    "Goto, Tomotsugu",
-    "Hashimoto, Tetsuya",
-    "Zakie, Muhammad Hassan",
-    "Jayaganthan, Matdhesh Kummar"
-   ],
-   "n_authors": 7,
-   "pub": "Astronomy and Astrophysics",
    "year": "2025",
    "journal": true,
    "refereed": true,
@@ -7106,6 +7106,36 @@
    "entry_date": "2025-03-12"
   },
   {
+   "key": "arXiv:2411.09203",
+   "bibcode": "2025ApJ...981...24M",
+   "arxiv": "2411.09203",
+   "doi": "10.3847/1538-4357/adaf19",
+   "title": "Reinvestigation of Fast Radio Burst Host Galaxy and Event Rate Density",
+   "authors": [
+    "Ma, W. Q.",
+    "Gao, Z. F.",
+    "Li, B. P.",
+    "Niu, C. H.",
+    "Yao, J. M.",
+    "Wang, F. Y."
+   ],
+   "n_authors": 6,
+   "pub": "The Astrophysical Journal",
+   "year": "2025",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K",
+    "2020ApJ...888..105Y",
+    "2022MNRAS.511.1961H"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2025-03-02"
+  },
+  {
    "key": "arXiv:2409.11476",
    "bibcode": "2025ApJ...981...39A",
    "arxiv": "2409.11476",
@@ -7131,36 +7161,6 @@
    "self": false,
    "cited": [
     "2022PASP..134i4106L"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2025-03-02"
-  },
-  {
-   "key": "arXiv:2411.09203",
-   "bibcode": "2025ApJ...981...24M",
-   "arxiv": "2411.09203",
-   "doi": "10.3847/1538-4357/adaf19",
-   "title": "Reinvestigation of Fast Radio Burst Host Galaxy and Event Rate Density",
-   "authors": [
-    "Ma, W. Q.",
-    "Gao, Z. F.",
-    "Li, B. P.",
-    "Niu, C. H.",
-    "Yao, J. M.",
-    "Wang, F. Y."
-   ],
-   "n_authors": 6,
-   "pub": "The Astrophysical Journal",
-   "year": "2025",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K",
-    "2020ApJ...888..105Y",
-    "2022MNRAS.511.1961H"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -7279,6 +7279,30 @@
    "entry_date": "2025-02-16"
   },
   {
+   "key": "arXiv:2412.18821",
+   "bibcode": "2025ChPhC..49c5103S",
+   "arxiv": "2412.18821",
+   "doi": "10.1088/1674-1137/ad9d1c",
+   "title": "Quantifying the memory and dynamical stability of magnetar bursts",
+   "authors": [
+    "Sang, Yu",
+    "Lin, Hai-Nan"
+   ],
+   "n_authors": 2,
+   "pub": "Chinese Physics C",
+   "year": "2025",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2024MNRAS.528L.133Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2025-02-12"
+  },
+  {
    "key": "2025ApPhA.131..165I",
    "bibcode": "2025ApPhA.131..165I",
    "arxiv": null,
@@ -7297,30 +7321,6 @@
    "self": false,
    "cited": [
     "2024NIMPA106569480A"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2025-02-12"
-  },
-  {
-   "key": "arXiv:2412.18821",
-   "bibcode": "2025ChPhC..49c5103S",
-   "arxiv": "2412.18821",
-   "doi": "10.1088/1674-1137/ad9d1c",
-   "title": "Quantifying the memory and dynamical stability of magnetar bursts",
-   "authors": [
-    "Sang, Yu",
-    "Lin, Hai-Nan"
-   ],
-   "n_authors": 2,
-   "pub": "Chinese Physics C",
-   "year": "2025",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2024MNRAS.528L.133Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -7798,6 +7798,29 @@
    "entry_date": "2024-12-01"
   },
   {
+   "key": "arXiv:2408.14100",
+   "bibcode": "2024ApJ...974..125K",
+   "arxiv": "2408.14100",
+   "doi": "10.3847/1538-4357/ad7382",
+   "title": "Correct Criterion of Crustal Failure Driven by Intense Magnetic Stress in Neutron Stars",
+   "authors": [
+    "Kojima, Yasufumi"
+   ],
+   "n_authors": 1,
+   "pub": "The Astrophysical Journal",
+   "year": "2024",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2024MNRAS.528L.133Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2024-12-01"
+  },
+  {
    "key": "arXiv:2401.08207",
    "bibcode": "2024ApJ...974..269L",
    "arxiv": "2401.08207",
@@ -7815,29 +7838,6 @@
    "self": false,
    "cited": [
     "2024MNRAS.528.3854Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2024-12-01"
-  },
-  {
-   "key": "arXiv:2408.14100",
-   "bibcode": "2024ApJ...974..125K",
-   "arxiv": "2408.14100",
-   "doi": "10.3847/1538-4357/ad7382",
-   "title": "Correct Criterion of Crustal Failure Driven by Intense Magnetic Stress in Neutron Stars",
-   "authors": [
-    "Kojima, Yasufumi"
-   ],
-   "n_authors": 1,
-   "pub": "The Astrophysical Journal",
-   "year": "2024",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2024MNRAS.528L.133Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -7936,38 +7936,6 @@
    "entry_date": "2024-12-01"
   },
   {
-   "key": "arXiv:2507.17696",
-   "bibcode": "2024ChPhL..41j9501Z",
-   "arxiv": "2507.17696",
-   "doi": "10.1088/0256-307X/41/10/109501",
-   "title": "A Narrowband Burst from FRB 20190520B Simultaneously Observed by FAST and Parkes",
-   "authors": [
-    "Zhu, Yuhao",
-    "Niu, Chenhui",
-    "Dai, Shi",
-    "Li, Di",
-    "Wang, Pei",
-    "Feng, Yi",
-    "Wu, Jingwen",
-    "Zhang, Yongkun",
-    "Cui, Xianghan",
-    "Zhang, Junshuo"
-   ],
-   "n_authors": 11,
-   "pub": "Chinese Physics Letters",
-   "year": "2024",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.511.1961H"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2024-12-01"
-  },
-  {
    "key": "arXiv:2407.11318",
    "bibcode": "2024ApJ...974..248Z",
    "arxiv": "2407.11318",
@@ -8049,6 +8017,38 @@
    "self": false,
    "cited": [
     "2016MNRAS.460.2875Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2024-12-01"
+  },
+  {
+   "key": "arXiv:2507.17696",
+   "bibcode": "2024ChPhL..41j9501Z",
+   "arxiv": "2507.17696",
+   "doi": "10.1088/0256-307X/41/10/109501",
+   "title": "A Narrowband Burst from FRB 20190520B Simultaneously Observed by FAST and Parkes",
+   "authors": [
+    "Zhu, Yuhao",
+    "Niu, Chenhui",
+    "Dai, Shi",
+    "Li, Di",
+    "Wang, Pei",
+    "Feng, Yi",
+    "Wu, Jingwen",
+    "Zhang, Yongkun",
+    "Cui, Xianghan",
+    "Zhang, Junshuo"
+   ],
+   "n_authors": 11,
+   "pub": "Chinese Physics Letters",
+   "year": "2024",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.511.1961H"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -8238,35 +8238,6 @@
    "entry_date": "2024-11-24"
   },
   {
-   "key": "2024ASSL..472..205L",
-   "bibcode": "2024ASSL..472..205L",
-   "arxiv": null,
-   "doi": "10.1007/978-3-031-58468-8",
-   "title": "Other types of source extraction and identification",
-   "authors": [
-    "Liu, D.",
-    "Padmanabh, P. V.",
-    "Van Eck, C. L.",
-    "Main, R.",
-    "Sprenger, T.",
-    "Kramer, M.",
-    "Balakrishnan, V."
-   ],
-   "n_authors": 7,
-   "pub": "Astrophysics and Space Science Library",
-   "year": "2024",
-   "journal": true,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2024-11-17"
-  },
-  {
    "key": "arXiv:2410.00576",
    "bibcode": "2024PASA...41...90L",
    "arxiv": "2410.00576",
@@ -8292,6 +8263,35 @@
     "2022MNRAS.511.1961H",
     "2022MNRAS.514.5987K",
     "2022PASP..134i4106L"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2024-11-17"
+  },
+  {
+   "key": "2024ASSL..472..205L",
+   "bibcode": "2024ASSL..472..205L",
+   "arxiv": null,
+   "doi": "10.1007/978-3-031-58468-8",
+   "title": "Other types of source extraction and identification",
+   "authors": [
+    "Liu, D.",
+    "Padmanabh, P. V.",
+    "Van Eck, C. L.",
+    "Main, R.",
+    "Sprenger, T.",
+    "Kramer, M.",
+    "Balakrishnan, V."
+   ],
+   "n_authors": 7,
+   "pub": "Astrophysics and Space Science Library",
+   "year": "2024",
+   "journal": true,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -8434,30 +8434,6 @@
    "entry_date": "2024-10-20"
   },
   {
-   "key": "arXiv:2407.06621",
-   "bibcode": "2024JCAP...10..057T",
-   "arxiv": "2407.06621",
-   "doi": "10.1088/1475-7516/2024/10/057",
-   "title": "Impact of lensing bias on the cosmological dispersion measure",
-   "authors": [
-    "Takahashi, Ryuichi"
-   ],
-   "n_authors": 1,
-   "pub": "Journal of Cosmology and Astroparticle Physics",
-   "year": "2024",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K",
-    "2022MNRAS.511.1961H"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2024-10-20"
-  },
-  {
    "key": "arXiv:2406.08254",
    "bibcode": "2024A&A...690A.281P",
    "arxiv": "2406.08254",
@@ -8475,6 +8451,30 @@
    "self": false,
    "cited": [
     "2022MNRAS.512.2142Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2024-10-20"
+  },
+  {
+   "key": "arXiv:2407.06621",
+   "bibcode": "2024JCAP...10..057T",
+   "arxiv": "2407.06621",
+   "doi": "10.1088/1475-7516/2024/10/057",
+   "title": "Impact of lensing bias on the cosmological dispersion measure",
+   "authors": [
+    "Takahashi, Ryuichi"
+   ],
+   "n_authors": 1,
+   "pub": "Journal of Cosmology and Astroparticle Physics",
+   "year": "2024",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K",
+    "2022MNRAS.511.1961H"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -8771,37 +8771,6 @@
    "entry_date": "2024-09-11"
   },
   {
-   "key": "arXiv:2408.10988",
-   "bibcode": "2024MNRAS.533.3174T",
-   "arxiv": "2408.10988",
-   "doi": "10.1093/mnras/stae2013",
-   "title": "Detection and localization of the highly active FRB 20240114A with MeerKAT",
-   "authors": [
-    "Tian, J.",
-    "Rajwade, K. M.",
-    "Pastor-Marazuela, I.",
-    "Stappers, B. W.",
-    "Bezuidenhout, M. C.",
-    "Caleb, M.",
-    "Jankowski, F.",
-    "Barr, E. D.",
-    "Kramer, M."
-   ],
-   "n_authors": 9,
-   "pub": "Monthly Notices of the Royal Astronomical Society",
-   "year": "2024",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2020ApJ...888..105Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2024-09-08"
-  },
-  {
    "key": "arXiv:2401.16783",
    "bibcode": "2024ApJ...972...58W",
    "arxiv": "2401.16783",
@@ -8851,6 +8820,37 @@
    "self": false,
    "cited": [
     "2018PASJ...70...39Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2024-09-08"
+  },
+  {
+   "key": "arXiv:2408.10988",
+   "bibcode": "2024MNRAS.533.3174T",
+   "arxiv": "2408.10988",
+   "doi": "10.1093/mnras/stae2013",
+   "title": "Detection and localization of the highly active FRB 20240114A with MeerKAT",
+   "authors": [
+    "Tian, J.",
+    "Rajwade, K. M.",
+    "Pastor-Marazuela, I.",
+    "Stappers, B. W.",
+    "Bezuidenhout, M. C.",
+    "Caleb, M.",
+    "Jankowski, F.",
+    "Barr, E. D.",
+    "Kramer, M."
+   ],
+   "n_authors": 9,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2024",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2020ApJ...888..105Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -8955,32 +8955,6 @@
    "entry_date": "2024-09-01"
   },
   {
-   "key": "arXiv:2308.10830",
-   "bibcode": "2024PhRvD.110d3503T",
-   "arxiv": "2308.10830",
-   "doi": "10.1103/PhysRevD.110.043503",
-   "title": "Scintillated microlensing: Measuring cosmic distances with fast radio bursts",
-   "authors": [
-    "Tsai, Anna",
-    "Jow, Dylan L.",
-    "Baker, Daniel",
-    "Pen, Ue-Li"
-   ],
-   "n_authors": 4,
-   "pub": "Physical Review D",
-   "year": "2024",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022PASP..134i4106L"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2024-09-01"
-  },
-  {
    "key": "arXiv:2312.15296",
    "bibcode": "2024Natur.632.1014B",
    "arxiv": "2312.15296",
@@ -9006,6 +8980,32 @@
    "self": false,
    "cited": [
     "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2024-09-01"
+  },
+  {
+   "key": "arXiv:2308.10830",
+   "bibcode": "2024PhRvD.110d3503T",
+   "arxiv": "2308.10830",
+   "doi": "10.1103/PhysRevD.110.043503",
+   "title": "Scintillated microlensing: Measuring cosmic distances with fast radio bursts",
+   "authors": [
+    "Tsai, Anna",
+    "Jow, Dylan L.",
+    "Baker, Daniel",
+    "Pen, Ue-Li"
+   ],
+   "n_authors": 4,
+   "pub": "Physical Review D",
+   "year": "2024",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022PASP..134i4106L"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -9673,33 +9673,6 @@
    "entry_date": "2024-04-30"
   },
   {
-   "key": "arXiv:2309.01847",
-   "bibcode": "2024ApJ...965..118L",
-   "arxiv": "2309.01847",
-   "doi": "10.3847/1538-4357/ad2a58",
-   "title": "A Geometric Neutron Star Model of Repeating and Nonrepeating Fast Radio Bursts",
-   "authors": [
-    "Liu, Ze-Nan",
-    "Xia, Zhao-Yang",
-    "Zhong, Shu-Qing",
-    "Wang, Fa-Yin",
-    "Dai, Zi-Gao"
-   ],
-   "n_authors": 5,
-   "pub": "The Astrophysical Journal",
-   "year": "2024",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.514.5987K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2024-04-21"
-  },
-  {
    "key": "arXiv:2402.18151",
    "bibcode": "2024ApJ...965..130K",
    "arxiv": "2402.18151",
@@ -9724,6 +9697,33 @@
    "self": true,
    "cited": [
     "2020MNRAS.498..484Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2024-04-21"
+  },
+  {
+   "key": "arXiv:2309.01847",
+   "bibcode": "2024ApJ...965..118L",
+   "arxiv": "2309.01847",
+   "doi": "10.3847/1538-4357/ad2a58",
+   "title": "A Geometric Neutron Star Model of Repeating and Nonrepeating Fast Radio Bursts",
+   "authors": [
+    "Liu, Ze-Nan",
+    "Xia, Zhao-Yang",
+    "Zhong, Shu-Qing",
+    "Wang, Fa-Yin",
+    "Dai, Zi-Gao"
+   ],
+   "n_authors": 5,
+   "pub": "The Astrophysical Journal",
+   "year": "2024",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.514.5987K"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -9790,6 +9790,31 @@
    "entry_date": "2024-03-17"
   },
   {
+   "key": "arXiv:2312.14772",
+   "bibcode": "2024MNRAS.52711893B",
+   "arxiv": "2312.14772",
+   "doi": "10.1093/mnras/stad3985",
+   "title": "Very high energy gamma-rays from GRB 180720B and GRB 190829A with external Compton emission",
+   "authors": [
+    "Barnard, Monica",
+    "Razzaque, Soebur",
+    "Joshi, Jagdish C."
+   ],
+   "n_authors": 3,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2024",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.512.2142Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2024-03-10"
+  },
+  {
    "key": "arXiv:2309.14337",
    "bibcode": "2024MNRAS.52711158Y",
    "arxiv": "2309.14337",
@@ -9810,31 +9835,6 @@
    "cited": [
     "2022MNRAS.511.1961H",
     "2022PASP..134i4106L"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2024-03-10"
-  },
-  {
-   "key": "arXiv:2312.14772",
-   "bibcode": "2024MNRAS.52711893B",
-   "arxiv": "2312.14772",
-   "doi": "10.1093/mnras/stad3985",
-   "title": "Very high energy gamma-rays from GRB 180720B and GRB 190829A with external Compton emission",
-   "authors": [
-    "Barnard, Monica",
-    "Razzaque, Soebur",
-    "Joshi, Jagdish C."
-   ],
-   "n_authors": 3,
-   "pub": "Monthly Notices of the Royal Astronomical Society",
-   "year": "2024",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.512.2142Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -10737,31 +10737,6 @@
    "entry_date": "2023-10-15"
   },
   {
-   "key": "arXiv:2308.06994",
-   "bibcode": "2023ApJ...956...12I",
-   "arxiv": "2308.06994",
-   "doi": "10.3847/1538-4357/acefcd",
-   "title": "Hybrid Emission Modeling of GRB 221009A: Shedding Light on TeV Emission Origins in Long GRBs",
-   "authors": [
-    "Isravel, Hebzibha",
-    "Bégué, Damien",
-    "Pe'er, Asaf"
-   ],
-   "n_authors": 3,
-   "pub": "The Astrophysical Journal",
-   "year": "2023",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.512.2142Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2023-10-08"
-  },
-  {
    "key": "arXiv:2308.10258",
    "bibcode": "2023ApJ...956...35C",
    "arxiv": "2308.10258",
@@ -10816,6 +10791,31 @@
    "self": false,
    "cited": [
     "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2023-10-08"
+  },
+  {
+   "key": "arXiv:2308.06994",
+   "bibcode": "2023ApJ...956...12I",
+   "arxiv": "2308.06994",
+   "doi": "10.3847/1538-4357/acefcd",
+   "title": "Hybrid Emission Modeling of GRB 221009A: Shedding Light on TeV Emission Origins in Long GRBs",
+   "authors": [
+    "Isravel, Hebzibha",
+    "Bégué, Damien",
+    "Pe'er, Asaf"
+   ],
+   "n_authors": 3,
+   "pub": "The Astrophysical Journal",
+   "year": "2023",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.512.2142Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -11084,6 +11084,36 @@
    "entry_date": "2023-07-10"
   },
   {
+   "key": "arXiv:2305.09428",
+   "bibcode": "2023A&A...675A..99P",
+   "arxiv": "2305.09428",
+   "doi": "10.1051/0004-6361/202346492",
+   "title": "Hunting for gamma-ray emission from fast radio bursts",
+   "authors": [
+    "Principe, G.",
+    "Di Venere, L.",
+    "Negro, M.",
+    "Di Lalla, N.",
+    "Omodei, N.",
+    "Di Tria, R.",
+    "Mazziotta, M. N.",
+    "Longo, F."
+   ],
+   "n_authors": 8,
+   "pub": "Astronomy and Astrophysics",
+   "year": "2023",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016MNRAS.460.2875Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2023-07-10"
+  },
+  {
    "key": "arXiv:2302.08386",
    "bibcode": "2023ApJ...951...82M",
    "arxiv": "2302.08386",
@@ -11109,36 +11139,6 @@
    "self": false,
    "cited": [
     "2020ApJ...888..105Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2023-07-10"
-  },
-  {
-   "key": "arXiv:2305.09428",
-   "bibcode": "2023A&A...675A..99P",
-   "arxiv": "2305.09428",
-   "doi": "10.1051/0004-6361/202346492",
-   "title": "Hunting for gamma-ray emission from fast radio bursts",
-   "authors": [
-    "Principe, G.",
-    "Di Venere, L.",
-    "Negro, M.",
-    "Di Lalla, N.",
-    "Omodei, N.",
-    "Di Tria, R.",
-    "Mazziotta, M. N.",
-    "Longo, F."
-   ],
-   "n_authors": 8,
-   "pub": "Astronomy and Astrophysics",
-   "year": "2023",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016MNRAS.460.2875Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -11173,32 +11173,6 @@
    "entry_date": "2023-07-02"
   },
   {
-   "key": "arXiv:2202.09726",
-   "bibcode": "2023JCAP...06..052W",
-   "arxiv": "2202.09726",
-   "doi": "10.1088/1475-7516/2023/06/052",
-   "title": "A path to precision cosmology: synergy between four promising late-universe cosmological probes",
-   "authors": [
-    "Wu, Peng-Ju",
-    "Shao, Yue",
-    "Jin, Shang-Jie",
-    "Zhang, Xin"
-   ],
-   "n_authors": 4,
-   "pub": "Journal of Cosmology and Astroparticle Physics",
-   "year": "2023",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.511.1961H"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2023-07-02"
-  },
-  {
    "key": "arXiv:2304.11179",
    "bibcode": "2023A&A...674A.223P",
    "arxiv": "2304.11179",
@@ -11224,6 +11198,32 @@
    "self": false,
    "cited": [
     "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2023-07-02"
+  },
+  {
+   "key": "arXiv:2202.09726",
+   "bibcode": "2023JCAP...06..052W",
+   "arxiv": "2202.09726",
+   "doi": "10.1088/1475-7516/2023/06/052",
+   "title": "A path to precision cosmology: synergy between four promising late-universe cosmological probes",
+   "authors": [
+    "Wu, Peng-Ju",
+    "Shao, Yue",
+    "Jin, Shang-Jie",
+    "Zhang, Xin"
+   ],
+   "n_authors": 4,
+   "pub": "Journal of Cosmology and Astroparticle Physics",
+   "year": "2023",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.511.1961H"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -11609,6 +11609,30 @@
    "entry_date": "2023-04-02"
   },
   {
+   "key": "arXiv:2209.04455",
+   "bibcode": "2023ApJ...945...87W",
+   "arxiv": "2209.04455",
+   "doi": "10.3847/1538-4357/acbc7d",
+   "title": "A Measurement of Circumgalactic Gas around Nearby Galaxies Using Fast Radio Bursts",
+   "authors": [
+    "Wu, Xiaohan",
+    "McQuinn, Matthew"
+   ],
+   "n_authors": 2,
+   "pub": "The Astrophysical Journal",
+   "year": "2023",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022PASP..134i4106L"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2023-03-12"
+  },
+  {
    "key": "arXiv:2208.13987",
    "bibcode": "2023JHEAp..37...51S",
    "arxiv": "2208.13987",
@@ -11631,30 +11655,6 @@
    "self": false,
    "cited": [
     "2022MNRAS.512.2142Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2023-03-12"
-  },
-  {
-   "key": "arXiv:2209.04455",
-   "bibcode": "2023ApJ...945...87W",
-   "arxiv": "2209.04455",
-   "doi": "10.3847/1538-4357/acbc7d",
-   "title": "A Measurement of Circumgalactic Gas around Nearby Galaxies Using Fast Radio Bursts",
-   "authors": [
-    "Wu, Xiaohan",
-    "McQuinn, Matthew"
-   ],
-   "n_authors": 2,
-   "pub": "The Astrophysical Journal",
-   "year": "2023",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022PASP..134i4106L"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -12290,30 +12290,6 @@
    "entry_date": "2022-07-17"
   },
   {
-   "key": "arXiv:2203.12551",
-   "bibcode": "2022JCAP...07..010G",
-   "arxiv": "2203.12551",
-   "doi": "10.1088/1475-7516/2022/07/010",
-   "title": "A possible subclassification of fast radio bursts",
-   "authors": [
-    "Guo, Han-Yue",
-    "Wei, Hao"
-   ],
-   "n_authors": 2,
-   "pub": "Journal of Cosmology and Astroparticle Physics",
-   "year": "2022",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2018PASJ...70...39Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2022-07-12"
-  },
-  {
    "key": "arXiv:2107.14242",
    "bibcode": "2022ApJ...933...57H",
    "arxiv": "2107.14242",
@@ -12333,6 +12309,30 @@
    "self": false,
    "cited": [
     "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2022-07-12"
+  },
+  {
+   "key": "arXiv:2203.12551",
+   "bibcode": "2022JCAP...07..010G",
+   "arxiv": "2203.12551",
+   "doi": "10.1088/1475-7516/2022/07/010",
+   "title": "A possible subclassification of fast radio bursts",
+   "authors": [
+    "Guo, Han-Yue",
+    "Wei, Hao"
+   ],
+   "n_authors": 2,
+   "pub": "Journal of Cosmology and Astroparticle Physics",
+   "year": "2022",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2018PASJ...70...39Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -12426,6 +12426,31 @@
    "entry_date": "2022-06-19"
   },
   {
+   "key": "arXiv:2108.01172",
+   "bibcode": "2022ApJ...931...88C",
+   "arxiv": "2108.01172",
+   "doi": "10.3847/1538-4357/ac6873",
+   "title": "Redshift Estimation and Constraints on Intergalactic and Interstellar Media from Dispersion and Scattering of Fast Radio Bursts",
+   "authors": [
+    "Cordes, J. M.",
+    "Ocker, Stella Koch",
+    "Chatterjee, Shami"
+   ],
+   "n_authors": 3,
+   "pub": "The Astrophysical Journal",
+   "year": "2022",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2022-06-05"
+  },
+  {
    "key": "arXiv:2204.12334",
    "bibcode": "2022ApJ...931..109N",
    "arxiv": "2204.12334",
@@ -12451,31 +12476,6 @@
    "self": false,
    "cited": [
     "2018PASJ...70L...7N"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2022-06-05"
-  },
-  {
-   "key": "arXiv:2108.01172",
-   "bibcode": "2022ApJ...931...88C",
-   "arxiv": "2108.01172",
-   "doi": "10.3847/1538-4357/ac6873",
-   "title": "Redshift Estimation and Constraints on Intergalactic and Interstellar Media from Dispersion and Scattering of Fast Radio Bursts",
-   "authors": [
-    "Cordes, J. M.",
-    "Ocker, Stella Koch",
-    "Chatterjee, Shami"
-   ],
-   "n_authors": 3,
-   "pub": "The Astrophysical Journal",
-   "year": "2022",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2020ApJ...888..105Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -12818,6 +12818,31 @@
    "entry_date": "2022-02-13"
   },
   {
+   "key": "arXiv:2111.07417",
+   "bibcode": "2021ApJ...922L..31X",
+   "arxiv": "2111.07417",
+   "doi": "10.3847/2041-8213/ac399c",
+   "title": "Statistical Measurements of Dispersion Measure Fluctuations in Fast Radio Bursts",
+   "authors": [
+    "Xu, Siyao",
+    "Weinberg, David H.",
+    "Zhang, Bing"
+   ],
+   "n_authors": 3,
+   "pub": "The Astrophysical Journal Letters",
+   "year": "2021",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2022-01-02"
+  },
+  {
    "key": "arXiv:2108.08717",
    "bibcode": "2021PhRvD.104l3033K",
    "arxiv": "2108.08717",
@@ -12837,31 +12862,6 @@
    "self": false,
    "cited": [
     "2018PASJ...70...39Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2022-01-02"
-  },
-  {
-   "key": "arXiv:2111.07417",
-   "bibcode": "2021ApJ...922L..31X",
-   "arxiv": "2111.07417",
-   "doi": "10.3847/2041-8213/ac399c",
-   "title": "Statistical Measurements of Dispersion Measure Fluctuations in Fast Radio Bursts",
-   "authors": [
-    "Xu, Siyao",
-    "Weinberg, David H.",
-    "Zhang, Bing"
-   ],
-   "n_authors": 3,
-   "pub": "The Astrophysical Journal Letters",
-   "year": "2021",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -13489,6 +13489,30 @@
    "entry_date": "2021-02-28"
   },
   {
+   "key": "arXiv:2101.06908",
+   "bibcode": "2021MNRAS.502.2482S",
+   "arxiv": "2101.06908",
+   "doi": "10.1093/mnras/stab153",
+   "title": "Precessing magnetars as central engines in short gamma-ray bursts",
+   "authors": [
+    "Suvorov, A. G.",
+    "Kokkotas, K. D."
+   ],
+   "n_authors": 2,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2021",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2020arXiv201007796Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2021-02-14"
+  },
+  {
    "key": "arXiv:2010.01560",
    "bibcode": "2021MNRAS.502.2615T",
    "arxiv": "2010.01560",
@@ -13508,30 +13532,6 @@
    "self": false,
    "cited": [
     "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2021-02-14"
-  },
-  {
-   "key": "arXiv:2101.06908",
-   "bibcode": "2021MNRAS.502.2482S",
-   "arxiv": "2101.06908",
-   "doi": "10.1093/mnras/stab153",
-   "title": "Precessing magnetars as central engines in short gamma-ray bursts",
-   "authors": [
-    "Suvorov, A. G.",
-    "Kokkotas, K. D."
-   ],
-   "n_authors": 2,
-   "pub": "Monthly Notices of the Royal Astronomical Society",
-   "year": "2021",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2020arXiv201007796Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -14022,30 +14022,6 @@
    "entry_date": "2020-10-11"
   },
   {
-   "key": "2020ApJ...901..130Z",
-   "bibcode": "2020ApJ...901..130Z",
-   "arxiv": null,
-   "doi": "10.3847/1538-4357/abb091",
-   "title": "Combinations of Standard Pings and Standard Candles: An Effective and Hubble Constant-free Probe of Dark Energy Evolution",
-   "authors": [
-    "Zhang, Lei",
-    "Li, Zhengxiang"
-   ],
-   "n_authors": 2,
-   "pub": "The Astrophysical Journal",
-   "year": "2020",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2020-10-04"
-  },
-  {
    "key": "arXiv:2003.12581",
    "bibcode": "2020MNRAS.498.1973L",
    "arxiv": "2003.12581",
@@ -14064,6 +14040,30 @@
    "self": false,
    "cited": [
     "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2020-10-04"
+  },
+  {
+   "key": "2020ApJ...901..130Z",
+   "bibcode": "2020ApJ...901..130Z",
+   "arxiv": null,
+   "doi": "10.3847/1538-4357/abb091",
+   "title": "Combinations of Standard Pings and Standard Candles: An Effective and Hubble Constant-free Probe of Dark Energy Evolution",
+   "authors": [
+    "Zhang, Lei",
+    "Li, Zhengxiang"
+   ],
+   "n_authors": 2,
+   "pub": "The Astrophysical Journal",
+   "year": "2020",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -14339,6 +14339,31 @@
    "entry_date": "2020-06-07"
   },
   {
+   "key": "arXiv:2005.06256",
+   "bibcode": "2020ApJ...895L..49P",
+   "arxiv": "2005.06256",
+   "doi": "10.3847/2041-8213/ab930a",
+   "title": "A Data-driven Technique Using Millisecond Transients to Measure the Milky Way Halo",
+   "authors": [
+    "Platts, E.",
+    "Prochaska, J. Xavier",
+    "Law, Casey J."
+   ],
+   "n_authors": 3,
+   "pub": "The Astrophysical Journal Letters",
+   "year": "2020",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2020-06-07"
+  },
+  {
    "key": "arXiv:2005.13160",
    "bibcode": "2020ApJ...895L..37B",
    "arxiv": "2005.13160",
@@ -14364,31 +14389,6 @@
    "self": false,
    "cited": [
     "2018PASJ...70...39Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2020-06-07"
-  },
-  {
-   "key": "arXiv:2005.06256",
-   "bibcode": "2020ApJ...895L..49P",
-   "arxiv": "2005.06256",
-   "doi": "10.3847/2041-8213/ab930a",
-   "title": "A Data-driven Technique Using Millisecond Transients to Measure the Milky Way Halo",
-   "authors": [
-    "Platts, E.",
-    "Prochaska, J. Xavier",
-    "Law, Casey J."
-   ],
-   "n_authors": 3,
-   "pub": "The Astrophysical Journal Letters",
-   "year": "2020",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2020ApJ...888..105Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -14532,30 +14532,6 @@
    "entry_date": "2020-05-07"
   },
   {
-   "key": "arXiv:2002.08297",
-   "bibcode": "2020ApJ...893L..26I",
-   "arxiv": "2002.08297",
-   "doi": "10.3847/2041-8213/ab83fb",
-   "title": "A Binary Comb Model for Periodic Fast Radio Bursts",
-   "authors": [
-    "Ioka, Kunihito",
-    "Zhang, Bing"
-   ],
-   "n_authors": 2,
-   "pub": "The Astrophysical Journal Letters",
-   "year": "2020",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2019MNRAS.483.4175Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2020-05-07"
-  },
-  {
    "key": "arXiv:2003.01919",
    "bibcode": "2020ApJ...893...44Z",
    "arxiv": "2003.01919",
@@ -14581,34 +14557,28 @@
    "entry_date": "2020-05-07"
   },
   {
-   "key": "arXiv:2004.02079",
-   "bibcode": "2020MNRAS.494.2886H",
-   "arxiv": "2004.02079",
-   "doi": "10.1093/mnras/staa895",
-   "title": "Luminosity-duration relations and luminosity functions of repeating and non-repeating fast radio bursts",
+   "key": "arXiv:2002.08297",
+   "bibcode": "2020ApJ...893L..26I",
+   "arxiv": "2002.08297",
+   "doi": "10.3847/2041-8213/ab83fb",
+   "title": "A Binary Comb Model for Periodic Fast Radio Bursts",
    "authors": [
-    "Hashimoto, Tetsuya",
-    "Goto, Tomotsugu",
-    "Wang, Ting-Wen",
-    "Kim, Seong Jin",
-    "Ho, Simon C.-C.",
-    "On, Alvina Y. L.",
-    "Lu, Ting-Yi",
-    "Santos, Daryl Joe D."
+    "Ioka, Kunihito",
+    "Zhang, Bing"
    ],
-   "n_authors": 8,
-   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "n_authors": 2,
+   "pub": "The Astrophysical Journal Letters",
    "year": "2020",
    "journal": true,
    "refereed": true,
    "self": false,
    "cited": [
-    "2018PASJ...70...39Y"
+    "2019MNRAS.483.4175Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
    "journal_seen": null,
-   "entry_date": "2020-05-03"
+   "entry_date": "2020-05-07"
   },
   {
    "key": "arXiv:2003.04848",
@@ -14632,6 +14602,36 @@
    "self": false,
    "cited": [
     "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2020-05-03"
+  },
+  {
+   "key": "arXiv:2004.02079",
+   "bibcode": "2020MNRAS.494.2886H",
+   "arxiv": "2004.02079",
+   "doi": "10.1093/mnras/staa895",
+   "title": "Luminosity-duration relations and luminosity functions of repeating and non-repeating fast radio bursts",
+   "authors": [
+    "Hashimoto, Tetsuya",
+    "Goto, Tomotsugu",
+    "Wang, Ting-Wen",
+    "Kim, Seong Jin",
+    "Ho, Simon C.-C.",
+    "On, Alvina Y. L.",
+    "Lu, Ting-Yi",
+    "Santos, Daryl Joe D."
+   ],
+   "n_authors": 8,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2020",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2018PASJ...70...39Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -15006,29 +15006,6 @@
    "entry_date": "2019-11-10"
   },
   {
-   "key": "arXiv:1811.00899",
-   "bibcode": "2018NatAs...2..865K",
-   "arxiv": "1811.00899",
-   "doi": "10.1038/s41550-018-0603-0",
-   "title": "The future of fast radio burst science",
-   "authors": [
-    "Keane, E. F."
-   ],
-   "n_authors": 1,
-   "pub": "Nature Astronomy",
-   "year": "2018",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2019-11-03"
-  },
-  {
    "key": "arXiv:1811.00195",
    "bibcode": "2018NatAs...2..860L",
    "arxiv": "1811.00195",
@@ -15045,6 +15022,29 @@
    "self": false,
    "cited": [
     "2018PASJ...70...39Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2019-11-03"
+  },
+  {
+   "key": "arXiv:1811.00899",
+   "bibcode": "2018NatAs...2..865K",
+   "arxiv": "1811.00899",
+   "doi": "10.1038/s41550-018-0603-0",
+   "title": "The future of fast radio burst science",
+   "authors": [
+    "Keane, E. F."
+   ],
+   "n_authors": 1,
+   "pub": "Nature Astronomy",
+   "year": "2018",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -15417,6 +15417,33 @@
    "entry_date": "2019-09-01"
   },
   {
+   "key": "arXiv:1907.09650",
+   "bibcode": "2019MNRAS.488.4220H",
+   "arxiv": "1907.09650",
+   "doi": "10.1093/mnras/stz2033",
+   "title": "Fast radio burst dispersion measures and rotation measures and the origin of intergalactic magnetic fields",
+   "authors": [
+    "Hackstein, S.",
+    "Brüggen, M.",
+    "Vazza, F.",
+    "Gaensler, B. M.",
+    "Heesen, V."
+   ],
+   "n_authors": 5,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2019",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2019-08-11"
+  },
+  {
    "key": "arXiv:1907.13056",
    "bibcode": "2019MNRAS.488.3957M",
    "arxiv": "1907.13056",
@@ -15449,20 +15476,16 @@
    "entry_date": "2019-08-11"
   },
   {
-   "key": "arXiv:1907.09650",
-   "bibcode": "2019MNRAS.488.4220H",
-   "arxiv": "1907.09650",
-   "doi": "10.1093/mnras/stz2033",
-   "title": "Fast radio burst dispersion measures and rotation measures and the origin of intergalactic magnetic fields",
+   "key": "2019ApJ...880..131L",
+   "bibcode": "2019ApJ...880..131L",
+   "arxiv": null,
+   "doi": "10.3847/1538-4357/ab29f0",
+   "title": "A Star-forming Galaxy in the Localization Region of FRB 110214",
    "authors": [
-    "Hackstein, S.",
-    "Brüggen, M.",
-    "Vazza, F.",
-    "Gaensler, B. M.",
-    "Heesen, V."
+    "Lee, Chien-Hsiu"
    ],
-   "n_authors": 5,
-   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "n_authors": 1,
+   "pub": "The Astrophysical Journal",
    "year": "2019",
    "journal": true,
    "refereed": true,
@@ -15493,29 +15516,6 @@
    "self": false,
    "cited": [
     "2018PASJ...70...39Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2019-08-11"
-  },
-  {
-   "key": "2019ApJ...880..131L",
-   "bibcode": "2019ApJ...880..131L",
-   "arxiv": null,
-   "doi": "10.3847/1538-4357/ab29f0",
-   "title": "A Star-forming Galaxy in the Localization Region of FRB 110214",
-   "authors": [
-    "Lee, Chien-Hsiu"
-   ],
-   "n_authors": 1,
-   "pub": "The Astrophysical Journal",
-   "year": "2019",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -15718,38 +15718,6 @@
    "entry_date": "2019-05-26"
   },
   {
-   "key": "arXiv:1811.10748",
-   "bibcode": "2019ApJ...876L..23H",
-   "arxiv": "1811.10748",
-   "doi": "10.3847/2041-8213/ab13ae",
-   "title": "FRB 121102 Bursts Show Complex Time-Frequency Structure",
-   "authors": [
-    "Hessels, J. W. T.",
-    "Spitler, L. G.",
-    "Seymour, A. D.",
-    "Cordes, J. M.",
-    "Michilli, D.",
-    "Lynch, R. S.",
-    "Gourdji, K.",
-    "Archibald, A. M.",
-    "Bassa, C. G.",
-    "Bower, G. C."
-   ],
-   "n_authors": 26,
-   "pub": "The Astrophysical Journal Letters",
-   "year": "2019",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2019-05-26"
-  },
-  {
    "key": "arXiv:1904.08927",
    "bibcode": "2019ApJ...876..146L",
    "arxiv": "1904.08927",
@@ -15791,6 +15759,38 @@
    ],
    "n_authors": 4,
    "pub": "Astronomy and Astrophysics",
+   "year": "2019",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2019-05-26"
+  },
+  {
+   "key": "arXiv:1811.10748",
+   "bibcode": "2019ApJ...876L..23H",
+   "arxiv": "1811.10748",
+   "doi": "10.3847/2041-8213/ab13ae",
+   "title": "FRB 121102 Bursts Show Complex Time-Frequency Structure",
+   "authors": [
+    "Hessels, J. W. T.",
+    "Spitler, L. G.",
+    "Seymour, A. D.",
+    "Cordes, J. M.",
+    "Michilli, D.",
+    "Lynch, R. S.",
+    "Gourdji, K.",
+    "Archibald, A. M.",
+    "Bassa, C. G.",
+    "Bower, G. C."
+   ],
+   "n_authors": 26,
+   "pub": "The Astrophysical Journal Letters",
    "year": "2019",
    "journal": true,
    "refereed": true,
@@ -16508,16 +16508,19 @@
    "entry_date": "2018-07-29"
   },
   {
-   "key": "arXiv:1804.01104",
-   "bibcode": "2018ApJ...861..150P",
-   "arxiv": "1804.01104",
-   "doi": "10.3847/1538-4357/aac9bc",
-   "title": "The Dispersion and Rotation Measure of Supernova Remnants and Magnetized Stellar Winds: Application to Fast Radio Bursts",
+   "key": "arXiv:1806.03441",
+   "bibcode": "2018ApJ...861..147P",
+   "arxiv": "1806.03441",
+   "doi": "10.3847/1538-4357/aacb33",
+   "title": "Constraining the Environmental Properties of FRB 131104 Using the Unified Dynamical Afterglow Model",
    "authors": [
-    "Piro, Anthony L.",
-    "Gaensler, B. M."
+    "Peng, Zong-Kai",
+    "Wang, Shan-Qin",
+    "Liu, Liang-Duan",
+    "Dai, Zi-Gao",
+    "Yu, Hai"
    ],
-   "n_authors": 2,
+   "n_authors": 5,
    "pub": "The Astrophysical Journal",
    "year": "2018",
    "journal": true,
@@ -16532,19 +16535,16 @@
    "entry_date": "2018-07-22"
   },
   {
-   "key": "arXiv:1806.03441",
-   "bibcode": "2018ApJ...861..147P",
-   "arxiv": "1806.03441",
-   "doi": "10.3847/1538-4357/aacb33",
-   "title": "Constraining the Environmental Properties of FRB 131104 Using the Unified Dynamical Afterglow Model",
+   "key": "arXiv:1804.01104",
+   "bibcode": "2018ApJ...861..150P",
+   "arxiv": "1804.01104",
+   "doi": "10.3847/1538-4357/aac9bc",
+   "title": "The Dispersion and Rotation Measure of Supernova Remnants and Magnetized Stellar Winds: Application to Fast Radio Bursts",
    "authors": [
-    "Peng, Zong-Kai",
-    "Wang, Shan-Qin",
-    "Liu, Liang-Duan",
-    "Dai, Zi-Gao",
-    "Yu, Hai"
+    "Piro, Anthony L.",
+    "Gaensler, B. M."
    ],
-   "n_authors": 5,
+   "n_authors": 2,
    "pub": "The Astrophysical Journal",
    "year": "2018",
    "journal": true,
@@ -17881,6 +17881,35 @@
    "entry_date": "2017-07-26"
   },
   {
+   "key": "arXiv:1704.00022",
+   "bibcode": "2017ApJ...843...84N",
+   "arxiv": "1704.00022",
+   "doi": "10.3847/1538-4357/aa794d",
+   "title": "Empirical Constraints on the Origin of Fast Radio Bursts: Volumetric Rates and Host Galaxy Demographics as a Test of Millisecond Magnetar Connection",
+   "authors": [
+    "Nicholl, M.",
+    "Williams, P. K. G.",
+    "Berger, E.",
+    "Villar, V. A.",
+    "Alexander, K. D.",
+    "Eftekhari, T.",
+    "Metzger, B. D."
+   ],
+   "n_authors": 7,
+   "pub": "The Astrophysical Journal",
+   "year": "2017",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2017-07-09"
+  },
+  {
    "key": "arXiv:1703.10173",
    "bibcode": "2017MNRAS.468.3746C",
    "arxiv": "1703.10173",
@@ -17900,35 +17929,6 @@
    ],
    "n_authors": 18,
    "pub": "Monthly Notices of the Royal Astronomical Society",
-   "year": "2017",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2017-07-09"
-  },
-  {
-   "key": "arXiv:1704.00022",
-   "bibcode": "2017ApJ...843...84N",
-   "arxiv": "1704.00022",
-   "doi": "10.3847/1538-4357/aa794d",
-   "title": "Empirical Constraints on the Origin of Fast Radio Bursts: Volumetric Rates and Host Galaxy Demographics as a Test of Millisecond Magnetar Connection",
-   "authors": [
-    "Nicholl, M.",
-    "Williams, P. K. G.",
-    "Berger, E.",
-    "Villar, V. A.",
-    "Alexander, K. D.",
-    "Eftekhari, T.",
-    "Metzger, B. D."
-   ],
-   "n_authors": 7,
-   "pub": "The Astrophysical Journal",
    "year": "2017",
    "journal": true,
    "refereed": true,
@@ -18212,6 +18212,32 @@
    "entry_date": "2017-02-28"
   },
   {
+   "key": "arXiv:1608.07675",
+   "bibcode": "2017RAA....17...13W",
+   "arxiv": "1608.07675",
+   "doi": "10.1088/1674-4527/17/2/13",
+   "title": "New limits on the photon mass with radio pulsars in the Magellanic clouds",
+   "authors": [
+    "Wei, Jun-Jie",
+    "Zhang, Er-Kang",
+    "Zhang, Song-Bo",
+    "Wu, Xue-Feng"
+   ],
+   "n_authors": 4,
+   "pub": "Research in Astronomy and Astrophysics",
+   "year": "2017",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2017-02-28"
+  },
+  {
    "key": "arXiv:1609.00929",
    "bibcode": "2017MNRAS.465.2286R",
    "arxiv": "1609.00929",
@@ -18255,32 +18281,6 @@
    ],
    "n_authors": 16,
    "pub": "Monthly Notices of the Royal Astronomical Society",
-   "year": "2017",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2017-02-28"
-  },
-  {
-   "key": "arXiv:1608.07675",
-   "bibcode": "2017RAA....17...13W",
-   "arxiv": "1608.07675",
-   "doi": "10.1088/1674-4527/17/2/13",
-   "title": "New limits on the photon mass with radio pulsars in the Magellanic clouds",
-   "authors": [
-    "Wei, Jun-Jie",
-    "Zhang, Er-Kang",
-    "Zhang, Song-Bo",
-    "Wu, Xue-Feng"
-   ],
-   "n_authors": 4,
-   "pub": "Research in Astronomy and Astrophysics",
    "year": "2017",
    "journal": true,
    "refereed": true,
@@ -18349,21 +18349,24 @@
    "entry_date": "2017-02-19"
   },
   {
-   "key": "arXiv:1701.01209",
-   "bibcode": "2017A&A...598A..88Z",
-   "arxiv": "1701.01209",
-   "doi": "10.1051/0004-6361/201629254",
-   "title": "Pulsar magnetospheric convulsions induced by an external magnetic field",
+   "key": "arXiv:1611.03848",
+   "bibcode": "2017ApJ...836L...6M",
+   "arxiv": "1611.03848",
+   "doi": "10.3847/2041-8213/836/1/L6",
+   "title": "Fast Radio Bursts with Extended Gamma-Ray Emission?",
    "authors": [
-    "Zhang, Fan"
+    "Murase, Kohta",
+    "Mészáros, Peter",
+    "Fox, Derek B."
    ],
-   "n_authors": 1,
-   "pub": "Astronomy and Astrophysics",
+   "n_authors": 3,
+   "pub": "The Astrophysical Journal Letters",
    "year": "2017",
    "journal": true,
    "refereed": true,
    "self": false,
    "cited": [
+    "2016MNRAS.460.2875Y",
     "2016Natur.530..453K"
    ],
    "first_seen": "2026-11-24",
@@ -18396,24 +18399,21 @@
    "entry_date": "2017-02-12"
   },
   {
-   "key": "arXiv:1611.03848",
-   "bibcode": "2017ApJ...836L...6M",
-   "arxiv": "1611.03848",
-   "doi": "10.3847/2041-8213/836/1/L6",
-   "title": "Fast Radio Bursts with Extended Gamma-Ray Emission?",
+   "key": "arXiv:1701.01209",
+   "bibcode": "2017A&A...598A..88Z",
+   "arxiv": "1701.01209",
+   "doi": "10.1051/0004-6361/201629254",
+   "title": "Pulsar magnetospheric convulsions induced by an external magnetic field",
    "authors": [
-    "Murase, Kohta",
-    "Mészáros, Peter",
-    "Fox, Derek B."
+    "Zhang, Fan"
    ],
-   "n_authors": 3,
-   "pub": "The Astrophysical Journal Letters",
+   "n_authors": 1,
+   "pub": "Astronomy and Astrophysics",
    "year": "2017",
    "journal": true,
    "refereed": true,
    "self": false,
    "cited": [
-    "2016MNRAS.460.2875Y",
     "2016Natur.530..453K"
    ],
    "first_seen": "2026-11-24",
@@ -18422,18 +18422,17 @@
    "entry_date": "2017-02-12"
   },
   {
-   "key": "arXiv:1612.03994",
-   "bibcode": "2017ApJ...835....1M",
-   "arxiv": "1612.03994",
-   "doi": "10.3847/1538-4357/835/1/1",
-   "title": "Data Compression for the Tomo-e Gozen Using Low-rank Matrix Approximation",
+   "key": "arXiv:1610.09448",
+   "bibcode": "2017ApJ...835...29Y",
+   "arxiv": "1610.09448",
+   "doi": "10.3847/1538-4357/835/1/29",
+   "title": "A New Electron-density Model for Estimation of Pulsar and FRB Distances",
    "authors": [
-    "Morii, Mikio",
-    "Ikeda, Shiro",
-    "Sako, Shigeyuki",
-    "Ohsawa, Ryou"
+    "Yao, J. M.",
+    "Manchester, R. N.",
+    "Wang, N."
    ],
-   "n_authors": 4,
+   "n_authors": 3,
    "pub": "The Astrophysical Journal",
    "year": "2017",
    "journal": true,
@@ -18448,17 +18447,18 @@
    "entry_date": "2017-02-05"
   },
   {
-   "key": "arXiv:1610.09448",
-   "bibcode": "2017ApJ...835...29Y",
-   "arxiv": "1610.09448",
-   "doi": "10.3847/1538-4357/835/1/29",
-   "title": "A New Electron-density Model for Estimation of Pulsar and FRB Distances",
+   "key": "arXiv:1612.03994",
+   "bibcode": "2017ApJ...835....1M",
+   "arxiv": "1612.03994",
+   "doi": "10.3847/1538-4357/835/1/1",
+   "title": "Data Compression for the Tomo-e Gozen Using Low-rank Matrix Approximation",
    "authors": [
-    "Yao, J. M.",
-    "Manchester, R. N.",
-    "Wang, N."
+    "Morii, Mikio",
+    "Ikeda, Shiro",
+    "Sako, Shigeyuki",
+    "Ohsawa, Ryou"
    ],
-   "n_authors": 3,
+   "n_authors": 4,
    "pub": "The Astrophysical Journal",
    "year": "2017",
    "journal": true,
@@ -18739,6 +18739,30 @@
    "entry_date": "2016-12-14"
   },
   {
+   "key": "arXiv:1608.03930",
+   "bibcode": "2016ApJ...832..199X",
+   "arxiv": "1608.03930",
+   "doi": "10.3847/0004-637X/832/2/199",
+   "title": "On the Origin of the Scatter Broadening of Fast Radio Burst Pulses and Astrophysical Implications",
+   "authors": [
+    "Xu, Siyao",
+    "Zhang, Bing"
+   ],
+   "n_authors": 2,
+   "pub": "The Astrophysical Journal",
+   "year": "2016",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2016-12-11"
+  },
+  {
    "key": "arXiv:1608.07673",
    "bibcode": "2016ApJ...832..212M",
    "arxiv": "1608.07673",
@@ -18757,30 +18781,6 @@
     "Kita, Hajime"
    ],
    "n_authors": 12,
-   "pub": "The Astrophysical Journal",
-   "year": "2016",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2016-12-11"
-  },
-  {
-   "key": "arXiv:1608.03930",
-   "bibcode": "2016ApJ...832..199X",
-   "arxiv": "1608.03930",
-   "doi": "10.3847/0004-637X/832/2/199",
-   "title": "On the Origin of the Scatter Broadening of Fast Radio Burst Pulses and Astrophysical Implications",
-   "authors": [
-    "Xu, Siyao",
-    "Zhang, Bing"
-   ],
-   "n_authors": 2,
    "pub": "The Astrophysical Journal",
    "year": "2016",
    "journal": true,
@@ -18852,15 +18852,16 @@
    "entry_date": "2016-11-20"
   },
   {
-   "key": "arXiv:1610.00416",
-   "bibcode": "2016ApJ...830L..38M",
-   "arxiv": "1610.00416",
-   "doi": "10.3847/2041-8205/830/2/L38",
-   "title": "Radio Transients from Accretion-induced Collapse of White Dwarfs",
+   "key": "arXiv:1608.08154",
+   "bibcode": "2016ApJ...830L..31Y",
+   "arxiv": "1608.08154",
+   "doi": "10.3847/2041-8205/830/2/L31",
+   "title": "Extracting Host Galaxy Dispersion Measure and Constraining Cosmological Parameters using Fast Radio Burst Data",
    "authors": [
-    "Moriya, Takashi J."
+    "Yang, Yuan-Pei",
+    "Zhang, Bing"
    ],
-   "n_authors": 1,
+   "n_authors": 2,
    "pub": "The Astrophysical Journal Letters",
    "year": "2016",
    "journal": true,
@@ -18875,16 +18876,15 @@
    "entry_date": "2016-10-23"
   },
   {
-   "key": "arXiv:1608.08154",
-   "bibcode": "2016ApJ...830L..31Y",
-   "arxiv": "1608.08154",
-   "doi": "10.3847/2041-8205/830/2/L31",
-   "title": "Extracting Host Galaxy Dispersion Measure and Constraining Cosmological Parameters using Fast Radio Burst Data",
+   "key": "arXiv:1610.00416",
+   "bibcode": "2016ApJ...830L..38M",
+   "arxiv": "1610.00416",
+   "doi": "10.3847/2041-8205/830/2/L38",
+   "title": "Radio Transients from Accretion-induced Collapse of White Dwarfs",
    "authors": [
-    "Yang, Yuan-Pei",
-    "Zhang, Bing"
+    "Moriya, Takashi J."
    ],
-   "n_authors": 2,
+   "n_authors": 1,
    "pub": "The Astrophysical Journal Letters",
    "year": "2016",
    "journal": true,
@@ -18953,25 +18953,23 @@
    "entry_date": "2016-10-09"
   },
   {
-   "key": "arXiv:1608.02345",
-   "bibcode": "2016PASA...33...47B",
-   "arxiv": "1608.02345",
-   "doi": "10.1017/pasa.2016.38",
-   "title": "Scientific Goals of the Kunlun Infrared Sky Survey (KISS)",
+   "key": "arXiv:1609.01419",
+   "bibcode": "2016A&A...593L..16G",
+   "arxiv": "1609.01419",
+   "doi": "10.1051/0004-6361/201629172",
+   "title": "FRB 150418: clues to its nature from European VLBI Network and e-MERLIN observations",
    "authors": [
-    "Burton, Michael G.",
-    "Zheng, Jessica",
-    "Mould, Jeremy",
-    "Cooke, Jeff",
-    "Ireland, Michael",
-    "Uddin, Syed Ashraf",
-    "Zhang, Hui",
-    "Yuan, Xiangyan",
-    "Lawrence, Jon",
-    "Ashley, Michael C. B."
+    "Giroletti, M.",
+    "Marcote, B.",
+    "Garrett, M. A.",
+    "Paragi, Z.",
+    "Yang, J.",
+    "Hada, K.",
+    "Muxlow, T. W. B.",
+    "Cheung, C. C."
    ],
-   "n_authors": 13,
-   "pub": "Publications of the Astronomical Society of Australia",
+   "n_authors": 8,
+   "pub": "Astronomy and Astrophysics",
    "year": "2016",
    "journal": true,
    "refereed": true,
@@ -19011,23 +19009,25 @@
    "entry_date": "2016-09-25"
   },
   {
-   "key": "arXiv:1609.01419",
-   "bibcode": "2016A&A...593L..16G",
-   "arxiv": "1609.01419",
-   "doi": "10.1051/0004-6361/201629172",
-   "title": "FRB 150418: clues to its nature from European VLBI Network and e-MERLIN observations",
+   "key": "arXiv:1608.02345",
+   "bibcode": "2016PASA...33...47B",
+   "arxiv": "1608.02345",
+   "doi": "10.1017/pasa.2016.38",
+   "title": "Scientific Goals of the Kunlun Infrared Sky Survey (KISS)",
    "authors": [
-    "Giroletti, M.",
-    "Marcote, B.",
-    "Garrett, M. A.",
-    "Paragi, Z.",
-    "Yang, J.",
-    "Hada, K.",
-    "Muxlow, T. W. B.",
-    "Cheung, C. C."
+    "Burton, Michael G.",
+    "Zheng, Jessica",
+    "Mould, Jeremy",
+    "Cooke, Jeff",
+    "Ireland, Michael",
+    "Uddin, Syed Ashraf",
+    "Zhang, Hui",
+    "Yuan, Xiangyan",
+    "Lawrence, Jon",
+    "Ashley, Michael C. B."
    ],
-   "n_authors": 8,
-   "pub": "Astronomy and Astrophysics",
+   "n_authors": 13,
+   "pub": "Publications of the Astronomical Society of Australia",
    "year": "2016",
    "journal": true,
    "refereed": true,
@@ -19168,15 +19168,15 @@
    "entry_date": "2016-08-26"
   },
   {
-   "key": "arXiv:1603.08875",
-   "bibcode": "2016MNRAS.461.1498M",
-   "arxiv": "1603.08875",
-   "doi": "10.1093/mnras/stw1328",
-   "title": "A burst in a wind bubble and the impact on baryonic ejecta: high-energy gamma-ray flashes and afterglows from fast radio bursts and pulsar-driven supernova remnants",
+   "key": "arXiv:1604.03909",
+   "bibcode": "2016MNRAS.461..984O",
+   "arxiv": "1604.03909",
+   "doi": "10.1093/mnras/stw1401",
+   "title": "The Euclidean distribution of fast radio bursts",
    "authors": [
-    "Murase, Kohta",
-    "Kashiyama, Kazumi",
-    "Mészáros, Peter"
+    "Oppermann, Niels",
+    "Connor, Liam D.",
+    "Pen, Ue-Li"
    ],
    "n_authors": 3,
    "pub": "Monthly Notices of the Royal Astronomical Society",
@@ -19193,15 +19193,15 @@
    "entry_date": "2016-08-14"
   },
   {
-   "key": "arXiv:1604.03909",
-   "bibcode": "2016MNRAS.461..984O",
-   "arxiv": "1604.03909",
-   "doi": "10.1093/mnras/stw1401",
-   "title": "The Euclidean distribution of fast radio bursts",
+   "key": "arXiv:1603.08875",
+   "bibcode": "2016MNRAS.461.1498M",
+   "arxiv": "1603.08875",
+   "doi": "10.1093/mnras/stw1328",
+   "title": "A burst in a wind bubble and the impact on baryonic ejecta: high-energy gamma-ray flashes and afterglows from fast radio bursts and pulsar-driven supernova remnants",
    "authors": [
-    "Oppermann, Niels",
-    "Connor, Liam D.",
-    "Pen, Ue-Li"
+    "Murase, Kohta",
+    "Kashiyama, Kazumi",
+    "Mészáros, Peter"
    ],
    "n_authors": 3,
    "pub": "Monthly Notices of the Royal Astronomical Society",
@@ -19670,30 +19670,6 @@
    "entry_date": "2016-06-05"
   },
   {
-   "key": "arXiv:1602.08130",
-   "bibcode": "2016JCAP...05..004F",
-   "arxiv": "1602.08130",
-   "doi": "10.1088/1475-7516/2016/05/004",
-   "title": "Constraining the CMB optical depth through the dispersion measure of cosmological radio transients",
-   "authors": [
-    "Fialkov, A.",
-    "Loeb, A."
-   ],
-   "n_authors": 2,
-   "pub": "Journal of Cosmology and Astroparticle Physics",
-   "year": "2016",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2016-06-05"
-  },
-  {
    "key": "arXiv:1602.08086",
    "bibcode": "2016ApJ...822L..14Z",
    "arxiv": "1602.08086",
@@ -19731,6 +19707,30 @@
    ],
    "n_authors": 5,
    "pub": "The Astrophysical Journal Letters",
+   "year": "2016",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2016-06-05"
+  },
+  {
+   "key": "arXiv:1602.08130",
+   "bibcode": "2016JCAP...05..004F",
+   "arxiv": "1602.08130",
+   "doi": "10.1088/1475-7516/2016/05/004",
+   "title": "Constraining the CMB optical depth through the dispersion measure of cosmological radio transients",
+   "authors": [
+    "Fialkov, A.",
+    "Loeb, A."
+   ],
+   "n_authors": 2,
+   "pub": "Journal of Cosmology and Astroparticle Physics",
    "year": "2016",
    "journal": true,
    "refereed": true,
@@ -19847,6 +19847,30 @@
    "entry_date": "2016-04-24"
   },
   {
+   "key": "2016ATel.8946....1W",
+   "bibcode": "2016ATel.8946....1W",
+   "arxiv": null,
+   "doi": null,
+   "title": "Final results of VLA monitoring of the FRB 150418 host galaxy candidate spanning 35 days",
+   "authors": [
+    "Williams, P. K. G.",
+    "Berger, E."
+   ],
+   "n_authors": 2,
+   "pub": "The Astronomer's Telegram",
+   "year": "2016",
+   "journal": true,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2016Natur.530..453K"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": null,
+   "entry_date": "2016-04-17"
+  },
+  {
    "key": "2016ATel.8938....1B",
    "bibcode": "2016ATel.8938....1B",
    "arxiv": null,
@@ -19864,30 +19888,6 @@
     "Totani, T."
    ],
    "n_authors": 9,
-   "pub": "The Astronomer's Telegram",
-   "year": "2016",
-   "journal": true,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2016Natur.530..453K"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2016-04-17"
-  },
-  {
-   "key": "2016ATel.8946....1W",
-   "bibcode": "2016ATel.8946....1W",
-   "arxiv": null,
-   "doi": null,
-   "title": "Final results of VLA monitoring of the FRB 150418 host galaxy candidate spanning 35 days",
-   "authors": [
-    "Williams, P. K. G.",
-    "Berger, E."
-   ],
-   "n_authors": 2,
    "pub": "The Astronomer's Telegram",
    "year": "2016",
    "journal": true,
@@ -20405,6 +20405,30 @@
    "entry_date": "2026-11-08"
   },
   {
+   "key": "arXiv:2607.04792",
+   "bibcode": "2026ApJ..1011..184Z",
+   "arxiv": "2607.04792",
+   "doi": "10.3847/1538-4357/aeaee3",
+   "title": "Evidence for a Delayed Progenitor Population for CHIME Nonrepeating Fast Radio Bursts from a Self-consistent Forward and Backward Inference Framework",
+   "authors": [
+    "Zhang, Zi-Liang",
+    "Zhang, Bing"
+   ],
+   "n_authors": 2,
+   "pub": "The Astrophysical Journal",
+   "year": "2026",
+   "journal": true,
+   "refereed": true,
+   "self": false,
+   "cited": [
+    "2022MNRAS.511.1961H"
+   ],
+   "first_seen": "2026-11-08",
+   "baseline": false,
+   "journal_seen": null,
+   "entry_date": "2026-11-08"
+  },
+  {
    "key": "arXiv:2604.13903",
    "bibcode": "2026PASP..138k5002C",
    "arxiv": "2604.13903",
@@ -20430,30 +20454,6 @@
    "self": false,
    "cited": [
     "2022PASP..134i4106L"
-   ],
-   "first_seen": "2026-11-08",
-   "baseline": false,
-   "journal_seen": null,
-   "entry_date": "2026-11-08"
-  },
-  {
-   "key": "arXiv:2607.04792",
-   "bibcode": "2026ApJ..1011..184Z",
-   "arxiv": "2607.04792",
-   "doi": "10.3847/1538-4357/aeaee3",
-   "title": "Evidence for a Delayed Progenitor Population for CHIME Nonrepeating Fast Radio Bursts from a Self-consistent Forward and Backward Inference Framework",
-   "authors": [
-    "Zhang, Zi-Liang",
-    "Zhang, Bing"
-   ],
-   "n_authors": 2,
-   "pub": "The Astrophysical Journal",
-   "year": "2026",
-   "journal": true,
-   "refereed": true,
-   "self": false,
-   "cited": [
-    "2022MNRAS.511.1961H"
    ],
    "first_seen": "2026-11-08",
    "baseline": false,
@@ -20763,8 +20763,531 @@
    "entry_date": "2026-10-25"
   }
  ],
- "missing": [],
- "missing_checked": {},
+ "missing": [
+  {
+   "arxiv": "2611.24542",
+   "title": "Interpretable attention-based neural posterior estimation for fast radio burst cosmology",
+   "authors": [
+    "Tian-Yang Sun",
+    "Ji-Guo Zhang",
+    "Wan-Peng Sun",
+    "Jing-Fei Zhang",
+    "Xin Zhang"
+   ],
+   "n_authors": 5,
+   "date": "2026-11-18",
+   "primary": "cosmology",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2022PASP..134i4106L",
+   "my_title": "BURSTT: Bustling Universe Radio Survey Telescope in Taiwan",
+   "my_year": "2022",
+   "text_sim": 0.015,
+   "shared_refs": 21,
+   "score": 0.645,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.18056",
+   "title": "Unsupervised Machine Learning Classification of FRB 20121102A across Distinct Active Episodes: Implications for FRB Emission Physics and Source Environments",
+   "authors": [
+    "Xiao Li",
+    "En-Wei Liang"
+   ],
+   "n_authors": 2,
+   "date": "2026-11-13",
+   "primary": "repeater",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2025ApJ...983L..16Y",
+   "my_title": "Time─Frequency Correlation of Repeating Fast Radio Bursts: Correlated Aftershocks Tend to Exhibit Downward Frequency Drifts",
+   "my_year": "2025",
+   "text_sim": 0.133,
+   "shared_refs": 14,
+   "score": 0.553,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.24542",
+   "title": "Interpretable attention-based neural posterior estimation for fast radio burst cosmology",
+   "authors": [
+    "Tian-Yang Sun",
+    "Ji-Guo Zhang",
+    "Wan-Peng Sun",
+    "Jing-Fei Zhang",
+    "Xin Zhang"
+   ],
+   "n_authors": 5,
+   "date": "2026-11-18",
+   "primary": "cosmology",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2020ApJ...888..105Y",
+   "my_title": "The Galactic Halo Contribution to the Dispersion Measure of Extragalactic Fast Radio Bursts",
+   "my_year": "2020",
+   "text_sim": 0.045,
+   "shared_refs": 15,
+   "score": 0.495,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.07832",
+   "title": "Design and Commissioning of the BURSTT-256 Main Antenna Array for the Fast Radio Burst Survey in the Local Universe",
+   "authors": [
+    "Shih-Hao Wang",
+    "Kai-Yang Lin",
+    "Chao-Te Li",
+    "Chau-Ching Chiong",
+    "Jen-Chieh Cheng",
+    "Chung-Cheng Chen",
+    "Hsien-Chun Tseng",
+    "Shu-Hao Chang",
+    "Pai-An Chen",
+    "Ta-Shun Wei"
+   ],
+   "n_authors": 39,
+   "date": "2026-11-05",
+   "primary": "methods",
+   "cites_me_elsewhere": true,
+   "my_bibcode": "2026PASP..138h4103R",
+   "my_title": "Statistical Inference of Fast Radio Burst Environments Using Galaxy Number Density",
+   "my_year": "2026",
+   "text_sim": 0.034,
+   "shared_refs": 14,
+   "score": 0.454,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.18056",
+   "title": "Unsupervised Machine Learning Classification of FRB 20121102A across Distinct Active Episodes: Implications for FRB Emission Physics and Source Environments",
+   "authors": [
+    "Xiao Li",
+    "En-Wei Liang"
+   ],
+   "n_authors": 2,
+   "date": "2026-11-13",
+   "primary": "repeater",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2024MNRAS.528L.133Y",
+   "my_title": "Quantifying chaos and randomness in magnetar bursts",
+   "my_year": "2024",
+   "text_sim": 0.116,
+   "shared_refs": 11,
+   "score": 0.446,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.17833",
+   "title": "Probing the Activity History of Repeating Fast Radio Bursts with Cluster Lensing",
+   "authors": [
+    "Huan Zhou",
+    "Kai Liao",
+    "Zhengxiang Li",
+    "Cheng-Gang Shao"
+   ],
+   "n_authors": 4,
+   "date": "2026-11-13",
+   "primary": "repeater",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2026arXiv261124202Y",
+   "my_title": "A Butterfly Collector's View of Fast Radio Bursts: Repeating Sources Go Quiet within a Few Years",
+   "my_year": "2026",
+   "text_sim": 0.109,
+   "shared_refs": 11,
+   "score": 0.439,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2610.37052",
+   "title": "Self lensing in BH-NS binaries as progenitors for periodically repeating Fast Radio Bursts",
+   "authors": [
+    "L. E. Rodríguez",
+    "M. Cruces",
+    "G. Voisin",
+    "J. Vera-Casanova",
+    "C. A. Braga"
+   ],
+   "n_authors": 5,
+   "date": "2026-10-27",
+   "primary": "progenitor",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2026arXiv261124202Y",
+   "my_title": "A Butterfly Collector's View of Fast Radio Bursts: Repeating Sources Go Quiet within a Few Years",
+   "my_year": "2026",
+   "text_sim": 0.077,
+   "shared_refs": 12,
+   "score": 0.437,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2610.40326",
+   "title": "Polarization and Burst Properties of the Repeating FRB~20240209A in a Quiescent Elliptical Host",
+   "authors": [
+    "Yong-Kun Zhang",
+    "Yi Feng",
+    "Di Li",
+    "Jin-Tao Xie",
+    "Chao-Wei Tsai",
+    "Pei Wang",
+    "Meng-Yao Xue"
+   ],
+   "n_authors": 7,
+   "date": "2026-10-29",
+   "primary": "polarization",
+   "cites_me_elsewhere": true,
+   "my_bibcode": "2025ApJ...983L..16Y",
+   "my_title": "Time─Frequency Correlation of Repeating Fast Radio Bursts: Correlated Aftershocks Tend to Exhibit Downward Frequency Drifts",
+   "my_year": "2025",
+   "text_sim": 0.069,
+   "shared_refs": 12,
+   "score": 0.429,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2610.37052",
+   "title": "Self lensing in BH-NS binaries as progenitors for periodically repeating Fast Radio Bursts",
+   "authors": [
+    "L. E. Rodríguez",
+    "M. Cruces",
+    "G. Voisin",
+    "J. Vera-Casanova",
+    "C. A. Braga"
+   ],
+   "n_authors": 5,
+   "date": "2026-10-27",
+   "primary": "progenitor",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2025ApJ...983L..16Y",
+   "my_title": "Time─Frequency Correlation of Repeating Fast Radio Bursts: Correlated Aftershocks Tend to Exhibit Downward Frequency Drifts",
+   "my_year": "2025",
+   "text_sim": 0.054,
+   "shared_refs": 12,
+   "score": 0.414,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2610.40326",
+   "title": "Polarization and Burst Properties of the Repeating FRB~20240209A in a Quiescent Elliptical Host",
+   "authors": [
+    "Yong-Kun Zhang",
+    "Yi Feng",
+    "Di Li",
+    "Jin-Tao Xie",
+    "Chao-Wei Tsai",
+    "Pei Wang",
+    "Meng-Yao Xue"
+   ],
+   "n_authors": 7,
+   "date": "2026-10-29",
+   "primary": "polarization",
+   "cites_me_elsewhere": true,
+   "my_bibcode": "2022PASP..134i4106L",
+   "my_title": "BURSTT: Bustling Universe Radio Survey Telescope in Taiwan",
+   "my_year": "2022",
+   "text_sim": 0.04,
+   "shared_refs": 12,
+   "score": 0.4,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.07832",
+   "title": "Design and Commissioning of the BURSTT-256 Main Antenna Array for the Fast Radio Burst Survey in the Local Universe",
+   "authors": [
+    "Shih-Hao Wang",
+    "Kai-Yang Lin",
+    "Chao-Te Li",
+    "Chau-Ching Chiong",
+    "Jen-Chieh Cheng",
+    "Chung-Cheng Chen",
+    "Hsien-Chun Tseng",
+    "Shu-Hao Chang",
+    "Pai-An Chen",
+    "Ta-Shun Wei"
+   ],
+   "n_authors": 39,
+   "date": "2026-11-05",
+   "primary": "methods",
+   "cites_me_elsewhere": true,
+   "my_bibcode": "2026arXiv260324983M",
+   "my_title": "Constraints on the Physical Association between ICECAT1 Neutrinos and Fast Radio Bursts Using the Second CHIME/FRB Catalogue",
+   "my_year": "2026",
+   "text_sim": 0.039,
+   "shared_refs": 12,
+   "score": 0.399,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.17833",
+   "title": "Probing the Activity History of Repeating Fast Radio Bursts with Cluster Lensing",
+   "authors": [
+    "Huan Zhou",
+    "Kai Liao",
+    "Zhengxiang Li",
+    "Cheng-Gang Shao"
+   ],
+   "n_authors": 4,
+   "date": "2026-11-13",
+   "primary": "repeater",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2022PASP..134i4106L",
+   "my_title": "BURSTT: Bustling Universe Radio Survey Telescope in Taiwan",
+   "my_year": "2022",
+   "text_sim": 0.046,
+   "shared_refs": 11,
+   "score": 0.376,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.19416",
+   "title": "Constraining neutrino masses with localized fast radio bursts: Current bounds and future prospects",
+   "authors": [
+    "Yin-Long Cao",
+    "Ji-Guo Zhang",
+    "Guo-Hong Du",
+    "Tian-Nuo Li",
+    "Jing-Fei Zhang",
+    "Xin Zhang"
+   ],
+   "n_authors": 6,
+   "date": "2026-11-14",
+   "primary": "multiwavelength",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2020ApJ...888..105Y",
+   "my_title": "The Galactic Halo Contribution to the Dispersion Measure of Extragalactic Fast Radio Bursts",
+   "my_year": "2020",
+   "text_sim": 0.066,
+   "shared_refs": 9,
+   "score": 0.336,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.21861",
+   "title": "A search for optical bursts from the repeating fast radio burst in the M81 globular cluster, FRB 20200120E",
+   "authors": [
+    "V. S. Dhillon",
+    "L. G. Spitler",
+    "K. Lackeos",
+    "A. N. Mbole",
+    "W. J. Page",
+    "A. J. Brown",
+    "N. Castro Segura",
+    "M. J. Dyer",
+    "J. A. Garbutt",
+    "M. J. Green"
+   ],
+   "n_authors": 21,
+   "date": "2026-11-16",
+   "primary": "repeater",
+   "cites_me_elsewhere": true,
+   "my_bibcode": "2026arXiv260324983M",
+   "my_title": "Constraints on the Physical Association between ICECAT1 Neutrinos and Fast Radio Bursts Using the Second CHIME/FRB Catalogue",
+   "my_year": "2026",
+   "text_sim": 0.12,
+   "shared_refs": 7,
+   "score": 0.33,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.19811",
+   "title": "Polarization of Fast Radio Bursts due to Propagation in Magnetized Plasma",
+   "authors": [
+    "Wei-Yang Wang",
+    "Xiaohui Liu",
+    "Nan Xu",
+    "Songyu Shen"
+   ],
+   "n_authors": 4,
+   "date": "2026-11-15",
+   "primary": "polarization",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2022PASP..134i4106L",
+   "my_title": "BURSTT: Bustling Universe Radio Survey Telescope in Taiwan",
+   "my_year": "2022",
+   "text_sim": 0.031,
+   "shared_refs": 9,
+   "score": 0.301,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.17805",
+   "title": "Periodic Modulation of Linear Polarization Fraction in Repeating FRB 20240114A",
+   "authors": [
+    "Fang Sun",
+    "Yong-Feng Huang",
+    "Chen Du",
+    "Chen Deng",
+    "Pei Wang",
+    "Lun-Hua Shang",
+    "Chen-Ran Hu",
+    "Xiao-Fei Dong",
+    "Jin-Jun Geng",
+    "Ze-Cheng Zou"
+   ],
+   "n_authors": 14,
+   "date": "2026-11-13",
+   "primary": "repeater",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2026arXiv261124202Y",
+   "my_title": "A Butterfly Collector's View of Fast Radio Bursts: Repeating Sources Go Quiet within a Few Years",
+   "my_year": "2026",
+   "text_sim": 0.046,
+   "shared_refs": 8,
+   "score": 0.286,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.21861",
+   "title": "A search for optical bursts from the repeating fast radio burst in the M81 globular cluster, FRB 20200120E",
+   "authors": [
+    "V. S. Dhillon",
+    "L. G. Spitler",
+    "K. Lackeos",
+    "A. N. Mbole",
+    "W. J. Page",
+    "A. J. Brown",
+    "N. Castro Segura",
+    "M. J. Dyer",
+    "J. A. Garbutt",
+    "M. J. Green"
+   ],
+   "n_authors": 21,
+   "date": "2026-11-16",
+   "primary": "repeater",
+   "cites_me_elsewhere": true,
+   "my_bibcode": "2025ApJ...983L..16Y",
+   "my_title": "Time─Frequency Correlation of Repeating Fast Radio Bursts: Correlated Aftershocks Tend to Exhibit Downward Frequency Drifts",
+   "my_year": "2025",
+   "text_sim": 0.042,
+   "shared_refs": 8,
+   "score": 0.282,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.19416",
+   "title": "Constraining neutrino masses with localized fast radio bursts: Current bounds and future prospects",
+   "authors": [
+    "Yin-Long Cao",
+    "Ji-Guo Zhang",
+    "Guo-Hong Du",
+    "Tian-Nuo Li",
+    "Jing-Fei Zhang",
+    "Xin Zhang"
+   ],
+   "n_authors": 6,
+   "date": "2026-11-14",
+   "primary": "multiwavelength",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2025A&A...698A.163H",
+   "my_title": "Decoding the cosmological baryonic fluctuations using localized fast radio bursts",
+   "my_year": "2025",
+   "text_sim": 0.053,
+   "shared_refs": 7,
+   "score": 0.263,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.17805",
+   "title": "Periodic Modulation of Linear Polarization Fraction in Repeating FRB 20240114A",
+   "authors": [
+    "Fang Sun",
+    "Yong-Feng Huang",
+    "Chen Du",
+    "Chen Deng",
+    "Pei Wang",
+    "Lun-Hua Shang",
+    "Chen-Ran Hu",
+    "Xiao-Fei Dong",
+    "Jin-Jun Geng",
+    "Ze-Cheng Zou"
+   ],
+   "n_authors": 14,
+   "date": "2026-11-13",
+   "primary": "repeater",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2026arXiv261115099Y",
+   "my_title": "Fast Radio Burst Population Constrained by Source-Count Growth and Burst Clustering",
+   "my_year": "2026",
+   "text_sim": 0.079,
+   "shared_refs": 6,
+   "score": 0.259,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2610.38735",
+   "title": "Probing the local primordial non-Gaussianity with clustering of FRB dispersion measure and galaxies",
+   "authors": [
+    "Indranil Das",
+    "Gilbert Holder"
+   ],
+   "n_authors": 2,
+   "date": "2026-10-28",
+   "primary": "cosmology",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2025A&A...698A.163H",
+   "my_title": "Decoding the cosmological baryonic fluctuations using localized fast radio bursts",
+   "my_year": "2025",
+   "text_sim": 0.049,
+   "shared_refs": 6,
+   "score": 0.229,
+   "found": "2026-11-24"
+  },
+  {
+   "arxiv": "2611.19811",
+   "title": "Polarization of Fast Radio Bursts due to Propagation in Magnetized Plasma",
+   "authors": [
+    "Wei-Yang Wang",
+    "Xiaohui Liu",
+    "Nan Xu",
+    "Songyu Shen"
+   ],
+   "n_authors": 4,
+   "date": "2026-11-15",
+   "primary": "polarization",
+   "cites_me_elsewhere": false,
+   "my_bibcode": "2018PASJ...70...39Y",
+   "my_title": "Repeating and non-repeating fast radio bursts from binary neutron star mergers",
+   "my_year": "2018",
+   "text_sim": 0.034,
+   "shared_refs": 6,
+   "score": 0.214,
+   "found": "2026-11-24"
+  }
+ ],
+ "missing_checked": {
+  "2611.27527": "pending",
+  "2611.26696": "pending",
+  "2611.26660": "pending",
+  "2611.26547": "pending",
+  "2611.25876": "pending",
+  "2611.25797": "pending",
+  "2611.25704": "pending",
+  "2611.25348": "pending",
+  "2611.25312": "pending",
+  "2611.24838": "pending",
+  "2611.24542": "done",
+  "2611.24202": "done",
+  "2611.21861": "done",
+  "2611.19811": "done",
+  "2611.19416": "done",
+  "2611.18512": "done",
+  "2611.18056": "done",
+  "2611.17833": "done",
+  "2611.17805": "done",
+  "2611.15099": "done",
+  "2611.12860": "pending",
+  "2611.08481": "done",
+  "2611.07832": "done",
+  "2611.05694": "done",
+  "2611.05351": "done",
+  "2611.02697": "done",
+  "2611.00341": "done",
+  "2610.40609": "done",
+  "2610.40326": "done",
+  "2610.38735": "done",
+  "2610.37646": "done",
+  "2610.37214": "pending",
+  "2610.37052": "done",
+  "2610.37034": "done",
+  "2610.35849": "done",
+  "2610.34848": "done"
+ },
  "baseline_date": "2026-11-24",
  "my_papers": [
   {
@@ -21158,5 +21681,5 @@
    "new_30d": 0
   }
  ],
- "updated": "2026-11-24T10:11:27+00:00"
+ "updated": "2026-11-24T16:04:25+00:00"
 }
