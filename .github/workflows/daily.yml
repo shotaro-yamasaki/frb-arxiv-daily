@@ -1,0 +1,68 @@
+name: Update FRB papers
+
+on:
+  schedule:
+    - cron: "17 2 * * 1-5"
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      backfill_days:
+        description: "Backfill the last N days from the arXiv API (0 = normal daily run)"
+        default: "0"
+      reclassify:
+        description: "Re-run keyword classification on all stored papers (after editing config.json)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update-papers
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch and classify
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          ARXIV_CONTACT: ${{ vars.ARXIV_CONTACT }}
+        run: |
+          if [ "${{ inputs.backfill_days }}" != "" ] && [ "${{ inputs.backfill_days }}" != "0" ]; then
+            python scripts/fetch.py --backfill "${{ inputs.backfill_days }}"
+          elif [ "${{ inputs.reclassify }}" = "true" ]; then
+            python scripts/fetch.py --reclassify
+          else
+            python scripts/fetch.py
+          fi
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/papers.json
+          git diff --cached --quiet || git commit -m "Update FRB papers $(date -u +%Y-%m-%d)"
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
