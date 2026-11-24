@@ -184,6 +184,7 @@ def update_citations(state, mine, me, today):
         state["baseline_date"] = today
     old = {c["key"]: c for c in state["citations"]}
     patterns = me.get("self_author_patterns", [])
+    recent_cut = (dt.date.fromisoformat(today) - dt.timedelta(days=30)).isoformat()
     result = []
     for doc in citing.values():
         ax = arxiv_id(doc)
@@ -192,6 +193,9 @@ def update_citations(state, mine, me, today):
         authors = doc.get("author") or []
         rec = old.get(key, {})
         journal = is_journal(doc)
+        entry_day = (doc.get("entry_date") or "")[:10]
+        # On the first run, citations added to ADS in the last 30 days still count as new.
+        recent_on_first = first_run and entry_day and entry_day >= recent_cut
         entry = {
             "key": key,
             "bibcode": doc["bibcode"],
@@ -206,8 +210,8 @@ def update_citations(state, mine, me, today):
             "refereed": "REFEREED" in (doc.get("property") or []),
             "self": is_self(authors, patterns),
             "cited": cited or rec.get("cited", []),
-            "first_seen": rec.get("first_seen", today),
-            "baseline": rec.get("baseline", first_run),
+            "first_seen": rec.get("first_seen") or (entry_day if recent_on_first else today),
+            "baseline": rec.get("baseline", first_run and not recent_on_first),
             "journal_seen": rec.get("journal_seen"),
             "entry_date": (doc.get("entry_date") or "")[:10],
         }
@@ -219,7 +223,6 @@ def update_citations(state, mine, me, today):
     state["citations"] = result
 
     counts = Counter(b for c in result for b in c["cited"])
-    recent_cut = (dt.date.fromisoformat(today) - dt.timedelta(days=30)).isoformat()
     recent = Counter(b for c in result if c["first_seen"] >= recent_cut and not c["baseline"] for b in c["cited"])
     state["my_papers"] = sorted([{
         "bibcode": d["bibcode"],
