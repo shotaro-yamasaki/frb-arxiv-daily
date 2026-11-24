@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T09:13:05+00:00",
+ "updated": "2026-11-24T09:13:35+00:00",
  "papers": [
   {
    "id": "2611.31069",
@@ -196,6 +196,1786 @@
    "primary": "cosmology",
    "tags": [
     "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.27527",
+   "title": "Modelling scintillation in Fast Radio Bursts",
+   "abstract": "Fast Radio Bursts (FRBs) are bright, ms-duration, extragalactic radio transients. Propagation through inhomogeneities in the ionised medium produces scintillation, observed as frequency-dependent intensity variations in their spectra, with bright patches, called scintles. The characteristic scintillation bandwidth probes scattering material along the line of sight. Measuring this scale can be challenging when the observing bandwidth of the burst spectra contains a few scintles. We study the uncertainties associated with recovering $ν_s$ from frequency autocorrelation functions (ACFs) under finite-bandwidth conditions. We examine the recovery of $ν_s$ from individual ACFs and investigate if averaging multiple independent ACFs provides a more robust measurement. Using simulations, we reproduce observational conditions to investigate the modelling of scintillation in ACFs and the associated measurement uncertainties. We use these simulations to test the finite scintle error (FSE) prescription and assess its applicability to real observations. We test the resulting modelling framework on Effelsberg Ultra Broad Band receiver observations of the repeating FRB 20240114A. As the number of scintles decreases, individual ACFs develop fluctuations that deviate from the expected Lorentzian profile. This results in increased scatter in the recovered $ν_s$ and a less reliable FSE prescription. Averaging multiple independent ACFs mitigates these effects and improves the recovery of $ν_s$ in the low-scintle regime. Our results provide a framework for ACF modelling and uncertainty estimation in FRBs. For individual bursts, the FSE is effective with sufficient scintles; we find $η= 0.055$ more suitable for FRB analysis and update the FSE accordingly. For repeaters, averaging multiple ACFs and bootstrap resampling improve the recovery and uncertainty estimation of $ν_s$.",
+   "authors": [
+    "L. Nicotera",
+    "T. Sprenger",
+    "O. Wucknitz",
+    "L. G. Spitler",
+    "F. Eppel",
+    "P. Limaye"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-20",
+   "primary": "propagation",
+   "tags": [
+    "propagation",
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "20240114A",
+    "repeater"
+   ]
+  },
+  {
+   "id": "2611.26696",
+   "title": "From Binary Wind to Radio Burst: Dispersion-Measure Evolution after Accretion-induced Collapse",
+   "abstract": "Secular changes in the dispersion measures (DMs) of repeating fast radio bursts probe the source-local plasma. Such DM time variability has been interpreted with spherical, single-density-profile models. Accretion-induced collapse (AIC) of a white dwarf may instead follow binary interaction and occur inside a finite, anisotropic circumstellar structure. Here, we construct an angle-dependent toy model of aspherical AIC ejecta propagating through a pre-AIC free wind, shocked-wind bubble, swept-up external shell, and polar cavity, exploring a diffuse environment (number density of $1~{\\rm cm^{-3}}$, located at $10~$pc) and a compact cloud (number density of $500~{\\rm cm^{-3}}$, located at $0.3~$pc), bracketing ionized and initially neutral upstream gas. The unshocked ejecta initially yield ${\\rm DM}\\propto t^{-2}$, while crossings of the finite wind-bubble interfaces produce breaks and curvature in ${\\rm DM}(t)$. In initially neutral models, shock ionization can overcome geometric dilution: the total DM reverses from decline to growth after approximately $10$--$20$ yr and later turns over as the finite reservoir is processed. Ionized-upstream models instead generally decline or flatten. Without fitting individual sources, our models span both signs and the approximate magnitudes of the secular DM-variation rates measured among repeaters. In this dynamical framework, DM evolution is set by shock propagation through the circumsource density and ionization structure, rather than the contemporaneous burst rate, distinguishing it from photoionization-driven scenarios. Consequently, in our model, an instantaneous \\(d{\\rm DM}/dt\\) is not a unique indicator of source age. We suggest that the observed distribution of secular DM variation slope amplitudes and signs will be important for distinguishing among different models of DM variations in repeating FRBs.",
+   "authors": [
+    "Smadar Naoz",
+    "Victoria M. Kaspi"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-19",
+   "primary": "progenitor",
+   "tags": [
+    "progenitor",
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "repeater"
+   ]
+  },
+  {
+   "id": "2611.26660",
+   "title": "An ALMA Survey of Molecular Gas in the Host Galaxies of Fast Radio Bursts",
+   "abstract": "We present ALMA observations of CO(1-0) and CO(2-1) emission and millimeter continuum measurements for 9 localized fast radio burst (FRB) hosts at z=0.05-0.38. CO emission is significantly detected in 6 hosts and tentatively detected in one, yielding molecular gas masses of 2.2x10^8-1.0x10^10 Mo for a Milky Way CO-to-H2 conversion factor. All 6 detections show spatially resolved emission and large-scale velocity gradients, several consistent with ordered disk rotation. FRB positions do not necessarily coincide with the brightest CO emission, and no distinct kinematic component is identified at the burst positions at the present kpc-scale resolution. Together with published data, we assemble the largest FRB-host sample with CO measurements or upper limits to date. CO-detected hosts tend to have larger molecular gas reservoirs and longer depletion times than stellar-mass- and star-formation-rate-matched xCOLD GASS galaxies. They also tend to have higher molecular gas fractions and longer depletion times than expected from molecular-gas scaling relations. However, survival analyses including non-detections do not establish a significant difference in molecular gas mass or gas fraction. Both hosts detected in CO and HI have molecular-to-atomic mass ratios within the broad scatter of comparison galaxies. Our results highlight diverse cold-gas environments rather than a uniformly molecular-gas-rich FRB host population. At the position of the repeating FRB20201124A, the measured 98 GHz continuum flux density is above the predicted star-formation contribution and lies at the lower end of or below an extrapolation of the VLA spectrum. These results allow a compact persistent-source contribution and a possible spectral turnover between centimeter and millimeter wavelengths, although the present sensitivity and resolution prevent a firm separation from surrounding star-forming emission.",
+   "authors": [
+    "Bunyo Hatsukade",
+    "Tetsuya Hashimoto",
+    "Yuu Niino",
+    "Fumi Egusa",
+    "Tzu-Yin Hsu",
+    "Kotaro Kohno",
+    "Kouji Ohta"
+   ],
+   "categories": [
+    "astro-ph.GA"
+   ],
+   "primary_category": "astro-ph.GA",
+   "announce_type": "new",
+   "date": "2026-11-19",
+   "primary": "host",
+   "tags": [
+    "host",
+    "survey"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.26547",
+   "title": "Nonlinearly Causal General-Relativistic Superfluid Hydrodynamics: Simulating Vortex Dynamics in Neutron-Star Interiors",
+   "abstract": "Neutron stars provide a natural laboratory for superfluid matter under extreme conditions. Its nonlinear dynamics is central to pulsar glitches, their possible links to fast radio bursts, and tidal interactions in inspiralling binaries. We develop a general-relativistic superfluid hydrodynamics framework incorporating entrainment, vortex forces, and line energy, and derive, for the first time, necessary and sufficient conditions for nonlinear causality and strong hyperbolicity. We also show that commonly used dissipative, force-balanced formulations without line tension are generically ill-posed at short wavelengths because of the Donnelly-Glaberson instability. Exploiting the analogy between vortex arrays with tension and force-free electrodynamics, we recast vortex dynamics in terms of effective electric and magnetic fields and drift velocities. This motivates a new finite-volume scheme combining constrained transport of superfluid vorticity with implicit electric-field evolution, enabling stable numerical evolution of the full system. We validate the scheme using an exact solution to the relativistic superfluid Riemann problem and Kelvin-wave dispersion relations, among other tests. Finally, we simulate dynamical, global general-relativistic two-fluid neutron-star equilibria, validate their oscillation modes, and present the first simplified calculation of superfluid interior spin-down with prescribed vortex release and repinning. The resulting stationary state retains both a net twist in the vortex array and residual differential rotation of the superfluid. Our framework thus enables nonlinear numerical studies of general-relativistic superfluid dynamics in neutron-star interiors.",
+   "authors": [
+    "Yuan Feng",
+    "Elias R. Most",
+    "Lorenzo Gavassino"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.SR",
+    "gr-qc",
+    "physics.flu-dyn",
+    "physics.plasm-ph"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-19",
+   "primary": "progenitor",
+   "tags": [
+    "progenitor"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.25876",
+   "title": "Gamma-Ray Bursts from Primordial Black Hole-Induced Neutron Star Collapse",
+   "abstract": "We show that the capture and subsequent endoparasitic consumption of a neutron star (NS) by a primordial black hole (PBH) can produce a short gamma-ray burst (GRB) without forming an accretion disk. During PBH-induced NS consumption, the NS spin is amplified through angular-momentum conservation and transfer from infalling matter, while flux freezing and a differential-rotation-driven dynamo amplify the magnetic field. We find that, for rapidly rotating millisecond pulsars (MSPs), these mechanisms can power short GRBs through magnetic dipole radiation and magnetic energy release. If asteroid-mass PBHs in the range $10^{-14}M_\\odot$--$10^{-11}M_\\odot$ constitute the dark matter, we estimate that searches of the Fermi-GBM archive and a future MeV gamma-ray mission such as COSI could detect these bursts. We also discuss possible multimessenger counterparts, including fast radio bursts powered by magnetic energy release, kilonovae and $511\\,{\\rm keV}$ line emission associated with centrifugally ejected neutron-rich matter, and gravitational waves from the rapid collapse and subsequent black-hole ringdown. Together, these signals probe complementary stages of PBH-induced NS consumption.",
+   "authors": [
+    "Yu Watanabe",
+    "Koichiro Yasuda",
+    "Alexander Kusenko"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "hep-ph"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-19",
+   "primary": "multiwavelength",
+   "tags": [
+    "multiwavelength",
+    "progenitor"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.25797",
+   "title": "New Candidate Activity Periods from FRB 20240209A and Repeating Fast Radio Burst Sources in the Second CHIME/FRB Catalog",
+   "abstract": "Repeating fast radio burst (FRB) sources with periodic activity provide important constraints on FRB models invoking neutron-star precession, rotation, or orbital modulation in binary systems. Although a few FRB sources exhibit evidence of periodic behavior, it remains unclear whether periodic activity is a common underlying feature of repeating FRBs. Using a new FRB periodicity search pipeline introduced by A. B. Pearlman et al. (2026), which is optimized for sparse event-arrival-time data from FRB surveys, we search for activity periods in the burst arrival times from FRB 20240209A and repeating FRBs in the Second Canadian Hydrogen Intensity Mapping Experiment (CHIME)/FRB Catalog. For FRB 20240209A, we identify a new candidate activity period of 170.4 $\\pm$ 4.7 days, with a trials-corrected statistical significance of 5.3$σ$. Our larger burst sample shows no evidence of the 128.5-day activity period previously reported for this source by A. Pal (2025). We also report candidate activity periods of 28.46 $\\pm$ 0.08 days, 86.7 $\\pm$ 0.5 days, and 36.4 $\\pm$ 0.5 days for FRB 20190208A, FRB 20200926A, and FRB 20220529A, with trials-corrected statistical significances of 3.1$σ$, 4.0$σ$, and 3.5$σ$, respectively. All statistical significances are evaluated against a homogeneous (constant-rate) Poisson null hypothesis, and we caution that they may decrease under null models that incorporate burst clustering. Collectively, our results constitute the most comprehensive search for periodic activity in the repeating FRB population to date.",
+   "authors": [
+    "Aaron B. Pearlman",
+    "Maxwell Fine",
+    "Amanda M. Cook",
+    "Victoria M. Kaspi",
+    "Kiyoshi W. Masui",
+    "Daniel Amouyal",
+    "Shami Chatterjee",
+    "Alice P. Curtin",
+    "Matt Dobbs",
+    "Tarraneh Eftekhari",
+    "Emmanuel Fonseca",
+    "B. M. Gaensler",
+    "Jason W. T. Hessels",
+    "Afrasiyab",
+    "Khan",
+    "Dongzi Li",
+    "Ryan Mckinven",
+    "Ayush Pandhi",
+    "Ziggy Pleunis",
+    "Mawson W. Sammons",
+    "Ketan R. Sand",
+    "Paul Scholz",
+    "Vishwangi Shah",
+    "Kaitlyn Shin",
+    "Kendrick Smith",
+    "Ingrid H. Stairs"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-19",
+   "primary": "repeater",
+   "tags": [
+    "repeater",
+    "survey"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME"
+   ]
+  },
+  {
+   "id": "2611.25704",
+   "title": "False Periodicities in Repeating Fast Radio Bursts Caused by Burst Clustering",
+   "abstract": "Fast radio bursts (FRBs) are millisecond-duration radio transients with high brightness temperatures, but their physical origin remains uncertain. The association of FRB 200428 with a Galactic magnetar provides compelling evidence that at least some FRBs originate from magnetar-like systems. Nevertheless, periodic modulation associated with neutron-star rotation has not been robustly detected in extragalactic FRBs. Motivated by the reported 1.7 s periodicity in the active repeater FRB 20201124A, we conduct a systematic search for short-timescale periodicity in four highly active repeating FRB sources. We employ a sliding-window method that analyzes temporally adjacent bursts within restricted time intervals, allowing transient or intermittent periodic signals to be identified. The search yields apparent period candidates with nominal Poisson-calibrated significances comparable to that reported for the 1.7 s signal, although the inferred periods vary substantially among sources and observing windows. We then perform a nonparametric waiting-time randomization test, in which the observed waiting-time distribution is preserved while the temporal ordering is destroyed. The randomized sequences reproduce the main candidate-period structures seen in the data, demonstrating that these apparent periodicities can arise from the non-Poissonian waiting-time statistics rather than from a coherent periodic process. Rotation-modulated epidemic-type aftershock sequence simulations provide a complementary parametric illustration of the same effect. We therefore find no robust evidence for a short intrinsic periodicity in these data, and the reported 1.7 s signal is not uniquely distinguished from clustering-induced candidates. Robust periodicity searches must evaluate significance against null models that account for the observed waiting-time statistics and the full search procedure.",
+   "authors": [
+    "Hao-Tian Lan",
+    "Qin Wu",
+    "Jia-Wei Luo",
+    "Fa-Yin Wang",
+    "Zi-Gao Dai"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-19",
+   "primary": "repeater",
+   "tags": [
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "20201124A",
+    "repeater"
+   ]
+  },
+  {
+   "id": "2611.25348",
+   "title": "FAST Burst-Cluster Catalog of FRB 20240114A",
+   "abstract": "We present the complete FAST burst-cluster catalog of FRB 20240114A, covering its 495-day active episode from January 28, 2024 to June 5, 2025. The catalog contains 13261 burst clusters, 19037 bursts, and 29026 sub-bursts detected in 99 observing sessions. The data reveal distinct organization across temporal scales. Among drifting burst clusters, downward-drifting clusters outnumber upward-drifting ones by approximately $9.4:1$. Between separate burst clusters, previously reported frequency changes show no preferred direction, while our Weibull analysis finds their arrival times broadly consistent with Poisson statistics, suggesting that burst clusters may represent approximately independent emission episodes within observing sessions. The Parkes/Murriyang observations revealed a long-term modulation of the characteristic emission frequency, and the extended FAST measurements show a consistent evolution. Burst energetics increase with cluster multiplicity and activity level, although significant scatter remains. The manually refined dispersion measure increases at $1.29\\pm0.11\\,\\mathrm{pc\\,cm^{-3}\\,yr^{-1}}$, enlarging the still limited but growing sample of repeaters with increasing DM. Overall, these results summarize the spectral--temporal evolution of FRB 20240114A and present a burst-cluster catalog linked to the existing BurstID measurements, providing a basis for future studies of repeating FRBs.",
+   "authors": [
+    "Long-Xuan Zhang",
+    "Ya Zeng",
+    "Tong-Lun Wang",
+    "Jun-Yi Shen",
+    "Ying-Ze Shan",
+    "Lin Zhou",
+    "Shi-Yan Tian",
+    "Tian-Cong Wang",
+    "Deng-Ke Zhou",
+    "De-Jiang Zhou",
+    "Jin-Lin Han",
+    "Jia-Rui Niu",
+    "Rui-Nan Li",
+    "Jin-Huang Cao",
+    "Rui Luo",
+    "Jin-Chen Jiang",
+    "Xiang-Han Cui",
+    "Wei-Yang Wang",
+    "Wen-Long Zhang",
+    "Si-Lu Xu",
+    "Pei Wang",
+    "Wei-Wei Zhu",
+    "Bing Zhang",
+    "Di Li",
+    "Yun-Peng Men",
+    "Yuan-Chuan Zou",
+    "Wan-Peng Sun",
+    "Xin Zhang",
+    "Chen-Hui Niu",
+    "Ye Li",
+    "Yuan-Hong Qu",
+    "Xiao-Hui Liu",
+    "Yuan-Pei Yang",
+    "Ke-Jia Lee",
+    "Jia-Wei Luo",
+    "Yi Feng",
+    "Dong-Zi Li",
+    "Yong-Feng Huang",
+    "Wen-Fei Yu",
+    "Qin Wu",
+    "He Gao",
+    "Fa-Yin Wang",
+    "Wei-Cong Jing",
+    "Chao-Wei Tsai",
+    "Lin Lin",
+    "Jin-Tao Xie",
+    "Jian-Hua Fang",
+    "Chen-Chen Miao",
+    "Yu-Hao Zhu",
+    "Yun-Chuan Chen",
+    "Yong-Kun Zhang",
+    "Shuo Cao",
+    "Zi-Wei Wu",
+    "Chun-Feng Zhang",
+    "Bo-Jun Wang",
+    "Hua-Xi Chen",
+    "Xiang-Lei Chen",
+    "Yu-Xiang Huang",
+    "Jian Li",
+    "Qing-Yue Qu",
+    "Yi-Dan Wang",
+    "Su-Ming Weng",
+    "Xue-Feng Wu",
+    "Shi-Han Yew",
+    "Ai-Yuan Yang",
+    "Lei Zhang",
+    "Ru-Shuang Zhao"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-19",
+   "primary": "survey",
+   "tags": [
+    "survey",
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "FAST",
+    "20240114A",
+    "repeater"
+   ]
+  },
+  {
+   "id": "2611.25312",
+   "title": "First $Ω_{\\rm m}-w$ Measurement Using Only Fast Radio Burst Observations",
+   "abstract": "Though fast radio bursts (FRBs) are widely advocated as a dark energy probe, no valid $Ω_m-w$ constraint has been obtained exclusively from FRB data to date. Benefiting from a rapidly growing localized sample and a novel statistical framework for modeling the dispersion measure (DM), we report the first simultaneous inference of the matter density $Ω_m$ and dark energy equation of state parameter $w$ from FRBs alone, without external observational priors on these two parameters. We combine a multi-parameter emulator for the nonlinear matter power spectrum with a physically motivated electron prescription to construct a cosmology-dependent cosmic-DM distribution. Within this unified analysis framework, the mean and variance of DM respond self-consistently to the same underlying cosmology, directly connecting the FRB likelihood to both cosmic expansion and structure growth. Analyzing 125 localized FRBs at $0.105\\leq z\\leq2.148$, we obtain $Ω_m = 0.33^{+0.10}_{-0.11}$ and $w = -0.80^{+0.28}_{-0.38}$ under the flat $w$CDM model. We find a new positive $Ω_m-w$ degeneracy in the FRB posterior, opposite to the strong anticorrelation derived from Type Ia supernovae, offering a complementary test of dark energy properties and highlighting their potential in future precision cosmological studies.",
+   "authors": [
+    "Yi-Ying Wang",
+    "Shi-Jie Gao",
+    "Chi Zhang",
+    "Yi-Zhong Fan"
+   ],
+   "categories": [
+    "astro-ph.CO",
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-11-19",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.24838",
+   "title": "Deconstructing the cosmic baryon distribution with fast radio bursts",
+   "abstract": "The precise distribution of baryons in the Universe remains an open question in cosmology, as their highly diffuse nature hinders direct observation. However, mapping it is integral for precision cosmology in studies of gravitational lensing, galaxy evolution and the cosmic microwave background with current and upcoming surveys. We use fast radio bursts (FRBs) and their dispersion measures (DMs) to probe and localise this baryon distribution in the large-scale structure (LSS). Using IllustrisTNG simulations, we classify the LSS into eight bins of increasing matter density, analogous to voids, filaments, and haloes. We model the DM contribution from each substructure and compare it with the simulated DMs to infer the density estimator, the ratio of electron number to total matter density. The resulting overdetermined system is solved in a Bayesian framework with a simulation-physics-informed model. To demonstrate observational applicability, we create a Euclid-like mock galaxy catalogue and build a density estimator based on luminous matter along FRB sightlines. We apply a bias correction for the underlying dark matter distribution and compare the two density estimators to recover the electron number density across the eight bins. Electrons are predominantly localised in low-density regions, while the ensemble mean across all bins aligns with the global theoretical estimate. Combining the FRB and galaxy density estimators, we recover the density of ionised baryons as $Ω_b f_{ion} = 0.0455^{+0.0028}_{-0.0026}$ (simulation: 0.0462), corresponding to $Ω_b = 0.0479^{+0.0029}_{-0.0027}$ for $f_{ion}=0.95$. Our bin-wise electron density estimate reproduces the simulation ground truth to within 10 per cent and gives gas fractions of $0.186 \\pm 0.012$, $0.179 \\pm 0.015$ and $0.046 \\pm 0.014$ in voids, filaments and haloes, against ground truths of 0.167, 0.173 and 0.067.",
+   "authors": [
+    "Koustav Konar",
+    "Yin-Zhe Ma",
+    "Léon V. E. Koopmans",
+    "P. Daniel Meerburg"
+   ],
+   "categories": [
+    "astro-ph.CO",
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-11-18",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.24542",
+   "title": "Interpretable attention-based neural posterior estimation for fast radio burst cosmology",
+   "abstract": "Fast radio bursts (FRBs) probe the integrated free-electron density along extragalactic sightlines and can be used to study late-time cosmic evolution. Conventional Bayesian analyses require repeated evaluations of computationally expensive likelihoods, making inference increasingly challenging as FRB catalogs grow. In this work, we develop an interpretable attention-based neural posterior estimator (AttNPE) for rapid posterior inference of the physical parameters from FRB catalogs with measured redshifts. The attention encoder compresses the catalog into a low-dimensional representation, and a conditional masked autoregressive flow maps samples from a base distribution to the seven-dimensional posterior. AttNPE yields posterior distributions in close agreement with Markov chain Monte Carlo (MCMC), recovering the parameter correlations in both simulated and observed FRB catalogs. For the observed catalog, AttNPE generates $5\\times10^4$ posterior samples in $0.036$~s after training, compared with $72.8$~h for the reference MCMC run, giving an elapsed-time ratio of $O(10^6)$. The attention-weight analysis shows that intermediate-redshift FRBs ($0.3\\leq z<0.7$) account for the largest share of the total attention averaged over simulated catalogs following the observed redshift distribution, consistent with the combined influence of source abundance and redshift-dependent sensitivity. These results demonstrate the potential of interpretable neural posterior estimation for efficient and repeated inference in FRB cosmology.",
+   "authors": [
+    "Tian-Yang Sun",
+    "Ji-Guo Zhang",
+    "Wan-Peng Sun",
+    "Jing-Fei Zhang",
+    "Xin Zhang"
+   ],
+   "categories": [
+    "astro-ph.CO",
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-11-18",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.24202",
+   "title": "A Butterfly Collector's View of Fast Radio Bursts: Repeating Sources Go Quiet within a Few Years",
+   "abstract": "How long repeating fast radio burst (FRB) sources stay active is key to their origins but poorly known as a population. We test this with unseen species estimation, a method first used to predict how many new butterfly species a further collecting trip would find. If each source keeps the same mean rate over time, the number of sources seen $k+1$ times in one window predicts how many bursts the sources seen $k$ times will emit in a later window. It assumes neither the burst rate distribution nor source distances. For the five years of CHIME/FRB Catalog 2, we measure the ratio $R$ of observed to predicted bursts against the gap $Δ$ between windows. A steady mean rate gives $R = 1$ at every $Δ$, so a change of $R$ with $Δ$ means that the sources change. $R$ is close to unity for $Δ\\lesssim 60$ days and drops by half within one year. Neither steady nor randomly fluctuating sources reproduce this decline, unless the latter are mostly silent. Three models explain the data equally well: a lifetime of about three years, on/off activity with two-year active phases, or a mix of short- and long-lived sources. Fitted to the first three years alone, they correctly predict the further decline of $R$ in the last two years. Longer monitoring of $R$, and of whether silent sources come back to life, will distinguish them. Unlike butterfly species, FRB sources do not wait for the next collecting trip, so follow-up should start soon.",
+   "authors": [
+    "Shotaro Yamasaki"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.IM"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-18",
+   "primary": "repeater",
+   "tags": [
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME"
+   ]
+  },
+  {
+   "id": "2611.21861",
+   "title": "A search for optical bursts from the repeating fast radio burst in the M81 globular cluster, FRB 20200120E",
+   "abstract": "We present a search for optical bursts from the repeating fast radio burst FRB 20200120E, which is located in a globular cluster of M81 and is the closest known extragalactic FRB. We observed FRB 20200120E simultaneously with the high-speed, quintuple-beam optical camera HiPERCAM on the 10.4-m Gran Telescopio Canarias and the Effelsberg 100-m Radio Telescope. We detected one radio burst of fluence $\\mathcal{F}_{\\rm R} = 0.14\\pm0.01$ Jy ms during our observations, but found no evidence for corresponding optical bursts in the 11.98 ms frames. We find 5$σ$ upper limits on the optical burst fluence of $\\mathcal{F}_{\\rm O} < 1.8\\times10^{-3}$ Jy ms (combined $u_s g_s r_s i_s z_s$-bands) and the optical burst energy of $E_{\\rm O} < 5.4\\times10^{36}$ erg ($r_s$-band), corrected for interstellar extinction. We compare our upper limit on the optical-to-radio fluence ratio $\\mathcal{F}_{\\rm O}/\\mathcal{F}_{\\rm R} < 0.013$ to various emission models involving inverse-Compton scattering in the magnetosphere or nebula of a highly-magnetised neutron~star.",
+   "authors": [
+    "V. S. Dhillon",
+    "L. G. Spitler",
+    "K. Lackeos",
+    "A. N. Mbole",
+    "W. J. Page",
+    "A. J. Brown",
+    "N. Castro Segura",
+    "M. J. Dyer",
+    "J. A. Garbutt",
+    "M. J. Green",
+    "D. Jarvis",
+    "M. R. Kennedy",
+    "P. Kerry",
+    "S. P. Littlefair",
+    "J. McCormac",
+    "J. Munday",
+    "S. G. Parsons",
+    "I. Pelisoli",
+    "E. Pike",
+    "D. I. Sahman",
+    "A. Yates"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.GA",
+    "astro-ph.SR"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-16",
+   "primary": "repeater",
+   "tags": [
+    "repeater",
+    "host"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "globular cluster"
+   ]
+  },
+  {
+   "id": "2611.19811",
+   "title": "Polarization of Fast Radio Bursts due to Propagation in Magnetized Plasma",
+   "abstract": "Polarization measurements of radio transients, particularly their frequency dependence, shed light on the magnetic environments of these sources. We extend the analytical solution of radiative transfer of the polarization properties of such transients to both a cold magnetized plasmas beyond the high-frequency approximation and a relativistic plasma with synchrotron emission. The Faraday mixing coefficients are enhanced makes Stokes parameters $Q$, $U$, and $V$ to exhibit a more rapid and complex frequency-dependent evolution. A relativistic plasma medium can also generate both Faraday roataion and conversion with a smaller magnetic field. The relativistic plasma is investigated as a persistent radio source (PRS) associated with FRB, and it is found that, although the observed PRS luminosity can be accounted for, an FRB can propagate out only under certain special parameter conditions. We apply the model to fit the polarization profile of GPM J1839$-$10 and revisit some FRBs. All sources with Faraday conversion require that the environment's magnetic field not exceed 100~G. The magnetic field of FRB 20180301A and GPM J1839$-$10 are almost perpendicular to the light of sight for at least some times.",
+   "authors": [
+    "Wei-Yang Wang",
+    "Xiaohui Liu",
+    "Nan Xu",
+    "Songyu Shen"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-15",
+   "primary": "polarization",
+   "tags": [
+    "polarization"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.19416",
+   "title": "Constraining neutrino masses with localized fast radio bursts: Current bounds and future prospects",
+   "abstract": "The dispersion-measure (DM)--redshift relation of fast radio bursts (FRBs) provides independent low-redshift cosmological information for neutrino-mass inference. In this work, we perform joint analyses with cosmic microwave background (CMB) data, using 120 localized FRBs with reliable host-galaxy redshifts and larger mock samples, to investigate the effects of sample size and the dark-energy model on constraints on the sum of neutrino masses, $\\sum m_ν$. In the $Λ$CDM+$\\sum m_ν$ model, CMB+FRB gives $\\sum m_ν<0.21\\,\\mathrm{eV}$, substantially relaxed relative to the current CMB+DESI result. With 1000 simulated events, CMB+FRB1(mock) gives an upper limit of $0.12\\,\\mathrm{eV}$, which decreases to $0.035\\,\\mathrm{eV}$ for CMB+FRB2(mock) with 10000 events. The latter is more stringent than the CMB+DESI limit, demonstrating the potential of large localized FRB samples to constrain neutrino mass. When the model is extended to $w_0w_a$CDM+$\\sum m_ν$, both the observed and mock samples yield upper limits of approximately $0.3$--$0.4\\,\\mathrm{eV}$, indicating that the assumed dark-energy model remains a dominant factor in these constraints. As localized FRB samples grow and the modeling of the individual DM contributions becomes more accurate, FRBs may provide further independent low-redshift information for constraining neutrino mass.",
+   "authors": [
+    "Yin-Long Cao",
+    "Ji-Guo Zhang",
+    "Guo-Hong Du",
+    "Tian-Nuo Li",
+    "Jing-Fei Zhang",
+    "Xin Zhang"
+   ],
+   "categories": [
+    "astro-ph.CO",
+    "hep-ph"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-11-14",
+   "primary": "multiwavelength",
+   "tags": [
+    "multiwavelength",
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.18512",
+   "title": "Probing baryonic feedback using fast radio bursts and galaxy surveys",
+   "abstract": "The dispersion measure (DM) of fast radio bursts (FRB) provides a noisy measure of the free-electron column density to the burst. With next-generation FRB surveys the number of bursts will drastically increase and measurements of the baryon distribution will be possible on the Mpc scales most relevant to Stage IV weak lensing surveys. Comparing the DM auto-spectrum, DM-shear cross-spectrum and the kinetic Sunyaev-Zel'dovich effect, we argue that the cross-correlation of FRB catalogs with galaxy surveys offers many advantages. Hybrid Effective Field Theory (HEFT), often used in large-scale structure cosmology, is capable of modeling the clustering of electrons jointly with galaxies and matter to small scales. Using HEFT with the Padé model of baryonic feedback, we forecast that next-generation FRB surveys (combined with galaxy samples) will be able to constrain feedback at a level informative for Stage IV weak lensing surveys. In particular we should not be limited by modeling the manner in which galaxies trace the matter field. Rather constraints of the higher-order electron biases and the electron-galaxy cross-stochasticity provide the dominant limitation, and are an obvious target for improvement in order to reach percent-level constraints. The same measurements also provide a valuable means of constraining feedback in hydrodynamic simulations of galaxy formation in a way that is not tied to the modeling of particular galaxy samples.",
+   "authors": [
+    "Haruki Ebina",
+    "Martin White"
+   ],
+   "categories": [
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-11-13",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.18056",
+   "title": "Unsupervised Machine Learning Classification of FRB 20121102A across Distinct Active Episodes: Implications for FRB Emission Physics and Source Environments",
+   "abstract": "Fast radio bursts (FRBs) are millisecond-duration radio transients of extragalactic origin. Identifying distinct burst populations and investigating their variations across active episodes provide important insights into the physical origins of repeating FRBs. In this paper, we apply an unsupervised machine learning approach to bursts from three active episodes of FRB 20121102A observed by the Five-hundred-metre Aperture Spherical Telescope (FAST). Our analysis reveals four distinct clusters primarily distinguished by their spectral properties. Notably, Cluster 1 exhibits bimodal-like distributions in central frequency and bandwidth and contains nearly all high-energy bursts, with a mean energy about an order of magnitude higher than those of the other clusters. It also occupies a distinct region in the width--fluence parameter space. These results suggest that this cluster may represent a distinct burst population potentially associated with different emission physics. Furthermore, the fractions of different burst clusters vary across active episodes. Cluster 1 accounts for about 27\\% of the bursts in 2019, compared with about 8\\% in 2022 and 2023. Cluster 2, with higher central frequencies and narrower bandwidths, has the largest fraction in 2019 and 2022, whereas Cluster 3, with broader bandwidths and intermediate central frequencies, has the largest fraction in 2023. These variations may indicate changes in the physical conditions of the emission regions or the local propagation environment across active episodes.",
+   "authors": [
+    "Xiao Li",
+    "En-Wei Liang"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-13",
+   "primary": "repeater",
+   "tags": [
+    "repeater",
+    "methods"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "FAST",
+    "20121102A"
+   ]
+  },
+  {
+   "id": "2611.17833",
+   "title": "Probing the Activity History of Repeating Fast Radio Bursts with Cluster Lensing",
+   "abstract": "Fast radio bursts (FRBs) are millisecond duration coherent radio transients, some of whose sources repeat, but the nature and active lifetimes of their engines remain uncertain. Strong lensing by galaxy clusters provides a physical lever on this lifetime problem: a short campaign can sample emission epochs of a repeating FRB separated by years, and distinct bursts in different lensed images, given a known relative lens delay, set a lower bound on its active lifetime, whereas delayed copies of a single burst only encode the lens delay. Based on the cluster-lens model of MACS J0717.5+3745, we quantify the accessible range of emission epochs for finite activity episodes, observing windows, and discovery selection. For a source-frame episode of duration \\(100~{\\rm yr}\\) at \\(z_s=2\\) and a source-frame rate of \\(0.1\\,{\\rm h}_{\\rm src}^{-1}\\), a five year campaign conditional on discovery yields a \\(95\\%\\) gain threshold of \\(m_{95}\\simeq25.6\\), corresponding to a source-frame span of \\(L_{95}\\simeq42.6~{\\rm yr}\\). At the population level, combining distinct burst associations with same burst echoes provides a way to test specified activity durations with a finite lens catalogue, e.g., activity durations differing by an order of magnitude can be distinguished with expected Bayes factor above $20$. More broadly, these lensed source frame epochs enable applications beyond activity-duration tests, e.g., linking burst activity to the evolution of the engine and its environment. Galaxy-cluster lensing therefore provides a promising future probe for accessing otherwise unobserved source history and for distinguishing between different activity duration models.",
+   "authors": [
+    "Huan Zhou",
+    "Kai Liao",
+    "Zhengxiang Li",
+    "Cheng-Gang Shao"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-13",
+   "primary": "repeater",
+   "tags": [
+    "repeater",
+    "survey",
+    "propagation",
+    "emission"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.17805",
+   "title": "Periodic Modulation of Linear Polarization Fraction in Repeating FRB 20240114A",
+   "abstract": "Long-term polarization changes in repeating fast radio bursts (FRBs) can probe their emission geometry and propagation environment. We searched for periodic variation in the degree of linear polarization (DOL) of FRB~20240114A using the polarization catalog from the Five-hundred-meter Aperture Spherical radio Telescope. The sample contains 6,099 bursts detected on 95 observing days over $\\sim 488$ days. The daily mean DOL series was analyzed using phase distance correlation and Lomb--Scargle periodograms over trial periods of 10--240 days. The strongest peaks occur at $119.91^{+2.67}_{-2.04}$ and $122.31^{+2.63}_{-2.82}$ days, respectively. The quoted ranges correspond to the period intervals above the global $3σ$ thresholds. Global false-alarm probabilities were estimated from \\(10^7\\) random permutations of the daily values among the fixed observing dates, with the full period search repeated for each permutation. The resulting probabilities are \\(9.98\\times10^{-4}\\) and \\(8.95\\times10^{-4}\\), corresponding to equivalent Gaussian significances of \\(3.09σ\\) and \\(3.12σ\\), respectively. As a supplementary check, the same analysis using daily median DOL yielded similar peaks near 120 days. A descriptive sinusoidal fit to all 95 daily mean DOL measurements at a fixed period of 119.91 days has a semi-amplitude of 3.23\\%. Possible explanations include precession-driven changes in viewing geometry and variations in propagation conditions within a binary system.",
+   "authors": [
+    "Fang Sun",
+    "Yong-Feng Huang",
+    "Chen Du",
+    "Chen Deng",
+    "Pei Wang",
+    "Lun-Hua Shang",
+    "Chen-Ran Hu",
+    "Xiao-Fei Dong",
+    "Jin-Jun Geng",
+    "Ze-Cheng Zou",
+    "Nurimangul Nurmamat",
+    "Orkash Amat",
+    "Jing-Peng Lyu",
+    "Yun-Chuan Zhang"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-13",
+   "primary": "repeater",
+   "tags": [
+    "repeater",
+    "polarization"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "20240114A"
+   ]
+  },
+  {
+   "id": "2611.15099",
+   "title": "Fast Radio Burst Population Constrained by Source-Count Growth and Burst Clustering",
+   "abstract": "Whether all fast radio burst (FRB) sources repeat, or whether some produce only a single burst, remains an open question. Using 3,950 bursts from the CHIME/FRB Catalog 2, we measure how the numbers of apparently single and repeating sources change with observing time, correcting for the declination-dependent, beam-weighted exposure and possible variations in the detection rate. Both source counts increase approximately linearly over 300--44,000~hr, as $N_{\\rm s}\\proptoΔt^{0.98\\pm0.02}$ for single sources and $N_{\\rm r}\\proptoΔt^{1.06\\pm0.14}$ for repeaters. Consequently, the observed repeater fraction remains nearly constant at $2.6^{+0.4}_{-0.6}\\%$. We interpret these results using population models that account for a distribution of detected burst rates and temporal clustering. The source counts are reproduced by a population spanning a range of rates, including sources expected to produce approximately one detectable burst over the observing time. Its detected burst rates follow a distribution close to $r^{-2}$ over 0.01--1.5~hr$^{-1}$. The burst timing and burst multiplicities provide additional constraints. Among 77 repeaters, only 6 have their first two detected bursts within a single CHIME transit, the median interval between them is 101 days, and 31 of the 52 repeaters with at least three bursts have five or more. These observations support this population and favor moderately clustered emission (Weibull shape $k\\simeq0.5$) and active phases lasting months to about a year. Our results are consistent with both a single population of repeaters whose rate distribution steepens below the range probed by CHIME and a mixed population that includes genuinely one-off sources. Thus, the current data do not require a one-off population, but cannot exclude one. Longer observing baselines are needed to distinguish these possibilities.",
+   "authors": [
+    "Shotaro Yamasaki",
+    "Tetsuya Hashimoto",
+    "Tomoki Wada",
+    "Tomotsugu Goto"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-11",
+   "primary": "repeater",
+   "tags": [
+    "repeater",
+    "population"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME",
+    "repeater"
+   ]
+  },
+  {
+   "id": "2611.12860",
+   "title": "Search for a Dispersion Measure Excess Toward Nearby Galaxy Halos Using Fast Radio Bursts from the Second CHIME/FRB Baseband Catalog",
+   "abstract": "Fast radio bursts (FRBs) probe foreground ionized baryons via their dispersion measures (DM). Using 1748 sub-arcminute-localized sources from the Second CHIME/FRB Baseband Catalog, we conduct a statistical stacking study of the circumgalactic media (CGM) of nearby galaxies by analyzing the DMs of FRBs whose sightlines intersect foreground halos. For galaxy halos within 50 Mpc, we measure a mean DM excess of $119\\pm44$ pc~cm$^{-3}$ $(p = 0.0053; \\sim 2.6σ)$ within one virial radius. Expanding to 150 Mpc (628 intersections), we find a tentative decline in the mean DM as a function of impact parameter $(p = 0.0046; \\sim 2.6σ)$, which is predominantly driven by typical Milky Way (MW)-like galaxies $(10 \\leq \\log(M_*/M_\\odot)\\leq 11)$. We use this DM profile to constrain parameters of the CGM electron density distribution, $n_e^\\mathrm{CGM}(r) \\propto r^{-3β}$, finding an extrapolated central electron density in the range of $(1.7-21.1) \\times 10^{-3}\\mathrm{\\,cm}^{-3}$, with a radial power-law index of $β= 0.68^{+0.15}_{-0.16}$, consistent with constraints from X-ray stacking studies of MW-like galaxies. At very low impact parameters, we detect a significant DM deficit likely due to cross-matching FRBs that originate from galaxies within our galaxy sample. By deriving the DM-galaxy cross-correlation function, we show that this deficit matches theoretical predictions if 20 FRBs originate from galaxies within 150 Mpc, indicating that CHIME/FRB detects a higher fraction of low-$z$ FRBs than previously thought. We forecast that $10^4$ FRBs with similar localization errors will provide a 5-$σ$ detection of the CGM, and that FRBs at intermediate redshifts ($0.4\\lesssim z_\\mathrm{FRB}\\lesssim 0.75$) are ideal for studying intervening CGMs.",
+   "authors": [
+    "Affan Khadir",
+    "Ayush Pandhi",
+    "Jason Hessels",
+    "Calvin Leung",
+    "B. M. Gaensler",
+    "Ludwig M. Böss",
+    "Amanda M. Cook",
+    "Alice P. Curtin",
+    "Klaus Dolag",
+    "Naman Jain",
+    "Victoria Kaspi",
+    "Afrokk Khan",
+    "Adam E. Lanman",
+    "Kiyoshi W. Masui",
+    "Daniele Michilli",
+    "Mason Ng",
+    "Aaron B. Pearlman",
+    "Sachin Pradeep E. T.",
+    "Aniket Prasad",
+    "Mawson Sammons",
+    "Paul Scholz",
+    "Kaitlyn Shin",
+    "Kendrick M. Smith",
+    "Jenny G. Sorce",
+    "Haochen Wang",
+    "Michele Woodland"
+   ],
+   "categories": [
+    "astro-ph.GA",
+    "astro-ph.CO",
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.GA",
+   "announce_type": "new",
+   "date": "2026-11-09",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology",
+    "survey"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME"
+   ]
+  },
+  {
+   "id": "2611.08481",
+   "title": "Joint analysis of the Macquart relation and the dispersion measure power spectrum: cross-covariance and redshift self-calibration",
+   "abstract": "The dispersion measures (DMs) of fast radio bursts (FRBs) trace ionised baryons along the line of sight, probing baryonic feedback. Two complementary observables can be constructed from an FRB catalogue: the DM-redshift (Macquart) relation of host-identified FRBs, and the angular power spectrum of the DM field of the full catalogue. Their joint analysis requires their cross-covariance. We derive it within the halo model and show it is a super-sample effect: only the monopole of an individual DM correlates with the angular power spectrum, yielding an exact, model-independent bound on the correlation coefficient. We validate the calculation against log-normal forward simulations of $10^4$ FRBs. For individual DMs, the correlation with the bandpowers is at the per cent level. Neglecting the cross-covariance changes the width of the $χ^2$ distribution by only 0.8 per cent, so the two observables can be treated as effectively independent for wide-area surveys. In a joint forecast with an LSST-like weak lensing survey, adding the Macquart relation tightens constraints on the physical baryon density by 32 per cent and on the mean host contribution by a factor of 4.1, while improving baryonification parameters by only about 5 per cent, indirectly through the host contribution. Finally, we show that the redshift distribution of FRBs without identified hosts, which enters every DM power spectrum, can be reconstructed by inverting their DMs with the jointly fitted mean relation without biasing the inferred parameters, whereas a 20 per cent error in the mean relation biases the DM power spectrum by up to 2$σ$ per band for $5\\times 10^5$ FRBs.",
+   "authors": [
+    "Amy Wayland",
+    "Robert Reischke"
+   ],
+   "categories": [
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-11-05",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology",
+    "survey"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.07832",
+   "title": "Design and Commissioning of the BURSTT-256 Main Antenna Array for the Fast Radio Burst Survey in the Local Universe",
+   "abstract": "The Bustling Universe Radio Survey Telescope in Taiwan (BURSTT) is a radio interferometer array designed for surveying fast radio bursts (FRBs) in the nearby Universe with a wide instantaneous field of view (FoV) of $\\approx$6000 deg$^2$ and precisely localizing them with sub-arcsecond angular resolution. The first phase of BURSTT, BURSTT-256, consists of a main antenna array comprising 256 log-periodic dipole antennas (LPDAs) observing at 400-800 MHz for real-time beamforming and FRB search, currently with 256 beams covering $\\approx$ 3200 deg$^2$ FoV, together with several smaller outrigger stations with 16-64 antennas and separated by $\\mathcal{O}(10^2 - 10^3)$ km baselines for joint observations to localize FRBs using very-long baseline interferometry. This work presents the design, deployment, and commissioning of the BURSTT-256 main array, including site selection, radio-frequency (RF) background characterization, receiver antenna array and RF front-end, as well as real-time, factorized digital beamforming backend that currently generates 256 beams. The system's on-sky performance, sensitivity, and beamforming fidelity have been calibrated through observations of bright celestial calibrators. The antenna array in the initial phase using commercial LPDAs has a system equivalent flux density of $\\approx$11 kJy, and is expected to achieve $\\approx$4 kJy using custom-design LPDAs after optimization in late 2026. BURSTT-256 serves as a critical pathfinder for future expansion of the array to 2048 elements and beyond, operating at 300-700 MHz with $\\approx$6000 deg$^2$ FoV. It establishes the framework required to discover and localize nearby FRBs with sub-arcsecond precision. By substantially increasing the number of well-localized nearby FRBs, BURSTT will facilitate multi-wavelength and multi-messenger counterpart identification, helping to unveil the elusive origin of FRBs.",
+   "authors": [
+    "Shih-Hao Wang",
+    "Kai-Yang Lin",
+    "Chao-Te Li",
+    "Chau-Ching Chiong",
+    "Jen-Chieh Cheng",
+    "Chung-Cheng Chen",
+    "Hsien-Chun Tseng",
+    "Shu-Hao Chang",
+    "Pai-An Chen",
+    "Ta-Shun Wei",
+    "Chin-Ting Ho",
+    "Vigo Feng-Shun Wu",
+    "Yu-Chieh Huang",
+    "Sujin Eie",
+    "Yao-Huan Tseng",
+    "Ue-Li Pen",
+    "Chih-Yi Wen",
+    "Homin Jiang",
+    "Andrew Wang",
+    "Bishnu Kumar Sharma",
+    "Tzu-Hong Chen Lin",
+    "Yuan-Wei Hu",
+    "Shih-Wen Chung",
+    "Chen-Hui Peng",
+    "Ming-Tang Chen",
+    "Pisin Chen",
+    "Jiwoo Nam",
+    "Tomotsugu Goto",
+    "Tetsuya Hashimoto",
+    "Chin-Ping Hu",
+    "Yuan-Chang Hou",
+    "Daniel Baker",
+    "Michael Chiang",
+    "Somnath Dutta",
+    "Sun-Kun King",
+    "Hiroto Masaoka",
+    "Chung-Yun Kuo",
+    "Che-Wei Pai",
+    "Decmend Fang-Jie Ling"
+   ],
+   "categories": [
+    "astro-ph.IM"
+   ],
+   "primary_category": "astro-ph.IM",
+   "announce_type": "new",
+   "date": "2026-11-05",
+   "primary": "methods",
+   "tags": [
+    "methods",
+    "survey",
+    "multiwavelength"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "BURSTT"
+   ]
+  },
+  {
+   "id": "2611.05694",
+   "title": "A high-frequency turnover in the persistent radio source of FRB20201124A",
+   "abstract": "Persistent radio sources (PRSs) associated with repeating fast radio bursts probe the immediate magneto-ionic environment of their engine and thereby constrain the nature and evolutionary stage of the progenitor. The persistent radio source of FRB20201124A is the most extreme in the current sample, with a spectrum that remains flat or inverted up to 22 GHz. We aim to constrain the centimetre-to-millimetre spectral energy distribution of this source and to test whether its properties are consistent with a young, rotation-powered magnetar wind nebula. We analysed archival ALMA Band 3 observations at $\\sim100$ GHz and combined them with existing VLA measurements at 6, 15 and 22 GHz. The resulting spectrum was fitted with the Granot--Sari broken power law in the slow-cooling regime using Bayesian nested sampling. The two-parameter model yields a peak frequency $ν_m = 63^{+100}_{-33}$ GHz and a peak flux $F_m = 28\\pm9$ $μ$Jy. This solution is consistent with theoretical expectations for a young magnetar wind nebula, which predict a peak frequency in the same range and a self-absorption frequency below $\\sim0.5$ GHz. With its inverted spectrum extending to tens of gigahertz and the highest peak frequency among known PRSs, the source associated with FRB20201124A is the most extreme in the current sample. Its properties match those expected for a rotation-powered magnetar wind nebula, making it a strong candidate for the youngest ($t\\lesssim20$ yr) magnetar associated with a repeating FRB to date.",
+   "authors": [
+    "G. Bruni",
+    "G. Gianfagna",
+    "L. Piro",
+    "A. L. Thakur",
+    "L. Nicastro",
+    "E. Palazzi",
+    "A. Rossi",
+    "S. Savaglio",
+    "A. Gardini",
+    "Y. -P. Yang",
+    "B. Zhang"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.SR"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-03",
+   "primary": "host",
+   "tags": [
+    "host",
+    "progenitor",
+    "repeater",
+    "polarization"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.05351",
+   "title": "Mapping large-scale structure without galaxy formation - combining fast radio bursts with CMB lensing",
+   "abstract": "Fast radio bursts (FRBs) are an emerging precision probe of cosmological fluctuations. The amount and quality of observed FRB data will grow enormously over the next decade. FRB dispersion data directly probe the free electron distribution up to intergalactic scales. Precision models of the free electron distribution are necessary to exploit this exciting new probe of large-scale structure. We show that the free electron distribution almost exactly follows the total matter distribution. We confirm this fact by estimating the electron field-level bias parameters for the first time from the FLAMINGO simulations. With simulation-based knowledge of a handful of electron free parameters, the electron distribution largely acts as a second realization of the matter distribution. Working on large scales, we can leverage this fact to combine FRB correlations with those of Cosmic Microwave Background (CMB) weak lensing to constrain cosmological parameters. Assuming access to localized FRBs with redshifts, we perform cosmological forecasts using these two large-scale matter probes, which have no strong dependence on baryonic feedback models nor on parameters that encode galaxy formation. We show that the parameters $σ_8$ and $Ω_m$ are constrained at a level similar to or better than that obtained by combining FRB dispersion with weak lensing of galaxy shapes under conservative assumptions. These results motivate the use of FRB data as a complementary probe of cosmic structure and will be especially compelling as redshifts become available for localized FRB host galaxies.",
+   "authors": [
+    "James M. Sullivan",
+    "Kiyoshi Masui",
+    "Ryan Raikman",
+    "Shion Andrew",
+    "Haochen Wang"
+   ],
+   "categories": [
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-11-03",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.02697",
+   "title": "Two Fast Radio Burst Candidates Detected in the RATAN-600 Blind Survey",
+   "abstract": "We report the detection of two single dispersed pulses with widths of about 6.7\\,ms and 15.6\\,ms and flux densities of about 0.8 and 1.7\\,Jy. These were found in a blind survey of two circular regions (Dec$\\;=+22^{\\circ}$ and $+5^{\\circ}$,RA: 0--24~h) at high radio frequencies \\mbox{(4400--5000\\,MHz)} using four 4-channel filter radiometers (central frequencies of 4475, 4625, 4775, and 4925\\,MHz) spanning a total frequency bandwidth of 600\\,MHz. The survey was carried out with the Western Sector antenna of the RATAN-600 radio telescope, which had an effective area of 1200\\,m$^2$ in~2017--2025. The total area of the survey was about 1500~square degrees, and each pointing of the antenna lasted one year. We consider these to be two rare, high-frequency FRB events (MJD~58614.38257 and MJD~58659.62482), detected with estimated dispersion measures of $200\\pm20$ and $266\\pm10$\\,pc\\,cm$^{-3}$ at a final signal-to-noise ratio (SNR) level of 8--9 after additional optimal filtration. After subtraction of the estimated dispersions within the Milky Way, we estimated redshifts of approximately 0.09 and 0.13, respectively, using the traditional equation: ${\\rm DM}\\,[{\\rm pc~cm}^{-3}] = 1000\\,z$ for the intergalactic medium. The estimated isotropic energies of the FRBs are equal to $10^{40}$\\,erg and $2\\times 10^{40}$\\,erg, respectively. To effectively detect single pulses, we applied machine learning methods using a neural network trained on synthetic FRB pulse profiles.",
+   "authors": [
+    "S. A. Trushkin",
+    "D. O. Kudryavtsev",
+    "P. G. Tsybulev",
+    "N. N. Bursov"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.GA"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-11-02",
+   "primary": "survey",
+   "tags": [
+    "survey",
+    "methods",
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2611.00341",
+   "title": "CHIME All-sky Multiday Pulsar Stacking Search (CHAMPSS): Power Spectrum Injections and Survey Sensitivity",
+   "abstract": "Artificial signal injection into real data is a key tool in time-domain radio astronomy, with particular import to the study of pulsars and Fast Radio Bursts (FRBs). Many surveys inject into the time series to probe observational biases impacting the detection of radio transients. In the case of the CHIME All-sky Multiday Pulsar Stack Search (CHAMPSS), the computational demands of both hardware and software time series injections force an alternative approach. We present methods for injecting artificial pulsar signals into the Fourier power spectrum. The injection process detailed here is computationally negligible compared to the overhead of the CHAMPSS search pipeline. We use injections to probe the in-system biases of the CHAMPSS survey. CHAMPSS is most sensitive to pulsars with frequencies on the order of 0.1 - 100 Hz and fluxes > 1 mJy. Our injections show weak overall sensitivity dependence on other factors such as dispersion measure (DM), duty cycle, and sky coordinates, but complex non-monotonic interactions between all parameters. Our findings suggest that frequency-dependent noise, especially low-frequency or \"red\" noise, and sampling limitations at higher frequencies are the dominant extrinsic factors decreasing CHAMPSS' sensitivity to pulsars.",
+   "authors": [
+    "Reynier Squillace",
+    "Lars Künkel",
+    "Robert Main",
+    "Scott M. Ransom",
+    "Wenke Xia",
+    "Kathryn Crowter",
+    "Victoria Kaspi",
+    "Ingrid Stairs",
+    "Hudson Bridgwater",
+    "Bradley Meyers",
+    "Alexander Saffer"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.IM"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-30",
+   "primary": "methods",
+   "tags": [
+    "methods",
+    "survey"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME"
+   ]
+  },
+  {
+   "id": "2610.40609",
+   "title": "From Dispersion to Metallicity: Probing the Milky Way Circumgalactic Medium with Fast Radio Bursts",
+   "abstract": "Circumgalactic Medium (CGM) plays a critical role in galactic evolution, serving as the primary reservoir for accretion and outflows. In this work, we present a novel statistical analysis to derive CGM metallicity from the dispersion measure (DM) of 25 Fast Radio Burst (FRB) sightlines. By combining metallicity-dependent oxygen absorption DM estimates with metallicity-independent FRB DMs, we directly constrain the metallicity of the hot phase of the Milky Way (MW) CGM. Considering different diffuse baryon fractions ($f_{\\text{d}} = 0.0, 0.6, 0.8$) in the Intergalactic Medium (IGM) and intervening halos, the median metallicities of CGM are $Z_{\\text{CGM}} = 0.12_{-0.04}^{+0.09} \\, Z_{\\odot}$, $0.26_{-0.12}^{+0.18} \\, Z_{\\odot}$, and $0.39_{-0.20}^{+0.26} \\, Z_{\\odot}$, respectively, by the bootstrapping method. Super-solar metallicity is seen in multiple sightlines for $f_d=0.8$, which is implausible for MW CGM metallicities. Even under conservative lower-bound estimates ($f_{\\text{d}} = 0.0$), the inferred CGM metallicity significantly exceeds expectations for IGM accretion ($Z_{\\text{IGM}} \\lesssim 0.1 \\, Z_{\\odot}$), providing strong empirical evidence that a large fraction of the metal-enriched galactic feedback material is efficiently retained within the Milky Way CGM. Furthermore, we observe significant sightline-to-sightline variation in inferred metallicities, pointing toward a highly anisotropic multi-phase CGM shaped by complex interactions between feedback outflows and cosmic accretion.",
+   "authors": [
+    "Manami Roy",
+    "Sanskriti Das",
+    "Smita Mathur",
+    "Anjali Gupta",
+    "Yair Krongold"
+   ],
+   "categories": [
+    "astro-ph.GA"
+   ],
+   "primary_category": "astro-ph.GA",
+   "announce_type": "new",
+   "date": "2026-10-29",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.40326",
+   "title": "Polarization and Burst Properties of the Repeating FRB~20240209A in a Quiescent Elliptical Host",
+   "abstract": "We report polarimetric observations of the repeating fast radio burst (FRB) source FRB 20240209A with the Green Bank Telescope at L band and 800 MHz. This source has previously been associated with a quiescent elliptical galaxy with a mass-weighted stellar age of approximately 11 Gyr. We detected three bursts, and the brightest burst resolves into eight components that drift toward lower frequencies. The bursts have mutually consistent rotation measures (RMs), and the small extragalactic RM agrees with the low RM predicted from the small host-galaxy dispersion measure ($\\mathrm{DM}_\\mathrm{host}$). The linear polarization fraction decreases toward lower frequencies within the brightest burst, consistent with depolarization by an RM scatter of $σ_\\mathrm{RM}\\simeq3.5$ rad m$^{-2}$. This RM scatter is comparable to those of several repeaters in star-forming galaxies. Therefore, FRBs in both star-forming and old, quiescent hosts can reside in relatively complex magnetoionic environments, which suggests that FRB sources may form through multiple channels.",
+   "authors": [
+    "Yong-Kun Zhang",
+    "Yi Feng",
+    "Di Li",
+    "Jin-Tao Xie",
+    "Chao-Wei Tsai",
+    "Pei Wang",
+    "Meng-Yao Xue"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-29",
+   "primary": "polarization",
+   "tags": [
+    "polarization",
+    "host",
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "repeater"
+   ]
+  },
+  {
+   "id": "2610.38735",
+   "title": "Probing the local primordial non-Gaussianity with clustering of FRB dispersion measure and galaxies",
+   "abstract": "We forecast the sensitivity of a joint fast radio burst (FRB) and galaxy survey to local primordial non-Gaussianity using the full $3\\times2$-point statistic: the angular dispersion-measure (DM) auto-spectrum, the DM-galaxy cross-spectrum, and the galaxy auto-spectrum. Local primordial non-Gaussianity imprints a scale-dependent bias on both the free-electron field probed by FRB dispersion measures and the galaxy field. Hence, all three spectra carry information on the local non-Gaussianity amplitude $f_{\\rm NL}$. Adopting a DESI-like luminous-red-galaxy sample and an FRB population over 35% of the sky, we forecast $σ(f_{\\rm NL}) \\simeq 5$ for both $N_{\\rm FRB} = 10^4$ and $10^5$ at fixed Planck 2018 cosmology, marginalised over three astrophysical bias parameters $(b_e^0, z_{\\rm fb}, b_g^{\\rm amp})$. The $f_{\\rm NL}$ constraint is robust to marginalising over the six $Λ$CDM parameters $(ω_b, ω_{\\rm cdm}, h, A_s, n_s, τ)$ with Planck priors. At these sample sizes, the galaxy auto-spectrum sets the constraint, while the DM sector's contribution grows with the burst count and becomes decisive for the larger samples anticipated in the SKA era, reaching $σ(f_{\\rm NL}) \\simeq 2$ at $10^7$ bursts.",
+   "authors": [
+    "Indranil Das",
+    "Gilbert Holder"
+   ],
+   "categories": [
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-10-28",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology",
+    "population"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.37646",
+   "title": "Measuring the magnetization profiles of galaxy groups and clusters",
+   "abstract": "Magnetic fields are vital in determining the physical conditions of baryons in massive halos. They are, however, notoriously difficult to observe. This impacts problems from our understanding of galaxy formation, to the observed deficit in the amplitude of thermal Sunyaev-Zel'dovich (tSZ) power spectrum that affects cosmological inferences. Although Faraday rotation measures (RMs) offer a direct probe of magnetic fields, it weights magnetic fields by the free-electron density. Several probes of free electrons, including fast radio burst (FRB) dispersion measures (DMs) and kinematic SZ (kSZ) effect, are now maturing into precision tools. We combine RM$^2$ stacks from SPICE-RACS around DESI galaxy groups and ROSAT clusters with optical depth profiles constrained jointly by the FRB DM-redshift relation and the kSZ effect, and obtain 95% upper limits on the rms line-of-sight magnetic field of $<3.9$-$11.6~μ$G ($<2.3$-$6.4~μ$G) in groups (clusters) for a 10~kpc coherence length. Combining these with thermal pressure profiles inferred from tSZ-shear cross-correlations, we obtain 95% lower limits on the plasma $β$ of $>0.31$ ($>11$) in groups (clusters). Although current constraints are only limits, we forecast a first detection with larger datasets from the Deep Synoptic Array (DSA). We present the first forecast of the DSA RM grid density ($\\sim365$ RMs deg$^{-2}$), which when combined with 10$^4$ FRBs would measure the field in groups to $3$-$13\\%$ precision, compared to current constraints of $38$-$75\\%$. Although the interpretation of current measurements remains challenging owing to depolarization along turbulent halo sightlines and the unknown coherence length, larger samples and DSA/Square Kilometer Array observations may resolve these uncertainties by measuring polarization-fraction profiles and the RM structure function using extended radio sources, respectively.",
+   "authors": [
+    "Kritti Sharma",
+    "Vikram Ravi",
+    "Elisabeth Krause"
+   ],
+   "categories": [
+    "astro-ph.GA",
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.GA",
+   "announce_type": "new",
+   "date": "2026-10-27",
+   "primary": "polarization",
+   "tags": [
+    "polarization",
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.37214",
+   "title": "Coherent Radio Emission from Flux Rope Mergers in 3D Relativistic Reconnection",
+   "abstract": "Coherent emission from merging plasmoids in relativistic reconnection is the leading model for radio emission originating in the outer magnetosphere of pulsars such as the Crab, and a candidate emission mechanism for fast radio bursts. This process has only been studied in 2D, and whether it survives in 3D, where the dynamics of structures in the reconnection layer can differ substantially, is still an open question. Here we present the first study of coherent wave generation from flux rope mergers in 3D relativistic reconnection. We use particle-in-cell simulations of relativistic reconnection with outflow boundary conditions and guide fields $B_g/B_0 = \\{0,0.1,0.3\\}$, and measure the efficiency $η$ with which inflowing magnetic energy is converted into escaping coherent waves. We find $η\\sim 7\\times10^{-4}$ without a guide field, a factor of a few below 2D results, and $η\\sim(1\\text{-}2) \\times10^{-3}$ at moderate guide fields, comparable to 2D with no guide field. We propose a physical picture for why the efficiency remains comparable to 2D, based on how reconnected field is transported away from the diffusion regions. The escaping waves are linearly polarized, with a polarization angle set by the direction of the upstream field. In the presence of a guide field, waves escaping from opposite sides of the reconnection layer therefore differ in polarization angle by $ \\sim 2\\arctan(B_g/B_0)$. Our results support relativistic magnetic reconnection as the origin of coherent radio emission from Crab-like pulsars, and strengthen its case as a potential emission mechanism for fast radio bursts.",
+   "authors": [
+    "Jasmine Parsons",
+    "Lorenzo Sironi",
+    "Anatoly Spitkovsky",
+    "Alexander Chernoglazov"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-27",
+   "primary": "emission",
+   "tags": [
+    "emission"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.37052",
+   "title": "Self lensing in BH-NS binaries as progenitors for periodically repeating Fast Radio Bursts",
+   "abstract": "Fast radio bursts (FRBs) are bright extragalactic transients whose origin remains uncertain. The discovery of repeating FRBs, some with cyclic activity windows, opens new prospects for testing their progenitors. Neutron stars (NSs) are strong candidates, as they naturally emit radio pulses with temporal and spectral properties resembling those of FRBs, an interpretation reinforced by the detection of an FRB-like burst from the Galactic magnetar SGR 1935+2154. Nevertheless, the pulse energy of typical radio-emitting NSs remains several orders of magnitude below that of even the faintest observed FRBs. We explore a binary system in which a NS orbits a black hole (BH), so that NS radio pulses are gravitationally amplified through self-lensing, producing characteristic signatures in the energy distribution, activity windows, and waiting times that can be contrasted with observations. We implement a simple NS-BH binary model with a circular orbit undergoing Lense-Thirring precession, and compute how the pulses are lensed along the orbit, including pulse splitting and time delays. Pure Keplerian orbits produce activity windows several orders of magnitude shorter than those of periodic FRBs. Post-Keplerian orbits with Lense-Thirring precession are more promising, yielding windows of a few to tens of days. Lensing transforms an intrinsic log-normal NS pulse-energy distribution, producing a high-energy power-law tail spanning up to four orders of magnitude. Interpreting the observed millisecond waiting times between consecutive bursts as lensing-induced image delays, we infer BH masses of 10^3-10^4 solar masses, in the intermediate-mass (IMBH) range. However, the amplification in our model is insufficient to bridge the energy gap between Galactic magnetar radio pulses and FRBs. Moreover, the non-detection of NS-IMBH systems suggests a low abundance, so this channel is likely rare.",
+   "authors": [
+    "L. E. Rodríguez",
+    "M. Cruces",
+    "G. Voisin",
+    "J. Vera-Casanova",
+    "C. A. Braga"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-27",
+   "primary": "progenitor",
+   "tags": [
+    "progenitor",
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "SGR 1935"
+   ]
+  },
+  {
+   "id": "2610.37034",
+   "title": "FLITS: an interactive, reproducible workbench for fast radio burst analysis",
+   "abstract": "Fast radio bursts (FRBs) are brief flashes of radio emission whose time, frequency, and polarization structure constrain their sources and propagation environments. FLITS (Fast-Look Interactive Transient Suite) is an open-source Python package with a browser interface for analysing detected bursts. It combines data inspection, interference mitigation, measurement, and modelling, including fits of the fitburst burst model, in a shared session, and reads SIGPROC filterbank, PSRFITS, and CHIME/FRB HDF5 data. The same routines measure larger samples from the command line and flag bursts whose automatic selections need checking. Trial dispersion measures can be scored by signal-to-noise, by burst structure, or with a smoothed-structure metric that also reports the range of dispersion measures consistent with the best one. Portable session files retain the selected data regions, excluded channels, calibration inputs, available results, input-data checksum, and software provenance, and supported measurements can be replayed from the command line and compared with their saved values. Uncertainty labels identify missing calibration information. A public reference workflow provides downloadable data and numerical checks.",
+   "authors": [
+    "Dirk Kuiper",
+    "Ziggy Pleunis",
+    "Jason W. T. Hessels"
+   ],
+   "categories": [
+    "astro-ph.IM",
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.IM",
+   "announce_type": "new",
+   "date": "2026-10-27",
+   "primary": "methods",
+   "tags": [
+    "methods",
+    "survey",
+    "polarization"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME"
+   ]
+  },
+  {
+   "id": "2610.35849",
+   "title": "Interaction of Strong X-mode Waves with Magnetized Pair Plasmas",
+   "abstract": "The interaction of strong ($a_0>1$), superluminal X-mode electromagnetic waves with magnetized pair plasma falls into two regimes set by $\\varepsilon_{\\rm B}\\equiv a_0ω_{\\rm B}/ω_0$, the ratio of the wave strength parameter to its frequency, in units of cyclotron frequency. For $\\varepsilon_{\\rm B}<1$ the wave propagates until induced scattering disrupts it. Using analytical theory and kinetic simulations, we show that the background magnetic field introduces a restoring frequency $Ω_{\\rm B}$ to scattering; when $Ω_{\\rm B}$ exceeds the scattering rate, the unattenuated length grows from $\\simeq\\varepsilon_{\\rm p}^{-2/3}$ to $\\simeq\\varepsilon_{\\rm B}^{1/2}/\\varepsilon_{\\rm p}$ wavelengths ($\\varepsilon_{\\rm p}\\equiv a_0ω_{\\rm p}/ω_0$; $ω_{\\rm p}$ is the plasma frequency). When $a_0^2>\\varepsilon_{\\rm B}>1$, the plasma current is nonlinear, and the wave is damped while riding a motional electric field, so one half-cycle appears attenuated. This framework has implications for the duration of fast radio bursts and whether they can escape their surroundings.",
+   "authors": [
+    "Navin Sridhar"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "physics.class-ph",
+    "physics.flu-dyn",
+    "physics.plasm-ph"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-26",
+   "primary": "propagation",
+   "tags": [
+    "propagation"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.34848",
+   "title": "A frequency-resolved measurement of the scattering law in FRB 20210415C",
+   "abstract": "Fast radio bursts (FRBs) show diverse temporal morphologies, shaped both by their intrinsic emission and by propagation effects such as residual dispersion and multipath scattering. Because several of these effects can broaden a burst asymmetrically, an asymmetric profile does not by itself establish multipath scattering. We measure the frequency dependence of the temporal tail in FRB 20210415C, a bright burst from the repeating source FRB 20210219C. The burst is detected across approximately 400-800 MHz. Frequency-resolved fits yield an empirical exponential-tail timescale, $τ_{\\rm emp}$, that follows $τ_{\\rm emp}\\proptoν^α$. Two complementary treatments of the underlying pulse width give $α=-3.95\\pm0.07$ and $-4.14\\pm0.08$. Both results are consistent with the commonly adopted $ν^{-4}$ scattering law. The inferred scattering time is approximately 8.0 ms at 583 MHz, exceeding Galactic foreground estimates by a factor of at least $4\\times10^{2}$. This favours a dominant contribution beyond the Milky Way, although the data do not localise the scattering screen. FRB 20210415C therefore provides a direct measurement of a scattering law commonly imposed in catalogue analyses.",
+   "authors": [
+    "Victor Pop",
+    "Mohammed A. Chamma",
+    "Aishwarya Kumar",
+    "Fereshteh Rajabi"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.IM"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-26",
+   "primary": "propagation",
+   "tags": [
+    "propagation"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.31365",
+   "title": "FRB 20210601A: Extreme Temporal Clustering in a Repeating Fast Radio Burst Source as Evidence for a Hidden Class of Episodic Repeaters",
+   "abstract": "Population studies of fast radio burst (FRB) repetition typically model sources using a single distribution of steady, time-averaged burst rates, yet individual sources show significant departures from this assumption. Here we present FRB 20210601A, a source discovered by the Canadian Hydrogen Intensity Mapping Experiment FRB project (CHIME/FRB) that represents the most extreme such departure yet identified. The source produced at least nine bursts within a single 106.5 s interval -- the highest instantaneous burst rate yet reported from a repeating FRB source at $\\gtrsim 2$ Jy ms fluences -- yet remained otherwise undetected despite $\\sim 320$ hr of exposure spanning 7 yr. The active interval occurred while the source was in a side-lobe of the CHIME/FRB digitized beams, implying an instantaneous burst rate $\\gtrsim2.3\\times$ higher ($\\gtrsim$ 21 bursts) at main-lobe sensitivity. The source's intense, brief burst storm flanked by apparent quiescence despite substantial exposure is unique among the CHIME/FRB repeater sample, although its burst morphology, excess dispersion measure ($\\rm{DM_{excess}} \\sim 360$ pc cm$^{-3}$), Faraday rotation measure ($|\\rm{RM_{excess}}| \\sim 150-170$ rad m$^{-2}$), and temporal scattering ($τ\\lesssim 0.37$ ms at 600 MHz) are otherwise typical. Modeling a population of episodically active repeaters (i.e., short burst storms separated by long recurrence times) and accounting for declination-dependent exposure, we forecast $\\sim1-4$ additional source discoveries similar to FRB 20210601A over the next decade of CHIME/FRB operations, corresponding to a CHIME/FRB-detectable population of $9^{+200}_{-8}$ sources (68% credible interval). These results demonstrate that highly episodic repeaters could constitute a selection-biased but detectable component of the FRB population, possibly reflecting distinct magnetospheric states or triggering mechanisms.",
+   "authors": [
+    "Ryan Mckinven",
+    "Amanda M. Cook",
+    "Alice P. Curtin",
+    "B. M. Gaensler",
+    "Jason W. T. Hessels",
+    "Naman Jain",
+    "Lordrick Kahinga",
+    "Victoria M. Kaspi",
+    "Charanjot Brar",
+    "Tomas Cassanelli",
+    "Shami Chatterjee",
+    "Fengqiu Adam Dong",
+    "Maxwell Fine",
+    "Emmanuel Fonseca",
+    "Afrokk Khan",
+    "Bikash Kharel",
+    "Calvin Leung",
+    "Robert Main",
+    "Kiyoshi W. Masui",
+    "Kyle McGregor",
+    "Nicole Mulyk",
+    "Mason Ng",
+    "Kenzie Nimmo",
+    "Ayush Pandhi",
+    "Aaron B. Pearlman",
+    "Ziggy Pleunis",
+    "Mawson W. Sammons",
+    "Paul Scholz",
+    "Kaitlyn Shin",
+    "Seth R. Siegel",
+    "Kendrick Smith",
+    "Ingrid Stairs"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-22",
+   "primary": "repeater",
+   "tags": [
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME",
+    "repeater"
+   ]
+  },
+  {
+   "id": "2610.28347",
+   "title": "Revisiting the Unknown Unknowns in Transient Astrophysics with the SKA Telescopes",
+   "abstract": "It was already recognised in the 2004 and 2014 SKA Science Case Chapters: \"The Exploration of the Unknown\" and \"The SKA and the Unknown Unknowns\", respectively, that the exploration of the unknown is an extremely important concept in realising the potential of any new instrument. This is especially true in an era of limited budgets but expanding analysis algorithms and capabilities. While this Chapter considers transients and environments, the ethos of these previous Chapters should be considered and embraced broadly and can be applied more broadly across SKAO science. We do not repeat in detail the important background these Chapters provide but encourage the reader to review them before reading this Chapter. In the last decade of radio transient astronomy, we have seen the value of these approaches with the expansion of the FRB population, the discovery of long period pulsars and transients and radio emission from white dwarfs to name just a few. With the SKAO, we should push the explored parameter space further and in new directions in all of the sensitivity, field-of-view, time, spectral, spectro-dynamic, polarisation and imaging domains. We should utilise approaches such as machine learning in allowing us to address the complexity that arises from the expanded parameter space and increased data rates and candidate sources. We will briefly summarise some of the impressive progress that the SKA pathfinders and precursors have made in these areas and what these mean for the SKA telescopes. We will also discuss ways in which it might be possible to push the current capabilities.",
+   "authors": [
+    "A. Andersson",
+    "M. Caleb",
+    "J. Callingham",
+    "A. Deller",
+    "D. Dobie",
+    "N. Hurley-Walker",
+    "B. Marcote",
+    "K. Rajwade",
+    "A. Rowlinson",
+    "B. Stappers",
+    "M. Trudu",
+    "H. Vedantham",
+    "A. Weltman"
+   ],
+   "categories": [
+    "astro-ph.IM"
+   ],
+   "primary_category": "astro-ph.IM",
+   "announce_type": "new",
+   "date": "2026-10-20",
+   "primary": "methods",
+   "tags": [
+    "methods",
+    "progenitor"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.27489",
+   "title": "Constraining the FRB Central Engine from Flux Variations of Persistent Radio Sources: FRB 20240114A as the First Attempt",
+   "abstract": "Some repeating fast radio bursts (FRBs) are associated with persistent radio sources (PRSs), likely driven by the long-term activity of a central engine. We investigate FRB 20240114A-currently the most active repeating FRB-to explore the link between its burst activity and the flux variability of its associated PRS. We model electrons responsible for FRB emission being continuously injected from a central magnetar into its magnetar wind nebula (MWN), where synchrotron radiation produces the PRS. Comparing our model with the latest PRS spectra and flux variations, we constrain the physical properties of the FRB source. We find that the total energy injected into the MWN during FAST observations from January to August 2024 is $\\sim 10^{48} \\, \\rm{erg}$, consistent with the magnetic energy budget of a magnetar with an internal magnetic field of $\\sim 10^{16} \\, \\rm G$. The bulk Lorentz factor of the FRB-emitting plasma is mildly constrained to $\\lesssim 10^3$, and FRB 20240114A is inferred to be powered by a young magnetar aged $\\sim 10$-$20 \\, \\rm {yr}$. These results show that the PRS flux variability effectively probes FRB emission properties. We predict that while PRS luminosity increases rapidly with enhanced FRB activity, it will slowly fade over decades via adiabatic cooling after FRB activity ceases. Energetics suggest that the hyper-active phase observed in FRB 20240114A (burst rate $\\sim 700 \\, \\rm hr^{-1}$) is a rare state with a duty cycle of $\\lesssim 10^{-2}$, which is broadly consistent with its detection rate in current FRB-PRS samples.",
+   "authors": [
+    "Hirotaka Matsumiya",
+    "Kazumi Kashiyama",
+    "Tomonori Totani"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-20",
+   "primary": "repeater",
+   "tags": [
+    "repeater",
+    "host"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "FAST",
+    "20240114A"
+   ]
+  },
+  {
+   "id": "2610.27311",
+   "title": "Source velocities of fast radio bursts constrained by their dispersion measure variations",
+   "abstract": "Growing evidence suggests that many fast radio bursts (FRBs) originate from extragalactic magnetars. Like all neutron stars, magnetars may be kicked at birth to large velocities, the values of which directly inform the physics governing stellar explosions and compact object formation. A subset of repeating FRBs show significant variability in their dispersion measures (i.e., electron column densities) over time, often exhibiting apparently secular trends. Here we show that all repeating FRBs with significant dispersion measure variations can be generically explained by motion of the source. We use existing measurements to constrain the minimum space velocities of the FRB sources, which are found to be $\\gtrsim 20-2800\\,{\\rm km\\,s}^{-1}$. We simultaneously constrain the plasma properties of the circumsource media, which are comparable to those of compact HII regions. For sources with compact radio nebulae, we directly infer the maximum source ages, and find them to be consistent with the ages of known Galactic magnetars. Our findings suggest that significant DM variability is a hallmark of young sources born with natal kicks through prompt formation channels. Applying our methods to a larger sample with continued monitoring of repeating FRB dispersion measures will reveal key physics of compact object formation.",
+   "authors": [
+    "S. K. Ocker",
+    "A. L. Piro"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-19",
+   "primary": "propagation",
+   "tags": [
+    "propagation",
+    "progenitor",
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.26454",
+   "title": "Pulsars as natural launchers of interstellar probes",
+   "abstract": "In this study, we investigate the feasibility of accelerating small probes up to relativistic energies via magnetocentrifugal acceleration by pulsars. Specifically, we consider a broad range of pulsars and examine probes with radii ranging from $10$ to $1000$ nm. We show that the probes may attain Lorentz factors of up to approximately $25$. Furthermore, we investigate the detectability of such probe swarms and demonstrate that, if a highly advanced civilization deploys probes with a total mass of approximately one billion tonnes for acceleration, their collective synchrotron emission could be detectable by the FAST radio telescope at a distance of 1 kpc. The study also discusses the potential resemblance between the emission from such probe swarms and fast radio bursts (FRBs), and outlines directions for future research.",
+   "authors": [
+    "Zaza N. Osmanov"
+   ],
+   "categories": [
+    "physics.pop-ph"
+   ],
+   "primary_category": "physics.pop-ph",
+   "announce_type": "new",
+   "date": "2026-10-19",
+   "primary": "progenitor",
+   "tags": [
+    "progenitor"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "FAST"
+   ]
+  },
+  {
+   "id": "2610.23333",
+   "title": "Foreground Groups and Host-Galaxy Geometry in the Dispersion-Measure Scatter of Fast Radio Bursts",
+   "abstract": "Localized fast radio bursts (FRBs) show substantial scatter in dispersion measure (DM) about the mean cosmic DM--redshift relation, also known as the Macquart relation. Both foreground structure and host galaxies contribute to this scatter. In this work, we examine foreground tracers and host galaxy properties using a parent catalog of 136 localized FRBs with measured DMs and spectroscopic host redshifts. Among 77 FRBs within the Gfinder footprint, DM excess relative to a fixed Macquart mean increases with foreground group count excess, with a Spearman coefficient of 0.459. Adding the foreground term to a mean host baseline reduces the leave-one-out root mean square error (RMSE) and mean absolute error (MAE) in extragalactic DM by \\(13.0\\%\\) and \\(7.5\\%\\), respectively. For 20 of these FRBs with optical host axis ratio measurements, adding a foreground term calibrated on the other 57 FRBs to the host shape model reduces the observer-frame leave-one-out RMSE from \\(76.3\\) to \\(64.0~\\mathrm{pc\\,cm^{-3}}\\) and MAE from \\(54.2\\) to \\(50.2~\\mathrm{pc\\,cm^{-3}}\\). And the in-sample residual standard deviation in the host rest frame decreases by \\(20.2\\%\\). Idealized galaxy models based on the Milky Way electron density distribution produce DM changes with inclination comparable to the fitted amplitude under the adopted assumptions.",
+   "authors": [
+    "Jiale Wang",
+    "Taotao Fang"
+   ],
+   "categories": [
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-10-16",
+   "primary": "host",
+   "tags": [
+    "host",
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.20847",
+   "title": "Correlated Radio Frequency Interference Monitor for Radio Telescopes",
+   "abstract": "Radio frequency interference (RFI) is one of the biggest challenges facing current radio astronomy experiments. Telescopes like the Canadian Hydrogen Observatory and Radio transient Detector (CHORD) need to accurately identify RFI to deliver on their science goals. For applications like HI intensity mapping for precision cosmology, long integrations consisting of hundreds to thousands of hours are needed, and thorough RFI flagging is required to avoid contaminating deep datasets. Currently, many major precision cosmology instruments are facing systematic limitations that include unflagged RFI contamination. For transients, false triggers due to RFI are common and interfere with the detection of real sources like fast radio bursts (FRBs). This paper presents a prototype design for an auxiliary array of horizon-pointed antennas that are cross-correlated in real-time at full cadence with the main telescope to assist in the identification and mitigation of RFI for the CHORD instrument. The major benefit of the version proposed here over a more traditional omnidirectional observatory monitor is the capability to synchronize with CHORD in real time and provide fine timescale flags and cross correlations. The general setup and techniques used here will be applicable to other radio telescopes as well.",
+   "authors": [
+    "Lindsay Berkhout",
+    "Ian Hendricksen",
+    "Joshua Montgomery",
+    "Arnab Chakraborty",
+    "Jean-Francois Cliche",
+    "Matt Dobbs",
+    "Albert Wai Kit Lau",
+    "James Mertens",
+    "Andre Renard",
+    "Keith Vanderlinde",
+    "Dallas Wulf"
+   ],
+   "categories": [
+    "astro-ph.IM"
+   ],
+   "primary_category": "astro-ph.IM",
+   "announce_type": "new",
+   "date": "2026-10-14",
+   "primary": "methods",
+   "tags": [
+    "methods"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.18710",
+   "title": "Evidence for Distinct One-Off and Repeating Subpopulations in CHIME/FRB Catalog 2",
+   "abstract": "The Canadian Hydrogen Intensity Mapping Experiment (CHIME) has published its second catalog of 3,641 fast radio bursts (FRBs). While this sample includes 981 bursts from 83 repeating sources, only 2.3% of CHIME FRBs are observed to repeat. This raises the question of whether the FRB population truly consists of a single repeating population or includes a distinct subpopulation of one-off sources. We apply Simulation Based Inference (SBI), a likelihood-free machine learning framework, to model the CHIME/FRB Catalog 2 dataset, testing eight FRB population models, half of which include a subpopulation of truly one-off sources. The current catalog strongly and decisively favors models including such a subpopulation, with the best-fitting model combining a log-normal burst rate distribution, a Poissonian wait-time distribution, and a one-off subpopulation. This preference is corroborated by an independent random forest classifier and by the ability of one-off models to naturally reproduce the hyperactive repeating sources present in the catalog without having been trained on them. We place upper limits on the potentially observable CHIME/FRB population of 36,000 repeating sources and 19 one-off sources per day in the CHIME sky. Models with a one-off subpopulation naturally account for the hyperactive repeating sources present in the catalog without having been trained on them, providing an independent consistency check on our results. We predict the repeater percentage will fall below 2% in the next five years, eventually declining to ~0.5% as the sample saturates with one-off detections.",
+   "authors": [
+    "Sloane Sirota",
+    "Duncan R. Lorimer"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-13",
+   "primary": "repeater",
+   "tags": [
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME",
+    "repeater"
+   ]
+  },
+  {
+   "id": "2610.18208",
+   "title": "Fast Radio Bursts from Monster Shocks and Flares of Inspiraling Binary Neutron Stars: A Kinetic Model for Double Pulsar",
+   "abstract": "The coalescence of binary neutron star systems offers unprecedented possibilities for multimessenger observations, including the detection of gravitational waves, gamma-ray bursts, kilonovae, and potentially fast radio bursts. For a detailed investigation of the latter, one requires a kinetic plasma model to describe the interacting magnetospheres of the stars. We present a three-dimensional particle-in-cell kinetic simulation of the combined magnetosphere of a binary neutron star in which the two stars physically orbit one another so that the orbital motion itself twists the magnetic loops. We find that the stellar magnetic-field intensity ratio controls the emergence of flares, while the stellar spins set the direction and modulation of the flare. We identify four spatially and dynamically distinct regions of strong electromagnetic energy release: (i) an expanding fast magnetosonic wave that steepens into a monster shock, (ii) a plasma flare being pushed by (iii) an expanding fireball and containing (iv) a reconnecting current sheet. The fast magnetosonic wave is a promising source of coherent radio emission. It is released when orbital motion cuts a closed plasma loop. The electric and magnetic wave amplitudes are similar and reach that of the background magnetic field. Our kinetic treatment yields particle spectra and plasma structures that can be used to assess coherent emission in kinetic-scale simulations. In conclusion, the stellar orbital motion constitutes a driving channel distinct from models with spin-driven magnetospheric twisting.",
+   "authors": [
+    "Jan Benáček",
+    "Benoît Cerutti",
+    "Martin Pohl",
+    "Tim Dietrich",
+    "Anna Neuweiler"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.SR"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-13",
+   "primary": "emission",
+   "tags": [
+    "emission",
+    "progenitor",
+    "multiwavelength"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.15536",
+   "title": "Joint Constraints on the Hubble Constant and Cosmic Baryon Density from Localized Fast Radio Bursts and DESI DR2 Baryon Acoustic Oscillations",
+   "abstract": "Fast radio bursts (FRBs) probe free-electron columns along cosmological sightlines through their dispersion measures (DMs), whereas baryon acoustic oscillations (BAO) constrain cosmic expansion geometry through acoustic distance ratios. In this work, we leverage their distinct physical sensitivities to simultaneously determine the Hubble constant ($H_0$) and cosmic baryon density ($Ω_{\\rm b}$) without external cosmic microwave background (CMB) or Big Bang nucleosynthesis (BBN) priors. Combining 120 localized FRBs and DESI DR2 BAO, we obtain $H_0=71.4^{+2.2}_{-2.5}\\ {\\rm km\\ s^{-1}\\ Mpc^{-1}}$ and $Ω_{\\rm b}=0.0503^{+0.0025}_{-0.0021}$ in $Λ$CDM, corresponding to precisions of $3.3\\%$ and $4.6\\%$, respectively. The inferred $H_0$ is statistically consistent with both SH0ES and CMB, and $Ω_{\\rm b}$ agrees with the joint constraint from BBN and CMB. Adopting IllustrisTNG-based DM distributions and fixing the diffuse-gas baryon fraction tightens the constraint to $H_0=68.8\\pm1.0\\ {\\rm km\\ s^{-1}\\ Mpc^{-1}}$, but lowers the central value toward the CMB-inferred value, identifying extragalactic DM modeling as the dominant systematic uncertainty. These results establish FRB-BAO complementarity as a new avenue for simultaneously constraining $H_0$ and $Ω_{\\rm b}$.",
+   "authors": [
+    "Ji-Guo Zhang",
+    "Tian-Nuo Li",
+    "Guo-Hong Du",
+    "Wan-Peng Sun",
+    "Jing-Fei Zhang",
+    "Xin Zhang"
+   ],
+   "categories": [
+    "astro-ph.CO",
+    "gr-qc",
+    "hep-ph"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-10-11",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.13062",
+   "title": "A Relationship Between Fast Radio Burst Dispersion Measure and Host Galaxy Inclination",
+   "abstract": "It is commonly thought that fast radio bursts (FRBs) trace star formation, and that they are produced by magnetars. Both hypotheses imply that their sources are hosted primarily (but not exclusively) in galactic disks. Although there is evidence in that direction, it has yet to be shown conclusively. In addition, a tension exists with the fact that at least one FRB source is found in a globular cluster far from the disk of the host. If FRBs originate primarily in disks, the galaxy orientation could leave an impression in the sample of observed FRBs, either as a selection bias against FRBs in edge-on galaxies or as a correlation with DMHost. Statistical tests against the inclinations of FRB host galaxies, derived from parametric morphology applied to optical and near-infrared imaging, can search for these effects. Such a search requires an adequately large sample of known FRB hosts that have been imaged to a sufficient depth, while estimates of DMHost also require the redshift of each host to be known. These conditions are best met in the Commensal Real-time ASKAP Fast Transient (CRAFT) survey sample of FRB host galaxies, for which the majority have been imaged at optical wavelengths with FORS2 on the Very Large Telescope (VLT). Here these data are fitted with the morphology software GALFIT to derive the elliptical axis ratio q (a proxy for inclination) for 34 hosts from the CRAFT sample, detected with ASKAP and followed up with VLT imaging. We find no bias against FRB detections from edge-on galaxies; instead, we uncover a new relationship between the inclination of an FRB host galaxy and DMHost. This is consistent with a primarily disk-based origin for CRAFT FRBs. Using this relationship we are able to reduce the scatter of the host sample about the Macquart relation by 40%, demonstrating a new empirical method for estimating DMHost that requires only deep optical imaging.",
+   "authors": [
+    "Lachlan Marnoch",
+    "Stuart D. Ryder",
+    "Sunil Simha",
+    "Alexa C. Gordon",
+    "R. M. Shannon",
+    "Nicolas Tejos",
+    "Marcin Glowacki",
+    "Ziteng Wang",
+    "Elizabeth K. Mahony",
+    "J. Xavier Prochaska",
+    "Wen-fai Fong",
+    "Richard M. McDermid"
+   ],
+   "categories": [
+    "astro-ph.GA",
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.GA",
+   "announce_type": "new",
+   "date": "2026-10-09",
+   "primary": "host",
+   "tags": [
+    "host"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "globular cluster"
+   ]
+  },
+  {
+   "id": "2610.10741",
+   "title": "Feedback-Conditional 3D Reconstruction of Cosmic Baryons with Flow Matching",
+   "abstract": "The complex relationship between galaxies and diffuse gas at large scales depends strongly on astrophysical feedback and cosmology. The dispersion measure (DM) of Fast Radio Bursts (FRBs) is a column of cosmic baryon density and is dominated by the intergalactic medium, which is not necessarily captured by traditional halo model prescriptions. We introduce a generative model to reconstruct 3D gas density fields from galaxy surveys, including redshift space distortions. The probabilistic model is trained on the CAMELS50 simulation suite (IllustrisTNG) and learns to predict the posterior distribution of gas fields conditioned on stellar mass-weighted galaxy density, cosmological parameters, the minimum stellar mass threshold for the galaxy sample, and the baryon suppression power spectrum as a measure of baryonic feedback. Our method uses the 3D gas reconstruction to estimate per-sightline FRB DMs and their posteriors. We validate the model on test boxes by showing agreement between predicted and true DM across individual lines of sight and the overall DM distribution. The model generalizes to a box size $\\sim$\\,4$^3$ times larger in volume than the training boxes and can cover the volumes spanned by cosmological FRB sightlines. The model's 3D gas density predictions vary with input power spectrum and feedback scenarios, offering an inference path to constrain feedback models from FRBs and other probes such as X-rays, the SZ effect, and weak lensing.",
+   "authors": [
+    "Maryam Hussaini",
+    "Aizhan Akhmetzhanova",
+    "Carolina Cuesta-Lazaro",
+    "Liam Connor"
+   ],
+   "categories": [
+    "astro-ph.CO"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-10-07",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.07325",
+   "title": "A spatially resolved view of Fast Radio Burst host metallicities with Integral-field Spectroscopy",
+   "abstract": "Magnetar sources are the leading theory for Fast Radio Burst (FRB) progenitors. If magnetars are indeed the dominant sources, we may thus expect any metallicity preference for magnetar formation to be reflected in the FRB site in host galaxies. Here, we leverage Integral Field Unit (IFU) spectroscopy to spatially resolve gas-phase metallicity distribution in five FRB host galaxies: FRB 20240210A, FRB 20240312D, FRB 20250227A, FRB 20211127I, and FRB 20250316A, at $z < 0.05$, including the FRB site, with the O3N2 index. We observed the first four sources with the newly commissioned Large Lenslet Array Magellan Spectrograph (LLAMAS) IFU on the Magellan Telescopes and used archival Keck/KCWI data for FRB 20250316A. We find ISM metallicity variations of at least 0.3 dex within individual hosts for the majority of the sample, with median values spanning $12 + log(O/H) \\approx$ 8.5--8.7. At the burst sites, four have metallicities of $12 + \\log(O/H) \\approx 8.5$--8.9, while the fifth has a metallicity below 8.5. These findings reveal substantial metallicity variations both among FRB host galaxies and within the local environments of the bursts. Consequently, our study shows that longslit-based global estimates of host galaxy metallicity do not always represent the true burst-site distributions. We therefore advocate for IFU follow-up of larger host samples to ultimately provide FRB-site-relevant observational constraints on metallicity preferences for FRB occurrence.",
+   "authors": [
+    "Sunil Simha",
+    "Hsiao-Wen Chen",
+    "Wen-fai Fong",
+    "Sarah Hughes",
+    "Yuxin Dong",
+    "J. Xavier Prochaska",
+    "Nicolas Tejos",
+    "Tarraneh Eftekhari",
+    "Alexa C. Gordon",
+    "Stuart D. Ryder",
+    "Mawson W. Sammons",
+    "Alice P. Curtin",
+    "Victoria M. Kaspi",
+    "Adam E. Lanman",
+    "Calvin Leung",
+    "Kiyoshi W. Masui",
+    "Aaron B. Pearlman",
+    "Ryan M. Shannon"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.GA"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-05",
+   "primary": "host",
+   "tags": [
+    "host"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.05386",
+   "title": "Radiation Reaction in Relativistic Magnetized Shocks of Neutron Star Magnetospheres",
+   "abstract": "The steepening of fast magnetosonic waves in the inner magnetospheres of magnetars can produce monster shocks, whose precursor emission may account for fast radio bursts (FRBs). For sufficiently bright bursts, particles crossing the shock radiate their energy within a single gyration period, raising the question of how radiation reaction affects the shock structure and its coherent emission. We investigate strongly cooled, relativistically magnetized shocks using a stationary multifluid model generalized to include the Landau-Lifshitz radiation-reaction force, together with particle-in-cell simulations of monster-shock dynamics. We show that the kinetic-scale shock transition is governed by only two dimensionless parameters: the Alfvénic Mach number and a cooling parameter $τ$ that measures radiative losses over a gyration period. Coherent precursor emission is triggered above a critical Mach number that increases with $τ$, at which the beam dynamics becomes chaotic. Above this threshold, radiative cooling shifts the peak frequency of the precursor to higher values, scaling as $τ^{2/7}$. Remarkably, monster shocks remain far above the emission threshold even under strong radiative cooling. Radiation reaction therefore does not quench the precursor emission; instead, it primarily shifts the spectral peak into the kinetic regime. The luminosity of the precursor wave is determined solely by the luminosity of the driving kHz wave and the conversion efficiency, $ε_X\\sim 10^{-3} - 10^{-2}$.",
+   "authors": [
+    "Arno Vanthieghem",
+    "Amir Levinson"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "physics.plasm-ph"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-10-04",
+   "primary": "emission",
+   "tags": [
+    "emission"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2610.04126",
+   "title": "LoFreq-SETI: A Low-Frequency Technosignature Search Pipeline for the LWA Swarm",
+   "abstract": "The search for extraterrestrial intelligence (SETI) is conducted across the electromagnetic spectrum to understand the prevalence and distribution of intelligent life in the universe. At radio frequencies, this effort focuses on searching for \"technosignatures\", observable indicators of technological activity consistent with our understanding of an advanced civilization. Historically, the microwave regime from 1-10 GHz has been the primary frequency range searched for these technosignatures, but recent SETI experiments utilizing low-frequency radio telescopes, such as the Low Frequency Array (LOFAR), Murchison Widefield Array, and MeerKAT radio telescope have explored the insufficiently studied frequency range below 1 GHz. However, the lowest radio frequencies ($<$100 MHz) have been even less explored for technosignatures, despite significant human communication signals occupying this band. The Long Wavelength Array (LWA) is a low-frequency (3-88 MHz) interferometer array telescope collaboration comprised of dipole 'stations' distributed across the Southwestern United States, and the LWA Swarm is the aperture synthesis telescope consisting of interconnected LWA stations operating as a long baseline interferometer. Here we present a narrowband technosignature pipeline using the Breakthrough Listen Interesting Signal Search algorithm for raw beamformed single-station LWA data and outline its planned extension to correlated visibilities from the LWA Swarm. We demonstrate the pipeline on a limited selection of fast radio burst observations to evaluate the data processing and spatial coincidence filtering for a future observing campaign of exoplanet systems.",
+   "authors": [
+    "Craig A. Taylor",
+    "Lillian Ekness",
+    "Chenoa Tremblay"
+   ],
+   "categories": [
+    "astro-ph.IM"
+   ],
+   "primary_category": "astro-ph.IM",
+   "announce_type": "new",
+   "date": "2026-10-02",
+   "primary": "methods",
+   "tags": [
+    "methods"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2609.38344",
+   "title": "VLBI Astrometric Procedure and Performance with CHIME/FRB Outriggers",
+   "abstract": "Precise localizations of fast radio bursts (FRBs) to specific environments within their host galaxies with very-long-baseline interferometry (VLBI) have provided valuable insights into the nature of their progenitors. To date, such localizations have relied primarily on traditional VLBI facilities, whose observational capabilities limit them to targeted follow-up on a small subset of repeating FRBs that are observable at frequencies above $\\sim$1 GHz. CHIME/FRB Outriggers is a low-frequency (400--800 MHz), wide-field VLBI network designed to overcome these limitations, aiming to localize a substantial fraction of CHIME-detected FRBs to $\\sim$50 mas precision. In this work, we detail the analysis procedure used to localize FRBs with the CHIME/FRB Outriggers VLBI array. With over a thousand test localizations consisting of continuum calibrators and pulsars with known VLBI positions, we provide a comprehensive demonstration of the VLBI array's ability to robustly meet, and under some conditions exceed, the nominal astrometric specification required for the central science goals of CHIME/FRB Outriggers. By demonstrating that a wide-field survey instrument can deliver routine $\\sim$50 mas astrometry on one-off FRBs, this work lays the foundation for the upcoming generation of wide-field VLBI FRB surveys and the population-scale FRB samples they will enable.",
+   "authors": [
+    "Shion Andrew",
+    "Mattias Lazda",
+    "Calvin Leung",
+    "Kiyoshi W. Masui",
+    "Danté M. Hewitt",
+    "Jacob Willis",
+    "Alyssa Atkinson",
+    "Kevin Bandura",
+    "Shami Chatterjee",
+    "Nina V. Gusinskaia",
+    "Adam E. Lanman",
+    "Juan Mena-Parra",
+    "Kenzie Nimmo",
+    "Aaron B. Pearlman",
+    "Ziggy Pleunis",
+    "Alexander W. Pollak",
+    "Gurman Sachdeva",
+    "Vishwangi Shah"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "astro-ph.IM"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-09-29",
+   "primary": "survey",
+   "tags": [
+    "survey",
+    "host"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "CHIME"
+   ]
+  },
+  {
+   "id": "2609.36988",
+   "title": "Detecting Extragalactic Exoplanets With Fast Radio Burst Nanolensing",
+   "abstract": "Fast Radio Bursts (FRBs) are spatially and temporally compact sources at cosmological distances. As background sources, they will be uniquely sensitive to the gravitational lensing of exoplanets outside of our own galaxy. We present a method to detect extragalactic exoplanets using planetary echo nanolensing-periodic, nanosecond-scale variations in the relative time of arrival (ToA) between an initial FRB and its microlensed echo as the planet orbits its host star. For a simple binary lens model, we demonstrate that measuring the amplitude and period of these ToA fluctuations enables a determination of the exoplanet mass and orbital parameters. FRBs will be most sensitive to echo nanolensing by lenses within ten megaparsecs of the Milky Way as well as within ten megaparsecs of the FRB host, opening the door to detections of planets at a range of redshifts. We estimate that at least one in a million FRBs will exhibit this phenomenon (i.e. an optical depth of $τ_l = 10^{-6}$). While current burst rates and low repeating-FRB fractions make a detection challenging in the immediate term, upcoming high-volume surveys and next-generation arrays (such as the SKA Phase 2) will bring the unambiguous detection of extragalactic exoplanets across cosmological redshifts into possibility.",
+   "authors": [
+    "Kenneth F. Olibrice",
+    "Dylan L. Jow"
+   ],
+   "categories": [
+    "astro-ph.EP",
+    "astro-ph.GA",
+    "astro-ph.HE",
+    "astro-ph.IM"
+   ],
+   "primary_category": "astro-ph.EP",
+   "announce_type": "new",
+   "date": "2026-09-29",
+   "primary": "repeater",
+   "tags": [
+    "repeater",
+    "propagation",
+    "survey",
+    "cosmology"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2609.36114",
+   "title": "Fast Radio Bursts from Induced Upscattering. I. Magnetar Polar Fireballs",
+   "abstract": "The extreme brightness temperatures of fast radio bursts (FRBs) demand a coherent process that converts magnetar burst energy into millisecond radio emission. We propose that FRBs can be produced within magnetar magnetospheres by induced (stimulated) upscattering in a relativistic fireball outflow. In this paper, we focus on induced Compton upscattering in an electron--positron fireball launched from the polar region of a magnetar. Radiation from the X-ray burst accelerates the polar fireball outflow to Lorentz factors of $Γ\\sim10$--$10^3$. Low-frequency seed waves, such as fast magnetosonic or Alfvén waves, entering the outflow from the side or against its motion undergo induced scattering and are Lorentz-boosted by the relativistic bulk motion from $ν_0\\sim10\\mathrm{kHz}$ to $ν_{\\rm obs}\\simΓ^2ν_0\\sim\\mathrm{GHz}$. Combining the polar fireball dynamics with the linear growth and nonlinear saturation of the induced scattering instability, we derive the FRB luminosity $L_{\\rm FRB}^{\\rm iso}$ and fractional spectral bandwidth $Δν/ν_{\\rm c}$. By considering the possible range of pair densities and temperatures, we find that this polar channel can account for the luminosity of Galactic FRB~20200428 and reach luminosities comparable to those of the brightest extragalactic FRBs. If the pair-loaded region is narrower than the relativistic beaming angle $1/Γ$, the model also produces a narrow spectrum and predicts $L_{\\rm FRB}^{\\rm iso}\\propto(Δν/ν_{\\rm c})^2$, a trend consistent with observations of repeating FRBs. The induced upscattering model thus connects magnetar X-ray bursts to FRBs through a coherent emission process grounded in plasma physics and makes observationally testable predictions.",
+   "authors": [
+    "Rei Nishiura",
+    "Kunihito Ioka",
+    "Bing Zhang"
+   ],
+   "categories": [
+    "astro-ph.HE",
+    "physics.plasm-ph"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-09-28",
+   "primary": "emission",
+   "tags": [
+    "emission",
+    "progenitor",
+    "repeater"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2609.35733",
+   "title": "Fast radio burst - persistent radio source systems III. The relation between PRS luminosity and FRB rotation measure",
+   "abstract": "Fast radio bursts (FRBs) are millisecond-duration radio transients of extragalactic origin whose physical origin remains uncertain. A small fraction of FRBs are known to repeat, and some of them are associated with persistent radio sources (PRSs), interpreted as synchrotron-emitting nebulae surrounding the FRB source. In the context of magnetar-based models, the rotation measure (RM) of an FRB is expected to correlate with the spectral luminosity of its associated PRS, providing a probe of the physical properties and evolution of the nebula. We investigate the relation between FRB RM and PRS spectral luminosity, constrain the characteristic size of the PRS nebulae, and use the intrinsic scatter of the relation to investigate evolutionary scenarios for FRB--PRS systems. We analyse a sample of 50 FRB sources with known RM, including both PRS detections and spectral luminosity upper limits, using a Bayesian MCMC framework that jointly accounts for detections and non-detections. We model the luminosity--RM relation as $L_ν\\propto ζ_e γ_c^2 R^2 {\\rm RM}^β$, constraining the characteristic nebular size $R$ and the RM scaling index $β$. For the full sample, we obtain $R = 0.016^{+0.115}_{-0.014}$ pc at $1σ$ confidence for a free $β$, while fixing the RM dependence to the canonical linear scaling, $β= 1$, gives $R = 0.008^{+0.058}_{-0.007}$ pc. The data mildly favour super linear RM scalings, although the inferred values of $β$ remain consistent with $β= 1$ within $2σ$. We find a substantial intrinsic scatter in the luminosity--RM relation, significantly larger than previous estimates based on confirmed PRSs alone. Interpreting this scatter within evolutionary models, our results favour scenarios involving efficient particle acceleration and/or rapid nebular expansion.",
+   "authors": [
+    "D. Pelliciari",
+    "G. Bernardi",
+    "L. Bruno",
+    "M. Pilia",
+    "P. Esposito",
+    "L. Beduzzi",
+    "A. Geminardi",
+    "O. Smirnov"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-09-28",
+   "primary": "host",
+   "tags": [
+    "host",
+    "polarization"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2609.35730",
+   "title": "Fast radio burst - persistent radio source systems II. A faint PRS associated with the nearby FRB 20181030A?",
+   "abstract": "Persistent radio sources (PRSs) are the continuum counterparts of fast radio bursts (FRBs), the latter being extragalactic transients of millisecond duration and Jy-level flux density. An FRB-PRS system is thought to be a flaring magnetar surrounded by an highly magnetized, baryon-loaded nebula. We aim to constrain the size of 20181030A-S1, a new PRS candidate, potentially associated with the repeating FRB 20181030A. The latter is localized with $\\sim 1'$ uncertainties in the outskirts of NGC 3252, which is a spiral galaxy at a luminosity distance of $20$ Mpc. We report very long baseline interferometric (VLBI) observations using the European VLBI Network at $1.7$ GHz of this PRS candidate at an angular resolution of $20$ milliarcseconds. Our observations reveal the presence of an unresolved radio source (20181030A-S1) at the position of the PRS candidate, confirming its compactness at milli-arcsecond angular scales. A fit to the position of the point-source yields a peak flux density of $280 \\pm 30$ $μ$Jy and a transverse physical size constrained to be $R < 0.5$ pc at $68\\%$ confidence level (CL). This flux density converts to a spectral luminosity of $(9 \\pm 1) \\times 10^{25}$ erg s$^{-1}$ Hz$^{-1}$, $\\sim 3$ orders of magnitude lower than confirmed PRSs, making 20181030A-S1 the closest and faintest PRS candidate known. Its low luminosity and modest rotation measure are consistent with the $L_ν-$rotation measure (RM) relation followed by confirmed FRB--PRS systems, supporting a common physical origin in magnetar-powered nebulae. We show how a magnetized wind nebula powered by an initially weak ($B_\\star \\simeq 10^{15}$ G) and young ($t_{\\rm age} \\simeq 15 - 150$ yrs) magnetar can account for both the observed spectral luminosity and RM of the system. Other possible origin scenarios for 20181030A-S1, in the case in which it is unrelated to the FRB source, are also discussed.",
+   "authors": [
+    "D. Pelliciari",
+    "G. Bernardi",
+    "B. Margalit",
+    "B. D. Metzger",
+    "C. Nanci",
+    "L. Bruno",
+    "M. Pilia",
+    "L. Beduzzi",
+    "C. Spingola",
+    "C. Stanghellini",
+    "P. Esposito",
+    "A. Geminardi",
+    "M. Giroletti"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-09-28",
+   "primary": "host",
+   "tags": [
+    "host",
+    "polarization"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2609.35729",
+   "title": "Fast radio burst - persistent radio source systems I. A 1.2 GHz search and catalog definition",
+   "abstract": "We present new $1.26$ GHz observations of 24 fast radio bursts (FRBs; 9 repeaters and 11 one-offs), conducted with the upgraded Giant Meter Wave Radio Telescope (uGMRT) at arc-second angular scale resolution, and combined them with literature data to construct an extended sample of 75 sources with either persistent luminosity measurements or upper limits. Our catalog is complete down to a $10^{29}$ erg s$^{-1}$ Hz$^{-1}$ luminosity threshold, which corresponds to the value of the first-discovered PRS, associated with FRB 20121102. We detect compact radio emission in six FRB fields, two of which are previously known PRSs and four are new candidates. The four new candidates are associated with three new repeating FRBs and one apparently one-off source. We computed the PRS occurrence using the whole catalog of 75 FRBs and found that PRSs more luminous than $10^{29}$ erg s$^{-1}$ Hz$^{-1}$ are rare. Unless otherwise stated, all uncertainties and upper limits are reported at the $95\\%$ confidence level (CL). If we only consider confirmed PRSs, we find an occurrence of $f_{\\rm all} = 0.06^{+0.09}_{-0.03}$, while including PRS candidates as well yields $f_{\\rm all} = 0.14^{+0.22}_{-0.08}$. We also compute the PRS occurrence in the two classes of FRBs: repeating and non-repeating. In the conservative case, i.e., when none of the new PRS candidates are considered to be associated with their FRBs, we find no preferred association between the PRSs and FRB class, with an occurrence of $f_{\\rm r} = 0.14^{+0.20}_{-0.09}$ for the sample of repeating FRBs and $f_{\\rm nr} \\leq 0.12$ for the sample of one-off sources. In the inclusive case, i.e., when all the new candidates are considered confirmed PRSs, we find $f_{\\rm r} = 0.27^{+0.21}_{-0.14}$ and $f_{\\rm nr} = 0.03^{+0.14}_{-0.02}$, with marginal ($90\\%$ CL) evidence that PRSs are preferably associated with repeating FRBs.",
+   "authors": [
+    "D. Pelliciari",
+    "L. Bruno",
+    "G. Bernardi",
+    "M. Pilia",
+    "P. Esposito",
+    "L. Beduzzi",
+    "A. Geminardi",
+    "O. Smirnov"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-09-28",
+   "primary": "host",
+   "tags": [
+    "host",
+    "survey",
+    "repeater",
+    "population"
+   ],
+   "classified_by": "keywords",
+   "watch": [
+    "repeater"
+   ]
+  },
+  {
+   "id": "2609.31842",
+   "title": "Correlated Signatures of Plasma Lensing in Fast Radio Bursts",
+   "abstract": "Plasma lensing has been proposed to explain narrow spectra, multiple burst copies, frequency drifts, interference fringes, and polarization changes in fast radio bursts (FRBs). Because many of these features are not unique to lensing, a convincing identification requires several correlated observables to be reproduced by one lens model. We derive such relations for a one-dimensional Gaussian plasma lens near a fold caustic. We distinguish the phase separation of the merging images from their observable group-delay difference and identify three regimes: resolved burst copies, overlapping images with negligible mutual coherence, and coherent spectral interference. We connect the magnification, image delay, spectral-envelope width, fringe spacing, differential dispersion, time-frequency caustic curvature, and the brightness and ordering of the third image. We derive separate finite-source constraints from large fold magnification and from fringe visibility, and relate the wave-optics magnification scale to the plasma column of the lens. High-contrast fringes simultaneously constrain the source size and the mutual coherence of the two image fields, which constrains the intrinsic coherence of the FRB radiation once the observed spectrum and instrumental bandpass are accounted for. We also derive the conditions for differential Faraday rotation in magnetized lenses. Finally, we show that clean lensing by a volume-filling turbulent screen requires fine tuning between rare strong fluctuations and caustic confusion, suggesting that sparse sheets, filaments, interfaces, or shocked clumps are more promising lensing structures.",
+   "authors": [
+    "Paz Beniamini",
+    "Pawan Kumar"
+   ],
+   "categories": [
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.HE",
+   "announce_type": "new",
+   "date": "2026-09-25",
+   "primary": "propagation",
+   "tags": [
+    "propagation"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2609.31106",
+   "title": "Probing the cosmic web with fast radio bursts: II. Scintillation",
+   "abstract": "We consider the formation of multiphase gas in cosmic web objects (CWOs) through cooling and fragmentation within the shock-heated medium of cosmic sheets and filaments, and the circumgalactic medium (CGM) of haloes. This leads to dense, cool ($\\sim10^{4}\\,\\mathrm{K}$), small-scale cloudlets in pressure equilibrium with their surroundings. Such ionized overdensities can affect the propagation of radio waves emitted by fast radio bursts (FRBs), allowing us to probe the small-scale structure in CWOs by examining their impact on the scintillation pattern of the observed FRB flux. While we find that the probability of encountering a high-temperature filament or sheet with cold cloudlets is rather small and usually confined to high redshifts, the expected high rates of FRBs may still permit detection through scintillation along rare sightlines. We suggest scintillation from the Milky Way (MW) interstellar medium as a promising probe: CWO plasma screens can suppress it, placing constraints on their cold-gas properties. Filaments and sheets can suppress MW scintillation from sources at $z_\\mathrm{S}\\gtrsim2$ and $3$, respectively, while cold and turbulent cloudlets in the CGM can be probed by sources at redshifts as low as $z_\\mathrm{S}\\sim0.5$, constraining remarkably low volume-filling fractions, $f_\\mathrm{v}$ (e.g. $f_\\mathrm{v}\\gtrsim10^{-5}$ for $z_\\mathrm{S}\\gtrsim2$). To provide testable predictions, we estimate the fraction of FRBs expected to encounter CWOs that may suppress MW scintillation below a given frequency, and express this as a function of the average extragalactic dispersion measure. Future FRB samples could map these constraints onto bounds on the existence and properties of cloudlets in CWOs, such as their density, size, $f_\\mathrm{v}$, and turbulence.",
+   "authors": [
+    "Sharon Lapiner",
+    "Nir Mandelker",
+    "Paz Beniamini",
+    "S. Peng Oh"
+   ],
+   "categories": [
+    "astro-ph.CO",
+    "astro-ph.GA",
+    "astro-ph.HE"
+   ],
+   "primary_category": "astro-ph.CO",
+   "announce_type": "new",
+   "date": "2026-09-25",
+   "primary": "cosmology",
+   "tags": [
+    "cosmology",
+    "propagation"
+   ],
+   "classified_by": "keywords",
+   "watch": []
+  },
+  {
+   "id": "2609.30962",
+   "title": "IDM-Net: A Lightweight Illumination-Decoupled Modulation Network for Low-Light Image Enhancement",
+   "abstract": "Low-light image enhancement (LLIE) remains challenging for lightweight models because illumination restoration and color fidelity are difficult to optimize simultaneously in the RGB color space. Although recent color-decoupled methods separate luminance and chrominance representations, they primarily optimize luminance as an enhancement target, leaving its potential as an explicit guidance prior largely unexplored during feature reconstruction. To address this limitation, we propose IDM-Net, a lightweight Illumination-Decoupled Modulation Network for low-light image enhancement. IDM-Net adopts a dual-encoder architecture consisting of a structure encoder that extracts multi-scale appearance features from the RGB image and a lightweight illumination encoder that learns illumination priors from the decoupled luminance (Y) channel. To effectively exploit these priors, we introduce an Illumination-Guided Modulation (IGM) module that injects multi-scale illumination cues into the decoder through spatially adaptive affine modulation, enabling accurate brightness restoration while preserving natural color consistency. Furthermore, we design a lightweight Feature Refinement Block (FRB) to progressively suppress degradation artifacts and recover fine-grained image details during reconstruction. Extensive experiments on multiple standard low-light image enhancement benchmarks demonstrate that IDM-Net achieves competitive performance among lightweight LLIE methods while maintaining an excellent balance between restoration quality and computational efficiency.",
+   "authors": [
+    "Cheng-Yen Hsiao",
+    "Jing-Ming Guo"
+   ],
+   "categories": [
+    "cs.CV"
+   ],
+   "primary_category": "cs.CV",
+   "announce_type": "new",
+   "date": "2026-09-25",
+   "primary": "emission",
+   "tags": [
+    "emission"
    ],
    "classified_by": "keywords",
    "watch": []
