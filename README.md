@@ -60,3 +60,11 @@ cd docs && python -m http.server 8000                     # http://localhost:800
 ```bash
 python tests/test_citations.py   # 偽の ADS 応答でロジックを確認(ネット不要)
 ```
+
+## Transient phase space(突発天体の位相空間マップ)
+
+`docs/phase.html`。電波の位相空間(L_ν と ν·W)と、光度と継続時間の図の2枚。拡大・ホバー・種類の切り替え・自分のモデルの重ね描き・スライド用PNGの保存ができる。
+
+- データは `docs/data/phase.json`。`python scripts/build_phase.py <Transient_Phase_Space> <FRBs/FRB>` で作り直す(GitHub の FRBs/Transient_Phase_Space と FRBs/FRB を clone して渡す)。
+- 長周期電波トランジェントと高エネルギー・光学の各種類の値は `scripts/phase_manual.json` に手で入れてある(出典つき)。新しい天体はここに足す。
+- FRBs/Transient_Phase_Space のデータは GPL-3.0(E. Keane)。ページの下に出典を表示している。

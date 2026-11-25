@@ -1,0 +1,337 @@
+{
+ "source_note": "Radio panel: FRBs/Transient_Phase_Space (E. Keane; Pietka, Fender & Keane 2015 MNRAS 446, 3687; Keane 2018 Nat. Astron. 2, 865; GPL-3.0), CHIME/FRB Catalog 1 (CHIME/FRB Collaboration 2021) via FRBs/FRB, long-period transients from the papers listed per object. High-energy/optical panel: typical ranges quoted in the reviews listed per class; boxes are approximate.",
+ "lpt": [
+  {
+   "name": "GLEAM-X J162759.5-523504.3",
+   "S_min": 5,
+   "S_max": 45,
+   "W_min": 30,
+   "W_max": 60,
+   "nu_GHz": 0.15,
+   "D_kpc": 1.3,
+   "detail": "P = 18.2 min. MWA 72-231 MHz. Peak 5-45 Jy, pulses 30-60 s, D = 1.3 kpc.",
+   "ref": "Hurley-Walker et al. 2022, Nature 601, 526"
+  },
+  {
+   "name": "GPM J1839-10",
+   "S_min": 0.1,
+   "S_max": 10,
+   "W_min": 30,
+   "W_max": 300,
+   "nu_GHz": 0.2,
+   "D_kpc": 5.7,
+   "detail": "P = 21 min. MWA ~200 MHz. Peak 0.1-10 Jy, pulses 30-300 s, D = 5.7 kpc (YMW16).",
+   "ref": "Hurley-Walker et al. 2023, Nature 619, 487"
+  },
+  {
+   "name": "GCRT J1745-3009",
+   "S_min": 1,
+   "S_max": 1,
+   "W_min": 600,
+   "W_max": 660,
+   "nu_GHz": 0.33,
+   "D_kpc": 8,
+   "detail": "P = 77 min. 330 MHz. ~1 Jy, ~10-11 min pulses, D ~ 8 kpc (Galactic Centre assumed).",
+   "ref": "Hyman et al. 2005, Nature 434, 50"
+  },
+  {
+   "name": "ASKAP J1935+2148",
+   "S_min": 0.1,
+   "S_max": 0.1,
+   "W_min": 10,
+   "W_max": 50,
+   "nu_GHz": 0.888,
+   "D_kpc": 4.85,
+   "detail": "P = 53.8 min. ASKAP 888 MHz. ~0.1 Jy, pulses 10-50 s, D = 4.85 kpc (DM).",
+   "ref": "Caleb et al. 2024, Nat. Astron. 8, 1159 (arXiv:2407.12266)"
+  },
+  {
+   "name": "ASKAP/DART J1832-0911",
+   "S_min": 0.03,
+   "S_max": 20,
+   "W_min": 120,
+   "W_max": 120,
+   "nu_GHz": 0.888,
+   "D_kpc": 4.5,
+   "detail": "P = 44.2 min. Discovery pulse 1.87 Jy at ASKAP, ~2 min. Other epochs 0.03-20 Jy at several frequencies. D = 4.5 kpc. Also seen in X-rays.",
+   "ref": "Wang et al. 2025, Nature (arXiv:2411.16606)"
+  },
+  {
+   "name": "CHIME J0630+25",
+   "S_min": 0.015,
+   "S_max": 0.67,
+   "W_min": 1,
+   "W_max": 4,
+   "nu_GHz": 0.4,
+   "D_kpc": 0.17,
+   "detail": "P = 421 s. Fluence 60-670 Jy ms at 400 MHz, widths up to 4 s, D = 170 pc. Peak flux here is estimated as fluence/width for widths of 1-4 s.",
+   "ref": "Dong et al. 2025, ApJL 990, L49 (arXiv:2407.07480)"
+  },
+  {
+   "name": "ILT J1101+5521",
+   "S_min": 0.041,
+   "S_max": 0.256,
+   "W_min": 30,
+   "W_max": 90,
+   "nu_GHz": 0.144,
+   "D_kpc": 0.504,
+   "detail": "P = 125.5 min, WD + M dwarf binary. LOFAR 120-168 MHz. Peak 41-256 mJy, pulses 30-90 s, D = 504 pc (Gaia).",
+   "ref": "de Ruiter et al. 2025, Nat. Astron. (arXiv:2408.11536)"
+  }
+ ],
+ "he": [
+  {
+   "name": "Magnetar short bursts",
+   "cls": "mag",
+   "t": [
+    0.01,
+    1
+   ],
+   "L": [
+    1e+39,
+    1e+41
+   ],
+   "ref": "Turolla, Zane & Watts 2015 (Rep. Prog. Phys.); Enoto et al. 2019 review",
+   "label_pos": "bottom"
+  },
+  {
+   "name": "Magnetar intermediate bursts",
+   "cls": "mag",
+   "t": [
+    1,
+    40
+   ],
+   "L": [
+    1e+41,
+    1e+43
+   ],
+   "ref": "Turolla, Zane & Watts 2015"
+  },
+  {
+   "name": "Magnetar giant flares (initial spike)",
+   "cls": "mag",
+   "t": [
+    0.1,
+    0.2
+   ],
+   "L": [
+    1e+44,
+    1e+47
+   ],
+   "ref": "Turolla, Zane & Watts 2015; Mereghetti 2008",
+   "note": "Includes the extragalactic giant flare candidates seen as short GRBs."
+  },
+  {
+   "name": "Type I X-ray bursts",
+   "cls": "xrb",
+   "t": [
+    10,
+    100
+   ],
+   "L": [
+    1e+37,
+    2e+38
+   ],
+   "ref": "Galloway et al. 2008 (ApJS 179, 360); approximate"
+  },
+  {
+   "name": "Short GRBs (prompt)",
+   "cls": "grb",
+   "t": [
+    0.01,
+    2
+   ],
+   "L": [
+    1e+50,
+    1e+53
+   ],
+   "ref": "Kouveliotou et al. 1993; Berger 2014 review; approximate isotropic peak L"
+  },
+  {
+   "name": "Long GRBs (prompt)",
+   "cls": "grb",
+   "t": [
+    2,
+    1000
+   ],
+   "L": [
+    1e+50,
+    1e+53
+   ],
+   "ref": "Kouveliotou et al. 1993; Yonetoku et al. 2004; approximate isotropic peak L"
+  },
+  {
+   "name": "Fast X-ray transients",
+   "cls": "fxt",
+   "t": [
+    100,
+    10000
+   ],
+   "L": [
+    1e+44,
+    1e+47
+   ],
+   "ref": "Wichern et al. 2024 (as quoted in arXiv:2410.21622)"
+  },
+  {
+   "name": "Quasi-periodic eruptions",
+   "cls": "qpe",
+   "t": [
+    1200,
+    260000
+   ],
+   "L": [
+    1e+41,
+    1e+43
+   ],
+   "ref": "Miniutti et al. 2019; Arcodia et al. 2021; QPE review arXiv:2607.15359",
+   "note": "Single eruptions last ~20 min to ~3 d. Peak 0.3-2 keV luminosity.",
+   "label_pos": "inside"
+  },
+  {
+   "name": "Fast blue optical transients",
+   "cls": "fbot",
+   "t": [
+    86400,
+    864000
+   ],
+   "L": [
+    1e+43,
+    1e+44
+   ],
+   "ref": "Drout et al. 2014; Pursiainen et al. 2018; as summarized in arXiv:1911.11912",
+   "note": "Rise time up to ~10 d.",
+   "points": [
+    {
+     "x": 216000,
+     "y": 4e+44,
+     "label": "AT2018cow (LFBOT)",
+     "detail": "Peak ~4e44 erg/s after a ~2.5 d rise.",
+     "ref": "Perley et al. 2019; Margutti et al. 2019",
+     "ax": -70,
+     "ay": -40
+    }
+   ],
+   "label_pos": "callout",
+   "callout": [
+    5.3,
+    48.4
+   ]
+  },
+  {
+   "name": "Classical novae",
+   "cls": "nova",
+   "t": [
+    100000.0,
+    10000000.0
+   ],
+   "L": [
+    1e+37,
+    1e+39
+   ],
+   "ref": "Bode & Evans 2008; approximate",
+   "label_pos": "top"
+  },
+  {
+   "name": "Kilonovae",
+   "cls": "kn",
+   "t": [
+    86000.0,
+    860000.0
+   ],
+   "L": [
+    1e+41,
+    1e+42
+   ],
+   "ref": "Metzger 2019 (Living Rev.); approximate",
+   "points": [
+    {
+     "x": 86400,
+     "y": 1e+42,
+     "label": "AT2017gfo",
+     "detail": "Bolometric ~1e42 erg/s at ~1 d.",
+     "ref": "Kasen et al. 2017; Cowperthwaite et al. 2017",
+     "ax": 30,
+     "ay": 55
+    }
+   ],
+   "label_pos": "callout",
+   "callout": [
+    3.6,
+    40.0
+   ]
+  },
+  {
+   "name": "Core-collapse SNe",
+   "cls": "sn",
+   "t": [
+    860000.0,
+    8600000.0
+   ],
+   "L": [
+    3e+41,
+    1e+43
+   ],
+   "ref": "Kasliwal 2012; Perley et al. 2020; approximate",
+   "label_pos": "callout",
+   "callout": [
+    7.4,
+    40.6
+   ]
+  },
+  {
+   "name": "Type Ia SNe",
+   "cls": "sn",
+   "t": [
+    1700000.0,
+    3500000.0
+   ],
+   "L": [
+    5e+42,
+    2e+43
+   ],
+   "ref": "Kasliwal 2012; approximate",
+   "label_pos": "callout",
+   "callout": [
+    7.9,
+    41.9
+   ]
+  },
+  {
+   "name": "Superluminous SNe",
+   "cls": "slsn",
+   "t": [
+    1700000.0,
+    17000000.0
+   ],
+   "L": [
+    1e+44,
+    1e+45
+   ],
+   "ref": "Gal-Yam 2012, 2019; approximate",
+   "label_pos": "callout",
+   "callout": [
+    6.2,
+    46.9
+   ]
+  },
+  {
+   "name": "Tidal disruption events (optical)",
+   "cls": "tde",
+   "t": [
+    1700000.0,
+    26000000.0
+   ],
+   "L": [
+    1e+43,
+    1e+45
+   ],
+   "ref": "van Velzen et al. 2020 review; approximate",
+   "label_pos": "callout",
+   "callout": [
+    7.3,
+    47.7
+   ]
+  }
+ ]
+}

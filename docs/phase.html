@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transient Phase Space · FRB arXiv Daily</title>
+<meta name="description" content="Interactive phase space of radio and high-energy transients: FRBs, long-period transients, pulsars, magnetars, QPEs, GRBs and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<style>
+:root{
+  --bg:#06070b; --bg2:#0b0d14; --panel:#10131c; --panel2:#151927; --line:#1f2435; --line2:#2a3047;
+  --ink:#e8ebf4; --muted:#8a91a8; --dim:#5a6178; --hot:#ff6a3d; --hot2:#ffb547; --cool:#5ad1ff; --violet:#c792ff;
+  --display:"Space Grotesk","Noto Sans JP",system-ui,sans-serif;
+  --body:"Inter","Noto Sans JP",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+html[lang=ja] body{font-family:"Noto Sans JP","Inter",system-ui,sans-serif}
+a{color:inherit} button,input,select{font:inherit;color:inherit}
+.wrap{max-width:1400px;margin:0 auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 0%,rgba(199,146,255,.12),transparent 55%),radial-gradient(ellipse at 20% 130%,rgba(255,106,61,.10),transparent 50%)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0 30px}
+.back{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.back:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line2);border-radius:999px;padding:3px}
+.lang button{white-space:nowrap;border:0;background:none;padding:4px 12px;border-radius:999px;font:500 12px var(--mono);color:var(--muted);cursor:pointer}
+.lang button.on{background:var(--ink);color:var(--bg)}
+.eyebrow{font:500 11.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--violet)}
+h1{font:700 clamp(32px,5vw,52px)/1.03 var(--display);letter-spacing:-.03em;margin:10px 0 0}
+h1 span{background:linear-gradient(95deg,var(--violet),var(--hot));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--muted);max-width:760px;margin:12px 0 26px}
+.bar{position:sticky;top:0;z-index:20;background:rgba(6,7,11,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.tabs{display:flex;gap:4px}
+.tab{border:0;background:none;padding:8px 14px;border-radius:9px;cursor:pointer;color:var(--muted);font:500 14px var(--display);white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab.on{background:var(--panel2);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line2)}
+input[type=search],input[type=text],input[type=number],select{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:7px 11px;font-size:13.5px;outline:none}
+input[type=search]{flex:1;min-width:180px}
+.btn{border:1px solid var(--line2);background:var(--panel2);border-radius:10px;padding:7px 12px;font:500 12.5px var(--mono);cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--muted)}
+.tog{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:7px 12px;font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tog.on{color:var(--violet);border-color:rgba(199,146,255,.4);background:rgba(199,146,255,.08)}
+main{padding:20px 0 60px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px}
+.layout>*{min-width:0}
+.plotcard{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:14px;padding:8px}
+#plot{width:100%;height:min(78vh,820px)}
+aside .card{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+aside h3{font:600 14px var(--display);margin:0 0 8px}
+.classes{display:flex;flex-direction:column;gap:2px}
+.cl{display:grid;grid-template-columns:12px 1fr auto;gap:9px;align-items:center;border:0;background:none;text-align:left;padding:5px 6px;border-radius:7px;cursor:pointer;font-size:13px}
+.cl:hover{background:var(--panel2)}
+.cl i{width:12px;height:12px;border-radius:3px;background:var(--c)}
+.cl.off{opacity:.35}
+.cl .n{font:11.5px var(--mono);color:var(--dim)}
+.row{display:flex;gap:6px;margin-bottom:6px}
+.row>*{flex:1;min-width:0}
+.mini{font-size:12px;color:var(--muted);line-height:1.6}
+.ov{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;padding:4px 0;border-top:1px solid var(--line)}
+.ov button{border:0;background:none;color:var(--dim);cursor:pointer}
+.foot{font-size:12.5px;color:var(--muted);margin-top:18px;line-height:1.75;max-width:1100px}
+.foot b{color:var(--ink);font-weight:500}
+@media (max-width:1000px){.layout{grid-template-columns:1fr}.wrap{padding:0 16px}#plot{height:70vh}input[type=search]{flex-basis:100%}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><a class="back" href="./">← FRB arXiv Daily</a>
+    <div class="lang"><button data-lang="en">EN</button><button data-lang="ja">日本語</button></div></div>
+  <div class="eyebrow" data-i="eyebrow"></div>
+  <h1><span>Transient</span> Phase Space</h1>
+  <p class="tagline" data-i="tagline"></p>
+</div></header>
+
+<div class="bar"><div class="wrap">
+  <div class="tabs"><button class="tab" data-p="radio" data-i="tabRadio"></button><button class="tab" data-p="he" data-i="tabHE"></button></div>
+  <input type="search" id="q">
+  <button class="tog" id="labels" data-i="labels"></button>
+  <button class="tog" id="light" data-i="light"></button>
+  <button class="btn" id="png">PNG ↓</button>
+</div></div>
+
+<main><div class="wrap">
+  <div class="layout">
+    <div class="plotcard"><div id="plot"></div></div>
+    <aside>
+      <div class="card"><h3 data-i="classes"></h3><div class="classes" id="classes"></div>
+        <p class="mini" style="margin:8px 0 0" data-i="classHint"></p></div>
+      <div class="card"><h3 data-i="overlay"></h3>
+        <div class="row"><select id="ovType"><option value="point"></option><option value="line"></option></select></div>
+        <div class="row"><input type="text" id="ovName" placeholder="name"></div>
+        <div class="row" id="ovPoint"><input type="text" id="ovX" placeholder="x"><input type="text" id="ovY" placeholder="y"></div>
+        <div class="row" id="ovLine" style="display:none"><input type="text" id="ovA" placeholder="y at x=1"><input type="text" id="ovK" placeholder="slope k"></div>
+        <div class="row" id="ovLine2" style="display:none"><input type="text" id="ovX1" placeholder="x min"><input type="text" id="ovX2" placeholder="x max"></div>
+        <button class="btn" id="ovAdd" style="width:100%" data-i="add"></button>
+        <div id="ovList" style="margin-top:8px"></div>
+        <p class="mini" data-i="ovHint"></p></div>
+    </aside>
+  </div>
+  <div class="foot" id="foot"></div>
+</div></main>
+
+<script>
+const I18N = {
+  en: {
+    eyebrow: "Radio and high-energy transients · interactive", tagline: "Where FRBs, long-period transients, pulsars and magnetars sit among all other transients. Zoom, hover for details, switch classes on and off, overlay your own model, and download a figure for slides.",
+    tabRadio: "Radio: L_ν vs ν·W", tabHE: "Luminosity vs duration", labels: "Labels", light: "White (for slides)", search: "Find an object (e.g. 20240114A, GPM, Crab)…",
+    classes: "Classes", classHint: "Click to show or hide. Double-click to show only that class.", overlay: "Your model", add: "Add to plot",
+    point: "Point", line: "Power law y = A·x^k",
+    ovHint: "Overlays are saved in this browser only. Use the axis units of the current panel.",
+    xr: "ν · W  (GHz s)", yr: "Spectral luminosity L_ν (erg s⁻¹ Hz⁻¹)",
+    xh: "Duration (s)", yh: "Peak luminosity (erg s⁻¹)",
+    coh: "Coherent", incoh: "Incoherent (T_B < 10¹² K)", unc: "Uncertainty principle",
+    foot: (n) => `<b>Radio panel.</b> L_ν = 4πD²S at the observing frequency, against the product of observing frequency and burst width (Cordes et al. 2004, Pietka, Fender & Keane 2015, Keane 2018). Dotted lines are constant brightness temperature T_B = L_ν / (8π k (νW)²). Most of the non-FRB data come from <a href="https://github.com/FRBs/Transient_Phase_Space" target="_blank" rel="noopener">FRBs/Transient_Phase_Space</a> (E. Keane, GPL-3.0) and the compilation of Pietka et al. (2015). FRBs are the first sub-bursts of CHIME/FRB Catalog 1 (2021). Their redshifts are spectroscopic when the host is known and otherwise estimated as (DM<sub>exc,NE2001</sub> − 50 − 50)/1000, so their luminosities are uncertain by a factor of a few. Long-period transients were typed in from the discovery papers. Error bars show the reported spread of peak flux and pulse width.<br>
+<b>Luminosity–duration panel.</b> Boxes are the typical ranges quoted in reviews for each class (see the hover text). They are approximate and meant for orientation. FRBs and long-period transients are shown as radio ν L_ν for comparison. These are not bolometric.<br>
+${n} objects in total. The data are in <a href="data/phase.json">data/phase.json</a>.`,
+  },
+  ja: {
+    eyebrow: "電波と高エネルギーの突発天体 · 対話式", tagline: "FRB、長周期電波トランジェント、パルサー、マグネターが、他の突発天体の中でどこにいるかを見る図です。拡大、詳細の表示、種類ごとの表示切り替え、自分のモデルの重ね描き、スライド用の画像の保存ができます。",
+    tabRadio: "電波:L_ν と ν·W", tabHE: "光度と継続時間", labels: "ラベル", light: "白背景(スライド用)", search: "天体を探す(例: 20240114A, GPM, Crab)…",
+    classes: "種類", classHint: "クリックで表示/非表示。ダブルクリックでその種類だけを表示。", overlay: "自分のモデル", add: "図に追加",
+    point: "点", line: "べき乗の線 y = A·x^k",
+    ovHint: "重ね描きはこのブラウザにだけ保存されます。いま表示しているパネルの軸の単位で入れてください。",
+    xr: "ν · W  (GHz s)", yr: "スペクトル光度 L_ν (erg s⁻¹ Hz⁻¹)",
+    xh: "継続時間 (s)", yh: "ピーク光度 (erg s⁻¹)",
+    coh: "コヒーレント", incoh: "インコヒーレント (T_B < 10¹² K)", unc: "不確定性原理",
+    foot: (n) => `<b>電波のパネル。</b>観測周波数でのL_ν = 4πD²Sを、観測周波数とバースト幅の積に対して描いています(Cordes et al. 2004、Pietka, Fender & Keane 2015、Keane 2018)。点線は輝度温度一定の線 T_B = L_ν / (8π k (νW)²)。FRB以外の多くは<a href="https://github.com/FRBs/Transient_Phase_Space" target="_blank" rel="noopener">FRBs/Transient_Phase_Space</a>(E. Keane、GPL-3.0)とPietka et al. (2015)のまとめから取っています。FRBはCHIME/FRB Catalog 1(2021)の最初のサブバーストです。赤方偏移は、母銀河がわかっているものは分光値、それ以外は(DM<sub>exc,NE2001</sub> − 50 − 50)/1000で見積もっているので、光度には数倍の不定性があります。長周期電波トランジェントは発見論文から手で入力しました。誤差棒はピーク強度とパルス幅の報告値の幅です。<br>
+<b>光度と継続時間のパネル。</b>箱は各種類についてレビューに書かれている典型的な範囲です(ホバーで出典を表示)。目安として使ってください。FRBと長周期電波トランジェントは比較のため電波のν L_νで描いています。全波長の光度ではありません。<br>
+全部で${n}天体。データは<a href="data/phase.json">data/phase.json</a>にあります。`,
+  },
+};
+const COLORS = {
+  frb: "#ff6a3d", frbrep: "#ffb547", magnetar: "#ff5d8f", lpt: "#c792ff", pulsar: "#5ad1ff", rrat: "#4fe3c1", grp: "#9fb3ff",
+  sun: "#f2e36b", star: "#e0a96d", rscvn: "#b9a37a", cv: "#7ee081", nova: "#ff9fd0", xrb: "#d2a679", sn: "#a7adbf",
+  grb: "#ff8f8f", agn: "#6d8bff", gw: "#ffffff",
+  mag: "#ff5d8f", qpe: "#4fe3c1", fbot: "#5ad1ff", fxt: "#f2e36b", kn: "#ffffff", slsn: "#ffb547", tde: "#6d8bff",
+};
+const LS = "frb-arxiv-daily:v1";
+let store = {}; try { store = JSON.parse(localStorage.getItem(LS) || "{}"); } catch (e) {}
+store.lang ||= (navigator.language || "").startsWith("ja") ? "ja" : "en";
+store.overlays ||= { radio: [], he: [] };
+const save = () => { try { localStorage.setItem(LS, JSON.stringify(store)); } catch (e) {} };
+const st = { panel: location.hash === "#he" ? "he" : "radio", labels: true, light: false, hidden: { radio: new Set(), he: new Set() }, q: "" };
+let D = null;
+const $ = id => document.getElementById(id);
+const t = k => I18N[store.lang][k];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = v => v >= 1e4 || v < 1e-2 ? v.toExponential(1).replace("e+", "e") : (+v.toPrecision(3)).toString();
+const lg = Math.log10;
+
+function theme() {
+  return st.light
+    ? { bg: "#ffffff", ink: "#111111", grid: "#e6e6e6", muted: "#555555", frame: "#999999" }
+    : { bg: "rgba(0,0,0,0)", ink: "#e8ebf4", grid: "#1f2435", muted: "#8a91a8", frame: "#2a3047" };
+}
+const col = c => { const v = COLORS[c] || "#8a91a8"; return st.light && v === "#ffffff" ? "#111111" : v; };
+
+function seriesOf(panel) { return panel === "radio" ? D.radio : D.he; }
+
+function radioTraces(th) {
+  const tr = [], ann = [], shapes = [];
+  // brightness temperature lines: L = 8 pi k T (nu W)^2 with nu W in GHz s -> factor 1e18
+  for (let e = 0; e <= 44; e += 4) {
+    const T = 10 ** e, xs = [], ys = [];
+    for (let lx = -10; lx <= 10.001; lx += 0.5) { const x = 10 ** lx, y = 8 * Math.PI * 1.380649e-16 * T * 1e18 * x * x; if (y > 1e6 && y < 1e40) { xs.push(x); ys.push(y); } }
+    if (xs.length < 2) continue;
+    tr.push({ x: xs, y: ys, mode: "lines", line: { color: th.muted, width: e === 12 ? 1.8 : 1, dash: "dot" }, opacity: e === 12 ? 0.9 : 0.45, hoverinfo: "skip", showlegend: false });
+    // label where the line leaves the top of the default view (L = 10^36.3)
+    const xTop = Math.sqrt(10 ** 36.3 / (8 * Math.PI * 1.380649e-16 * T * 1e18));
+    if (st.labels && xTop > 1e-9 && xTop < 1e9) ann.push({ x: lg(xTop), y: 36.3, text: `10<sup>${e}</sup> K`, showarrow: false, yshift: 10, font: { size: 12.5, color: th.muted } });
+  }
+  // uncertainty principle: nu W < 1
+  shapes.push({ type: "rect", xref: "x", yref: "paper", x0: 1e-12, x1: 1e-9, y0: 0, y1: 1, fillcolor: st.light ? "#eeeeee" : "#151927", line: { width: 0 }, layer: "below" });
+  if (st.labels) ann.push({ x: lg(3e-10), y: 0.5, yref: "paper", text: esc(t("unc")), showarrow: false, textangle: -90, font: { size: 13, color: th.muted } });
+  // incoherent region label
+  if (st.labels) {
+    ann.push({ x: lg(3e6), y: lg(1e14), text: esc(t("incoh")), showarrow: false, font: { size: 13, color: th.muted }, textangle: -38 });
+    ann.push({ x: lg(1e1), y: lg(1e33), text: esc(t("coh")), showarrow: false, font: { size: 13, color: th.muted }, textangle: -38 });
+  }
+  for (const s of D.radio) {
+    const hidden = st.hidden.radio.has(s.name);
+    const isLPT = s.cls === "lpt";
+    const pts = s.points;
+    tr.push({
+      x: pts.map(p => p.x), y: pts.map(p => p.y), mode: "markers", name: s.name, visible: hidden ? "legendonly" : true,
+      marker: { color: col(s.cls), size: isLPT ? 11 : (s.cls === "pulsar" ? 4.5 : 7), symbol: isLPT ? "star" : (s.cls === "frbrep" ? "diamond" : "circle"),
+                opacity: s.cls === "pulsar" ? 0.55 : 0.85, line: { width: isLPT ? 1 : 0, color: th.bg === "#ffffff" ? "#333" : "#06070b" } },
+      error_x: isLPT ? { type: "data", symmetric: false, array: pts.map(p => p.xr[1] - p.x), arrayminus: pts.map(p => p.x - p.xr[0]), color: col(s.cls), thickness: 1.2, width: 0 } : undefined,
+      error_y: isLPT ? { type: "data", symmetric: false, array: pts.map(p => p.yr[1] - p.y), arrayminus: pts.map(p => p.y - p.yr[0]), color: col(s.cls), thickness: 1.2, width: 0 } : undefined,
+      customdata: pts.map(p => [esc(p.label), esc(p.detail || ""), esc(p.ref || s.ref), p.z != null ? `z = ${p.z} (${p.zkind})` : ""]),
+      hovertemplate: `<b>%{customdata[0]}</b><br>${esc(s.name)}<br>νW = %{x:.2e} GHz s<br>L<sub>ν</sub> = %{y:.2e} erg/s/Hz<br>%{customdata[3]}%{customdata[1]}<br><i>%{customdata[2]}</i><extra></extra>`,
+    });
+    if (st.labels && !hidden && pts.length) {
+      const mx = pts.map(p => lg(p.x)).sort((a, b) => a - b), my = pts.map(p => lg(p.y)).sort((a, b) => a - b);
+      const dy = { frbrep: -1.5, magnetar: -1.0 }[s.cls] ?? 0.9;
+      const cx = mx[Math.floor(mx.length / 2)], cy = isLPT ? Math.max(...my) + 0.9 : my[Math.floor(my.length / 2)] + dy;
+      ann.push({ x: cx, y: cy, text: `<b>${esc(s.name)}</b>`, showarrow: false, font: { size: 13.5, color: col(s.cls) }, bgcolor: st.light ? "rgba(255,255,255,.7)" : "rgba(6,7,11,.55)" });
+    }
+  }
+  return { tr, ann, shapes, xr: [-10, 10], yr: [10, 37.2], xt: t("xr"), yt: t("yr") };
+}
+
+function heTraces(th) {
+  const tr = [], ann = [], shapes = [];
+  for (const s of D.he) {
+    const hidden = st.hidden.he.has(s.name), c = col(s.cls);
+    if (s.box) {
+      const [x0, x1] = s.box.x, [y0, y1] = s.box.y;
+      // a transparent trace carries the hover text and the on/off state for the box
+      tr.push({ x: [x0, x1, x1, x0, x0], y: [y0, y0, y1, y1, y0], mode: "lines", fill: "toself", name: s.name,
+                visible: hidden ? "legendonly" : true, fillcolor: c + (st.light ? "33" : "26"), line: { color: c, width: 1.4 },
+                hovertemplate: `<b>${esc(s.name)}</b><br>${fmt(x0)}–${fmt(x1)} s<br>${fmt(y0)}–${fmt(y1)} erg/s<br>${esc(s.note || "")}<br><i>${esc(s.ref)}</i><extra></extra>`, hoveron: "fills+points" });
+      if (st.labels && !hidden) {
+        const pos = s.label_pos || "top", cxm = (lg(x0) + lg(x1)) / 2, cym = (lg(y0) + lg(y1)) / 2;
+        const at = { top: [cxm, lg(y1) + 0.35, "center"], bottom: [cxm, lg(y0) - 0.4, "center"], right: [lg(x1) + 0.08, cym, "left"],
+                     left: [lg(x0) - 0.08, cym, "right"], topleft: [lg(x0), lg(y1) + 0.35, "right"] }[pos];
+        if (pos === "callout" && s.callout) {
+          ann.push({ x: cxm, y: cym, ax: s.callout[0], ay: s.callout[1], axref: "x", ayref: "y", text: `<b>${esc(s.name)}</b>`, showarrow: true,
+                     arrowhead: 0, arrowwidth: 1.2, arrowcolor: c, font: { size: 13, color: c }, bgcolor: st.light ? "rgba(255,255,255,.8)" : "rgba(6,7,11,.7)" });
+        } else if (pos === "inside") {
+          ann.push({ x: cxm, y: cym, text: `<b>${esc(s.name)}</b>`, showarrow: false, font: { size: 13, color: c } });
+        } else ann.push({ x: at[0], y: at[1], xanchor: at[2], text: `<b>${esc(s.name)}</b>`, showarrow: false, font: { size: 13, color: c } });
+      }
+    }
+    if (s.points && s.points.length) {
+      tr.push({ x: s.points.map(p => p.x), y: s.points.map(p => p.y), mode: "markers", name: s.name + (s.box ? " (objects)" : ""),
+                visible: hidden ? "legendonly" : true,
+                marker: { color: c, size: s.radio ? (s.cls === "lpt" ? 11 : 6) : 11, symbol: s.cls === "lpt" ? "star" : (s.radio ? "circle" : "star-diamond"), opacity: s.radio ? 0.8 : 1 },
+                customdata: s.points.map(p => [esc(p.label), esc(p.detail || ""), esc(p.ref || s.ref)]),
+                hovertemplate: `<b>%{customdata[0]}</b><br>t = %{x:.2e} s<br>L = %{y:.2e} erg/s<br>%{customdata[1]}<br><i>%{customdata[2]}</i><extra></extra>` });
+      if (st.labels && !hidden) {
+        if (s.radio) {
+          const mx = s.points.map(p => lg(p.x)).sort((a, b) => a - b), my = s.points.map(p => lg(p.y)).sort((a, b) => a - b);
+          ann.push({ x: mx[Math.floor(mx.length / 2)], y: Math.max(...my) + 0.6, text: `<b>${esc(s.name)}</b>`, showarrow: false, font: { size: 13, color: c } });
+        } else for (const p of s.points) ann.push({ x: lg(p.x), y: lg(p.y), text: esc(p.label), showarrow: true, arrowhead: 0, ax: p.ax ?? 40, ay: p.ay ?? -24, arrowcolor: c, font: { size: 12.5, color: c } });
+      }
+    }
+  }
+  return { tr, ann, shapes, xr: [-5, 8.6], yr: [26, 54], xt: t("xh"), yt: t("yh") };
+}
+
+function overlayTraces(th) {
+  const tr = [], ann = [];
+  for (const o of store.overlays[st.panel]) {
+    if (o.type === "point") {
+      tr.push({ x: [o.x], y: [o.y], mode: "markers", marker: { size: 13, symbol: "x", color: st.light ? "#000" : "#fff" }, hovertemplate: `<b>${esc(o.name)}</b><extra></extra>`, showlegend: false });
+      ann.push({ x: lg(o.x), y: lg(o.y), text: esc(o.name), showarrow: true, ax: 30, ay: -20, arrowcolor: th.ink, font: { size: 13, color: th.ink } });
+    } else {
+      const xs = [], ys = [];
+      for (let i = 0; i <= 40; i++) { const x = 10 ** (lg(o.x1) + (lg(o.x2) - lg(o.x1)) * i / 40); xs.push(x); ys.push(o.A * x ** o.k); }
+      tr.push({ x: xs, y: ys, mode: "lines", line: { color: st.light ? "#000" : "#fff", width: 2.2 }, hovertemplate: `<b>${esc(o.name)}</b><extra></extra>`, showlegend: false });
+      ann.push({ x: lg(xs[30]), y: lg(ys[30]), text: esc(o.name), showarrow: false, yshift: 12, font: { size: 13, color: th.ink } });
+    }
+  }
+  return { tr, ann };
+}
+
+function highlight() {
+  const q = st.q.trim().toLowerCase();
+  if (!q) return [];
+  const hits = [];
+  for (const s of seriesOf(st.panel)) for (const p of s.points || []) if ((p.label || "").toLowerCase().includes(q)) hits.push(p);
+  return hits.slice(0, 30);
+}
+
+function draw() {
+  if (!D) return;
+  const th = theme();
+  const P = st.panel === "radio" ? radioTraces(th) : heTraces(th);
+  const O = overlayTraces(th);
+  const hits = highlight();
+  const hl = hits.length ? [{ x: hits.map(p => p.x), y: hits.map(p => p.y), mode: "markers", marker: { size: 18, color: "rgba(0,0,0,0)", line: { color: st.light ? "#000" : "#fff", width: 2 } }, hoverinfo: "skip", showlegend: false }] : [];
+  const hlAnn = hits.slice(0, 8).map(p => ({ x: lg(p.x), y: lg(p.y), text: esc(p.label), showarrow: true, ax: 40, ay: -30, arrowcolor: th.ink, font: { size: 13, color: th.ink }, bgcolor: st.light ? "#fff" : "#06070b" }));
+  const axis = (title, range) => ({ type: "log", title: { text: title, font: { size: 16, color: th.ink } }, range, gridcolor: th.grid, zeroline: false,
+    linecolor: th.frame, mirror: true, ticks: "outside", tickcolor: th.frame, tickfont: { size: 14, color: th.ink }, exponentformat: "power", dtick: 2 });
+  const layout = {
+    paper_bgcolor: th.bg, plot_bgcolor: th.bg, font: { family: "Inter, Noto Sans JP, sans-serif", color: th.ink },
+    margin: { l: 86, r: 24, t: 16, b: 70 }, showlegend: false, hovermode: "closest", dragmode: "zoom",
+    hoverlabel: { bgcolor: st.light ? "#fff" : "#151927", bordercolor: th.frame, font: { size: 12.5, color: th.ink } },
+    xaxis: axis(P.xt, P.xr), yaxis: axis(P.yt, P.yr), annotations: [...P.ann, ...O.ann, ...hlAnn], shapes: P.shapes,
+  };
+  Plotly.react("plot", [...P.tr, ...O.tr, ...hl], layout, { responsive: true, displaylogo: false, modeBarButtonsToRemove: ["lasso2d", "select2d"],
+    toImageButtonOptions: { format: "png", filename: `transient_phase_space_${st.panel}`, width: 1200, height: 820, scale: 3 } });
+  renderClasses();
+}
+
+function renderClasses() {
+  const list = seriesOf(st.panel);
+  $("classes").innerHTML = list.map(s => `<button class="cl ${st.hidden[st.panel].has(s.name) ? "off" : ""}" data-n="${esc(s.name)}" style="--c:${col(s.cls)}">
+    <i></i><span>${esc(s.name)}</span><span class="n">${s.points?.length || ""}</span></button>`).join("");
+}
+
+function renderOverlays() {
+  $("ovList").innerHTML = store.overlays[st.panel].map((o, i) => `<div class="ov"><span>${esc(o.name)} <span class="n" style="color:var(--dim)">(${o.type})</span></span><button data-i="${i}">✕</button></div>`).join("");
+}
+
+function renderStatic() {
+  document.documentElement.lang = store.lang;
+  document.querySelectorAll("[data-i]").forEach(el => el.textContent = t(el.dataset.i));
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === store.lang));
+  document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", b.dataset.p === st.panel));
+  $("ovType").options[0].text = t("point"); $("ovType").options[1].text = t("line");
+  $("q").placeholder = t("search");
+  $("labels").classList.toggle("on", st.labels); $("light").classList.toggle("on", st.light);
+  if (D) $("foot").innerHTML = t("foot")([...D.radio, ...D.he].reduce((s, x) => s + (x.points?.length || 0), 0));
+  renderOverlays();
+}
+
+/* events */
+document.querySelector(".tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if (!b) return; st.panel = b.dataset.p; history.replaceState(null, "", "#" + st.panel); renderStatic(); draw(); });
+$("labels").addEventListener("click", () => { st.labels = !st.labels; renderStatic(); draw(); });
+$("light").addEventListener("click", () => { st.light = !st.light; renderStatic(); draw(); });
+$("q").addEventListener("input", e => { st.q = e.target.value; draw(); });
+let clickTimer = null;
+$("classes").addEventListener("click", e => {
+  const b = e.target.closest(".cl"); if (!b) return;
+  clearTimeout(clickTimer);
+  clickTimer = setTimeout(() => { const h = st.hidden[st.panel]; h.has(b.dataset.n) ? h.delete(b.dataset.n) : h.add(b.dataset.n); draw(); }, 220);
+});
+$("classes").addEventListener("dblclick", e => {
+  const b = e.target.closest(".cl"); if (!b) return; clearTimeout(clickTimer);
+  const h = st.hidden[st.panel], all = seriesOf(st.panel).map(s => s.name);
+  const only = all.every(n => n === b.dataset.n ? !h.has(n) : h.has(n));
+  h.clear(); if (!only) all.forEach(n => n !== b.dataset.n && h.add(n)); draw();
+});
+$("png").addEventListener("click", async () => {
+  const was = st.light; st.light = true; draw();
+  await Plotly.downloadImage("plot", { format: "png", filename: `transient_phase_space_${st.panel}`, width: 1200, height: 820, scale: 3 });
+  st.light = was; draw();
+});
+$("ovType").addEventListener("change", e => {
+  const line = e.target.value === "line";
+  $("ovPoint").style.display = line ? "none" : ""; $("ovLine").style.display = line ? "" : "none"; $("ovLine2").style.display = line ? "" : "none";
+});
+$("ovAdd").addEventListener("click", () => {
+  const n = s => Number(String(s).replace(/×10\^?/i, "e").trim());
+  const name = $("ovName").value.trim() || "model";
+  const o = $("ovType").value === "point" ? { type: "point", name, x: n($("ovX").value), y: n($("ovY").value) }
+    : { type: "line", name, A: n($("ovA").value), k: n($("ovK").value), x1: n($("ovX1").value), x2: n($("ovX2").value) };
+  const ok = o.type === "point" ? o.x > 0 && o.y > 0 : o.A > 0 && isFinite(o.k) && o.x1 > 0 && o.x2 > o.x1;
+  if (!ok) { $("ovAdd").textContent = "⚠ check numbers"; setTimeout(() => $("ovAdd").textContent = t("add"), 1500); return; }
+  store.overlays[st.panel].push(o); save(); renderOverlays(); draw();
+});
+$("ovList").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; store.overlays[st.panel].splice(+b.dataset.i, 1); save(); renderOverlays(); draw(); });
+document.querySelector(".lang").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; store.lang = b.dataset.lang; save(); renderStatic(); draw(); });
+
+renderStatic();
+fetch("data/phase.json?" + Date.now()).then(r => r.json()).then(d => { D = d; renderStatic(); draw(); })
+  .catch(() => { $("plot").innerHTML = '<p style="padding:40px;color:#8a91a8">Could not load data/phase.json</p>'; });
+</script>
+</body>
+</html>
