@@ -24,32 +24,6 @@
    "entry_date": "2026-11-22"
   },
   {
-   "key": "arXiv:2609.38100",
-   "bibcode": "2026MNRAS.tmp.2023A",
-   "arxiv": "2609.38100",
-   "doi": "10.1093/mnras/stag2192",
-   "title": "Very High-Energy GRB Afterglow Fits with Neural-Network Emulation and Bayesian inference",
-   "authors": [
-    "Aguilar-Ruiz, Edilberto",
-    "Talavera, Jessica Saldívar",
-    "Gill, Ramandeep",
-    "Srinivasan, Sundar"
-   ],
-   "n_authors": 4,
-   "pub": "Monthly Notices of the Royal Astronomical Society",
-   "year": "2026",
-   "journal": true,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2022MNRAS.512.2142Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": "2026-11-25",
-   "entry_date": "2026-11-22"
-  },
-  {
    "key": "arXiv:2608.03914",
    "bibcode": "2026ApJ..1012...70L",
    "arxiv": "2608.03914",
@@ -75,6 +49,32 @@
    "self": false,
    "cited": [
     "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": "2026-11-25",
+   "entry_date": "2026-11-22"
+  },
+  {
+   "key": "arXiv:2609.38100",
+   "bibcode": "2026MNRAS.tmp.2023A",
+   "arxiv": "2609.38100",
+   "doi": "10.1093/mnras/stag2192",
+   "title": "Very High-Energy GRB Afterglow Fits with Neural-Network Emulation and Bayesian inference",
+   "authors": [
+    "Aguilar-Ruiz, Edilberto",
+    "Talavera, Jessica Saldívar",
+    "Gill, Ramandeep",
+    "Srinivasan, Sundar"
+   ],
+   "n_authors": 4,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2026",
+   "journal": true,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2022MNRAS.512.2142Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -21681,5 +21681,5 @@
    "new_30d": 0
   }
  ],
- "updated": "2026-11-25T13:06:14+00:00"
+ "updated": "2026-11-25T19:56:25+00:00"
 }
