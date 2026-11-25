@@ -1,6 +1,148 @@
 {
  "citations": [
   {
+   "key": "arXiv:2501.08876",
+   "bibcode": "2025PhDT.......469S",
+   "arxiv": "2501.08876",
+   "doi": "10.48550/arXiv.2501.08876",
+   "title": "In pursuit of the Diffuse Supernova Neutrino Background at the Super-Kamiokande and Hyper-Kamiokande experiments",
+   "authors": [
+    "Santos, Andrew"
+   ],
+   "n_authors": 1,
+   "pub": "Ph.D. Thesis",
+   "year": "2025",
+   "journal": true,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2024NIMPA106569480A"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": "2026-11-25",
+   "entry_date": "2026-11-22"
+  },
+  {
+   "key": "arXiv:2609.38100",
+   "bibcode": "2026MNRAS.tmp.2023A",
+   "arxiv": "2609.38100",
+   "doi": "10.1093/mnras/stag2192",
+   "title": "Very High-Energy GRB Afterglow Fits with Neural-Network Emulation and Bayesian inference",
+   "authors": [
+    "Aguilar-Ruiz, Edilberto",
+    "Talavera, Jessica Saldívar",
+    "Gill, Ramandeep",
+    "Srinivasan, Sundar"
+   ],
+   "n_authors": 4,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2026",
+   "journal": true,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2022MNRAS.512.2142Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": "2026-11-25",
+   "entry_date": "2026-11-22"
+  },
+  {
+   "key": "arXiv:2608.03914",
+   "bibcode": "2026ApJ..1012...70L",
+   "arxiv": "2608.03914",
+   "doi": "10.3847/1538-4357/aeb6b9",
+   "title": "First Fast Radio Burst Search Campaign at the Argentine Institute of Radio Astronomy",
+   "authors": [
+    "Lousto, Carlos O.",
+    "Prajapati, Harsh",
+    "Zubieta, Ezequiel",
+    "Araujo Furlan, Susana B.",
+    "Gancio, Guillermo",
+    "Pelle, Joaquín",
+    "Romero, Gustavo E.",
+    "García, Federico",
+    "del Palacio, Santiago",
+    "Cahill, Nathan"
+   ],
+   "n_authors": 10,
+   "pub": "The Astrophysical Journal",
+   "year": "2026",
+   "journal": true,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2020ApJ...888..105Y"
+   ],
+   "first_seen": "2026-11-24",
+   "baseline": true,
+   "journal_seen": "2026-11-25",
+   "entry_date": "2026-11-22"
+  },
+  {
+   "key": "arXiv:2611.21861",
+   "bibcode": "2026MNRAS.tmp.2037D",
+   "arxiv": "2611.21861",
+   "doi": "10.1093/mnras/stag2212",
+   "title": "A search for optical bursts from the repeating fast radio burst in the M81 globular cluster, FRB 20200120E",
+   "authors": [
+    "Dhillon, V. S.",
+    "Spitler, L. G.",
+    "Lackeos, K.",
+    "Mbole, A. N.",
+    "Page, W. J.",
+    "Brown, A. J.",
+    "Segura, N. Castro",
+    "Dyer, M. J.",
+    "Garbutt, J. A.",
+    "Green, M. J."
+   ],
+   "n_authors": 21,
+   "pub": "Monthly Notices of the Royal Astronomical Society",
+   "year": "2026",
+   "journal": true,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2022PASP..134i4106L"
+   ],
+   "first_seen": "2026-11-18",
+   "baseline": false,
+   "journal_seen": "2026-11-25",
+   "entry_date": "2026-11-22"
+  },
+  {
+   "key": "arXiv:2610.40326",
+   "bibcode": "2026ApJ..1012..121Z",
+   "arxiv": "2610.40326",
+   "doi": "10.3847/1538-4357/aeb940",
+   "title": "Polarization and Burst Properties of the Repeating FRB 20240209A in a Quiescent Elliptical Host",
+   "authors": [
+    "Zhang, Yong-Kun",
+    "Feng, Yi",
+    "Li, Di",
+    "Xie, Jin-Tao",
+    "Tsai, Chao-Wei",
+    "Wang, Pei",
+    "Xue, Meng-Yao"
+   ],
+   "n_authors": 7,
+   "pub": "The Astrophysical Journal",
+   "year": "2026",
+   "journal": true,
+   "refereed": false,
+   "self": false,
+   "cited": [
+    "2026ApJ...997L...6Y"
+   ],
+   "first_seen": "2026-11-02",
+   "baseline": false,
+   "journal_seen": "2026-11-25",
+   "entry_date": "2026-11-22"
+  },
+  {
    "key": "arXiv:2610.31664",
    "bibcode": "2026arXiv261031664B",
    "arxiv": "2610.31664",
@@ -924,32 +1066,6 @@
    "self": false,
    "cited": [
     "2022PASP..134i4106L"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-09-30"
-  },
-  {
-   "key": "arXiv:2609.38100",
-   "bibcode": "2026arXiv260938100A",
-   "arxiv": "2609.38100",
-   "doi": "10.48550/arXiv.2609.38100",
-   "title": "Very High-Energy GRB Afterglow Fits with Neural-Network Emulation and Bayesian inference",
-   "authors": [
-    "Aguilar-Ruiz, Edilberto",
-    "Saldívar Talavera, Jessica",
-    "Gill, Ramandeep",
-    "Srinivasan, Sundar"
-   ],
-   "n_authors": 4,
-   "pub": "arXiv e-prints",
-   "year": "2026",
-   "journal": false,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2022MNRAS.512.2142Y"
    ],
    "first_seen": "2026-11-24",
    "baseline": true,
@@ -1901,38 +2017,6 @@
    "baseline": true,
    "journal_seen": null,
    "entry_date": "2026-08-09"
-  },
-  {
-   "key": "arXiv:2608.03914",
-   "bibcode": "2026arXiv260803914L",
-   "arxiv": "2608.03914",
-   "doi": "10.48550/arXiv.2608.03914",
-   "title": "First fast radio burst search campaign at the Argentine Institute of Radio Astronomy",
-   "authors": [
-    "Lousto, Carlos O.",
-    "Prajapati, Harsh",
-    "Zubieta, Ezequiel",
-    "Araujo Furlan, Susana B.",
-    "Gancio, Guillermo",
-    "Pelle, Joaquín",
-    "Romero, Gustavo E.",
-    "García, Federico",
-    "del Palacio, Santiago",
-    "Cahill, Nathan"
-   ],
-   "n_authors": 10,
-   "pub": "arXiv e-prints",
-   "year": "2026",
-   "journal": false,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2020ApJ...888..105Y"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2026-08-05"
   },
   {
    "key": "2026Univ...12..190S",
@@ -7603,29 +7687,6 @@
    "baseline": true,
    "journal_seen": null,
    "entry_date": "2025-01-19"
-  },
-  {
-   "key": "arXiv:2501.08876",
-   "bibcode": "2025arXiv250108876S",
-   "arxiv": "2501.08876",
-   "doi": "10.48550/arXiv.2501.08876",
-   "title": "Diffuse Supernova Neutrino Background",
-   "authors": [
-    "Santos, Andrew D."
-   ],
-   "n_authors": 1,
-   "pub": "arXiv e-prints",
-   "year": "2025",
-   "journal": false,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2024NIMPA106569480A"
-   ],
-   "first_seen": "2026-11-24",
-   "baseline": true,
-   "journal_seen": null,
-   "entry_date": "2025-01-16"
   },
   {
    "key": "arXiv:2408.03163",
@@ -20208,38 +20269,6 @@
    "entry_date": "2026-11-19"
   },
   {
-   "key": "arXiv:2611.21861",
-   "bibcode": "2026arXiv261121861D",
-   "arxiv": "2611.21861",
-   "doi": "10.48550/arXiv.2611.21861",
-   "title": "A search for optical bursts from the repeating fast radio burst in the M81 globular cluster, FRB 20200120E",
-   "authors": [
-    "Dhillon, V. S.",
-    "Spitler, L. G.",
-    "Lackeos, K.",
-    "Mbole, A. N.",
-    "Page, W. J.",
-    "Brown, A. J.",
-    "Castro Segura, N.",
-    "Dyer, M. J.",
-    "Garbutt, J. A.",
-    "Green, M. J."
-   ],
-   "n_authors": 21,
-   "pub": "arXiv e-prints",
-   "year": "2026",
-   "journal": false,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2022PASP..134i4106L"
-   ],
-   "first_seen": "2026-11-18",
-   "baseline": false,
-   "journal_seen": null,
-   "entry_date": "2026-11-18"
-  },
-  {
    "key": "2026ApJ..1012...21W",
    "bibcode": "2026ApJ..1012...21W",
    "arxiv": null,
@@ -20516,35 +20545,6 @@
    "baseline": false,
    "journal_seen": null,
    "entry_date": "2026-11-03"
-  },
-  {
-   "key": "arXiv:2610.40326",
-   "bibcode": "2026arXiv261040326Z",
-   "arxiv": "2610.40326",
-   "doi": null,
-   "title": "Polarization and Burst Properties of the Repeating FRB~20240209A in a Quiescent Elliptical Host",
-   "authors": [
-    "Zhang, Yong-Kun",
-    "Feng, Yi",
-    "Li, Di",
-    "Xie, Jin-Tao",
-    "Tsai, Chao-Wei",
-    "Wang, Pei",
-    "Xue, Meng-Yao"
-   ],
-   "n_authors": 7,
-   "pub": "arXiv e-prints",
-   "year": "2026",
-   "journal": false,
-   "refereed": false,
-   "self": false,
-   "cited": [
-    "2026ApJ...997L...6Y"
-   ],
-   "first_seen": "2026-11-02",
-   "baseline": false,
-   "journal_seen": null,
-   "entry_date": "2026-11-02"
   },
   {
    "key": "arXiv:2610.40958",
@@ -21508,7 +21508,7 @@
    "arxiv": "2206.08983",
    "refereed": true,
    "citation_count": 92,
-   "new_30d": 9
+   "new_30d": 8
   },
   {
    "bibcode": "2022MNRAS.514.5987K",
@@ -21558,7 +21558,7 @@
    "arxiv": "2201.03574",
    "refereed": true,
    "citation_count": 76,
-   "new_30d": 7
+   "new_30d": 6
   },
   {
    "bibcode": "2020arXiv201007796Y",
@@ -21681,5 +21681,5 @@
    "new_30d": 0
   }
  ],
- "updated": "2026-11-24T16:04:55+00:00"
+ "updated": "2026-11-25T07:30:07+00:00"
 }
