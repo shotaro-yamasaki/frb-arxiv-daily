@@ -80,7 +80,7 @@ def main():
     citations.main()
     s = json.loads(citations.OUT.read_text())
     assert s["baseline_date"] == "2026-11-27"
-    assert all(c["baseline"] for c in s["citations"]) and len(s["citations"]) == 2
+    assert all(c["baseline"] for c in s["citations"]) and len(s["citations"]) == 2  # both entered ADS long ago
     assert any(c["self"] for c in s["citations"])
 
     WORLD["day"] = 2
@@ -99,6 +99,14 @@ def main():
     assert ("2611.00001", "2024ApJ...900....1Y") in miss, s["missing"]
     assert not any(a == "2611.00002" and b == "2025PASJ...77....2Y" for a, b in miss)
     assert s["missing_checked"].get("2611.00005") == "pending"
+    # First run: a citation entered in ADS within 30 days is shown as new right away.
+    os.environ["TODAY"] = "2026-01-20"
+    citations.OUT.unlink()
+    WORLD["day"] = 1
+    citations.main()
+    s2 = json.loads(citations.OUT.read_text())
+    c = {x["key"]: x for x in s2["citations"]}["arXiv:2601.00010"]
+    assert not c["baseline"] and c["first_seen"] == "2026-01-05", c
     print("my papers:", [(p["bibcode"], p["new_30d"]) for p in s["my_papers"]])
     print("missing:", [(m["arxiv"], m["my_bibcode"], m["text_sim"], m["shared_refs"]) for m in s["missing"]])
     shutil.rmtree(tmp)

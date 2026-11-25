@@ -14,6 +14,7 @@ import os
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections import Counter
@@ -33,7 +34,7 @@ MINE_FL = "bibcode,alternate_bibcode,title,year,pub,identifier,citation_count,ab
 
 def ads_search(q, fl, rows=2000, sort="date desc"):
     """Return all documents for a query (handles pagination)."""
-    token = os.environ["ADS_TOKEN"]
+    token = re.sub(r"^(Bearer|Bearer:)\s*", "", os.environ["ADS_TOKEN"].strip()).strip()
     docs, start = [], 0
     while True:
         params = urllib.parse.urlencode({"q": q, "fl": fl, "rows": rows, "start": start, "sort": sort})
@@ -43,6 +44,15 @@ def ads_search(q, fl, rows=2000, sort="date desc"):
                 with urllib.request.urlopen(req, timeout=90) as r:
                     res = json.loads(r.read())["response"]
                 break
+            except urllib.error.HTTPError as e:
+                if e.code in (401, 403):
+                    sys.exit("ADS rejected the token (HTTP %d). Copy the token again from "
+                             "https://ui.adsabs.harvard.edu/user/settings/token and update the "
+                             "ADS_TOKEN secret. Token length seen: %d characters." % (e.code, len(token)))
+                if i == 2:
+                    raise
+                print(f"ADS retry {i + 1}: {e}", file=sys.stderr)
+                time.sleep(5 * (i + 1))
             except Exception as e:  # noqa: BLE001
                 if i == 2:
                     raise

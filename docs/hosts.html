@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FRB Host Galaxies · FRB arXiv Daily</title>
+<meta name="description" content="Properties of localized FRB host galaxies in one sortable table, updated weekly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06070b; --bg2:#0b0d14; --panel:#10131c; --panel2:#151927; --line:#1f2435; --line2:#2a3047;
+  --ink:#e8ebf4; --muted:#8a91a8; --dim:#5a6178;
+  --sf:#5ad1ff; --gv:#7ee081; --q:#ff6a3d; --unk:#6b7287; --hot2:#ffb547; --violet:#c792ff;
+  --display:"Space Grotesk","Noto Sans JP",system-ui,sans-serif;
+  --body:"Inter","Noto Sans JP",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+html[lang=ja] body{font-family:"Noto Sans JP","Inter",system-ui,sans-serif}
+a{color:inherit} button,input{font:inherit;color:inherit}
+.wrap{max-width:1320px;margin:0 auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 85% 0%,rgba(126,224,129,.10),transparent 55%),radial-gradient(ellipse at 60% 120%,rgba(90,209,255,.10),transparent 50%)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0 34px}
+.back{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.back:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line2);border-radius:999px;padding:3px}
+.lang button{white-space:nowrap;border:0;background:none;padding:4px 12px;border-radius:999px;font:500 12px var(--mono);color:var(--muted);cursor:pointer}
+.lang button.on{background:var(--ink);color:var(--bg)}
+.eyebrow{font:500 11.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gv)}
+h1{font:700 clamp(32px,5vw,52px)/1.03 var(--display);letter-spacing:-.03em;margin:10px 0 0}
+h1 span{background:linear-gradient(95deg,var(--sf),var(--gv));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--muted);max-width:680px;margin:12px 0 0}
+.stats{display:flex;gap:34px;flex-wrap:wrap;padding:24px 0 28px}
+.stat b{display:block;font:600 26px/1.1 var(--display)}
+.stat span{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.stat.small b{font-size:15px;line-height:1.8}
+
+.bar{position:sticky;top:0;z-index:20;background:rgba(6,7,11,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.seg{display:flex;flex-wrap:wrap;max-width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:3px}
+.seg button{border:0;background:none;padding:6px 11px;border-radius:7px;font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.seg button.on{background:var(--panel2);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line2)}
+.seg button i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c);margin-right:6px}
+input[type=search],input[type=number]{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:7px 11px;font-size:13.5px;outline:none}
+input[type=search]{flex:1;min-width:160px}
+input[type=number]{width:74px}
+.zr{display:flex;gap:6px;align-items:center;font:12px var(--mono);color:var(--muted)}
+.tog{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:7px 12px;font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tog.on{color:var(--gv);border-color:rgba(126,224,129,.4);background:rgba(126,224,129,.08)}
+.btn{border:1px solid var(--line2);background:var(--panel2);border-radius:10px;padding:7px 12px;font:500 12.5px var(--mono);cursor:pointer}
+.btn:hover{border-color:var(--muted)}
+
+main{padding:26px 0 60px}
+.grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px;margin-bottom:26px}
+.card{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card h2{font:600 15px var(--display);margin:0 0 4px}
+.card .sub{font-size:12.5px;color:var(--muted);margin:0 0 6px}
+svg text{font-family:var(--body)}
+#plot{width:100%;height:auto;display:block}
+.pt{cursor:pointer;transition:r .15s}
+.pt.dimmed{opacity:.12}
+#tip{position:fixed;pointer-events:none;background:var(--panel2);border:1px solid var(--line2);border-radius:8px;padding:6px 10px;font:12px var(--mono);display:none;z-index:50}
+.hist-row{display:grid;grid-template-columns:120px 1fr 44px;gap:10px;align-items:center;font-size:13px;margin:7px 0}
+.hist-row .b{height:14px;border-radius:4px;background:var(--c)}
+.hist-row .n{font:12px var(--mono);color:var(--muted);text-align:right}
+.mini{font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.6}
+
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;white-space:nowrap}
+th{position:sticky;top:0;background:var(--panel2);font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right;padding:10px 10px;border-bottom:1px solid var(--line2);cursor:pointer;user-select:none}
+th:first-child,td:first-child,th.l,td.l{text-align:left}
+th:hover{color:var(--ink)}
+th.sorted{color:var(--gv)}
+td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+tr:hover td{background:rgba(255,255,255,.02)}
+tr.flash td{background:rgba(126,224,129,.12)}
+td.frb{font:500 13px var(--mono)}
+td .err{color:var(--dim);font-size:11.5px}
+td.na{color:var(--dim)}
+.cls{font:600 11px var(--mono);padding:2px 8px;border-radius:999px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 10%,transparent)}
+.rep{color:var(--hot2);font-weight:600}
+.badge{font:600 10px var(--mono);letter-spacing:.06em;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:1px}
+.badge.auto{color:var(--violet);border:1px solid rgba(199,146,255,.45)}
+.badge.ok{color:var(--gv);border:1px solid rgba(126,224,129,.45)}
+.badge.kind{color:var(--dim);border:1px solid var(--line2)}
+td.refs{text-align:left;white-space:normal;min-width:220px;font-size:12.5px;color:var(--muted)}
+td.refs a{color:var(--sf);text-decoration:none}
+.foot{font-size:12.5px;color:var(--muted);margin-top:16px;line-height:1.75;max-width:980px}
+.foot b{color:var(--ink);font-weight:500}
+@media (max-width:980px){.grid{grid-template-columns:1fr}.grid>*{min-width:0}input[type=search]{flex-basis:100%}.wrap{padding:0 16px}.stats{gap:10px 24px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><a class="back" href="./">← FRB arXiv Daily</a>
+    <div class="lang"><button data-lang="en">EN</button><button data-lang="ja">日本語</button></div></div>
+  <div class="eyebrow" data-i="eyebrow"></div>
+  <h1><span>FRB</span> Host Galaxies</h1>
+  <p class="tagline" data-i="tagline"></p>
+  <div class="stats" id="stats"></div>
+</div></header>
+
+<div class="bar"><div class="wrap">
+  <input type="search" id="q">
+  <div class="seg" id="rep"><button data-v="all" data-i="all"></button><button data-v="rep" data-i="repeaters"></button><button data-v="non" data-i="nonrep"></button></div>
+  <div class="seg" id="cls">
+    <button data-v="all" data-i="all"></button>
+    <button data-v="SF" style="--c:var(--sf)"><i></i><span data-i="SF"></span></button>
+    <button data-v="GV" style="--c:var(--gv)"><i></i><span data-i="GV"></span></button>
+    <button data-v="Q" style="--c:var(--q)"><i></i><span data-i="Q"></span></button>
+    <button data-v="?" style="--c:var(--unk)"><i></i><span data-i="unk"></span></button>
+  </div>
+  <div class="zr">z <input type="number" id="zmin" step="0.05" min="0" placeholder="min"> – <input type="number" id="zmax" step="0.05" min="0" placeholder="max"></div>
+  <button class="tog" id="lit" data-i="litOnly"></button>
+  <button class="btn" id="csv">CSV ↓</button>
+</div></div>
+
+<main><div class="wrap">
+  <div class="grid">
+    <div class="card">
+      <h2 data-i="plotT"></h2><p class="sub" data-i="plotS"></p>
+      <svg id="plot" viewBox="0 0 640 430" role="img" aria-label="SFR versus stellar mass"></svg>
+    </div>
+    <div class="card">
+      <h2 data-i="offT"></h2><p class="sub" data-i="offS"></p>
+      <svg id="offplot" viewBox="0 0 560 250" role="img" aria-label="Offset distribution"></svg>
+      <h2 style="margin-top:14px" data-i="clsT"></h2>
+      <div id="clsbars"></div>
+      <p class="mini" id="litinfo"></p>
+    </div>
+  </div>
+  <div class="tablewrap"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+  <div class="foot" id="foot"></div>
+</div></main>
+<div id="tip"></div>
+
+<script>
+/* ---------- settings you may want to change ---------- */
+const MS_SF = -0.5;   // ΔMS above this: star-forming
+const MS_Q = -1.5;    // ΔMS below this: quiescent. In between: green valley.
+const H0 = 67.66, OM = 0.30966;  // Planck18, used for the age of the Universe in the main sequence
+
+const I18N = {
+  en: {
+    eyebrow: "Localized FRBs · host galaxy properties", tagline: "Every localized FRB host in one sortable table. The base data come from the FRBs/FRB repository every week, and a weekly literature search adds hosts from new papers.",
+    all: "All", repeaters: "Repeaters", nonrep: "Non-repeaters", SF: "Star-forming", GV: "Green valley", Q: "Quiescent", unk: "No SFR/M*",
+    litOnly: "Literature additions only", search: "Search FRB name or reference…",
+    sHosts: "Hosts", sBoth: "With M* and SFR", sRep: "Repeaters", sLit: "From literature", sSync: "FRBs/FRB sync", sSearch: "Last literature search",
+    plotT: "Star formation rate vs stellar mass", plotS: "Filled diamonds are repeaters. Lines show the star-forming main sequence (Speagle et al. 2014) at two redshifts. Click a point to find it in the table.",
+    offT: "Projected offset from the host centre", offS: "Number of hosts per bin (kpc, log bins).",
+    clsT: "Class by offset from the main sequence",
+    cols: { frb: "FRB", z: "z", rep: "Rep.", m: "log M*", sfr: "SFR", ssfr: "log sSFR", dms: "ΔMS", cls: "Class", off: "Offset (kpc)", offa: "Offset (″)", pox: "P(O|x)", refs: "References" },
+    yes: "yes", no: "no", nHosts: n => `${n} hosts shown`,
+    litinfo: (n, d) => n ? `${n} values were added from recent papers by the weekly search (last run ${d}). Rows marked AUTO were read by Claude and are not checked yet.` : `No literature additions yet. The weekly search adds hosts from new papers that are not yet in FRBs/FRB.`,
+    foot: `<b>Sources.</b> Base values are copied from the <a href="https://github.com/FRBs/FRB" target="_blank" rel="noopener">FRBs/FRB</a> repository (Prochaska et al.), which compiles published host measurements. Each row lists the papers behind its values. Rows or values marked <span class="badge auto">AUTO</span> were added by the weekly literature search from the paper linked in the row and have not been checked by hand. <span class="badge ok">CHECKED</span> means checked by hand.<br>
+<b>Derived columns.</b> sSFR = SFR / M*. ΔMS = log SFR − log SFR<sub>MS</sub>(M*, z), with the main sequence of Speagle et al. (2014) and the age of the Universe for Planck18. Class: star-forming if ΔMS > ${MS_SF}, quiescent if ΔMS < ${MS_Q}, green valley in between. This is a rough guide: SFR tracers, IMFs and SED codes differ between papers.<br>
+<b>Masses.</b> When only the total formed mass (Prospector "Mtotal") is available it is shown with a † mark. It is about 0.2 dex larger than the surviving stellar mass.`,
+  },
+  ja: {
+    eyebrow: "位置の決まったFRB · 母銀河の性質", tagline: "位置の決まったFRBの母銀河を一つの表にまとめました。土台のデータは毎週FRBs/FRBリポジトリから取り込み、毎週の文献検索で新しい論文の母銀河を追加します。",
+    all: "すべて", repeaters: "リピーター", nonrep: "非リピーター", SF: "星形成", GV: "グリーンバレー", Q: "休止", unk: "SFR/M*なし",
+    litOnly: "文献から追加した分のみ", search: "FRB名や文献で検索…",
+    sHosts: "母銀河", sBoth: "M*とSFRあり", sRep: "リピーター", sLit: "文献から追加", sSync: "FRBs/FRB取込", sSearch: "最終の文献検索",
+    plotT: "星形成率と星質量", plotS: "塗りつぶしの菱形がリピーター。線は2つの赤方偏移での星形成主系列(Speagle et al. 2014)。点を押すと表の該当行に移動します。",
+    offT: "母銀河中心からの投影距離", offS: "ビンごとの母銀河の数(kpc、対数ビン)。",
+    clsT: "主系列からのずれによる分類",
+    cols: { frb: "FRB", z: "z", rep: "リピ", m: "log M*", sfr: "SFR", ssfr: "log sSFR", dms: "ΔMS", cls: "分類", off: "オフセット(kpc)", offa: "オフセット(″)", pox: "P(O|x)", refs: "文献" },
+    yes: "はい", no: "いいえ", nHosts: n => `${n}個を表示中`,
+    litinfo: (n, d) => n ? `毎週の検索で、最近の論文から${n}件の値を追加しました(最終実行 ${d})。AUTOの印はClaudeが読み取った値で、まだ確認されていません。` : `文献からの追加はまだありません。毎週の検索で、FRBs/FRBにまだ入っていない新しい論文の母銀河を追加します。`,
+    foot: `<b>出典。</b>土台の値は、公表された母銀河の測定をまとめた<a href="https://github.com/FRBs/FRB" target="_blank" rel="noopener">FRBs/FRB</a>リポジトリ(Prochaskaら)から取っています。各行に元の論文を載せています。<span class="badge auto">AUTO</span>の付いた行や値は、毎週の文献検索が行内のリンク先の論文から追加したもので、まだ人の目で確認していません。<span class="badge ok">CHECKED</span>は確認済みです。<br>
+<b>計算した列。</b>sSFR = SFR / M*。ΔMS = log SFR − log SFR<sub>MS</sub>(M*, z)。主系列はSpeagle et al. (2014)、宇宙年齢はPlanck18で計算。分類は、ΔMS > ${MS_SF}を星形成、ΔMS < ${MS_Q}を休止、その間をグリーンバレーとしています。SFRの指標、IMF、SEDコードが論文ごとに違うので、目安として使ってください。<br>
+<b>質量。</b>形成された総質量(Prospectorの"Mtotal")しかないものは†を付けています。現在の星質量より約0.2 dex大きくなります。`,
+  },
+};
+
+const COL = { SF: "var(--sf)", GV: "var(--gv)", Q: "var(--q)", "?": "var(--unk)" };
+const HEX = { SF: "#5ad1ff", GV: "#7ee081", Q: "#ff6a3d", "?": "#6b7287" };
+const LS = "frb-arxiv-daily:v1";
+let store = {}; try { store = JSON.parse(localStorage.getItem(LS) || "{}"); } catch (e) {}
+store.lang ||= (navigator.language || "").startsWith("ja") ? "ja" : "en";
+const save = () => { try { localStorage.setItem(LS, JSON.stringify(store)); } catch (e) {} };
+const st = { rep: "all", cls: "all", q: "", zmin: null, zmax: null, lit: false, sort: "frb", dir: -1 };
+let ROWS = [], META = {};
+const $ = id => document.getElementById(id);
+const t = k => I18N[store.lang][k];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+/* ---------- cosmology and main sequence ---------- */
+function ageGyr(z) {
+  const a1 = 1 / (1 + z), n = 400, f = a => 1 / (a * Math.sqrt(OM / a ** 3 + (1 - OM)));
+  let s = 0; const lo = 1e-6, h = (a1 - lo) / n;
+  for (let i = 0; i <= n; i++) { const a = lo + i * h; s += f(a) * (i === 0 || i === n ? 1 : i % 2 ? 4 : 2); }
+  return s * h / 3 * 977.8 / H0;
+}
+const msLogSFR = (logM, z) => { const tt = ageGyr(z); return (0.84 - 0.026 * tt) * logM - (6.51 - 0.11 * tt); };
+
+function derive(r) {
+  r.log_sfr = r.sfr > 0 ? Math.log10(r.sfr) : null;
+  r.log_ssfr = r.log_sfr != null && r.log_mstar != null ? r.log_sfr - r.log_mstar : null;
+  r.dms = r.log_sfr != null && r.log_mstar != null && r.z != null ? r.log_sfr - msLogSFR(r.log_mstar, Math.max(r.z, 0.001)) : null;
+  r.cls = r.dms == null ? "?" : r.dms > MS_SF ? "SF" : r.dms < MS_Q ? "Q" : "GV";
+  return r;
+}
+
+/* ---------- merge base data with literature additions ---------- */
+const FIELDS = ["z", "ra", "dec", "repeater", "dm", "log_mstar", "log_mstar_lo", "log_mstar_up", "mstar_kind", "sfr", "sfr_lo", "sfr_up", "sfr_kind",
+                "offset_kpc", "offset_kpc_err", "offset_arcsec", "z_gas", "morphology", "p_ox"];
+function merge(base, lit) {
+  const by = new Map(base.hosts.map(h => [h.frb, { ...h, lit: [] }]));
+  for (const e of lit.entries || []) {
+    const key = String(e.frb).replace(/^FRB\s*/i, "");
+    let row = by.get(key);
+    if (!row) { row = { frb: key, refs: [], source: "literature", lit: [] }; by.set(key, row); }
+    const filled = [];
+    for (const f of FIELDS) if (e[f] != null && row[f] == null) { row[f] = e[f]; filled.push(f); }
+    if (filled.length || row.source === "literature") row.lit.push({ ...e, filled });
+    const ref = e.source?.ref || (e.source?.arxiv ? "arXiv:" + e.source.arxiv : null);
+    if (ref && !row.refs.includes(ref)) row.refs.push(ref);
+  }
+  return [...by.values()].map(derive);
+}
+
+/* ---------- filtering and sorting ---------- */
+function visible() {
+  const q = st.q.trim().toLowerCase();
+  return ROWS.filter(r =>
+    (st.rep === "all" || (st.rep === "rep" ? r.repeater === true : r.repeater === false)) &&
+    (st.cls === "all" || r.cls === st.cls) &&
+    (st.zmin == null || (r.z != null && r.z >= st.zmin)) && (st.zmax == null || (r.z != null && r.z <= st.zmax)) &&
+    (!st.lit || r.lit.length) &&
+    (!q || (r.frb + " " + r.refs.join(" ") + " " + (r.surveys || []).join(" ")).toLowerCase().includes(q)));
+}
+const SORTKEY = { frb: r => r.frb, z: r => r.z, rep: r => r.repeater ? 1 : 0, m: r => r.log_mstar, sfr: r => r.sfr, ssfr: r => r.log_ssfr,
+                  dms: r => r.dms, cls: r => ({ SF: 0, GV: 1, Q: 2, "?": 3 })[r.cls], off: r => r.offset_kpc, offa: r => r.offset_arcsec, zg: r => r.z_gas, pox: r => r.p_ox };
+function sorted(list) {
+  const k = SORTKEY[st.sort] || SORTKEY.frb;
+  return list.slice().sort((a, b) => {
+    const x = k(a), y = k(b);
+    if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1;
+    return (x < y ? -1 : x > y ? 1 : 0) * st.dir;
+  });
+}
+
+/* ---------- rendering ---------- */
+const f = (v, d = 2) => v == null ? null : Number(v).toFixed(d);
+const cell = (v, extra = "") => v == null ? `<td class="na">–</td>` : `<td>${v}${extra}</td>`;
+function litBadge(r) {
+  if (!r.lit.length) return "";
+  const ok = r.lit.every(e => e.status === "checked");
+  return `<span class="badge ${ok ? "ok" : "auto"}">${ok ? "CHECKED" : "AUTO"}</span>`;
+}
+function refsHtml(r) {
+  const lits = r.lit.map(e => e.source?.arxiv ? `<a href="https://arxiv.org/abs/${esc(e.source.arxiv)}" target="_blank" rel="noopener">${esc(e.source.ref || "arXiv:" + e.source.arxiv)}</a>${e.source.where ? ` (${esc(e.source.where)})` : ""}` : "").filter(Boolean);
+  const base = r.refs.filter(x => !r.lit.some(e => x === (e.source?.ref || "arXiv:" + e.source?.arxiv))).map(esc);
+  return [...base, ...lits].join(", ");
+}
+function renderTable(list) {
+  const c = t("cols");
+  const head = [["frb", "l"], ["z"], ["rep"], ["m"], ["sfr"], ["ssfr"], ["dms"], ["cls"], ["off"], ["offa"], ["pox"], ["refs", "l"]];
+  $("thead").innerHTML = "<tr>" + head.map(([k, cl]) => `<th class="${cl || ""} ${st.sort === k ? "sorted" : ""}" data-k="${k}">${esc(c[k])}${st.sort === k ? (st.dir > 0 ? " ↑" : " ↓") : ""}</th>`).join("") + "</tr>";
+  $("tbody").innerHTML = sorted(list).map(r => `<tr id="row-${esc(r.frb)}">
+    <td class="frb">${esc(r.frb)}${litBadge(r)}</td>
+    ${cell(f(r.z, r.z < 0.01 ? 4 : 3), r.z_type === "phot" ? ' <span class="err">phot</span>' : "")}
+    ${r.repeater == null ? `<td class="na">–</td>` : `<td>${r.repeater ? `<span class="rep">${esc(t("yes"))}</span>` : esc(t("no"))}</td>`}
+    ${cell(f(r.log_mstar), r.mstar_kind === "total formed" ? "†" : "")}
+    ${cell(r.sfr == null ? null : (r.sfr < 0.1 ? f(r.sfr, 3) : f(r.sfr, 2)))}
+    ${cell(f(r.log_ssfr))}
+    ${cell(f(r.dms))}
+    <td><span class="cls" style="--c:${COL[r.cls]}">${esc(r.cls === "?" ? "–" : t(r.cls))}</span></td>
+    ${cell(f(r.offset_kpc, 1), r.offset_kpc_err != null ? ` <span class="err">±${f(r.offset_kpc_err, 1)}</span>` : "")}
+    ${cell(f(r.offset_arcsec, 2))}
+    ${cell(r.p_ox ? f(r.p_ox, 2) : null)}
+    <td class="refs">${refsHtml(r)}</td></tr>`).join("");
+}
+
+function renderPlot(list) {
+  const W = 640, H = 430, L = 62, R = 18, T = 16, B = 52;
+  const xmin = 7, xmax = 12, ymin = -3.5, ymax = 2;
+  const X = v => L + (v - xmin) / (xmax - xmin) * (W - L - R), Y = v => T + (ymax - v) / (ymax - ymin) * (H - T - B);
+  let s = `<rect x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="none" stroke="#2a3047"/>`;
+  for (let x = 7; x <= 12; x++) s += `<line x1="${X(x)}" x2="${X(x)}" y1="${T}" y2="${H - B}" stroke="#1f2435"/><text x="${X(x)}" y="${H - B + 20}" fill="#8a91a8" font-size="14" text-anchor="middle">${x}</text>`;
+  for (let y = -3; y <= 2; y++) s += `<line x1="${L}" x2="${W - R}" y1="${Y(y)}" y2="${Y(y)}" stroke="#1f2435"/><text x="${L - 10}" y="${Y(y) + 5}" fill="#8a91a8" font-size="14" text-anchor="end">${y}</text>`;
+  s += `<text x="${(L + W - R) / 2}" y="${H - 10}" fill="#e8ebf4" font-size="15" text-anchor="middle">log M* (M☉)</text>`;
+  s += `<text transform="translate(18 ${(T + H - B) / 2}) rotate(-90)" fill="#e8ebf4" font-size="15" text-anchor="middle">log SFR (M☉ yr⁻¹)</text>`;
+  // main sequence and green-valley band at z = 0.1, main sequence at z = 0.5
+  for (const [z, dash] of [[0.1, ""], [0.5, "6 5"]]) {
+    const pts = [7, 12].map(m => `${X(m)},${Y(msLogSFR(m, z))}`).join(" ");
+    s += `<polyline points="${pts}" fill="none" stroke="#e8ebf4" stroke-width="1.4" stroke-dasharray="${dash}" opacity=".75"/>`;
+    const lx = 7.25, ly = msLogSFR(lx, z);
+    s += `<text x="${X(lx)}" y="${Y(ly) - 9}" fill="#e8ebf4" font-size="13" opacity=".85">MS z=${z}</text>`;
+  }
+  const band = [7, 12, 12, 7].map((m, i) => `${X(m)},${Y(msLogSFR(m, 0.1) + (i < 2 ? MS_SF : MS_Q))}`).join(" ");
+  s += `<polygon points="${band}" fill="#7ee081" opacity=".07"/>`;
+  s += `<text x="${X(7.15)}" y="${Y(msLogSFR(7.15, 0.1) + (MS_SF + MS_Q) / 2) + 5}" fill="#7ee081" font-size="13" opacity=".9">${esc(t("GV"))} (z=0.1)</text>`;
+  for (const r of list) {
+    if (r.log_mstar == null || r.log_sfr == null) continue;
+    const cx = X(Math.min(xmax, Math.max(xmin, r.log_mstar))), cy = Y(Math.min(ymax, Math.max(ymin, r.log_sfr)));
+    const c = HEX[r.cls];
+    s += r.repeater
+      ? `<path class="pt" data-f="${esc(r.frb)}" d="M${cx} ${cy - 8}L${cx + 8} ${cy}L${cx} ${cy + 8}L${cx - 8} ${cy}Z" fill="${c}" stroke="#06070b" stroke-width="1"/>`
+      : `<circle class="pt" data-f="${esc(r.frb)}" cx="${cx}" cy="${cy}" r="5.5" fill="none" stroke="${c}" stroke-width="2"/>`;
+  }
+  $("plot").innerHTML = s;
+}
+
+function renderOffsets(list) {
+  const W = 560, H = 250, L = 46, R = 10, T = 22, B = 46;
+  const edges = []; for (let e = -1; e <= 2.01; e += 0.25) edges.push(e);
+  const cnt = rep => edges.slice(0, -1).map((e, i) => list.filter(r => r.offset_kpc > 0 && r.repeater === rep &&
+    Math.log10(r.offset_kpc) >= e && Math.log10(r.offset_kpc) < edges[i + 1]).length);
+  const a = cnt(true), b = cnt(false), mx = Math.max(1, ...a, ...b);
+  const X = v => L + (v + 1) / 3 * (W - L - R), Y = v => T + (1 - v / mx) * (H - T - B);
+  let s = `<line x1="${L}" x2="${W - R}" y1="${Y(0)}" y2="${Y(0)}" stroke="#2a3047"/>`;
+  edges.slice(0, -1).forEach((e, i) => {
+    const x0 = X(e) + 2, w = (X(edges[i + 1]) - X(e) - 4) / 2;
+    if (a[i]) s += `<rect x="${x0}" y="${Y(a[i])}" width="${w}" height="${Y(0) - Y(a[i])}" rx="2" fill="#ffb547"/>`;
+    if (b[i]) s += `<rect x="${x0 + w}" y="${Y(b[i])}" width="${w}" height="${Y(0) - Y(b[i])}" rx="2" fill="#5ad1ff" opacity=".75"/>`;
+  });
+  for (const v of [0.1, 1, 10, 100]) s += `<text x="${X(Math.log10(v))}" y="${H - B + 20}" fill="#8a91a8" font-size="14" text-anchor="middle">${v}</text>`;
+  s += `<text x="${(L + W) / 2}" y="${H - 6}" fill="#e8ebf4" font-size="14" text-anchor="middle">${esc(store.lang === "ja" ? "投影オフセット (kpc)" : "Projected offset (kpc)")}</text>`;
+  s += `<text x="${L - 10}" y="${Y(mx) + 5}" fill="#8a91a8" font-size="13" text-anchor="end">${mx}</text><text x="${L - 10}" y="${Y(0)}" fill="#8a91a8" font-size="13" text-anchor="end">0</text>`;
+  s += `<text x="${W - R}" y="${T}" fill="#ffb547" font-size="13" text-anchor="end">■ ${esc(t("repeaters"))} (${a.reduce((x, y) => x + y, 0)})</text>`;
+  s += `<text x="${W - R}" y="${T + 18}" fill="#5ad1ff" font-size="13" text-anchor="end">■ ${esc(t("nonrep"))} (${b.reduce((x, y) => x + y, 0)})</text>`;
+  $("offplot").innerHTML = s;
+}
+
+function renderClassBars(list) {
+  const n = { SF: 0, GV: 0, Q: 0, "?": 0 }; list.forEach(r => n[r.cls]++);
+  const mx = Math.max(1, ...Object.values(n));
+  $("clsbars").innerHTML = ["SF", "GV", "Q", "?"].map(k => `<div class="hist-row"><span>${esc(k === "?" ? t("unk") : t(k))}</span>
+    <div><div class="b" style="--c:${COL[k]};width:${100 * n[k] / mx}%"></div></div><span class="n">${n[k]}</span></div>`).join("");
+}
+
+function render() {
+  const list = visible();
+  renderTable(list); renderPlot(list); renderOffsets(list); renderClassBars(list);
+  document.querySelectorAll("#rep button").forEach(b => b.classList.toggle("on", b.dataset.v === st.rep));
+  document.querySelectorAll("#cls button").forEach(b => b.classList.toggle("on", b.dataset.v === st.cls));
+  $("lit").classList.toggle("on", st.lit);
+}
+function renderStatic() {
+  document.documentElement.lang = store.lang;
+  document.querySelectorAll("[data-i]").forEach(el => el.textContent = t(el.dataset.i));
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === store.lang));
+  $("q").placeholder = t("search");
+  $("foot").innerHTML = t("foot");
+  const nLit = ROWS.reduce((s, r) => s + r.lit.length, 0);
+  const d = v => v ? new Date(v).toLocaleDateString(store.lang === "ja" ? "ja-JP" : "en-US", { year: "numeric", month: "short", day: "numeric" }) : "—";
+  $("stats").innerHTML = [
+    ["sHosts", ROWS.length], ["sBoth", ROWS.filter(r => r.log_mstar != null && r.sfr != null).length],
+    ["sRep", ROWS.filter(r => r.repeater).length], ["sLit", ROWS.filter(r => r.lit.length).length],
+  ].map(([k, v]) => `<div class="stat"><b>${v}</b><span>${esc(t(k))}</span></div>`).join("") +
+    `<div class="stat small"><b>${esc(d(META.base))}</b><span>${esc(t("sSync"))}</span></div>` +
+    `<div class="stat small"><b>${esc(d(META.search))}</b><span>${esc(t("sSearch"))}</span></div>`;
+  $("litinfo").textContent = t("litinfo")(nLit, d(META.search));
+}
+
+/* ---------- events ---------- */
+$("rep").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { st.rep = b.dataset.v; render(); } });
+$("cls").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { st.cls = b.dataset.v; render(); } });
+$("lit").addEventListener("click", () => { st.lit = !st.lit; render(); });
+$("q").addEventListener("input", e => { st.q = e.target.value; render(); });
+for (const id of ["zmin", "zmax"]) $(id).addEventListener("input", e => { st[id] = e.target.value === "" ? null : +e.target.value; render(); });
+$("thead").addEventListener("click", e => {
+  const th = e.target.closest("th"); if (!th || th.dataset.k === "refs") return;
+  if (st.sort === th.dataset.k) st.dir *= -1; else { st.sort = th.dataset.k; st.dir = th.dataset.k === "frb" ? -1 : 1; }
+  render();
+});
+const tip = $("tip");
+for (const id of ["plot"]) {
+  $(id).addEventListener("mousemove", e => {
+    const p = e.target.closest(".pt"); if (!p) { tip.style.display = "none"; return; }
+    const r = ROWS.find(x => x.frb === p.dataset.f);
+    tip.innerHTML = `FRB ${esc(r.frb)} · z=${f(r.z, 3)}<br>log M*=${f(r.log_mstar)} · SFR=${f(r.sfr, 3)}`;
+    tip.style.display = "block"; tip.style.left = e.clientX + 14 + "px"; tip.style.top = e.clientY + 14 + "px";
+  });
+  $(id).addEventListener("mouseleave", () => tip.style.display = "none");
+  $(id).addEventListener("click", e => {
+    const p = e.target.closest(".pt"); if (!p) return;
+    const row = document.getElementById("row-" + p.dataset.f); if (!row) return;
+    row.scrollIntoView({ behavior: "smooth", block: "center" });
+    row.classList.add("flash"); setTimeout(() => row.classList.remove("flash"), 1800);
+  });
+}
+$("csv").addEventListener("click", () => {
+  const cols = ["frb", "z", "z_type", "repeater", "ra", "dec", "dm", "log_mstar", "mstar_kind", "sfr", "sfr_kind", "log_ssfr", "dms", "cls", "offset_kpc", "offset_kpc_err", "offset_arcsec", "z_gas", "p_ox", "refs", "source"];
+  const q = v => v == null ? "" : /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : String(v);
+  const lines = [cols.join(",")].concat(sorted(visible()).map(r => cols.map(c => q(c === "refs" ? r.refs.join("; ") : c === "source" ? (r.lit.length ? r.source + "+literature" : r.source) : typeof r[c] === "number" ? +r[c].toFixed(4) : r[c])).join(",")));
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([lines.join("\n")], { type: "text/csv" }));
+  a.download = "frb_hosts.csv"; a.click();
+});
+document.querySelector(".lang").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return; store.lang = b.dataset.lang; save(); renderStatic(); render();
+});
+
+Promise.all([
+  fetch("data/hosts_base.json?" + Date.now()).then(r => r.json()),
+  fetch("data/hosts_lit.json?" + Date.now()).then(r => r.ok ? r.json() : { entries: [] }).catch(() => ({ entries: [] })),
+]).then(([base, lit]) => {
+  META = { base: base.updated, search: lit.last_search };
+  ROWS = merge(base, lit);
+  renderStatic(); render();
+}).catch(() => { renderStatic(); $("tbody").innerHTML = `<tr><td>Could not load data/hosts_base.json</td></tr>`; });
+</script>
+</body>
+</html>
