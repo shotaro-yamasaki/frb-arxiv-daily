@@ -3,6 +3,8 @@ name: Update FRB papers
 on:
   schedule:
     - cron: "17 2 * * 1-5"
+    - cron: "47 5 * * 1-5"
+    - cron: "17 10 * * 1-5"
   push:
     branches: [main]
   workflow_dispatch:
@@ -46,7 +48,7 @@ jobs:
           elif [ "${{ inputs.reclassify }}" = "true" ]; then
             python scripts/fetch.py --reclassify
           else
-            python scripts/fetch.py
+            python scripts/fetch.py　--catchup 5
           fi
       - name: Track citations to my papers (needs ADS_TOKEN)
         env:
