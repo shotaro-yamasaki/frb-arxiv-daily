@@ -48,7 +48,7 @@ jobs:
           elif [ "${{ inputs.reclassify }}" = "true" ]; then
             python scripts/fetch.py --reclassify
           else
-            python scripts/fetch.py　--catchup 5
+            python scripts/fetch.py --catchup 5
           fi
       - name: Track citations to my papers (needs ADS_TOKEN)
         env:
