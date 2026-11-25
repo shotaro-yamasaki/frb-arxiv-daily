@@ -207,6 +207,8 @@ def main():
     ap.add_argument("--backfill", type=int, default=0, help="query the arXiv API for the last N days")
     ap.add_argument("--rss-file", help="parse a local RSS file instead of downloading (testing)")
     ap.add_argument("--atom-file", help="parse a local Atom API file instead of downloading (testing)")
+    ap.add_argument("--catchup", type=int, default=0,
+                    help="also query the arXiv API for the last N days, so a missed day is not lost")
     ap.add_argument("--reclassify", action="store_true",
                     help="re-run keyword classification on stored papers (after editing config.json)")
     args = ap.parse_args()
@@ -216,16 +218,23 @@ def main():
     db = load_db()
     known = {p["id"] for p in db["papers"]}
 
-    if args.rss_file:
-        raw = parse_rss(Path(args.rss_file).read_bytes(), set(cfg["announce_types"]))
-    elif args.atom_file:
-        raw = parse_atom(Path(args.atom_file).read_bytes())
+    if args.rss_file or args.atom_file:
+        raw = []
+        if args.rss_file:
+            raw += parse_rss(Path(args.rss_file).read_bytes(), set(cfg["announce_types"]))
+        if args.atom_file:
+            raw += parse_atom(Path(args.atom_file).read_bytes())
     elif args.backfill:
         raw = fetch_api(args.backfill)
     elif args.reclassify:
         raw = []
     else:
         raw = fetch_rss(cfg)
+        if args.catchup:
+            try:
+                raw += fetch_api(args.catchup)  # RSS entries come first, so their dates win
+            except Exception as e:  # noqa: BLE001
+                print(f"catch-up query failed (continuing with RSS only): {e}", file=sys.stderr)
     print(f"{len(raw)} candidate entries")
 
     new = []
