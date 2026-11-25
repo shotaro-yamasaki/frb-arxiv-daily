@@ -39,7 +39,7 @@ button{font:inherit;color:inherit}
 .lang{display:flex;border:1px solid var(--line2);border-radius:999px;padding:3px;background:rgba(16,19,28,.7);backdrop-filter:blur(6px)}
 .lang button{white-space:nowrap;border:0;background:none;padding:4px 12px;border-radius:999px;font:500 12px var(--mono);color:var(--muted);cursor:pointer}
 .lang button.on{background:var(--ink);color:var(--bg)}
-h1{font:700 clamp(38px,6vw,64px)/1 var(--display);letter-spacing:-.03em;margin:0}
+h1{font:700 clamp(38px,6vw,64px)/1 var(--display);letter-spacing:-.03em;margin:0;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 h1 .f{background:linear-gradient(95deg,var(--hot) 0%,var(--hot2) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .tagline{color:var(--muted);margin:12px 0 0;font-size:15.5px;max-width:560px}
 .stats{display:flex;gap:34px;margin-top:22px;flex-wrap:wrap}
@@ -392,6 +392,13 @@ document.querySelector(".lang").addEventListener("click", e => {
     if (e.target.closest("input, textarea") || e.metaKey || e.ctrlKey || e.altKey) return;
     buf = (buf + e.key.toLowerCase()).slice(-4);
     if (buf === "cite") location.href = "me.html";
+  });
+  // On phones: tap the title 5 times quickly.
+  let taps = 0, timer = null;
+  document.querySelector("h1").addEventListener("click", () => {
+    taps++; clearTimeout(timer);
+    timer = setTimeout(() => taps = 0, 1500);
+    if (taps >= 5) location.href = "me.html";
   });
 })();
 
