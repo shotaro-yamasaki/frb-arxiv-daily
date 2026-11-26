@@ -87,6 +87,13 @@ jobs:
         run: python scripts/check_hosts_lit.py
       - name: Check phase-space values
         run: python scripts/check_phase_manual.py
+      - name: Check repeater reports
+        run: python scripts/check_repeater_reports.py
+      - name: Scan the ATel feed for repeating FRBs
+        continue-on-error: true
+        run: python scripts/atel_scan.py
+      - name: Build repeater activity data
+        run: python scripts/repeaters_build.py
       - name: Rebuild phase-space data when its inputs change
         continue-on-error: true
         run: |
