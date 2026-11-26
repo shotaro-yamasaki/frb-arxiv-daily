@@ -90,17 +90,13 @@ jobs:
       - name: Rebuild phase-space data when its inputs change
         continue-on-error: true
         run: |
-          mkdir -p data
-          if [ ! -f data/chimefrbcat2.csv ]; then
-            curl -fsSL -o data/chimefrbcat2.csv https://storage.googleapis.com/chimefrb-dev.appspot.com/catalog2/chimefrbcat2.csv \
-              && echo "Downloaded CHIME/FRB Catalog 2: $(wc -l < data/chimefrbcat2.csv) lines" \
-              || rm -f data/chimefrbcat2.csv
-          fi
+          python scripts/get_chime_cat2.py
           need=no
           [ "${{ inputs.rebuild_phase }}" = "true" ] && need=yes
           [ -f data/chimefrbcat2.csv ] && ! grep -q '"frb_catalog":"CHIME/FRB Catalog 2"' docs/data/phase.json && need=yes
           built=$(git log -1 --format=%ct -- docs/data/phase.json); built=${built:-0}
-          changed=$(git log -1 --format=%ct -- scripts/phase_manual.json scripts/build_phase.py); changed=${changed:-0}
+          changed=$(git log -1 --format=%ct -- scripts/phase_manual.json scripts/build_phase.py data/chimefrbcat2.csv); changed=${changed:-0}
+          git diff --quiet -- data/chimefrbcat2.csv || need=yes
           [ "$changed" -gt "$built" ] && need=yes
           if [ "$need" = "yes" ]; then
             git clone -q --depth 1 https://github.com/FRBs/Transient_Phase_Space /tmp/TPS
@@ -115,7 +111,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/*.json
           git add docs/img/*.jpg 2>/dev/null || true
-          git add data/*.csv 2>/dev/null || true
+          git add data/ 2>/dev/null || true
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Update FRB papers $(date -u +%Y-%m-%d)"
           for i in 1 2 3; do
