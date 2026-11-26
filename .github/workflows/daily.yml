@@ -81,6 +81,8 @@ jobs:
           fi
       - name: Check literature host values
         run: python scripts/check_hosts_lit.py
+      - name: Check phase-space values
+        run: python scripts/check_phase_manual.py
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"

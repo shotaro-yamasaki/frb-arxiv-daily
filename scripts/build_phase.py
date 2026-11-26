@@ -172,7 +172,8 @@ def build():
         hi = s[1] * d * d * SD2_TO_LNU
         lpt_pts.append({"x": o["nu_GHz"] * math.sqrt(w[0] * w[1]), "y": math.sqrt(lo * hi),
                         "xr": [o["nu_GHz"] * w[0], o["nu_GHz"] * w[1]], "yr": [lo, hi],
-                        "label": o["name"], "detail": o["detail"], "ref": o["ref"]})
+                        "label": o["name"] + (" [AUTO]" if o.get("status") == "auto" else ""),
+                        "detail": o["detail"], "ref": o["ref"]})
     radio.append(pts(lpt_pts, "Long-period transients", "lpt", "see each object",
                      "Ranges show the reported spread of peak flux density and pulse width."))
 
@@ -190,7 +191,8 @@ def build():
     he.append({"name": "Long-period transients (radio, ν L_ν)", "cls": "lpt", "ref": "see each object", "radio": True, "points": lpt_he})
     for c in manual["he"]:
         he.append({"name": c["name"], "cls": c["cls"], "ref": c["ref"], "note": c.get("note", ""), "label_pos": c.get("label_pos", "top"), "callout": c.get("callout"),
-                   "box": {"x": c["t"], "y": c["L"]}, "points": c.get("points", [])})
+                   "box": {"x": c["t"], "y": c["L"]},
+                   "points": [dict(p, label=p["label"] + (" [AUTO]" if p.get("status") == "auto" else "")) for p in c.get("points", [])]})
 
     out = {"source_note": manual["source_note"], "radio": radio, "he": he}
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
