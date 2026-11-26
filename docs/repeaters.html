@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repeater Activity · FRB arXiv Daily</title>
+<meta name="description" content="Activity windows of periodic repeating FRBs, last known detections of all repeaters, and visibility from FAST, Subaru and BURSTT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06070b; --panel:#10131c; --panel2:#151927; --line:#1f2435; --line2:#2a3047;
+  --ink:#e8ebf4; --muted:#8a91a8; --dim:#5a6178;
+  --on:#7ee081; --soon:#ffb547; --off:#6b7287; --sf:#5ad1ff; --hot:#ff6a3d; --violet:#c792ff;
+  --display:"Space Grotesk","Noto Sans JP",system-ui,sans-serif;
+  --body:"Inter","Noto Sans JP",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+html[lang=ja] body{font-family:"Noto Sans JP","Inter",system-ui,sans-serif}
+a{color:inherit} button,input,select{font:inherit;color:inherit}
+.wrap{max-width:1320px;margin:0 auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 85% 0%,rgba(255,181,71,.10),transparent 55%),radial-gradient(ellipse at 55% 130%,rgba(126,224,129,.10),transparent 50%)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0 34px;gap:12px}
+.back{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.back:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line2);border-radius:999px;padding:3px}
+.lang button{white-space:nowrap;border:0;background:none;padding:4px 12px;border-radius:999px;font:500 12px var(--mono);color:var(--muted);cursor:pointer}
+.lang button.on{background:var(--ink);color:var(--bg)}
+.eyebrow{font:500 11.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--soon)}
+h1{font:700 clamp(32px,5vw,52px)/1.03 var(--display);letter-spacing:-.03em;margin:10px 0 0}
+h1 span{background:linear-gradient(95deg,var(--soon),var(--on));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--muted);max-width:760px;margin:12px 0 0}
+.stats{display:flex;gap:34px;flex-wrap:wrap;padding:24px 0 28px}
+.stat b{display:block;font:600 26px/1.1 var(--display)}
+.stat span{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.stat.small b{font-size:15px;line-height:1.8}
+
+.bar{position:sticky;top:0;z-index:20;background:rgba(6,7,11,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.seg{display:flex;flex-wrap:wrap;max-width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:3px}
+.seg button{border:0;background:none;padding:6px 11px;border-radius:7px;font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.seg button.on{background:var(--panel2);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line2)}
+input[type=search],input[type=date]{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:13.5px;outline:none;color-scheme:dark}
+input[type=search]{flex:1;min-width:150px}
+.lbl{font:12px var(--mono);color:var(--muted);display:flex;gap:6px;align-items:center}
+.tog{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:7px 12px;font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tog.on{color:var(--on);border-color:rgba(126,224,129,.4);background:rgba(126,224,129,.08)}
+.btn{border:1px solid var(--line2);background:var(--panel2);border-radius:10px;padding:7px 12px;font:500 12.5px var(--mono);cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--muted)}
+.sitenote{font-size:12px;color:var(--dim);width:100%}
+
+main{padding:26px 0 60px}
+h2.sec{font:600 20px var(--display);margin:8px 0 4px;letter-spacing:-.01em}
+p.secsub{color:var(--muted);font-size:13.5px;margin:0 0 14px;max-width:900px}
+.pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:22px}
+.card{background:linear-gradient(180deg,rgba(16,19,28,.95),rgba(11,13,20,.95));border:1px solid var(--line);border-radius:14px;padding:18px 20px;min-width:0}
+.card h3{font:600 19px var(--display);margin:0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.card .meta{font:12px var(--mono);color:var(--muted);margin:4px 0 12px}
+.state{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.state.on{color:var(--on);background:rgba(126,224,129,.12);box-shadow:inset 0 0 0 1px rgba(126,224,129,.35)}
+.state.edge{color:var(--soon);background:rgba(255,181,71,.12);box-shadow:inset 0 0 0 1px rgba(255,181,71,.35)}
+.state.off{color:var(--muted);background:rgba(138,145,168,.10);box-shadow:inset 0 0 0 1px var(--line2)}
+.big{font:600 30px/1.15 var(--display);margin:6px 0 2px}
+.big small{font:500 14px var(--body);color:var(--muted);margin-left:6px}
+svg text{font-family:var(--body)}
+.phasebar{width:100%;height:auto;display:block;margin:10px 0 6px}
+table.win{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+table.win th{font:500 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim);text-align:left;padding:5px 6px;border-bottom:1px solid var(--line2)}
+table.win td{padding:6px 6px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+table.win tr.now td{color:var(--on)}
+.unc{color:var(--muted);font:12px var(--mono)}
+.vis{font:12px var(--mono)}
+.vis.no{color:var(--hot)}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.6}
+.note b{color:var(--ink);font-weight:500}
+.cardfoot{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+
+.tl{margin-bottom:30px}
+#timeline{width:100%;height:auto;display:block}
+.range{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:rgba(6,7,11,.86)}
+table.all{width:100%;border-collapse:collapse;font-size:13.5px;white-space:nowrap}
+table.all th{position:sticky;top:0;background:var(--panel2);font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right;padding:10px;border-bottom:1px solid var(--line2);cursor:pointer;user-select:none}
+table.all th.l,table.all td.l{text-align:left}
+table.all th:hover{color:var(--ink)}
+table.all th.sorted{color:var(--on)}
+table.all td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+table.all tbody tr.row{cursor:pointer}
+table.all tbody tr.row:hover td{background:rgba(255,255,255,.025)}
+table.all td.name{font:500 13.5px var(--mono)}
+.chip{display:inline-block;font:500 11px var(--mono);padding:2px 8px;border-radius:999px;letter-spacing:.04em}
+.chip.active{color:var(--on);background:rgba(126,224,129,.12)}
+.chip.recent{color:var(--soon);background:rgba(255,181,71,.12)}
+.chip.quiet{color:var(--muted);background:rgba(138,145,168,.10)}
+.chip.per{color:var(--violet);background:rgba(199,146,255,.12)}
+.chip.loc{color:var(--sf);background:rgba(90,209,255,.10)}
+.mute{color:var(--dim)}
+.nope{color:var(--hot)}
+tr.detail td{background:rgba(16,19,28,.9);white-space:normal;text-align:left;padding:12px 16px;font-size:13px}
+tr.detail ul{margin:4px 0;padding-left:18px}
+tr.detail li{margin:3px 0}
+.foot{font-size:12.5px;color:var(--dim);margin-top:20px;line-height:1.7}
+.foot a{color:var(--muted)}
+
+@media (max-width:900px){
+  .pgrid{grid-template-columns:minmax(0,1fr)}
+  .wrap{padding:0 16px}
+  .eyebrow{display:none}
+  .stats{gap:22px}
+  .bar.top-bar{position:static}
+  .tlscroll{overflow-x:auto} #timeline{min-width:880px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top"><a class="back" href="./" data-i18n="back">← FRB arXiv Daily</a>
+      <div class="lang"><button data-lang="en">EN</button><button data-lang="ja">日本語</button></div></div>
+    <div class="eyebrow" data-i18n="eyebrow">Repeaters · activity forecast</div>
+    <h1 data-i18n-html="title">Repeater <span>activity</span></h1>
+    <p class="tagline" data-i18n="tagline"></p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<div class="bar top-bar"><div class="wrap">
+  <div class="seg" id="sites"></div>
+  <label class="lbl"><span data-i18n="date">Date</span> <input type="date" id="day"></label>
+  <button class="btn" id="today" data-i18n="today">Today</button>
+  <div class="sitenote" id="sitenote"></div>
+</div></div>
+
+<main><div class="wrap">
+  <h2 class="sec" data-i18n="perTitle">Periodic repeaters</h2>
+  <p class="secsub" data-i18n="perSub"></p>
+  <div class="pgrid" id="periodic"></div>
+
+  <section class="tl card">
+    <h3 data-i18n="tlTitle">Activity windows in a proposal period</h3>
+    <div class="meta" data-i18n="tlSub"></div>
+    <div class="range">
+      <label class="lbl"><span data-i18n="from">From</span> <input type="date" id="from"></label>
+      <label class="lbl"><span data-i18n="to">To</span> <input type="date" id="to"></label>
+      <div class="seg" id="presets"></div>
+      <button class="btn" id="icsAll" data-i18n="ics">Download .ics</button>
+      <button class="btn" id="csvAll" data-i18n="csv">Download .csv</button>
+    </div>
+    <div class="tlscroll"><svg id="timeline"></svg></div>
+  </section>
+
+  <h2 class="sec" data-i18n="allTitle">All repeaters</h2>
+  <p class="secsub" data-i18n="allSub"></p>
+  <div class="bar" style="position:static;background:none;border:0;margin:0 0 10px"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <input type="search" id="q" data-i18n-ph="search">
+    <button class="tog" id="fVis" data-i18n="fVis">Observable from site</button>
+    <button class="tog" id="fLoc" data-i18n="fLoc">Localized only</button>
+    <button class="tog" id="fRep" data-i18n="fRep">Reports after Cat2</button>
+  </div></div>
+  <div class="tablewrap"><table class="all"><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+  <div class="foot" id="foot"></div>
+</div></main>
+
+<script>
+const LS = "frb-arxiv-daily:v1";
+let store = {}; try { store = JSON.parse(localStorage.getItem(LS) || "{}"); } catch (e) {}
+store.lang ||= (navigator.language || "").startsWith("ja") ? "ja" : "en";
+store.rsite ||= "FAST";
+const save = () => { try { localStorage.setItem(LS, JSON.stringify(store)); } catch (e) {} };
+
+const SITES = {
+  FAST:   { lat: 25.6529, lon: 106.8566, tz: 8,   lim: 50, night: false, en: "FAST", ja: "FAST",
+            noteEn: "FAST, Guizhou. Limit: zenith angle ≤ 40° (elevation ≥ 50°). Times in Beijing time (UTC+8).",
+            noteJa: "FAST(貴州)。天頂角 40° 以内(仰角 50° 以上)を観測可能とする。時刻は北京時間(UTC+8)。" },
+  Subaru: { lat: 19.8255, lon: -155.4761, tz: -10, lim: 30, night: true, en: "Subaru", ja: "すばる",
+            noteEn: "Subaru, Maunakea. Limit: elevation ≥ 30° during astronomical night (Sun below −18°). Times in HST (UTC−10).",
+            noteJa: "すばる(マウナケア)。仰角 30° 以上、かつ天文薄明の外(太陽高度 −18° 以下)。時刻はハワイ時間(UTC−10)。" },
+  BURSTT: { lat: 24.76, lon: 121.58, tz: 8, lim: 30, night: false, en: "BURSTT", ja: "BURSTT",
+            noteEn: "BURSTT main station, Fushan (approximate position). Generic limit: elevation ≥ 30°. The real BURSTT beam is a fixed fan, so treat this as a rough guide. Times in UTC+8.",
+            noteJa: "BURSTT 主局(福山、位置は概略)。仮に仰角 30° 以上とする。実際の BURSTT は固定ビームなので目安として扱う。時刻は UTC+8。" },
+};
+
+const I18N = {
+  en: {
+    back: "← FRB arXiv Daily", eyebrow: "Repeaters · activity forecast", title: "Repeater <span>activity</span>",
+    tagline: "Where the periodic repeaters are in their activity cycle, when the next windows open, and when each repeater was last seen active. Visibility is computed for FAST, Subaru and BURSTT, for proposals and quick follow-up decisions.",
+    date: "Date", today: "Today", perTitle: "Periodic repeaters",
+    perSub: "Phase = ((MJD − MJD₀) / P) mod 1. The uncertainty on a predicted window grows with the number of cycles since MJD₀ (number of cycles × σ_P). Windows far in the future can shift by days.",
+    tlTitle: "Activity windows in a proposal period", tlSub: "Shaded: predicted active window. Faint edges: ±1σ shift from the period uncertainty. Bars below: hours per day each source is observable from the selected site.",
+    from: "From", to: "To", ics: "Download .ics", csv: "Download .csv",
+    allTitle: "All repeaters", allSub: "CHIME/FRB Catalog 2 repeaters plus localized repeaters. Catalog 2 ends on 2023-09-15. Later activity comes from ATels, CHIME/FRB notices and papers (checked weekly). Click a row to see all reports.",
+    search: "Search FRB name…", fVis: "Observable from site", fLoc: "Localized only", fRep: "Reports after Cat2",
+    sRep: "repeaters", sPer: "periodic", sRepts: "reports after Cat2", sSearch: "last literature search", sUpd: "data built",
+    active: "Active now", edge: "Window edge", inactive: "Inactive",
+    opensIn: "Next window opens in", closesIn: "Window closes in", days: "d", phase: "phase",
+    wStart: "Opens (UTC)", wEnd: "Closes (UTC)", wUnc: "±1σ", wVis: "Visible", hrs: "h/day",
+    never: "never above limit", always: "circumpolar",
+    cols: { frb: "FRB", tags: "", ra: "RA", dec: "Dec", dm: "DM", z: "z", n: "Cat2 bursts", last: "Last Cat2", rep: "Latest report", st: "Status", el: "Max el.", tr: "Transit", up: "h above limit" },
+    chipActive: "≤ 30 d", chipRecent: "≤ 1 yr", chipQuiet: "quiet", per: "periodic", loc: "localized",
+    noRep: "No reports after Catalog 2 yet.", refs: "References",
+    tDet: "detection", tNon: "non-detection", tStorm: "burst storm", tAtel: "ATel (unchecked)",
+    ref: "Ephemeris", refErr: "Period uncertainty", window: "Window",
+    icsOne: ".ics for this source",
+    foot: "Positions and DMs: CHIME/FRB Catalog 2 (CHIME/FRB Collaboration 2025) and FRBs/FRB for localized sources. Elevation and transit use a simple sidereal-time calculation (good to about a minute). Predicted windows are statistical. Chromatic activity of FRB 20180916B means the active window depends on observing frequency.",
+  },
+  ja: {
+    back: "← FRB arXiv Daily", eyebrow: "リピーター · 活動予報", title: "リピーターの<span>活動予報</span>",
+    tagline: "周期リピーターが活動周期のどの位相にいて、次の活動期がいつ始まるか、各リピーターが最後に活動していたのはいつかを一覧にします。FAST・すばる・BURSTT からの可視性も計算するので、プロポーザルや緊急観測の判断に使えます。",
+    date: "日付", today: "今日", perTitle: "周期リピーター",
+    perSub: "位相 = ((MJD − MJD₀) / P) mod 1。予測窓の不確かさは MJD₀ からの周期数 × σ_P で増えるので、先の窓ほど数日ずれる可能性があります。",
+    tlTitle: "観測期間中の活動期", tlSub: "塗り:予測される活動期。薄い縁:周期の誤差による ±1σ のずれ。下の棒:選んだ観測所から 1 日に何時間観測できるか。",
+    from: "開始", to: "終了", ics: ".ics を保存", csv: ".csv を保存",
+    allTitle: "全リピーター", allSub: "CHIME/FRB Catalog 2 のリピーターと位置決定済みのリピーター。Catalog 2 は 2023-09-15 まで。それ以降の活動は ATel・CHIME/FRB 速報・論文から毎週調べて追加します。行をクリックすると報告一覧が開きます。",
+    search: "FRB 名で検索…", fVis: "この観測所で観測可", fLoc: "位置決定済みのみ", fRep: "Cat2 以降の報告あり",
+    sRep: "リピーター", sPer: "周期あり", sRepts: "Cat2 以降の報告", sSearch: "最終文献検索", sUpd: "データ更新",
+    active: "活動期", edge: "活動期の端", inactive: "非活動期",
+    opensIn: "次の活動期まで", closesIn: "活動期の終わりまで", days: "日", phase: "位相",
+    wStart: "開始 (UTC)", wEnd: "終了 (UTC)", wUnc: "±1σ", wVis: "可視", hrs: "時間/日",
+    never: "制限仰角に届かない", always: "周極",
+    cols: { frb: "FRB", tags: "", ra: "赤経", dec: "赤緯", dm: "DM", z: "z", n: "Cat2 バースト数", last: "Cat2 最終", rep: "最新の報告", st: "状態", el: "最大仰角", tr: "南中", up: "制限以上の時間" },
+    chipActive: "30 日以内", chipRecent: "1 年以内", chipQuiet: "静穏", per: "周期", loc: "位置決定",
+    noRep: "Catalog 2 以降の報告はまだありません。", refs: "文献",
+    tDet: "検出", tNon: "非検出", tStorm: "バースト嵐", tAtel: "ATel(未確認)",
+    ref: "暦", refErr: "周期の誤差", window: "活動期",
+    icsOne: "この天体の .ics",
+    foot: "位置と DM:CHIME/FRB Catalog 2(CHIME/FRB Collaboration 2025)、位置決定済みの天体は FRBs/FRB。仰角と南中時刻は簡単な恒星時計算(誤差 1 分程度)。予測窓は統計的なもの。FRB 20180916B は活動が周波数に依存するので、活動期は観測周波数で変わります。",
+  },
+};
+const t = k => I18N[store.lang][k];
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// ---------- time and astronomy ----------
+const D2R = Math.PI / 180, MJD0 = Date.UTC(1858, 10, 17);
+const toMJD = ms => (ms - MJD0) / 864e5;
+const fromMJD = m => MJD0 + m * 864e5;
+const isoDay = ms => new Date(ms).toISOString().slice(0, 10);
+const parseDay = s => Date.parse(s + "T00:00:00Z");
+function gmstDeg(ms) { const jd = ms / 864e5 + 2440587.5; return ((280.46061837 + 360.98564736629 * (jd - 2451545)) % 360 + 360) % 360; }
+function sunRaDec(ms) {
+  const n = ms / 864e5 + 2440587.5 - 2451545, L = 280.460 + 0.9856474 * n, g = (357.528 + 0.9856003 * n) * D2R;
+  const lam = (L + 1.915 * Math.sin(g) + 0.020 * Math.sin(2 * g)) * D2R, eps = (23.439 - 4e-7 * n) * D2R;
+  return [Math.atan2(Math.cos(eps) * Math.sin(lam), Math.cos(lam)) / D2R, Math.asin(Math.sin(eps) * Math.sin(lam)) / D2R];
+}
+function elev(ra, dec, ms, site) {
+  const H = (gmstDeg(ms) + site.lon - ra) * D2R, p = site.lat * D2R, d = dec * D2R;
+  return Math.asin(Math.sin(p) * Math.sin(d) + Math.cos(p) * Math.cos(d) * Math.cos(H)) / D2R;
+}
+const maxEl = (dec, site) => 90 - Math.abs(site.lat - dec);
+// hours per local day above the limit (and in astronomical night if the site needs it); 10-min sampling
+function hoursUp(ra, dec, dayMs, site) {
+  if (maxEl(dec, site) < site.lim) return 0;
+  const start = dayMs - site.tz * 36e5; let n = 0;
+  for (let i = 0; i < 144; i++) {
+    const ms = start + i * 6e5;
+    if (elev(ra, dec, ms, site) < site.lim) continue;
+    if (site.night) { const [sr, sd] = sunRaDec(ms); if (elev(sr, sd, ms, site) > -18) continue; }
+    n++;
+  }
+  return n / 6;
+}
+// local transit time on the given local date
+function transit(ra, dayMs, site) {
+  const start = dayMs - site.tz * 36e5;
+  const lst0 = gmstDeg(start) + site.lon;
+  const dh = ((((ra - lst0) % 360) + 360) % 360) / 15 / 1.00273790935;
+  const ms = start + dh * 36e5 + site.tz * 36e5;
+  const d = new Date(ms); return String(d.getUTCHours()).padStart(2, "0") + ":" + String(d.getUTCMinutes()).padStart(2, "0");
+}
+
+// ---------- periodic windows ----------
+function windowsBetween(e, m1, m2) {
+  const out = [], [a, b] = e.window;
+  for (let n = Math.floor((m1 - e.ref_mjd) / e.P) - 1; ; n++) {
+    const s = e.ref_mjd + (n + a) * e.P, f = e.ref_mjd + (n + b) * e.P;
+    if (s > m2) break;
+    if (f < m1) continue;
+    const sig = Math.abs(n + 0.5) * e.P_err;
+    out.push({ n, s, f, mid: e.ref_mjd + (n + 0.5 * (a + b)) * e.P, sig });
+  }
+  return out;
+}
+const phaseAt = (e, m) => (((m - e.ref_mjd) / e.P) % 1 + 1) % 1;
+
+// ---------- state ----------
+let DATA = null, sortKey = "last", sortDir = -1, filt = { vis: false, loc: false, rep: false }, open = new Set();
+const todayLocal = () => { const s = SITES[store.rsite], d = new Date(Date.now() + s.tz * 36e5); return isoDay(d.getTime()); };
+const $ = id => document.getElementById(id);
+const fmtDate = s => s ? new Date(parseDay(s)).toLocaleDateString(store.lang === "ja" ? "ja-JP" : "en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }) : "—";
+const fmtShort = ms => new Date(ms).toLocaleDateString(store.lang === "ja" ? "ja-JP" : "en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+const fmtRA = ra => { const h = ra / 15, hh = Math.floor(h), mm = Math.floor((h - hh) * 60); return `${String(hh).padStart(2, "0")}h${String(mm).padStart(2, "0")}m`; };
+
+function renderStatic() {
+  document.documentElement.lang = store.lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => el.textContent = t(el.dataset.i18n));
+  document.querySelectorAll("[data-i18n-html]").forEach(el => el.innerHTML = t(el.dataset.i18nHtml));
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => el.placeholder = t(el.dataset.i18nPh));
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === store.lang));
+  $("sites").innerHTML = Object.keys(SITES).map(k => `<button data-site="${k}" class="${k === store.rsite ? "on" : ""}">${SITES[k][store.lang]}</button>`).join("");
+  $("sitenote").textContent = SITES[store.rsite][store.lang === "ja" ? "noteJa" : "noteEn"];
+  const P = store.lang === "ja" ? [["6m", "6 か月"], ["1y", "1 年"], ["fast", "FAST 2027A"], ["sub", "すばる S27A"]] : [["6m", "6 months"], ["1y", "1 year"], ["fast", "FAST 2027A"], ["sub", "Subaru S27A"]];
+  $("presets").innerHTML = P.map(([k, l]) => `<button data-p="${k}">${l}</button>`).join("");
+  $("foot").textContent = t("foot");
+  $("fVis").classList.toggle("on", filt.vis); $("fLoc").classList.toggle("on", filt.loc); $("fRep").classList.toggle("on", filt.rep);
+}
+
+function renderStats() {
+  const s = DATA.sources, nrep = s.reduce((a, x) => a + x.reports.filter(r => r.date > DATA.cat2_end).length, 0);
+  $("stats").innerHTML = [
+    [s.length, t("sRep")], [s.filter(x => x.periodic).length, t("sPer")], [nrep, t("sRepts")],
+  ].map(([b, l]) => `<div class="stat"><b>${b}</b><span>${l}</span></div>`).join("") +
+    `<div class="stat small"><b>${DATA.last_search ? fmtDate(DATA.last_search) : "—"}</b><span>${t("sSearch")}</span></div>` +
+    `<div class="stat small"><b>${fmtDate(DATA.updated.slice(0, 10))}</b><span>${t("sUpd")}</span></div>`;
+}
+
+function phaseSVG(e, ph) {
+  const W = 600, H = 96, L = 16, R = W - 16, x = p => L + p * (R - L), [a, b] = e.window;
+  let s = `<rect x="${L}" y="16" width="${R - L}" height="34" rx="7" fill="#151927" stroke="#2a3047"/>`;
+  s += `<rect x="${x(a)}" y="16" width="${x(b) - x(a)}" height="34" fill="rgba(126,224,129,.28)" stroke="rgba(126,224,129,.6)"/>`;
+  for (const p of [0, .25, .5, .75, 1]) s += `<line x1="${x(p)}" x2="${x(p)}" y1="50" y2="58" stroke="#5a6178"/><text x="${x(p)}" y="84" fill="#8a91a8" font-size="21" text-anchor="${p === 0 ? "start" : p === 1 ? "end" : "middle"}">${p}</text>`;
+  s += `<text x="${(x(a) + x(b)) / 2}" y="40" fill="#7ee081" font-size="20" font-weight="600" text-anchor="middle">${esc(t("window"))}</text>`;
+  s += `<line x1="${x(ph)}" x2="${x(ph)}" y1="8" y2="60" stroke="#ffb547" stroke-width="4"/><circle cx="${x(ph)}" cy="8" r="7" fill="#ffb547"/>`;
+  return `<svg class="phasebar" viewBox="0 0 ${W} ${H}">${s}</svg>`;
+}
+
+function renderPeriodic() {
+  const site = SITES[store.rsite], day = parseDay($("day").value), m = toMJD(day + 12 * 36e5);
+  $("periodic").innerHTML = DATA.sources.filter(x => x.periodic).map(src => {
+    const e = src.periodic, ph = phaseAt(e, m), [a, b] = e.window, inW = ph >= a && ph <= b;
+    const ws = windowsBetween(e, m - e.P, m + 8 * e.P).filter(w => w.f >= m).slice(0, 6);
+    const cur = ws[0], sig = cur.sig, edge = inW ? (cur.f - m < sig || m - cur.s < sig) : (cur.s - m < sig);
+    const st = inW ? (edge ? "edge" : "on") : (edge ? "edge" : "off");
+    const stTxt = inW ? t("active") : (edge ? t("edge") : t("inactive"));
+    const big = inW ? `${t("closesIn")} ${(cur.f - m).toFixed(1)} ${t("days")}` : `${t("opensIn")} ${(cur.s - m).toFixed(1)} ${t("days")}`;
+    const mx = maxEl(src.dec, site), hrs = hoursUp(src.ra, src.dec, day, site);
+    const rows = ws.map((w, i) => {
+      const h = hoursUp(src.ra, src.dec, parseDay(isoDay(fromMJD(w.mid))), site);
+      return `<tr class="${i === 0 && inW ? "now" : ""}"><td>${isoDay(fromMJD(w.s))}</td><td>${isoDay(fromMJD(w.f))}</td><td class="unc">± ${w.sig.toFixed(1)} ${t("days")}</td><td class="vis ${h ? "" : "no"}">${h ? h.toFixed(1) + " " + t("hrs") : "—"}</td></tr>`;
+    }).join("");
+    return `<div class="card">
+      <h3>FRB ${src.frb} <span class="state ${st}">${stTxt}</span></h3>
+      <div class="meta">P = ${e.P} ± ${e.P_err} d · MJD₀ = ${e.ref_mjd} · ${t("phase")} ${ph.toFixed(3)} · ${fmtRA(src.ra)} ${src.dec >= 0 ? "+" : ""}${src.dec.toFixed(2)}°</div>
+      <div class="big">${big}<small>± ${sig.toFixed(1)} ${t("days")}</small></div>
+      ${phaseSVG(e, ph)}
+      <div class="vis ${hrs ? "" : "no"}">${SITES[store.rsite][store.lang]}: ${mx < site.lim ? t("never") + ` (max ${mx.toFixed(1)}°)` : `${t("cols").el} ${mx.toFixed(1)}° · ${t("cols").tr} ${transit(src.ra, day, site)} · ${hrs.toFixed(1)} ${t("hrs")}`}</div>
+      <table class="win"><thead><tr><th>${t("wStart")}</th><th>${t("wEnd")}</th><th style="text-transform:none">${t("wUnc")}</th><th>${t("wVis")}</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="note"><b>${t("window")}:</b> ${esc(e.window_note)}<br><b>${t("ref")}:</b> ${esc(e.ref)}<br><b>${t("refErr")}:</b> ${esc(e.ref_err)}</div>
+      <div class="cardfoot"><button class="btn" data-ics="${src.frb}">${t("icsOne")}</button></div>
+    </div>`;
+  }).join("");
+}
+
+function rangeMs() { return [parseDay($("from").value), parseDay($("to").value) + 864e5]; }
+
+function renderTimeline() {
+  const per = DATA.sources.filter(x => x.periodic), site = SITES[store.rsite];
+  let [t1, t2] = rangeMs(); if (!(t2 > t1)) t2 = t1 + 864e5 * 30;
+  const W = 1240, L = 150, R = W - 20, rowH = 74, top = 34, H = top + per.length * rowH + 20;
+  const x = ms => L + (ms - t1) / (t2 - t1) * (R - L);
+  let s = "";
+  // month ticks
+  const d0 = new Date(t1); let mt = Date.UTC(d0.getUTCFullYear(), d0.getUTCMonth(), 1);
+  const span = (t2 - t1) / 864e5, step = span > 500 ? 3 : span > 240 ? 2 : 1;
+  for (let k = 0; mt <= t2; k++, mt = Date.UTC(new Date(mt).getUTCFullYear(), new Date(mt).getUTCMonth() + 1, 1)) {
+    if (mt < t1) continue;
+    const xm = x(mt); s += `<line x1="${xm}" x2="${xm}" y1="${top - 6}" y2="${H - 16}" stroke="#1f2435"/>`;
+    if (new Date(mt).getUTCMonth() % step === 0) s += `<text x="${xm + 3}" y="${top - 12}" fill="#8a91a8" font-size="14">${esc(new Date(mt).toLocaleDateString(store.lang === "ja" ? "ja-JP" : "en-US", { year: "2-digit", month: "short", timeZone: "UTC" }))}</text>`;
+  }
+  per.forEach((src, i) => {
+    const e = src.periodic, y = top + i * rowH, ws = windowsBetween(e, toMJD(t1), toMJD(t2));
+    s += `<text x="10" y="${y + 24}" fill="#e8ebf4" font-size="15" font-weight="600" font-family="JetBrains Mono,monospace">${src.frb}</text>`;
+    s += `<text x="10" y="${y + 44}" fill="#8a91a8" font-size="13">P = ${e.P} d</text>`;
+    s += `<rect x="${L}" y="${y + 8}" width="${R - L}" height="26" rx="4" fill="#10131c"/>`;
+    for (const w of ws) {
+      const a = Math.max(x(fromMJD(w.s)), L), b = Math.min(x(fromMJD(w.f)), R);
+      const a2 = Math.max(x(fromMJD(w.s - w.sig)), L), b2 = Math.min(x(fromMJD(w.f + w.sig)), R);
+      s += `<rect x="${a2}" y="${y + 8}" width="${Math.max(b2 - a2, 0)}" height="26" fill="rgba(126,224,129,.12)"/>`;
+      s += `<rect x="${a}" y="${y + 8}" width="${Math.max(b - a, 0)}" height="26" fill="rgba(126,224,129,.45)"/>`;
+    }
+    // visibility strip: hours per day, sampled every few days
+    const n = Math.min(120, Math.ceil(span)), dw = (R - L) / n;
+    for (let k = 0; k < n; k++) {
+      const ms = t1 + (k + .5) * (t2 - t1) / n, h = hoursUp(src.ra, src.dec, parseDay(isoDay(ms)), site);
+      if (h > 0) s += `<rect x="${L + k * dw}" y="${y + 52 - Math.min(h, 12) * 1.3}" width="${Math.max(dw - .6, .6)}" height="${Math.min(h, 12) * 1.3}" fill="#5ad1ff" opacity=".75"/>`;
+    }
+    s += `<line x1="${L}" x2="${R}" y1="${y + 52}" y2="${y + 52}" stroke="#2a3047"/>`;
+    s += `<text x="10" y="${y + 64}" fill="#5ad1ff" font-size="12.5">${esc(SITES[store.rsite][store.lang])} ${t("hrs")}</text>`;
+  });
+  const now = Date.now();
+  if (now > t1 && now < t2) s += `<line x1="${x(now)}" x2="${x(now)}" y1="${top - 4}" y2="${H - 16}" stroke="#ffb547" stroke-width="2"/><text x="${x(now) + 4}" y="${H - 4}" fill="#ffb547" font-size="13">${t("today")}</text>`;
+  $("timeline").setAttribute("viewBox", `0 0 ${W} ${H}`); $("timeline").innerHTML = s;
+}
+
+function statusOf(src, todayMs) {
+  if (!src.last_detection) return ["quiet", "—"];
+  const age = (todayMs - parseDay(src.last_detection)) / 864e5;
+  if (age <= 30) return ["active", t("chipActive")];
+  if (age <= 365) return ["recent", t("chipRecent")];
+  return ["quiet", `${t("chipQuiet")} · ${src.last_detection.slice(0, 7)}`];
+}
+const typeTxt = ty => ({ detection: t("tDet"), "non-detection": t("tNon"), "burst-storm": t("tStorm"), atel: t("tAtel") }[ty] || ty);
+
+function renderTable() {
+  const site = SITES[store.rsite], day = parseDay($("day").value), q = $("q").value.trim().toLowerCase(), C = t("cols");
+  const cols = [["frb", "l"], ["tags", "l"], ["ra", ""], ["dec", ""], ["dm", ""], ["z", ""], ["n", ""], ["last", ""], ["rep", "l"], ["st", "l"], ["el", ""], ["tr", ""], ["up", ""]];
+  $("thead").innerHTML = "<tr>" + cols.map(([k, c]) => `<th class="${c} ${sortKey === k ? "sorted" : ""}" data-k="${k}">${C[k]}${sortKey === k ? (sortDir > 0 ? " ↑" : " ↓") : ""}</th>`).join("") + "</tr>";
+  let rows = DATA.sources.map(s => {
+    const later = s.reports.filter(r => r.date > DATA.cat2_end);
+    return { s, el: maxEl(s.dec, site), up: hoursUp(s.ra, s.dec, day, site), later, latest: later[0] || null };
+  });
+  rows = rows.filter(r => (!q || r.s.frb.toLowerCase().includes(q.replace(/^frb\s*/, ""))) && (!filt.vis || r.up > 0) && (!filt.loc || r.s.localized) && (!filt.rep || r.later.length));
+  const key = { frb: r => r.s.frb, tags: r => (r.s.periodic ? 2 : 0) + (r.s.localized ? 1 : 0), ra: r => r.s.ra, dec: r => r.s.dec, dm: r => r.s.dm ?? -1, z: r => r.s.z ?? -1, n: r => r.s.cat2_bursts, last: r => r.s.last_detection || "", rep: r => r.latest?.date || "", st: r => r.s.last_detection || "", el: r => r.el, tr: r => r.s.ra, up: r => r.up }[sortKey];
+  rows.sort((a, b) => { const A = key(a), B = key(b); return (A > B ? 1 : A < B ? -1 : 0) * sortDir; });
+  $("tbody").innerHTML = rows.map(r => {
+    const s = r.s, [cls, txt] = statusOf(s, day), lt = r.latest;
+    const tags = (s.periodic ? `<span class="chip per">${t("per")}</span> ` : "") + (s.localized ? `<span class="chip loc">${t("loc")}</span>` : "");
+    const rep = lt ? `${lt.date} · ${esc(typeTxt(lt.type))}${lt.telescope ? " · " + esc(lt.telescope) : ""}${r.later.length > 1 ? ` <span class="mute">+${r.later.length - 1}</span>` : ""}` : `<span class="mute">—</span>`;
+    const el = r.el < site.lim ? `<span class="nope">${r.el.toFixed(0)}°</span>` : `${r.el.toFixed(0)}°`;
+    let html = `<tr class="row" data-frb="${s.frb}"><td class="l name">${s.frb}</td><td class="l">${tags}</td><td>${fmtRA(s.ra)}</td><td>${s.dec >= 0 ? "+" : ""}${s.dec.toFixed(2)}°</td><td>${s.dm ?? "—"}</td><td>${s.z ?? "<span class='mute'>—</span>"}</td><td>${s.cat2_bursts || "<span class='mute'>—</span>"}</td><td>${s.cat2_last || "<span class='mute'>—</span>"}</td><td class="l">${rep}</td><td class="l"><span class="chip ${cls}">${txt}</span></td><td>${el}</td><td>${r.el < site.lim ? "<span class='mute'>—</span>" : transit(s.ra, day, site)}</td><td>${r.up ? r.up.toFixed(1) : "<span class='mute'>0</span>"}</td></tr>`;
+    if (open.has(s.frb)) {
+      const list = s.reports.length ? "<ul>" + s.reports.map(x => `<li><b>${x.date}</b> · ${esc(typeTxt(x.type))}${x.telescope ? " · " + esc(x.telescope) : ""}${x.note ? " — " + esc(x.note) : ""} ${x.source?.url ? `<a href="${esc(x.source.url)}" target="_blank" rel="noopener">${esc(x.source.atel ? "ATel #" + x.source.atel : x.source.arxiv ? "arXiv:" + x.source.arxiv : "link")}</a>` : ""}</li>`).join("") + "</ul>" : `<span class="mute">${t("noRep")}</span>`;
+      const cat = s.cat2_bursts ? `<div class="mute">CHIME/FRB Catalog 2: ${s.cat2_bursts} bursts, ${s.cat2_first} – ${s.cat2_last}</div>` : "";
+      html += `<tr class="detail"><td colspan="${cols.length}">${cat}${list}</td></tr>`;
+    }
+    return html;
+  }).join("");
+}
+
+function ics(list) {
+  const pad = ms => isoDay(ms).replace(/-/g, ""), stamp = new Date().toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z";
+  let out = "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//frb-arxiv-daily//repeaters//EN\r\n";
+  for (const [src, w] of list) out += `BEGIN:VEVENT\r\nUID:${src.frb}-${w.n}@frb-arxiv-daily\r\nDTSTAMP:${stamp}\r\nDTSTART;VALUE=DATE:${pad(fromMJD(w.s))}\r\nDTEND;VALUE=DATE:${pad(fromMJD(w.f) + 864e5)}\r\nSUMMARY:FRB ${src.frb} active window (±${w.sig.toFixed(1)} d)\r\nDESCRIPTION:Predicted from P = ${src.periodic.P} ± ${src.periodic.P_err} d\\, MJD0 = ${src.periodic.ref_mjd}. ${src.periodic.ref.replace(/[,;]/g, " ")}\r\nEND:VEVENT\r\n`;
+  return out + "END:VCALENDAR\r\n";
+}
+function download(name, text, type) { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); }
+function windowsInRange(only) {
+  const [t1, t2] = rangeMs(), out = [];
+  for (const src of DATA.sources.filter(x => x.periodic && (!only || x.frb === only)))
+    for (const w of windowsBetween(src.periodic, toMJD(t1), toMJD(t2))) out.push([src, w]);
+  return out;
+}
+
+function render() { renderPeriodic(); renderTimeline(); renderTable(); }
+function setPreset(p) {
+  const y = new Date().getUTCFullYear() + 1, now = Date.now();
+  const r = { "6m": [now, now + 182 * 864e5], "1y": [now, now + 365 * 864e5], fast: [Date.UTC(2027, 1, 1), Date.UTC(2027, 6, 31)], sub: [Date.UTC(2027, 1, 1), Date.UTC(2027, 6, 31)] }[p];
+  $("from").value = isoDay(r[0]); $("to").value = isoDay(r[1]); renderTimeline();
+}
+
+document.querySelector(".lang").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; store.lang = b.dataset.lang; save(); renderStatic(); renderStats(); render(); });
+$("sites").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; store.rsite = b.dataset.site; save(); renderStatic(); render(); });
+$("day").addEventListener("change", render);
+$("today").addEventListener("click", () => { $("day").value = todayLocal(); render(); });
+$("from").addEventListener("change", renderTimeline); $("to").addEventListener("change", renderTimeline);
+$("presets").addEventListener("click", e => { const b = e.target.closest("button"); if (b) setPreset(b.dataset.p); });
+$("q").addEventListener("input", renderTable);
+for (const [id, k] of [["fVis", "vis"], ["fLoc", "loc"], ["fRep", "rep"]]) $(id).addEventListener("click", () => { filt[k] = !filt[k]; $(id).classList.toggle("on", filt[k]); renderTable(); });
+$("thead").addEventListener("click", e => { const th = e.target.closest("th"); if (!th) return; const k = th.dataset.k; if (sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = ["frb", "ra", "tr"].includes(k) ? 1 : -1; } renderTable(); });
+$("tbody").addEventListener("click", e => { if (e.target.closest("a")) return; const tr = e.target.closest("tr.row"); if (!tr) return; const f = tr.dataset.frb; open.has(f) ? open.delete(f) : open.add(f); renderTable(); });
+$("periodic").addEventListener("click", e => { const b = e.target.closest("[data-ics]"); if (b) download(`FRB${b.dataset.ics}_windows.ics`, ics(windowsInRange(b.dataset.ics)), "text/calendar"); });
+$("icsAll").addEventListener("click", () => download("repeater_windows.ics", ics(windowsInRange()), "text/calendar"));
+$("csvAll").addEventListener("click", () => download("repeater_windows.csv", "frb,start_utc,end_utc,sigma_days,mjd_start,mjd_end\n" + windowsInRange().map(([s, w]) => `${s.frb},${isoDay(fromMJD(w.s))},${isoDay(fromMJD(w.f))},${w.sig.toFixed(2)},${w.s.toFixed(2)},${w.f.toFixed(2)}`).join("\n"), "text/csv"));
+
+renderStatic();
+$("day").value = todayLocal();
+$("from").value = isoDay(Date.now()); $("to").value = isoDay(Date.now() + 365 * 864e5);
+fetch("data/repeaters.json", { cache: "no-store" }).then(r => r.json()).then(d => { DATA = d; renderStats(); render(); })
+  .catch(err => { $("periodic").innerHTML = `<div class="card">Could not load data/repeaters.json (${esc(err.message)})</div>`; });
+</script>
+</body>
+</html>

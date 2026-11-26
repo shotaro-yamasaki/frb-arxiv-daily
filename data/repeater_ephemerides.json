@@ -1,0 +1,21 @@
+{
+ "note": "Activity-cycle ephemerides of periodic repeaters. phase = ((MJD - ref_mjd) / P) mod 1. The active window is given in phase. P_err is used to show how uncertain a predicted window is: shift = (cycles since ref_mjd) x P_err.",
+ "sources": [
+  {
+   "frb": "20180916B",
+   "P": 16.33, "P_err": 0.04, "P_err_published": 0.12, "ref_mjd": 58369.40,
+   "window": [0.3408, 0.6592],
+   "window_note": "Active window ~5.2 d centred on phase 0.5 at 600 MHz (CHIME). Activity is chromatic: higher frequencies peak earlier (e.g. ~3.6 d before the CHIME peak at 4-8 GHz), lower frequencies later.",
+   "ref": "CHIME/FRB Collaboration 2020, Nature 582, 351; Pleunis et al. 2021, ApJL 911, L3 (P = 16.33 ± 0.12 d, MJD 58369.40, 5.2 d window)",
+   "ref_err": "P_err = 0.04 d from CHIME bursts 2018-2024 (arXiv:2310.16307). The published CHIME value is ± 0.12 d."
+  },
+  {
+   "frb": "20121102A",
+   "P": 159.3, "P_err": 0.8, "ref_mjd": 58356.5,
+   "window": [0.235, 0.765],
+   "window_note": "Active for ~53% of the cycle, centred on phase 0.5 (L band).",
+   "ref": "Braga et al. 2025, A&A (FRB 20121102A monitoring: updated periodicity in the L band): P = 159.3 ± 0.8 d, MJD 58356.5, 53% duty cycle",
+   "ref_err": "Earlier values: 157 ± 7 d (Rajwade et al. 2020), 161 ± 5 d (Cruces et al. 2021), 158.1 ± 0.3 d with a 62% window (Nancay, A&A 2025)."
+  }
+ ]
+}
