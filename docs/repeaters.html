@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Repeater Activity · FRB arXiv Daily</title>
-<meta name="description" content="Activity windows of periodic repeating FRBs, last known detections of all repeaters, and visibility from FAST, Subaru and BURSTT.">
+<meta name="description" content="Activity windows of periodic repeating FRBs, last known detections of all repeaters, and visibility from FAST, Lulin and BURSTT.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -169,16 +169,16 @@ tr.detail li{margin:3px 0}
 const LS = "frb-arxiv-daily:v1";
 let store = {}; try { store = JSON.parse(localStorage.getItem(LS) || "{}"); } catch (e) {}
 store.lang ||= (navigator.language || "").startsWith("ja") ? "ja" : "en";
-store.rsite ||= "FAST";
+if (!["FAST", "Lulin", "BURSTT"].includes(store.rsite)) store.rsite = "FAST";
 const save = () => { try { localStorage.setItem(LS, JSON.stringify(store)); } catch (e) {} };
 
 const SITES = {
   FAST:   { lat: 25.6529, lon: 106.8566, tz: 8,   lim: 50, night: false, en: "FAST", ja: "FAST",
             noteEn: "FAST, Guizhou. Limit: zenith angle ≤ 40° (elevation ≥ 50°). Times in Beijing time (UTC+8).",
             noteJa: "FAST(貴州)。天頂角 40° 以内(仰角 50° 以上)を観測可能とする。時刻は北京時間(UTC+8)。" },
-  Subaru: { lat: 19.8255, lon: -155.4761, tz: -10, lim: 30, night: true, en: "Subaru", ja: "すばる",
-            noteEn: "Subaru, Maunakea. Limit: elevation ≥ 30° during astronomical night (Sun below −18°). Times in HST (UTC−10).",
-            noteJa: "すばる(マウナケア)。仰角 30° 以上、かつ天文薄明の外(太陽高度 −18° 以下)。時刻はハワイ時間(UTC−10)。" },
+  Lulin:  { lat: 23.4686, lon: 120.8735, tz: 8, lim: 30, night: true, en: "Lulin", ja: "鹿林",
+            noteEn: "Lulin Observatory, Taiwan (2862 m). Limit: elevation ≥ 30° during astronomical night (Sun below −18°). Times in Taiwan time (UTC+8).",
+            noteJa: "鹿林天文台(台湾、標高 2862 m)。仰角 30° 以上、かつ天文薄明の外(太陽高度 −18° 以下)。時刻は台湾時間(UTC+8)。" },
   BURSTT: { lat: 24.76, lon: 121.58, tz: 8, lim: 30, night: false, en: "BURSTT", ja: "BURSTT",
             noteEn: "BURSTT main station, Fushan (approximate position). Generic limit: elevation ≥ 30°. The real BURSTT beam is a fixed fan, so treat this as a rough guide. Times in UTC+8.",
             noteJa: "BURSTT 主局(福山、位置は概略)。仮に仰角 30° 以上とする。実際の BURSTT は固定ビームなので目安として扱う。時刻は UTC+8。" },
@@ -187,7 +187,7 @@ const SITES = {
 const I18N = {
   en: {
     back: "← FRB arXiv Daily", eyebrow: "Repeaters · activity forecast", title: "Repeater <span>activity</span>",
-    tagline: "Where the periodic repeaters are in their activity cycle, when the next windows open, and when each repeater was last seen active. Visibility is computed for FAST, Subaru and BURSTT, for proposals and quick follow-up decisions.",
+    tagline: "Where the periodic repeaters are in their activity cycle, when the next windows open, and when each repeater was last seen active. Visibility is computed for FAST, Lulin and BURSTT, for proposals and quick follow-up decisions.",
     date: "Date", today: "Today", perTitle: "Periodic repeaters",
     perSub: "Phase = ((MJD − MJD₀) / P) mod 1. The uncertainty on a predicted window grows with the number of cycles since MJD₀ (number of cycles × σ_P). Windows far in the future can shift by days.",
     tlTitle: "Activity windows in a proposal period", tlSub: "Shaded: predicted active window. Faint edges: ±1σ shift from the period uncertainty. Bars below: hours per day each source is observable from the selected site.",
@@ -209,7 +209,7 @@ const I18N = {
   },
   ja: {
     back: "← FRB arXiv Daily", eyebrow: "リピーター · 活動予報", title: "リピーターの<span>活動予報</span>",
-    tagline: "周期リピーターが活動周期のどの位相にいて、次の活動期がいつ始まるか、各リピーターが最後に活動していたのはいつかを一覧にします。FAST・すばる・BURSTT からの可視性も計算するので、プロポーザルや緊急観測の判断に使えます。",
+    tagline: "周期リピーターが活動周期のどの位相にいて、次の活動期がいつ始まるか、各リピーターが最後に活動していたのはいつかを一覧にします。FAST・鹿林・BURSTT からの可視性も計算するので、プロポーザルや緊急観測の判断に使えます。",
     date: "日付", today: "今日", perTitle: "周期リピーター",
     perSub: "位相 = ((MJD − MJD₀) / P) mod 1。予測窓の不確かさは MJD₀ からの周期数 × σ_P で増えるので、先の窓ほど数日ずれる可能性があります。",
     tlTitle: "観測期間中の活動期", tlSub: "塗り:予測される活動期。薄い縁:周期の誤差による ±1σ のずれ。下の棒:選んだ観測所から 1 日に何時間観測できるか。",
@@ -301,7 +301,7 @@ function renderStatic() {
   document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === store.lang));
   $("sites").innerHTML = Object.keys(SITES).map(k => `<button data-site="${k}" class="${k === store.rsite ? "on" : ""}">${SITES[k][store.lang]}</button>`).join("");
   $("sitenote").textContent = SITES[store.rsite][store.lang === "ja" ? "noteJa" : "noteEn"];
-  const P = store.lang === "ja" ? [["6m", "6 か月"], ["1y", "1 年"], ["fast", "FAST 2027A"], ["sub", "すばる S27A"]] : [["6m", "6 months"], ["1y", "1 year"], ["fast", "FAST 2027A"], ["sub", "Subaru S27A"]];
+  const P = store.lang === "ja" ? [["6m", "6 か月"], ["1y", "1 年"], ["fast", "FAST 2027A"]] : [["6m", "6 months"], ["1y", "1 year"], ["fast", "FAST 2027A"]];
   $("presets").innerHTML = P.map(([k, l]) => `<button data-p="${k}">${l}</button>`).join("");
   $("foot").textContent = t("foot");
   $("fVis").classList.toggle("on", filt.vis); $("fLoc").classList.toggle("on", filt.loc); $("fRep").classList.toggle("on", filt.rep);
@@ -446,7 +446,7 @@ function windowsInRange(only) {
 function render() { renderPeriodic(); renderTimeline(); renderTable(); }
 function setPreset(p) {
   const y = new Date().getUTCFullYear() + 1, now = Date.now();
-  const r = { "6m": [now, now + 182 * 864e5], "1y": [now, now + 365 * 864e5], fast: [Date.UTC(2027, 1, 1), Date.UTC(2027, 6, 31)], sub: [Date.UTC(2027, 1, 1), Date.UTC(2027, 6, 31)] }[p];
+  const r = { "6m": [now, now + 182 * 864e5], "1y": [now, now + 365 * 864e5], fast: [Date.UTC(2027, 1, 1), Date.UTC(2027, 6, 31)] }[p];
   $("from").value = isoDay(r[0]); $("to").value = isoDay(r[1]); renderTimeline();
 }
 
