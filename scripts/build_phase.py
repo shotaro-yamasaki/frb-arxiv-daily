@@ -112,7 +112,8 @@ def read_chime(frbrepo, cat2_path):
         dl = lum_dist_kpc(z)
         p = {"x": nu * width, "y": flux * dl ** 2 * SD2_TO_LNU / (1 + z),
              "label": f"FRB {name}" + (f" ({repname.replace('FRB', 'FRB ')})" if is_rep else ""),
-             "z": round(z, 3), "zkind": zkind, "nu": nu, "w": width, "ref": ref}
+             "z": round(z, 3), "zkind": zkind, "nu": round(nu, 4), "w": float(f"{width:.4g}")}
+        p["x"], p["y"] = float(f"{p['x']:.4g}"), float(f"{p['y']:.4g}")
         (rep if is_rep else one).append(p)
     return one, rep, cat_name
 
@@ -233,7 +234,7 @@ def build():
     for srs in radio:
         if srs["cls"].startswith("frb"):
             k = "frb_z" if srs["cls"].endswith("_z") else "frb_dm"
-            frb_he[k] += [{"x": p["w"], "y": p["nu"] * 1e9 * p["y"], "label": p["label"]} for p in srs["points"]]
+            frb_he[k] += [{"x": p["w"], "y": float(f"{p['nu'] * 1e9 * p['y']:.4g}"), "label": p["label"]} for p in srs["points"]]
     lpt_he = [{"x": math.sqrt(o["W_min"] * o["W_max"]),
                "y": o["nu_GHz"] * 1e9 * math.sqrt(o["S_min"] * o["S_max"]) * o["D_kpc"] ** 2 * SD2_TO_LNU,
                "label": o["name"], "ref": o["ref"]} for o in manual["lpt"]]
