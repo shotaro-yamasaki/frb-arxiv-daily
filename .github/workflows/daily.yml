@@ -2,9 +2,8 @@ name: Update FRB papers
 
 on:
   schedule:
-    - cron: "17 2 * * 1-5"
-    - cron: "47 5 * * 1-5"
-    - cron: "17 10 * * 1-5"
+    # Every hour from 08:17 to 20:17 Taipei time (00:17-12:17 UTC), every day
+    - cron: "17 0-12 * * *"
   push:
     branches: [main]
   workflow_dispatch:
@@ -68,10 +67,10 @@ jobs:
       - name: Sync FRB host data from FRBs/FRB (Mondays, or when missing)
         continue-on-error: true
         run: |
-          if [ "$(date -u +%u)" = "1" ] || [ ! -f docs/data/hosts_base.json ] || [ "${{ inputs.sync_hosts }}" = "true" ]; then
+          if [ "$(date -u +%u%H)" = "100" ] || [ ! -f docs/data/hosts_base.json ] || [ "${{ inputs.sync_hosts }}" = "true" ]; then
             git clone -q --depth 1 https://github.com/FRBs/FRB /tmp/FRB && python scripts/hosts_sync.py /tmp/FRB
           else
-            echo "Not Monday: skipping host sync"
+            echo "Host sync runs only in the first run on Monday: skipping"
           fi
       - name: Download the background image once (M51, ESA/Hubble, CC BY 4.0)
         continue-on-error: true
