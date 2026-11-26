@@ -1,7 +1,9 @@
 """Build the data for the transient phase-space page (docs/phase.html).
 
 Usage:
-  python scripts/build_phase.py PATH_TO_Transient_Phase_Space PATH_TO_FRBs_FRB_repo
+  python scripts/build_phase.py PATH_TO_Transient_Phase_Space PATH_TO_FRBs_FRB_repo [--cat2 data/chimefrbcat2.csv]
+
+FRBs come from CHIME/FRB Catalog 2 when --cat2 points to the catalogue file, otherwise from Catalog 1.
 
 Inputs
   - FRBs/Transient_Phase_Space (Keane, Pietka et al.; GPL-3.0): pulsars, RRATs, giant pulses, Sun,
@@ -49,6 +51,70 @@ def num(s):
         return v if math.isfinite(v) and v > 0 else None
     except ValueError:
         return None
+
+
+CAT2 = None
+META = {}
+
+# Column names used by the CHIME/FRB catalogues. The first name found is used.
+COLS = {
+    "name": ["tns_name"], "repeater": ["repeater_name"], "flux": ["flux"], "width": ["width_fitb", "width"],
+    "freq": ["peak_freq"], "dmx": ["dm_exc_ne2001", "dm_exc_ymw16"], "sub": ["sub_num"],
+}
+
+
+def read_chime(frbrepo, cat2_path):
+    """First sub-burst of each CHIME burst, with L_nu and the source of z."""
+    zspec = {}
+    for f in (Path(frbrepo) / "frb" / "data" / "FRBs").glob("FRB*.json"):
+        d = json.load(open(f))
+        if d.get("z"):
+            zspec[d["FRB"].replace("FRB", "")] = d["z"]
+    if cat2_path and Path(cat2_path).exists():
+        path, cat_name, ref = Path(cat2_path), "CHIME/FRB Catalog 2", "CHIME/FRB Collaboration 2025 (Catalog 2)"
+    else:
+        path, cat_name, ref = Path(frbrepo) / "frb" / "data" / "FRBs" / "chimefrbcat1.csv", "CHIME/FRB Catalog 1", "CHIME/FRB Collaboration 2021"
+        if not path.exists():
+            path = Path(frbrepo) / "frb" / "data" / "FRBs" / "chimefrbcat.csv"
+    rows = list(csv.DictReader(open(path, newline="", encoding="utf-8-sig")))
+    have = set(rows[0].keys()) if rows else set()
+    col = {}
+    for k, names in COLS.items():
+        col[k] = next((n for n in names if n in have), None)
+        if col[k] is None and k != "sub":
+            sys.exit(f"{path.name}: no column for '{k}' (tried {names}). Columns are: {sorted(have)}")
+    print(f"{cat_name}: {len(rows)} rows, columns used: {col}")
+    one, rep = [], []
+    seen = set()
+    for r in rows:
+        if col["sub"] and r.get(col["sub"]) not in ("0", "", None):
+            continue
+        name = r[col["name"]].replace("FRB", "").strip()
+        repname = (r.get(col["repeater"]) or "").strip()
+        is_rep = repname not in ("", "-9999", "nan", "None")
+        key = (name, r.get(col["freq"]), r.get(col["flux"]))
+        if key in seen:
+            continue
+        seen.add(key)
+        flux, width, nu = num(r[col["flux"]]), num(r[col["width"]]), num(r[col["freq"]])
+        if not (flux and width and nu):
+            continue
+        nu = min(max(nu, 400.0), 800.0) / 1e3      # GHz, clipped to the CHIME band
+        # spectroscopic z: by TNS name, or by repeater name for repeaters (all bursts share the host)
+        zk = zspec.get(name) or (zspec.get(repname.replace("FRB", "")) if is_rep else None)
+        if zk:
+            z, zkind = zk, "spectroscopic"
+        else:
+            dmx = num(r[col["dmx"]])
+            if not dmx:
+                continue
+            z, zkind = max((dmx - 50 - 50) / 1000.0, 0.01), "from DM"
+        dl = lum_dist_kpc(z)
+        p = {"x": nu * width, "y": flux * dl ** 2 * SD2_TO_LNU / (1 + z),
+             "label": f"FRB {name}" + (f" ({repname.replace('FRB', 'FRB ')})" if is_rep else ""),
+             "z": round(z, 3), "zkind": zkind, "nu": nu, "w": width, "ref": ref}
+        (rep if is_rep else one).append(p)
+    return one, rep, cat_name
 
 
 def pts(rows, name, cls, ref, note=""):
@@ -122,43 +188,27 @@ def build_radio(tps, frbrepo):
     series.append(pts([{"x": nu * w, "y": s * d * d * SD2_TO_LNU, "label": "FRB 20200428D (SGR 1935+2154)"}],
                       "Galactic magnetar burst", "magnetar", "STARE2/CHIME 2020 via Keane (TPS)"))
 
-    # CHIME/FRB Catalog 1: first sub-burst of each event
-    zspec = {}
-    for f in (Path(frbrepo) / "frb" / "data" / "FRBs").glob("FRB*.json"):
-        d = json.load(open(f))
-        if d.get("z"):
-            zspec[d["FRB"].replace("FRB", "")] = d["z"]
-    one, rep = [], []
-    for r in csv.DictReader(open(Path(frbrepo) / "frb" / "data" / "FRBs" / "chimefrbcat.csv")):
-        if r.get("sub_num") not in ("0", ""):
-            continue
-        name = r["tns_name"].replace("FRB", "")
-        flux, width, nu = num(r["flux"]), num(r["width_fitb"]), num(r["peak_freq"])
-        if not (flux and width and nu):
-            continue
-        nu = min(max(nu, 400.0), 800.0) / 1e3      # GHz, clipped to the CHIME band
-        if name in zspec:
-            z, zkind = zspec[name], "spectroscopic"
-        else:
-            dmx = num(r["dm_exc_ne2001"])
-            if not dmx:
-                continue
-            z, zkind = max((dmx - 50 - 50) / 1000.0, 0.01), "from DM"
-        dl = lum_dist_kpc(z)
-        p = {"x": nu * width, "y": flux * dl ** 2 * SD2_TO_LNU / (1 + z),
-             "label": f"FRB {name}" + (f" ({r['repeater_name'].replace('FRB', 'FRB ')})" if r["repeater_name"] not in ("", "-9999") else ""),
-             "z": round(z, 3), "zkind": zkind, "nu": nu, "w": width}
-        (rep if r["repeater_name"] not in ("", "-9999") else one).append(p)
-    note = ("CHIME/FRB Catalog 1 (first sub-burst). z: spectroscopic where the host is known, otherwise "
-            "(DM_exc,NE2001 - 50 - 50)/1000. L_nu includes a (1+z)^-1 bandwidth factor.")
-    series.append(pts(one, "FRBs (non-repeating)", "frb", "CHIME/FRB Collaboration 2021", note))
-    series.append(pts(rep, "FRBs (repeating)", "frbrep", "CHIME/FRB Collaboration 2021", note))
+    one, rep, cat_name = read_chime(frbrepo, CAT2)
+    note = (f"{cat_name} (first sub-burst). Filled markers: spectroscopic z of the host. Open markers: z estimated "
+            "as (DM_exc,NE2001 - 50 - 50)/1000. L_nu includes a (1+z)^-1 bandwidth factor.")
+    for lst, base, label in ((one, "frb", "FRBs"), (rep, "frbrep", "Repeating FRBs")):
+        known = [p for p in lst if p["zkind"] == "spectroscopic"]
+        est = [p for p in lst if p["zkind"] != "spectroscopic"]
+        series.append(pts(est, f"{label}, z from DM", base + "_dm", cat_name, note))
+        series.append(pts(known, f"{label}, z measured", base + "_z", cat_name, note))
+    META["frb_catalog"] = cat_name
     series.append(pts(gcrt, "GCRT J1745-3009 (old entry)", "lpt", "Keane (TPS)"))
     return series
 
 
 def build():
-    tps, frbrepo = sys.argv[1], sys.argv[2]
+    global CAT2
+    args = sys.argv[1:]
+    if "--cat2" in args:
+        i = args.index("--cat2")
+        CAT2 = args[i + 1]
+        args = args[:i] + args[i + 2:]
+    tps, frbrepo = args[0], args[1]
     manual = json.loads(MANUAL.read_text(encoding="utf-8"))
     radio = build_radio(tps, frbrepo)
     radio = [s for s in radio if s["cls"] != "lpt"]  # replaced by the hand-checked LPT list below
@@ -179,22 +229,25 @@ def build():
 
     he = []
     # radio bursts on the same luminosity-duration plane: nu*L_nu against pulse width
-    frb_he = []
+    frb_he = {"frb_z": [], "frb_dm": []}
     for srs in radio:
-        if srs["cls"] in ("frb", "frbrep"):
-            frb_he += [{"x": p["w"], "y": p["nu"] * 1e9 * p["y"], "label": p["label"]} for p in srs["points"]]
+        if srs["cls"].startswith("frb"):
+            k = "frb_z" if srs["cls"].endswith("_z") else "frb_dm"
+            frb_he[k] += [{"x": p["w"], "y": p["nu"] * 1e9 * p["y"], "label": p["label"]} for p in srs["points"]]
     lpt_he = [{"x": math.sqrt(o["W_min"] * o["W_max"]),
                "y": o["nu_GHz"] * 1e9 * math.sqrt(o["S_min"] * o["S_max"]) * o["D_kpc"] ** 2 * SD2_TO_LNU,
                "label": o["name"], "ref": o["ref"]} for o in manual["lpt"]]
-    he.append({"name": "FRBs (radio, ν L_ν)", "cls": "frb", "ref": "CHIME/FRB Catalog 1", "radio": True, "points": frb_he,
-               "note": "Radio ν L_ν at the CHIME peak frequency against burst width."})
+    he.append({"name": "FRBs, z from DM (radio, ν L_ν)", "cls": "frb_dm", "ref": META.get("frb_catalog", ""), "radio": True,
+               "points": frb_he["frb_dm"], "note": "Radio ν L_ν at the CHIME peak frequency against burst width."})
+    he.append({"name": "FRBs, z measured (radio, ν L_ν)", "cls": "frb_z", "ref": META.get("frb_catalog", ""), "radio": True,
+               "points": frb_he["frb_z"], "note": "Radio ν L_ν at the CHIME peak frequency against burst width."})
     he.append({"name": "Long-period transients (radio, ν L_ν)", "cls": "lpt", "ref": "see each object", "radio": True, "points": lpt_he})
     for c in manual["he"]:
         he.append({"name": c["name"], "cls": c["cls"], "ref": c["ref"], "note": c.get("note", ""), "label_pos": c.get("label_pos", "top"), "callout": c.get("callout"),
                    "box": {"x": c["t"], "y": c["L"]},
                    "points": [dict(p, label=p["label"] + (" [AUTO]" if p.get("status") == "auto" else "")) for p in c.get("points", [])]})
 
-    out = {"source_note": manual["source_note"], "radio": radio, "he": he}
+    out = {"source_note": manual["source_note"], "frb_catalog": META.get("frb_catalog"), "radio": radio, "he": he}
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     for s in radio:
         print(f"radio {s['name']:32s} {len(s['points'])}")
