@@ -12,6 +12,10 @@ on:
       backfill_days:
         description: "Backfill the last N days from the arXiv API (0 = normal daily run)"
         default: "0"
+      rebuild_phase:
+        description: "Rebuild the phase-space data now"
+        type: boolean
+        default: false
       sync_hosts:
         description: "Re-import FRB host data from FRBs/FRB now"
         type: boolean
@@ -83,12 +87,35 @@ jobs:
         run: python scripts/check_hosts_lit.py
       - name: Check phase-space values
         run: python scripts/check_phase_manual.py
+      - name: Rebuild phase-space data when its inputs change
+        continue-on-error: true
+        run: |
+          mkdir -p data
+          if [ ! -f data/chimefrbcat2.csv ]; then
+            curl -fsSL -o data/chimefrbcat2.csv https://storage.googleapis.com/chimefrb-dev.appspot.com/catalog2/chimefrbcat2.csv \
+              && echo "Downloaded CHIME/FRB Catalog 2: $(wc -l < data/chimefrbcat2.csv) lines" \
+              || rm -f data/chimefrbcat2.csv
+          fi
+          need=no
+          [ "${{ inputs.rebuild_phase }}" = "true" ] && need=yes
+          [ -f data/chimefrbcat2.csv ] && ! grep -q '"frb_catalog":"CHIME/FRB Catalog 2"' docs/data/phase.json && need=yes
+          built=$(git log -1 --format=%ct -- docs/data/phase.json); built=${built:-0}
+          changed=$(git log -1 --format=%ct -- scripts/phase_manual.json scripts/build_phase.py); changed=${changed:-0}
+          [ "$changed" -gt "$built" ] && need=yes
+          if [ "$need" = "yes" ]; then
+            git clone -q --depth 1 https://github.com/FRBs/Transient_Phase_Space /tmp/TPS
+            [ -d /tmp/FRB ] || git clone -q --depth 1 https://github.com/FRBs/FRB /tmp/FRB
+            python scripts/build_phase.py /tmp/TPS /tmp/FRB --cat2 data/chimefrbcat2.csv
+          else
+            echo "Phase-space data is up to date"
+          fi
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/*.json
           git add docs/img/*.jpg 2>/dev/null || true
+          git add data/*.csv 2>/dev/null || true
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Update FRB papers $(date -u +%Y-%m-%d)"
           for i in 1 2 3; do

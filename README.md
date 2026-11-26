@@ -65,6 +65,7 @@ python tests/test_citations.py   # 偽の ADS 応答でロジックを確認(ネ
 
 `docs/phase.html`。電波の位相空間(L_ν と ν·W)と、光度と継続時間の図の2枚。拡大・ホバー・種類の切り替え・自分のモデルの重ね描き・スライド用PNGの保存ができる。
 
-- データは `docs/data/phase.json`。`python scripts/build_phase.py <Transient_Phase_Space> <FRBs/FRB>` で作り直す(GitHub の FRBs/Transient_Phase_Space と FRBs/FRB を clone して渡す)。
+- データは `docs/data/phase.json`。FRB は CHIME/FRB Catalog 2(`data/chimefrbcat2.csv`。ワークフローが公式サイトから一度だけ取得)。塗りつぶしの印は母銀河の分光赤方偏移、白抜きは DM から推定した赤方偏移。
+- `scripts/phase_manual.json` や `scripts/build_phase.py` を変えると、毎日のワークフローが自動で作り直す。手元では `python scripts/build_phase.py <Transient_Phase_Space> <FRBs/FRB> --cat2 data/chimefrbcat2.csv`。
 - 長周期電波トランジェントと高エネルギー・光学の各種類の値は `scripts/phase_manual.json` に手で入れてある(出典つき)。新しい天体はここに足す。
 - FRBs/Transient_Phase_Space のデータは GPL-3.0(E. Keane)。ページの下に出典を表示している。

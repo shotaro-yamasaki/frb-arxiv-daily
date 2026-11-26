@@ -50,18 +50,13 @@ This is the procedure for the weekly scheduled Claude task. The goal is to keep
 6. **Update the file.** Add entries with `"status": "auto"` and `"added": "YYYY-MM-DD"`. Set `last_search` to the
    current UTC time. Keep the JSON valid and indented by one space.
 
-7. **Check and rebuild.**
-   ```
-   python scripts/check_phase_manual.py
-   git clone --depth 1 https://github.com/FRBs/Transient_Phase_Space /tmp/TPS
-   git clone --depth 1 https://github.com/FRBs/FRB /tmp/FRB
-   python scripts/build_phase.py /tmp/TPS /tmp/FRB
-   ```
-   Fix every reported problem before committing.
+7. **Check.** Run `python scripts/check_phase_manual.py` and fix every reported problem before committing.
+   Do not rebuild `docs/data/phase.json` yourself: the daily workflow rebuilds it automatically after your push
+   (it uses the CHIME/FRB Catalog 2 copy in `data/chimefrbcat2.csv`).
 
-8. **Commit and push to main.** Commit `scripts/phase_manual.json` and `docs/data/phase.json` with the message
-   `Add transients to the phase space from the literature (YYYY-MM-DD)`. If the push is rejected, pull with rebase,
-   rebuild, and push again. Pushing to main publishes the site.
+8. **Commit and push to main.** Commit only `scripts/phase_manual.json` with the message
+   `Add transients to the phase space from the literature (YYYY-MM-DD)`. If the push is rejected, pull with rebase
+   and push again. Pushing to main starts the workflow that rebuilds the data and publishes the site.
 
 9. **Report.** Send a short summary in Japanese: papers checked, objects added with their values and source,
    and relevant papers that gave no usable values (with the reason). If nothing new was found, say so in one line.

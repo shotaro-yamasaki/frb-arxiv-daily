@@ -116,7 +116,8 @@ const I18N = {
     xr: "ν · W  (GHz s)", yr: "Spectral luminosity L_ν (erg s⁻¹ Hz⁻¹)",
     xh: "Duration (s)", yh: "Peak luminosity (erg s⁻¹)",
     coh: "Coherent", incoh: "Incoherent (T_B < 10¹² K)", unc: "Uncertainty principle",
-    foot: (n) => `<b>Radio panel.</b> L_ν = 4πD²S at the observing frequency, against the product of observing frequency and burst width (Cordes et al. 2004, Pietka, Fender & Keane 2015, Keane 2018). Dotted lines are constant brightness temperature T_B = L_ν / (8π k (νW)²). Most of the non-FRB data come from <a href="https://github.com/FRBs/Transient_Phase_Space" target="_blank" rel="noopener">FRBs/Transient_Phase_Space</a> (E. Keane, GPL-3.0) and the compilation of Pietka et al. (2015). FRBs are the first sub-bursts of CHIME/FRB Catalog 1 (2021). Their redshifts are spectroscopic when the host is known and otherwise estimated as (DM<sub>exc,NE2001</sub> − 50 − 50)/1000, so their luminosities are uncertain by a factor of a few. Long-period transients were typed in from the discovery papers. Error bars show the reported spread of peak flux and pulse width.<br>
+    zMeas: "z measured (host)", zDM: "z from DM", oneFRB: "FRBs", repFRB: "Repeating FRBs",
+    foot: (n) => `<b>Radio panel.</b> L_ν = 4πD²S at the observing frequency, against the product of observing frequency and burst width (Cordes et al. 2004, Pietka, Fender & Keane 2015, Keane 2018). Dotted lines are constant brightness temperature T_B = L_ν / (8π k (νW)²). Most of the non-FRB data come from <a href="https://github.com/FRBs/Transient_Phase_Space" target="_blank" rel="noopener">FRBs/Transient_Phase_Space</a> (E. Keane, GPL-3.0) and the compilation of Pietka et al. (2015). FRBs are the first sub-bursts of the CHIME/FRB catalogue named in the plot. Filled markers use the spectroscopic redshift of the host (from FRBs/FRB, matched by burst or repeater name). Open markers use z estimated as (DM<sub>exc,NE2001</sub> − 50 − 50)/1000, so their luminosities are uncertain by a factor of a few. Long-period transients were typed in from the discovery papers. Error bars show the reported spread of peak flux and pulse width.<br>
 <b>Luminosity–duration panel.</b> Boxes are the typical ranges quoted in reviews for each class (see the hover text). They are approximate and meant for orientation. FRBs and long-period transients are shown as radio ν L_ν for comparison. These are not bolometric.<br>
 ${n} objects in total. The data are in <a href="data/phase.json">data/phase.json</a>.`,
   },
@@ -129,13 +130,14 @@ ${n} objects in total. The data are in <a href="data/phase.json">data/phase.json
     xr: "ν · W  (GHz s)", yr: "スペクトル光度 L_ν (erg s⁻¹ Hz⁻¹)",
     xh: "継続時間 (s)", yh: "ピーク光度 (erg s⁻¹)",
     coh: "コヒーレント", incoh: "インコヒーレント (T_B < 10¹² K)", unc: "不確定性原理",
-    foot: (n) => `<b>電波のパネル。</b>観測周波数でのL_ν = 4πD²Sを、観測周波数とバースト幅の積に対して描いています(Cordes et al. 2004、Pietka, Fender & Keane 2015、Keane 2018)。点線は輝度温度一定の線 T_B = L_ν / (8π k (νW)²)。FRB以外の多くは<a href="https://github.com/FRBs/Transient_Phase_Space" target="_blank" rel="noopener">FRBs/Transient_Phase_Space</a>(E. Keane、GPL-3.0)とPietka et al. (2015)のまとめから取っています。FRBはCHIME/FRB Catalog 1(2021)の最初のサブバーストです。赤方偏移は、母銀河がわかっているものは分光値、それ以外は(DM<sub>exc,NE2001</sub> − 50 − 50)/1000で見積もっているので、光度には数倍の不定性があります。長周期電波トランジェントは発見論文から手で入力しました。誤差棒はピーク強度とパルス幅の報告値の幅です。<br>
+    zMeas: "zは母銀河の分光値", zDM: "zはDMから推定", oneFRB: "FRB", repFRB: "リピーターFRB",
+    foot: (n) => `<b>電波のパネル。</b>観測周波数でのL_ν = 4πD²Sを、観測周波数とバースト幅の積に対して描いています(Cordes et al. 2004、Pietka, Fender & Keane 2015、Keane 2018)。点線は輝度温度一定の線 T_B = L_ν / (8π k (νW)²)。FRB以外の多くは<a href="https://github.com/FRBs/Transient_Phase_Space" target="_blank" rel="noopener">FRBs/Transient_Phase_Space</a>(E. Keane、GPL-3.0)とPietka et al. (2015)のまとめから取っています。FRBは図中に書いたCHIME/FRBカタログの最初のサブバーストです。塗りつぶしの印は母銀河の分光赤方偏移(FRBs/FRBから、バースト名かリピーター名で対応)を使ったもの、白抜きの印は(DM<sub>exc,NE2001</sub> − 50 − 50)/1000で赤方偏移を見積もったもので、後者の光度には数倍の不定性があります。長周期電波トランジェントは発見論文から手で入力しました。誤差棒はピーク強度とパルス幅の報告値の幅です。<br>
 <b>光度と継続時間のパネル。</b>箱は各種類についてレビューに書かれている典型的な範囲です(ホバーで出典を表示)。目安として使ってください。FRBと長周期電波トランジェントは比較のため電波のν L_νで描いています。全波長の光度ではありません。<br>
 全部で${n}天体。データは<a href="data/phase.json">data/phase.json</a>にあります。`,
   },
 };
 const COLORS = {
-  frb: "#ff6a3d", frbrep: "#ffb547", magnetar: "#ff5d8f", lpt: "#c792ff", pulsar: "#5ad1ff", rrat: "#4fe3c1", grp: "#9fb3ff",
+  frb: "#ff6a3d", frbrep: "#ffb547", frb_z: "#ff6a3d", frb_dm: "#d98b70", frbrep_z: "#ffd23f", frbrep_dm: "#b9a46c", magnetar: "#ff5d8f", lpt: "#c792ff", pulsar: "#5ad1ff", rrat: "#4fe3c1", grp: "#9fb3ff",
   sun: "#f2e36b", star: "#e0a96d", rscvn: "#b9a37a", cv: "#7ee081", nova: "#ff9fd0", xrb: "#d2a679", sn: "#a7adbf",
   grb: "#ff8f8f", agn: "#6d8bff", gw: "#ffffff",
   mag: "#ff5d8f", qpe: "#4fe3c1", fbot: "#5ad1ff", fxt: "#f2e36b", kn: "#ffffff", slsn: "#ffb547", tde: "#6d8bff",
@@ -185,22 +187,34 @@ function radioTraces(th) {
   for (const s of D.radio) {
     const hidden = st.hidden.radio.has(s.name);
     const isLPT = s.cls === "lpt";
+    const isFRB = s.cls.startsWith("frb"), isRep = s.cls.startsWith("frbrep"), zMeas = s.cls.endsWith("_z");
     const pts = s.points;
+    const mk = isFRB
+      ? { color: col(s.cls), size: zMeas ? 9.5 : 6.5, symbol: (isRep ? "diamond" : "circle") + (zMeas ? "" : "-open"), opacity: zMeas ? 1 : 0.6,
+          line: { width: zMeas ? 1 : 1.3, color: zMeas ? (st.light ? "#333" : "#06070b") : col(s.cls) } }
+      : { color: col(s.cls), size: isLPT ? 11 : (s.cls === "pulsar" ? 4.5 : 7), symbol: isLPT ? "star" : "circle",
+          opacity: s.cls === "pulsar" ? 0.55 : 0.85, line: { width: isLPT ? 1 : 0, color: st.light ? "#333" : "#06070b" } };
     tr.push({
       x: pts.map(p => p.x), y: pts.map(p => p.y), mode: "markers", name: s.name, visible: hidden ? "legendonly" : true,
-      marker: { color: col(s.cls), size: isLPT ? 11 : (s.cls === "pulsar" ? 4.5 : 7), symbol: isLPT ? "star" : (s.cls === "frbrep" ? "diamond" : "circle"),
-                opacity: s.cls === "pulsar" ? 0.55 : 0.85, line: { width: isLPT ? 1 : 0, color: th.bg === "#ffffff" ? "#333" : "#06070b" } },
+      marker: mk,
       error_x: isLPT ? { type: "data", symmetric: false, array: pts.map(p => p.xr[1] - p.x), arrayminus: pts.map(p => p.x - p.xr[0]), color: col(s.cls), thickness: 1.2, width: 0 } : undefined,
       error_y: isLPT ? { type: "data", symmetric: false, array: pts.map(p => p.yr[1] - p.y), arrayminus: pts.map(p => p.y - p.yr[0]), color: col(s.cls), thickness: 1.2, width: 0 } : undefined,
       customdata: pts.map(p => [esc(p.label), esc(p.detail || ""), esc(p.ref || s.ref), p.z != null ? `z = ${p.z} (${p.zkind})` : ""]),
       hovertemplate: `<b>%{customdata[0]}</b><br>${esc(s.name)}<br>νW = %{x:.2e} GHz s<br>L<sub>ν</sub> = %{y:.2e} erg/s/Hz<br>%{customdata[3]}%{customdata[1]}<br><i>%{customdata[2]}</i><extra></extra>`,
     });
-    if (st.labels && !hidden && pts.length) {
+    if (st.labels && !hidden && pts.length && !(isFRB && zMeas)) {
       const mx = pts.map(p => lg(p.x)).sort((a, b) => a - b), my = pts.map(p => lg(p.y)).sort((a, b) => a - b);
-      const dy = { frbrep: -1.5, magnetar: -1.0 }[s.cls] ?? 0.9;
+      const dy = { frbrep_dm: -1.7, magnetar: -1.0, frb_dm: 1.4 }[s.cls] ?? 0.9;
       const cx = mx[Math.floor(mx.length / 2)], cy = isLPT ? Math.max(...my) + 0.9 : my[Math.floor(my.length / 2)] + dy;
-      ann.push({ x: cx, y: cy, text: `<b>${esc(s.name)}</b>`, showarrow: false, font: { size: 13.5, color: col(s.cls) }, bgcolor: st.light ? "rgba(255,255,255,.7)" : "rgba(6,7,11,.55)" });
+      const txt = isFRB ? (isRep ? t("repFRB") : t("oneFRB")) : s.name;
+      ann.push({ x: cx, y: cy, text: `<b>${esc(txt)}</b>`, showarrow: false, font: { size: 13.5, color: col(isRep ? "frbrep_z" : isFRB ? "frb_z" : s.cls) }, bgcolor: st.light ? "rgba(255,255,255,.7)" : "rgba(6,7,11,.55)" });
     }
+  }
+  // key for the FRB markers, drawn inside the plot
+  if (st.labels && D.radio.some(s => s.cls.startsWith("frb"))) {
+    ann.push({ x: 0.065, y: 0.93, xref: "paper", yref: "paper", xanchor: "left", yanchor: "top", align: "left", showarrow: false,
+               text: `<b>FRBs</b>  ●/◆ ${esc(t("zMeas"))}   ○/◇ ${esc(t("zDM"))}<br>● ○ ${esc(t("oneFRB"))}   ◆ ◇ ${esc(t("repFRB"))}  ·  ${esc(D.frb_catalog || "")}`,
+               font: { size: 12.5, color: th.ink }, bgcolor: st.light ? "rgba(255,255,255,.85)" : "rgba(6,7,11,.7)", bordercolor: th.frame, borderpad: 6 });
   }
   return { tr, ann, shapes, xr: [-10, 10], yr: [10, 37.2], xt: t("xr"), yt: t("yr") };
 }
@@ -230,11 +244,15 @@ function heTraces(th) {
     if (s.points && s.points.length) {
       tr.push({ x: s.points.map(p => p.x), y: s.points.map(p => p.y), mode: "markers", name: s.name + (s.box ? " (objects)" : ""),
                 visible: hidden ? "legendonly" : true,
-                marker: { color: c, size: s.radio ? (s.cls === "lpt" ? 11 : 6) : 11, symbol: s.cls === "lpt" ? "star" : (s.radio ? "circle" : "star-diamond"), opacity: s.radio ? 0.8 : 1 },
+                marker: s.cls === "frb_dm" ? { color: c, size: 6, symbol: "circle-open", opacity: 0.6, line: { width: 1.3, color: c } }
+                      : s.cls === "frb_z" ? { color: c, size: 9, symbol: "circle", line: { width: 1, color: st.light ? "#333" : "#06070b" } }
+                      : { color: c, size: s.radio ? (s.cls === "lpt" ? 11 : 6) : 11, symbol: s.cls === "lpt" ? "star" : (s.radio ? "circle" : "star-diamond"), opacity: s.radio ? 0.8 : 1 },
                 customdata: s.points.map(p => [esc(p.label), esc(p.detail || ""), esc(p.ref || s.ref)]),
                 hovertemplate: `<b>%{customdata[0]}</b><br>t = %{x:.2e} s<br>L = %{y:.2e} erg/s<br>%{customdata[1]}<br><i>%{customdata[2]}</i><extra></extra>` });
       if (st.labels && !hidden) {
-        if (s.radio) {
+        if (s.radio && s.cls === "frb_z") {
+          /* labelled together with the z-from-DM series */
+        } else if (s.radio) {
           const mx = s.points.map(p => lg(p.x)).sort((a, b) => a - b), my = s.points.map(p => lg(p.y)).sort((a, b) => a - b);
           ann.push({ x: mx[Math.floor(mx.length / 2)], y: Math.max(...my) + 0.6, text: `<b>${esc(s.name)}</b>`, showarrow: false, font: { size: 13, color: c } });
         } else for (const p of s.points) ann.push({ x: lg(p.x), y: lg(p.y), text: esc(p.label), showarrow: true, arrowhead: 0, ax: p.ax ?? 40, ay: p.ay ?? -24, arrowcolor: c, font: { size: 12.5, color: c } });
